@@ -1,0 +1,30 @@
+{
+  "name": "libp2p-website",
+  "version": "0.0.0",
+  "description": "Webpage of the libp2p project. A multi protocol approach for a interoperable network stack that follows the 'self description' in favor of assumptions",
+  "main": "src/server.js",
+  "engines" : { "node" : "^4.0.0" },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ipfs": "ipfs add -r src/public | tail -n1 | cut -d ' ' -f2 >> versions",
+    "pages": "./node_modules/.bin/jade src/pages/index.jade -o src/public -P",
+    "rel": "npm run pages && npm run ipfs",
+    "start": "npm run rel && node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diasdavid/libp2p-website.git"
+  },
+  "keywords": [
+    "IPFS"
+  ],
+  "author": "David Dias <daviddias@ipfs.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diasdavid/libp2p-website/issues"
+  },
+  "homepage": "https://github.com/diasdavid/libp2p-website",
+  "devDependencies": {
+    "jade": "^1.11.0"
+  }
+}
