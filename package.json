@@ -11,6 +11,7 @@
     "rel": "npm run pages && npm run ipfs",
     "start": "npm run rel && node src/server.js"
   },
+  "engines" : { "node" : "^4.0.0" },
   "repository": {
     "type": "git",
     "url": "https://github.com/diasdavid/libp2p-website.git"
