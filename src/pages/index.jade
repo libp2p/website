@@ -1,7 +1,47 @@
 extends ./layout.jade
 
 block content
-  h1 libp2p - an upgradable network stack 
-  #container.col
-    p.
-      FEATURES
+  .row
+    .col-md-2 
+    .col-md-8
+      img(src="https://raw.githubusercontent.com/diasdavid/specs/libp2p-spec/protocol/network/figs/logo.png")
+      h1 A multiprotocol aware networking suite
+    .col-md-2
+
+   hr
+  .row
+    .col-md-2
+      ul
+        li Home
+        li Goals
+        li Requirements
+        li Usage Examples
+        li
+          a(href="/ready.html") is libp2p ready?
+    .col-md-8
+      h2 Welcome!
+      p With the developement of building IPFS, the InterPlanetary FileSystem[?], we came to learn about the several challenges imposed by having to run a distributed file system on top of heterogeneous devices, with diferent network setups and capabilities. During this process, we had to revisit the whole network stack and elaborate solutions to overcome the obstacles imposed by design decisions of the several layers and protocols, without breaking compatibility or recreating technologies.
+      p In order to build this library, we focused on tackling problems independently, creating less complex solutions with powerful abstractions, that when composed, can offer an environment for a Peer-to-Peer application to work sucessfuly.
+      p `libp2p` is the result of the collective experience while building a distributed system, that puts the responsability on the developers on how they want their app to interop with others in the network, favoring configuration and extensibility instead of assumptions about how the network setup.
+      p In essence, a peer using libp2p should be able to communicate with another peer using different transports, including connection relay, and talk over different protocols, negotiated in demand.
+      p 
+        | The full specification for libp2p is a working process that can be found on 
+        a(href="https://github.com/ipfs/specs/pull/19") ipfs/specs
+
+      h2 Goals and Requirements 
+      p Our goals for libp2p specification and its implementations are:
+      ul
+        li Enable the use of various transports (TCP, UDP, DTLS, uTP, etc)
+        li Efficient use of sockets (connection reuse)
+        li Enable communications between peers to be multiplex over one socket (avoiding handshake overhead)
+        li Enable multiprotocols and respective versions to be used between peers, using a negotiation process.
+        li Be backwards compatible
+        li Work in current systems
+        li Use the current network technologies to its best capability
+        li Have NAT Traversal
+        li Enable connections to be relayed
+        li Enable encrypted channels 
+
+      h2 Usage examples
+      pre From Readmes and so on
+   .col-md-2

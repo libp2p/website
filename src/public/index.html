@@ -2,11 +2,56 @@
 <html lang="en">
   <head>
     <title>libp2p</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   </head>
   <body>
-    <h1>libp2p - an upgradable network stack </h1>
-    <div id="container" class="col">
-      <p>FEATURES 4444</p>
+    <div class="row">
+      <div class="col-md-2"> </div>
+      <div class="col-md-8"><img src="https://raw.githubusercontent.com/diasdavid/specs/libp2p-spec/protocol/network/figs/logo.png">
+        <h1>A multiprotocol aware networking suite</h1>
+      </div>
+      <div class="col-md-2"></div>
     </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-2">
+        <ul>
+          <li>Home</li>
+          <li>Goals</li>
+          <li>Requirements</li>
+          <li>Usage Examples</li>
+          <li><a href="/ready.html">is libp2p ready?</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <h2>Welcome!</h2>
+        <p>With the developement of building IPFS, the InterPlanetary FileSystem[?], we came to learn about the several challenges imposed by having to run a distributed file system on top of heterogeneous devices, with diferent network setups and capabilities. During this process, we had to revisit the whole network stack and elaborate solutions to overcome the obstacles imposed by design decisions of the several layers and protocols, without breaking compatibility or recreating technologies.</p>
+        <p>In order to build this library, we focused on tackling problems independently, creating less complex solutions with powerful abstractions, that when composed, can offer an environment for a Peer-to-Peer application to work sucessfuly.</p>
+        <p>`libp2p` is the result of the collective experience while building a distributed system, that puts the responsability on the developers on how they want their app to interop with others in the network, favoring configuration and extensibility instead of assumptions about how the network setup.</p>
+        <p>In essence, a peer using libp2p should be able to communicate with another peer using different transports, including connection relay, and talk over different protocols, negotiated in demand.</p>
+        <p>
+           
+          The full specification for libp2p is a working process that can be found on <a href="https://github.com/ipfs/specs/pull/19">ipfs/specs</a>
+        </p>
+        <h2>Goals and Requirements </h2>
+        <p>Our goals for libp2p specification and its implementations are:</p>
+        <ul>
+          <li>Enable the use of various transports (TCP, UDP, DTLS, uTP, etc)</li>
+          <li>Efficient use of sockets (connection reuse)</li>
+          <li>Enable communications between peers to be multiplex over one socket (avoiding handshake overhead)</li>
+          <li>Enable multiprotocols and respective versions to be used between peers, using a negotiation process.</li>
+          <li>Be backwards compatible</li>
+          <li>Work in current systems</li>
+          <li>Use the current network technologies to its best capability</li>
+          <li>Have NAT Traversal</li>
+          <li>Enable connections to be relayed</li>
+          <li>Enable encrypted channels </li>
+        </ul>
+        <h2>Usage examples</h2>
+        <pre>From Readmes and so on</pre>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
