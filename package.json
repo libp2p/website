@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "description": "Webpage of the libp2p project. A multi protocol approach for a interoperable network stack that follows the 'self description' in favor of assumptions",
   "main": "src/server.js",
-  "engines" : { "node" : "^4.0.0" },
+  "engines": {
+    "node": "^4.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ipfs": "ipfs add -r src/public | tail -n1 | cut -d ' ' -f2 >> versions",
     "pages": "./node_modules/.bin/jade src/pages/index.jade -o src/public -P",
     "rel": "npm run pages && npm run ipfs",
-    "start": "npm run rel && node src/server.js"
+    "start": "npm run rel && node src/server.js",
+    "mon": "nodemon --exec 'npm run start' -e js,jade --ignore src/public"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
   },
   "homepage": "https://github.com/diasdavid/libp2p-website",
   "devDependencies": {
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "nodemon": "^1.7.1"
   }
 }
