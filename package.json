@@ -14,6 +14,7 @@
     "start": "npm run rel && node src/server.js",
     "mon": "nodemon --exec 'npm run start' -e js,jade --ignore src/public"
   },
+  "engines" : { "node" : "^4.0.0" },
   "repository": {
     "type": "git",
     "url": "https://github.com/diasdavid/libp2p-website.git"
