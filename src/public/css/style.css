@@ -1,0 +1,162 @@
+a:link, a:visited {
+  text-decoration: underline;
+  color: #001C57;
+}
+
+h1, h2, h3, h4 {
+  font-family: sans-serif;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 2.0em;
+  text-align: left;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
+h2 small {
+  font-size: 0.5em;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
+header {
+  font-family: sans-serif;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 20px;
+  height: 50px;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+header a:link, a:visited {
+  text-decoration: none;
+}
+
+header ul {
+  padding-top: 37px;
+  float: right;
+}
+
+header li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header img {
+  margin-top: 20px;
+  width: 150px;
+  display: inline;
+  float: left;
+}
+
+.content {
+  margin: 0px auto;
+  width: 60%;
+  text-align: center;
+}
+
+.content p {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+div .logo {
+  margin: 0 auto;
+}
+
+.section {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 40px;
+  padding-top: 10px;
+}
+
+.content ul {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.content li:before {
+  font-family: 'FontAwesome';
+  content: '\f18e';
+  margin:0 15px 0 -15px;
+  color: #62D1D4;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.ipfs {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+.ipfs h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.ipfs img {
+  width: 400px;
+}
+
+.boxdesc {
+  text-align: center;
+}
+
+.boxdesc span {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .content ul {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    display: none;
+  }
+
+  .boxdesc span {
+    display: block;
+  }
+}
+
+code {
+  text-align: left;
+  font-family: 'monospace';
+}
