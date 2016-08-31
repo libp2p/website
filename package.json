@@ -8,21 +8,24 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pages": "./node_modules/.bin/jade src/pages/index.jade -o src/public -P"
+    "pages": "./node_modules/.bin/jade src/pages/index.jade -o src/public -P",
+    "jekyll": "jekyll serve"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/diasdavid/libp2p-website.git"
+    "url": "https://github.com/libp2p/libp2p-website.git"
   },
   "keywords": [
-    "IPFS"
+    "IPFS",
+    "libp2p",
+    "protocol labs"
   ],
   "author": "David Dias <daviddias@ipfs.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diasdavid/libp2p-website/issues"
+    "url": "https://github.com/libp2p/libp2p-website/issues"
   },
-  "homepage": "https://github.com/diasdavid/libp2p-website",
+  "homepage": "https://github.com/libp2p/libp2p-website",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-imagemin": "^3.0.3",
