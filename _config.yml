@@ -3,7 +3,7 @@ path:
 baseurl:      
 markdown:     kramdown
 google_analytics:
-github:       libp2p/libp2p-website
+github:       libp2p/website
 
 # Metadata
 title:        libp2p
@@ -32,15 +32,15 @@ author:
 # Open Source Protocol
 # See http://osprotocol.com
 os:
-  repo:     https://github.com/libp2p/libp2p-website
-  src:      git@github.com:libp2p/libp2p-website.git
-  issues:   https://github.com/libp2p/libp2p-website/issues
+  repo:     https://github.com/libp2p/website
+  src:      git@github.com:libp2p/website.git
+  issues:   https://github.com/libp2p/website/issues
   branch:   minimal-cayman
   rcs_type: git
 
 # Maintainer (normally on GitHub)
 maintainer:
-  name: Protocol Labs Inc.
-  link: https://github.com/libp2p
+  name:     Protocol Labs Inc.
+  link:     https://github.com/libp2p
 
 # Gems
