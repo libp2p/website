@@ -9,10 +9,13 @@ repo: libp2p/libp2p
   a.nav-item {
     margin: 0px 20px;
   }
+
   .green {
     color: #2ecc40;
   }
+
 </style>
+
 <div class="nav" style="text-align:center;padding:30px; margin:0px auto;">
   <a class="nav-item" href="#home">Home</a>
   <a class="nav-item" href="/specs">Spec</a>
@@ -89,4 +92,14 @@ libp2p
 pubsub
 
 That is going to be a seriously js-* heavy graph. -->
+
+## You can make libp2p better!
+
+Libp2p is a work in progress. As such, there's a few things you can do right now to help out:
+
+- **Read the spec!** If you have any questions or comments, issues or changes, weigh in on [libp2p/specs](https://github.com/libp2p/specs).
+- Go through the modules above and **check out existing issues**. This would be especially useful for modules in active development. Some knowledge of IPFS/libp2p may be required, as well as the infrasture behind it - for instance, you may need to read up on p2p and more complex operations like muxing to be able to help technically.
+- **Perform code reviews**. Most of this has been developed by @diasdavid, which means that more eyes will help a) speed the project along b) ensure quality and c) reduce possible future bugs.
+- **Add tests**. There can never be enough tests.
+- **Talk to us.** You can find us on IRC at #ipfs on Freenode.
 
