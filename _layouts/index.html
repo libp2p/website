@@ -44,7 +44,9 @@
   <body>
     {% if site.logo %}
     <div class="header">
-     <img class='logo' src="{{ site.baseurl }}/assets/img/{{ site.logo.name }}" title="{{ site.title }}" alt="{{ site.title }}"/>
+      <a href="/">
+       <img class='logo' src="{{ site.baseurl }}/assets/img/{{ site.logo.name }}" title="{{ site.title }}" alt="{{ site.title }}"/>
+      </a>
     </div>
     {% else %}
     <div class="header">
