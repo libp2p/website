@@ -1,6 +1,6 @@
 # Setup
-path:         
-baseurl:      
+path:         https://ipfs.io/ipfs/QmfHVKKHfPa9aFU9vNstTfdwx2jD78wKkkiAkcmqbFPDno/_site
+baseurl:      https://ipfs.io/ipfs/QmfHVKKHfPa9aFU9vNstTfdwx2jD78wKkkiAkcmqbFPDno/_site
 markdown:     kramdown
 google_analytics:
 github:       libp2p/website
