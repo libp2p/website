@@ -1,8 +1,23 @@
 doctype html
 html(lang="en")
   head
-    title='libp2p'
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="css/reset.css", type="text/css", media="all")
+    link(rel="stylesheet", href="css/style.css", type="text/css", media="all")
+    link(rel="stylesheet", href="css/font-awesome.min.css", type="text/css", media="all")
+    link(rel="stylesheet", href="css/highlight.github.css")
+    script(src="js/highlight.pack.js")
+    title libp2p - P2P networking on rails
+    link(rel="icon" type="image/png" href="img/favicon.png")
   body
+    header
+      div
+        img(src="img/boxmodel.png", style="width: 40px; margin-top: 15px; margin-right: 20px")
+        img(src="img/logo.svg")
+        ul
+          li
+            a(href="#getstarted") Get Started
+          li
+            a(href="https://github.com/ipfs/specs/tree/master/libp2p") Specification
     block content
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    script hljs.initHighlightingOnLoad();

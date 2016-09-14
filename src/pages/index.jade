@@ -1,60 +1,65 @@
-extends ./layout.jade
+extends layout
 
 block content
-  .row
-    .col-md-2
-    .col-md-8
-      img(src="https://raw.githubusercontent.com/diasdavid/specs/libp2p-spec/protocol/network/figs/logo.png")
-      h1 A network framework for decentralized P2P application development
-    .col-md-2
+  .content
+    .logo
+      img(src="img/boxmodel.png")
+      br
+      img.textlogo(src="img/logo.svg")
+    h1 A network framework for decentralized P2P application development
 
-   hr
-  .row
-    .col-md-2
-      //
-        ul
-          li Home
-          li Goals
-          li Requirements
-          li Usage Examples
-          li
-            a(href="/ready.html") is libp2p ready?
-    .col-md-8
-      p While developing <a href="https://ipfs.io">IPFS</a>, we came to learn about the several challenges imposed by having to run a distributed file system on top of heterogeneous devices, with diferent network setups and capabilities. During this process, we had to constantly revisit the whole network stack and create solutions to overcome the obstacles imposed by design decisions of the several layers and protocols, without breaking compatibility or recreating technologies. This was a tedious, time consuming process.
+  .content
+    img(src="img/boxdiagram.png")
 
-      p Instead of re-inventing the wheel every time we need to build a decentralized P2P application, we focused on streamlining the problem by tackling networking complexity in an abstract, general purpose way. The result is <strong>libp2p</strong>: a framework for simplifying networking with P2P applications. Developers decide on how they want their app to interop with others in the network, favoring configuration and extensibility instead of assumptions about networking setup. The goal is to enable rapid development of P2P applications for everyone.
+  .content
+    .boxdesc
+      span(style="color: #9731C2") Content Routing
+      span(style="color: #5C36C2") Peer Routing
+      span(style="color: #C39719") Discovery
+      span(style="color: #00872A") Transports
+      span(style="color: #851345") NAT Traversal
 
-      p <strong>We are still actively developing libp2p, so expect the specification to change.</strong>
+  .content.section
+    p
+      | While developing IPFS, we came to learn about the several challenges imposed by having to run a distributed file system on top of heterogeneous devices, with diferent network setups and capabilities. During this process, we had to constantly revisit the whole network stack and create solutions to overcome the obstacles imposed by design decisions of the several layers and protocols, without breaking compatibility or recreating technologies. This was a tedious, time consuming process.
+    p
+      | Instead of re-inventing the wheel every time we need to build a decentralized P2P application, we focused on streamlining the problem by tackling networking complexity in an abstract, general purpose way. The result is libp2p: a framework for simplifying networking with P2P applications. Developers decide on how they want their app to interop with others in the network, favoring configuration and extensibility instead of assumptions about networking setup. The goal is to enable rapid development of P2P applications for everyone.
+    p
+      strong
+        | We are still actively developing libp2p, so expect the specification to change.
 
-      h2 Goals and Requirements
-      p Our goals for libp2p specification and its implementations are:
-      ul
-        li Enable the use of various transports (TCP, UDP, DTLS, uTP, etc)
-        li Efficient use of sockets (connection reuse)
-        li Enable communications between peers to be multiplex over one socket (avoiding handshake overhead)
-        li Enable multiprotocols and respective versions to be used between peers, using a negotiation process.
-        li Be backwards compatible
-        li Work in current systems
-        li Use the current network technologies to its best capability
-        li Have NAT Traversal
-        li Enable connections to be relayed
-        li Enable encrypted channels
+  .content
+    h2 Goals and Requirements
+    p Our goals for libp2p specification and its implementations are:
+    ul
+      li Enable the use of various transports (TCP, UDP, DTLS, uTP, etc)
+      li Efficient use of sockets (connection reuse)
+      li Enable communications between peers to be multiplex over one socket (avoiding handshake overhead)
+      li Enable multiprotocols and respective versions to be used between peers, using a negotiation process.
+      li Be backwards compatible
+      li Work in current systems
+      li Use the current network technologies to its best capability
+      li Have NAT Traversal
+      li Enable connections to be relayed
+      li Enable encrypted channels
 
-      h2 Specifications and Implementations <small>(note: work in progress!)</small>
-      ul
-        li
-          a(href="https://github.com/ipfs/specs/tree/master/libp2p") Specification
-        li
-          a(href="https://github.com/diasdavid/js-libp2p") JavaScript implementation
-        li
-          a(href="https://github.com/ipfs/go-libp2p") Golang implementation
-        li
-          a(href="https://github.com/candeira/py-ipfs/blob/readme-roadmap/README.md") Python
-        li
-          a(href="https://github.com/diasdavid/rust-libp2p") Rust
+  .content
+    a(name="getstarted")
+    h2
+      | Get Started
+      small  (note: work in progress)
+    ul
+      li
+        a(href="https://github.com/ipfs/specs/tree/master/libp2p") Specification
+      li
+        a(href="https://ipfs.io/ipfs/QmRthja4NnZEwXcUNgTKpX86dtGMQxstMbhgnTzmVhrW4D/libp2p-part/ipfs-018.libp2p-part.pdf") Slide deck
+      li
+        a(href="https://github.com/diasdavid/js-libp2p") js-libp2p
+      li
+        a(href="https://github.com/ipfs/go-libp2p") go-libp2p
+    h2 IRC
+    p We"re at #ipfs on Freenode. Join us!
 
-      h2 IRC
-      ul
-        li You can find us at #ipfs on Freenode.
-
-   .col-md-2
+  .content.ipfs
+    a(href="http://ipfs.io")
+      img(src="img/ipfs-logo-black.png")
