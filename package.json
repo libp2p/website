@@ -1,5 +1,5 @@
 {
-  "name": "libp2p-website",
+  "name": "website",
   "version": "0.0.0",
   "description": "Webpage of the libp2p project. A multi protocol approach for a interoperable network stack that follows the 'self description' in favor of assumptions",
   "main": "src/server.js",
@@ -13,7 +13,7 @@
   "engines" : { "node" : "^4.0.0" },
   "repository": {
     "type": "git",
-    "url": "https://github.com/diasdavid/libp2p-website.git"
+    "url": "https://github.com/diasdavid/website.git"
   },
   "keywords": [
     "IPFS"
@@ -21,9 +21,9 @@
   "author": "David Dias <daviddias@ipfs.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diasdavid/libp2p-website/issues"
+    "url": "https://github.com/diasdavid/website/issues"
   },
-  "homepage": "https://github.com/diasdavid/libp2p-website",
+  "homepage": "https://github.com/diasdavid/website",
   "devDependencies": {
     "jade": "^1.11.0",
     "nodemon": "^1.7.1"
