@@ -8,18 +8,46 @@ website
 
 ![](https://raw.githubusercontent.com/diasdavid/specs/libp2p-spec/protocol/network/figs/logo.png)
 
-# Development
+# Install
 
-Make sure to have a ipfs daemon running and leverage nodemon for the win!
+You need to have [Hugo](https://gohugo.io/). See the install instructions on their website.
 
+## Installing more themes
+
+This Hugo theme adopted from the [Air theme](https://github.com/syui/hugo-theme-air).
+
+Hugo allows us to install different themes easily.
+
+    mkdir themes
+    cd themes
+    git clone https://github.com/syui/hugo-theme-air
+
+## Build your website with this theme
+
+    hugo server -t hugo-theme-air
+
+# Usage
+
+## Preview
+
+
+```bash
+$ hugo server
+# Open 127.0.0.1:1313
 ```
-$ npm run mon
-# Then open localhost:9090
+
+## Hosting
+
+```bash
+# build
+$ hugo
+
+$ ipfs add -r public
 ```
 
 -----
 
-structure
+## structure
 - description
 - goal (what tries to achieve and overcome)
 - requirements (from technology, ecosystem, etc)

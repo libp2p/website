@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" 7 Properties &middot;  libp2p" />
+  	<meta property="og:site_name" content="libp2p" />
+  	<meta property="og:url" content="/specs/7-properties/" />
+    
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="0001-01-01T00:00:00Z" />
+
+    
+    
+
+  <title>
+     7 Properties &middot;  libp2p
+  </title>
+
+    <meta name="description" content="make peer-to-peer great again" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+	  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    
+    <link rel="stylesheet" type="text/css" href="../../css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="index.xml" rel="alternate" type="application/rss+xml" title="libp2p" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.16" />
+
+    <link rel="canonical" href="../../specs/7-properties/" />
+
+    
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="../../js/particles.js"></script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+<header class="main-header " style="background-image: url(images/user.jpg)">
+
+    <nav class="main-nav overlay clearfix">
+        
+    </nav>
+<div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+              <a class="btn-bootstrap-2" href="../../">libp2p</a>
+          </h1>
+          <h2 class="page-description">make peer-to-peer great again</h2>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+  <main id="content" class="content" role="main">
+
+
+  <article class="post specs">
+
+    <header class="post-header">
+        <h1 class="post-title">7 Properties</h1>
+        <section class="post-meta">
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<h2 id="7-1-communication-model-streams">7.1 Communication Model - Streams</h2>
+
+<p>The Network layer handles all the problems of connecting to a peer, and exposes
+simple bidirectional streams. Users can both open a new stream
+(<code>NewStream</code>) and register a stream handler (<code>SetStreamHandler</code>). The user
+is then free to implement whatever wire messaging protocol she desires. This
+makes it easy to build peer-to-peer protocols, as the complexities of
+connectivity, multi-transport support, flow control, and so on, are handled.</p>
+
+<p>To help capture the model, consider that:</p>
+
+<ul>
+<li><code>NewStream</code> is similar to making a Request in an HTTP client.</li>
+<li><code>SetStreamHandler</code> is similar to registering a URL handler in an HTTP server</li>
+</ul>
+
+<p>So a protocol, such as a DHT, could:</p>
+
+<pre><code class="language-go">node := p2p.NewNode(peerid)
+
+// register a handler, here it is simply echoing everything.
+node.SetStreamHandler(&quot;/helloworld&quot;, func (s Stream) {
+  io.Copy(s, s)
+})
+
+// make a request.
+buf1 := []byte(&quot;Hello World!&quot;)
+buf2 := make([]byte, len(buf1))
+
+stream, _ := node.NewStream(&quot;/helloworld&quot;, peerid) // open a new stream
+stream.Write(buf1)  // write to the remote
+stream.Read(buf2)   // read what was sent back
+fmt.Println(buf2)   // print what was sent back
+</code></pre>
+
+<h2 id="7-2-ports-constrained-entrypoints">7.2 Ports - Constrained Entrypoints</h2>
+
+<p>In the Internet of 2015, we have a processing model where a program may be
+running without the ability to open multiple &ndash; or even single &ndash; network
+ports. Most hosts are behind NAT, whether of the household ISP variety or the new
+containerized data-center type. And some programs may even be running in
+browsers, with no ability to open sockets directly (sort of). This presents
+challenges to completely peer-to-peer networks that aspire to connect <em>any</em>
+hosts together &ndash; whether they&rsquo;re running on a page in the browser, or in
+a container within a container.</p>
+
+<p>IPFS only needs a single channel of communication with the rest of the
+network. This may be a single TCP or UDP port, or a single connection
+through WebSockets or WebRTC. In a sense, the role of the TCP/UDP network
+stack &ndash; i.e. multiplexing applications and connections &ndash; may now be forced
+to happen at the application level.</p>
+
+<h2 id="7-3-transport-protocols">7.3 Transport Protocols</h2>
+
+<p>IPFS is transport-agnostic. It can run on any transport protocol. The
+<code>ipfs-addr</code> format (which is an IPFS-specific
+<a href="https://github.com/jbenet/multiaddr">multiaddr</a>) describes the transport.
+For example:</p>
+
+<pre><code class="language-sh"># ipv4 + tcp
+/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC
+
+# ipv6 + tcp
+/ip6/2601:9:4f82:5fff:aefd:ecff:fe0b:7cfe/tcp/1031/ipfs/QmRzjtZsTqL1bMdoJDwsC6ZnDX1PW1vTiav1xewHYAPJNT
+
+# ipv4 + udp + udt
+/ip4/104.131.131.82/udp/4001/udt/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ
+
+# ipv4 + udp + utp
+/ip4/104.131.67.168/udp/1038/utp/ipfs/QmU184wLPg7afQjBjwUUFkeJ98Fp81GhHGurWvMqwvWEQN
+</code></pre>
+
+<p>IPFS delegates the transport dialing to a multiaddr-based network package, such
+as <a href="https://github.com/jbenet/go-multiaddr-net">go-multiaddr-net</a>. It is
+advisable to build modules like this in other languages, and scope the
+implementation of other transport protocols.</p>
+
+<p>Some of the transport protocols we will be using:</p>
+
+<ul>
+<li>UTP</li>
+<li>UDT</li>
+<li>SCTP</li>
+<li>WebRTC (SCTP, etc)</li>
+<li>WebSockets</li>
+<li>TCP Remy</li>
+</ul>
+
+<h2 id="7-4-non-ip-networks">7.4 Non-IP Networks</h2>
+
+<p>Efforts like <a href="http://named-data.net">NDN</a> and
+<a href="http://www.cs.cmu.edu/~xia/">XIA</a> are new architectures for the Internet,
+which are closer to the model IPFS uses than what IP provides today. IPFS
+will be able to operate on top of these architectures trivially, as there
+are no assumptions made about the network stack in the protocol. Implementations
+will likely need to change, but changing implementations is vastly easier than
+changing protocols.</p>
+
+<h2 id="7-5-on-the-wire">7.5 On the wire</h2>
+
+<p>We have the <strong>hard constraint</strong> of making IPFS work across <em>any</em> duplex stream (an outgoing and an incoming stream pair, any arbitrary connection) and work on <em>any</em> platform.</p>
+
+<p>To make this work, IPFS has to solve a few problems:</p>
+
+<ul>
+<li><a href="#751-protocol-multiplexing">Protocol Multiplexing</a> - running multiple protocols over the same stream
+
+<ul>
+<li><a href="#752-multistream-self-describing-protocol-stream">multistream</a> - self-describing protocol streams</li>
+<li><a href="#753-multistream-selector-self-describing-protocol-stream-selector">multistream-select</a> - a self-describing protocol selector</li>
+<li><a href="#754-stream-multiplexing">Stream Multiplexing</a> - running many independent streams over the same wire</li>
+</ul></li>
+<li><a href="#755-portable-encodings">Portable Encodings</a> - using portable serialization formats</li>
+<li><a href="#756-secure-communication">Secure Communications</a> - using ciphersuites to establish security and privacy (like TLS)</li>
+</ul>
+
+<h3 id="7-5-1-protocol-multiplexing">7.5.1 Protocol-Multiplexing</h3>
+
+<p>Protocol Multiplexing means running multiple different protocols over the same stream. This could happen sequentially (one after the other), or concurrently (at the same time, with their messages interleaved). We achieve protocol multiplexing using three pieces:</p>
+
+<ul>
+<li><a href="#752-multistream-self-describing-protocol-stream">multistream</a> - self-describing protocol streams</li>
+<li><a href="#753-multistream-selector-self-describing-protocol-stream-selector">multistream-select</a> - a self-describing protocol selector</li>
+<li><a href="#754-stream-multiplexing">Stream Multiplexing</a> - running many independent streams over the same wire</li>
+</ul>
+
+<h3 id="7-5-2-multistream-self-describing-protocol-stream">7.5.2 multistream - self-describing protocol stream</h3>
+
+<p><a href="https://github.com/jbenet/multistream">multistream</a> is a self-describing protocol stream format. It is extremely simple. Its goal is to define a way to add headers to protocols that describe the protocol itself. It is sort of like adding versions to a protocol, but extremely explicit.</p>
+
+<p>For example:</p>
+
+<pre><code>/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-dht/0.2.3
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+...
+</code></pre>
+
+<h3 id="7-5-3-multistream-selector-self-describing-protocol-stream-selector">7.5.3 multistream-selector - self-describing protocol stream selector</h3>
+
+<p><a href="https://github.com/jbenet/multistream/tree/master/multistream">multistream-select</a> is a simple <a href="https://github.com/jbenet/multistream">multistream</a> protocol that allows listing and selecting other protocols. This means that Protomux has a list of registered protocols, listens for one, and then <em>nests</em> (or upgrades) the connection to speak the registered protocol. This takes direct advantage of multistream: it enables interleaving multiple protocols, as well as inspecting what protocols might be spoken by the remote endpoint.</p>
+
+<p>For example:</p>
+
+<pre><code>/ipfs/QmdRKVhvzyATs3L6dosSb6w8hKuqfZK2SyPVqcYJ5VLYa2/multistream-select/0.3.0
+/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-dht/0.2.3
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+...
+</code></pre>
+
+<h3 id="7-5-4-stream-multiplexing">7.5.4 Stream Multiplexing</h3>
+
+<p>Stream Multiplexing is the process of multiplexing (or combining) many different streams into a single one. This is a complicated subject because it enables protocols to run concurrently over the same wire, and all sorts of notions regarding fairness, flow control, head-of-line blocking, etc. start affecting the protocols. In practice, stream multiplexing is well understood and there are many stream multiplexing protocols. To name a few:</p>
+
+<ul>
+<li>HTTP/2</li>
+<li>SPDY</li>
+<li>QUIC</li>
+<li>SSH</li>
+</ul>
+
+<p>IPFS nodes are free to support whatever stream multiplexors they wish, on top of the default one. The default one is there to enable even the simplest of nodes to speak multiple protocols at once. The default multiplexor will be HTTP/2 (or maybe QUIC?), but implementations for it are sparse, so we are beginning with SPDY. We simply select which protocol to use with a multistream header.</p>
+
+<p>For example:</p>
+
+<pre><code>/ipfs/QmdRKVhvzyATs3L6dosSb6w8hKuqfZK2SyPVqcYJ5VLYa2/multistream-select/0.3.0
+/ipfs/Qmb4d8ZLuqnnVptqTxwqt3aFqgPYruAbfeksvRV1Ds8Gri/spdy/3
+&lt;spdy-header-opening-a-stream-0&gt;
+/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-dht/0.2.3
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;spdy-header-opening-a-stream-1&gt;
+/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-bitswap/0.3.0
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+&lt;spdy-header-selecting-stream-0&gt;
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;spdy-header-selecting-stream-1&gt;
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+...
+</code></pre>
+
+<h3 id="7-5-5-portable-encodings">7.5.5 Portable Encodings</h3>
+
+<p>In order to be ubiquitous, we <em>must</em> use hyper-portable format encodings, those that are easy to use in various other platforms. Ideally these encodings are well-tested in the wild, and widely used. There may be cases where multiple encodings have to be supported (and hence we may need a <a href="https://github.com/jbenet/multicodec">multicodec</a> self-describing encoding), but this has so far not been needed.
+For now, we use <a href="https://github.com/google/protobuf">protobuf</a> for all protocol messages exclusively, but other good candidates are <a href="https://capnproto.org/">capnp</a>, <a href="http://bsonspec.org/">bson</a>, and <a href="http://ubjson.org/">ubjson</a>.</p>
+
+<h3 id="7-5-6-secure-communications">7.5.6 Secure Communications</h3>
+
+<p>The wire protocol is &ndash; of course &ndash; wrapped with encryption. We use cyphersuites similar to TLS. This is explained further in the <a href="./#encryption">network spec</a>.</p>
+
+<h3 id="7-5-7-protocol-multicodecs">7.5.7 Protocol Multicodecs</h3>
+
+<p>Here, we present a table with the multicodecs defined for each IPFS protocol that has a wire componenent. This list may change over time and currently exists as a guide for implementation.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">protocol</th>
+<th align="left">multicodec</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">secio</td>
+<td align="left">/secio/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">TLS</td>
+<td align="left">/tls/1.3.0</td>
+</tr>
+
+<tr>
+<td align="left">plaintext</td>
+<td align="left">/plaintext/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">spdy</td>
+<td align="left">/spdy/3.1.0</td>
+</tr>
+
+<tr>
+<td align="left">yamux</td>
+<td align="left">/yamux/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">multiplex</td>
+<td align="left">/multiplex/6.7.0</td>
+</tr>
+
+<tr>
+<td align="left">identify</td>
+<td align="left">/ipfs/id/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">ping</td>
+<td align="left">/ipfs/ping/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">relay</td>
+<td align="left">/ipfs/relay/line/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">diagnostics</td>
+<td align="left">/ipfs/diag/net/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">Kademlia DHT</td>
+<td align="left">/ipfs/kad/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">bitswap</td>
+<td align="left">/ipfs/bitswap/1.0.0</td>
+</tr>
+</tbody>
+</table>
+
+    </section>
+
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">libp2p</a> All rights reserved - 2016</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+
+</body>
+</html>
+

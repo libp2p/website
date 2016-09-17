@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" 4 Architecture &middot;  libp2p" />
+  	<meta property="og:site_name" content="libp2p" />
+  	<meta property="og:url" content="/specs/4-architecture/" />
+    
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="0001-01-01T00:00:00Z" />
+
+    
+    
+
+  <title>
+     4 Architecture &middot;  libp2p
+  </title>
+
+    <meta name="description" content="make peer-to-peer great again" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+	  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    
+    <link rel="stylesheet" type="text/css" href="../../css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="index.xml" rel="alternate" type="application/rss+xml" title="libp2p" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.16" />
+
+    <link rel="canonical" href="../../specs/4-architecture/" />
+
+    
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="../../js/particles.js"></script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+<header class="main-header " style="background-image: url(images/user.jpg)">
+
+    <nav class="main-nav overlay clearfix">
+        
+    </nav>
+<div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+              <a class="btn-bootstrap-2" href="../../">libp2p</a>
+          </h1>
+          <h2 class="page-description">make peer-to-peer great again</h2>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+  <main id="content" class="content" role="main">
+
+
+  <article class="post specs">
+
+    <header class="post-header">
+        <h1 class="post-title">4 Architecture</h1>
+        <section class="post-meta">
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><code>libp2p</code> was designed around the Unix Philosophy of creating small components that are easy to understand and test. These components should also be able to be swapped in order to accomodate different technologies or scenarios and also make it feasible to upgrade them over time.</p>
+
+<p>Although different peers can support different protocols depending on their capabilities, any peer can act as a dialer and/or a listener for connections from other peers, connections that once established can be reused from both ends, removing the distinction between clients and servers.</p>
+
+<p>The <code>libp2p</code> interface acts as a thin veneer over a multitude of subsystems that are required in order for peers to be able to communicate. These subsystems are allowed to be built on top of other subsystems as long as they respect the standardized interface. The main areas where these subsystems fit are:</p>
+
+<ul>
+<li>Peer Routing - Mechanism to decide which peers to use for routing particular messages. This routing can be done recursively, iteratively or even in a broadcast/multicast mode.</li>
+<li>Swarm - Handles everything that touches the &lsquo;opening a stream&rsquo; part of <code>libp2p</code>, from protocol muxing, stream muxing, NAT traversal and connection relaying, while being multi-transport.</li>
+<li>Distributed Record Store - A system to store and distribute records. Records are small entries used by other systems for signaling, establishing links, announcing peers or content, and so on. They have a similar role to DNS in the broader Internet.</li>
+<li>Discovery - Finding or identifying other peers in the network.</li>
+</ul>
+
+<p>Each of these subsystems exposes a well known interface (see <a href="6-interfaces.md">chapter 6</a> for Interfaces) and may use each other in order to fulfil their goal. A global overview of the system is:</p>
+
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────┐
+│                                  libp2p                                         │
+└─────────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────┐┌─────────────────┐┌──────────────────────────┐┌───────────────┐
+│   Peer Routing  ││      Swarm      ││ Distributed Record Store ││  Discovery    │
+└─────────────────┘└─────────────────┘└──────────────────────────┘└───────────────┘
+</code></pre>
+
+<h2 id="4-1-peer-routing">4.1 Peer Routing</h2>
+
+<p>A Peer Routing subsystem exposes an interface to identify which peers a message should be routed to in the DHT. It receives a key and must return one or more <code>PeerInfo</code> objects.</p>
+
+<p>We present two examples of possible Peer Routing subsystems, the first based on a the Kademlia DHT and the second based on mDNS. Nevertheless, other Peer Routing mechanisms can be implemented, as long as they fulfil the same expectation and interface.</p>
+
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│       Peer Routing                                           │
+│                                                              │
+│┌──────────────┐┌────────────────┐┌──────────────────────────┐│
+││ kad-routing  ││ mDNS-routing   ││ other-routing-mechanisms ││
+││              ││                ││                          ││
+││              ││                ││                          ││
+│└──────────────┘└────────────────┘└──────────────────────────┘│
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+
+<h3 id="4-1-1-kad-routing">4.1.1 kad-routing</h3>
+
+<p>kad-routing implements the Kademlia Routing table, where each peer holds a set of k-buckets, each of them containing several <code>PeerInfo</code> objects from other peers in the network.</p>
+
+<h3 id="4-1-2-mdns-routing">4.1.2 mDNS-routing</h3>
+
+<p>mDNS-routing uses mDNS probes to identify if local area network peers have a given key or they are simply present.</p>
+
+<h2 id="4-2-swarm">4.2 Swarm</h2>
+
+<h3 id="4-2-1-stream-muxer">4.2.1 Stream Muxer</h3>
+
+<p>The stream muxer must implement the interface offered by <a href="https://github.com/diasdavid/interface-stream-muxer">interface-stream-muxer</a>.</p>
+
+<h3 id="4-2-2-protocol-muxer">4.2.2 Protocol Muxer</h3>
+
+<p>Protocol muxing is handled on the application level instead of the conventional way at the port level (where different services/protocols listen at different ports). This enables us to support several protocols to be muxed in the same socket, saving the cost of doing NAT traversal for more than one port.</p>
+
+<p>Protocol multiplexing is done through <a href="https://github.com/jbenet/multistream"><code>multistream</code></a>, a protocol to negotiate different types of streams (protocols) using <a href="https://github.com/jbenet/multicodec"><code>multicodec</code></a>.</p>
+
+<h3 id="4-2-3-transport">4.2.3 Transport</h3>
+
+<h3 id="4-2-4-crypto">4.2.4 Crypto</h3>
+
+<h3 id="4-2-5-identify">4.2.5 Identify</h3>
+
+<p><strong>Identify</strong> is one of the protocols mounted on top of Swarm, our Connection handler. However, it follows and respects the same pattern as any other protocol when it comes to mounting it on top of Swarm. Identify enables us to trade <code>listenAddrs</code> and <code>observedAddrs</code> between peers, which is crucial for the working of IPFS. Since every socket open implements <code>REUSEPORT</code>, an <code>observedAddr</code> by another peer can enable a third peer to connect to us, since the port will be already open and redirect to us on a NAT.</p>
+
+<h3 id="4-2-6-relay">4.2.6 Relay</h3>
+
+<h2 id="4-3-distributed-record-store">4.3 Distributed Record Store</h2>
+
+<h3 id="4-3-1-record">4.3.1 Record</h3>
+
+<p>Follows <a href="../iprs-interplanetary-record-system">IPRS</a>.</p>
+
+<h3 id="4-3-2-abstract-record-store">4.3.2 abstract-record-store</h3>
+
+<h3 id="4-3-3-kad-record-store">4.3.3 kad-record-store</h3>
+
+<h3 id="4-3-4-mdns-record-store">4.3.4 mDNS-record-store</h3>
+
+<h3 id="4-3-5-s3-record-store">4.3.5 s3-record-store</h3>
+
+<h2 id="4-4-discovery">4.4 Discovery</h2>
+
+<h3 id="4-4-1-mdns-discovery">4.4.1 mDNS-discovery</h3>
+
+<p>mDNS-discovery is a Discovery Protocol that uses <a href="https://en.wikipedia.org/wiki/Multicast_DNS">mDNS</a> over local area networks. It emits mDNS beacons to find if there are more peers available. Local area network peers are very useful to peer-to-peer protocols, because of their low latency links.</p>
+
+<p>mDNS-discovery is a standalone protocol and does not depend on any other <code>libp2p</code> protocol. mDNS-discovery can yield peers available in the local area network, without relying on other infrastructure. This is particularly useful in intranets, networks disconnected from the Internet backbone, and networks which temporarily lose links.</p>
+
+<p>mDNS-discovery can be configured per-service (i.e. discover only peers participating in a specific protocol, like IPFS), and with private networks (discover peers belonging to a private network).</p>
+
+<p>We are exploring ways to make mDNS-discovery beacons encrypted (so that other nodes in the local network cannot discern what service is being used), though the nature of mDNS will always reveal local IP addresses.</p>
+
+<p><strong>Privacy note:</strong> mDNS advertises in local area networks, which reveals IP addresses to listeners in the same local network. It is not recommended to use this with privacy-sensitive applications or oblivious routing protocols.</p>
+
+<h4 id="4-4-2-random-walk">4.4.2 random-walk</h4>
+
+<p>Random-Walk is a Discovery Protocol for DHTs (and other protocols with routing tables). It makes random DHT queries in order to learn about a large number of peers quickly. This causes the DHT (or other protocols) to converge much faster, at the expense of a small load at the very beginning.</p>
+
+<h4 id="4-4-3-bootstrap-list">4.4.3 bootstrap-list</h4>
+
+<p>Bootstrap-List is a Discovery Protocol that uses local storage to cache the addresses of highly stable (and somewhat trusted) peers available in the network. This allows protocols to &ldquo;find the rest of the network&rdquo;. This is essentially the same way that DNS bootstraps itself (though note that changing the DNS bootstrap list &ndash; the &ldquo;dot domain&rdquo; addresses &ndash; is not easy to do, by design).</p>
+
+<ul>
+<li>The list should be stored in long-term local storage, whatever that means to the local node (e.g. to disk).</li>
+<li>Protocols can ship a default list hardcoded or along with the standard code distribution (like DNS).</li>
+<li>In most cases (and certainly in the case of IPFS) the bootstrap list should be user configurable, as users may wish to establish separate networks, or place their reliance and trust in specific nodes.</li>
+</ul>
+
+    </section>
+
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">libp2p</a> All rights reserved - 2016</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+
+</body>
+</html>
+

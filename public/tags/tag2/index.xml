@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag2 on Libp2p</title>
+    <link>/tags/tag2/</link>
+    <description>Recent content in Tag2 on Libp2p</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>All rights reserved - 2016</copyright>
+    <lastBuildDate>Wed, 14 Sep 2016 13:44:52 -0400</lastBuildDate>
+    <atom:link href="/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>foo</title>
+      <link>/post/post-title/</link>
+      <pubDate>Wed, 14 Sep 2016 13:44:52 -0400</pubDate>
+      
+      <guid>/post/post-title/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
