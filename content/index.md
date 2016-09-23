@@ -5,6 +5,7 @@ type = "index"
 <style>
   a.nav-item {
     margin: 0px 20px;
+    text-decoration: underline;
   }
 
   .green {
@@ -13,8 +14,8 @@ type = "index"
 
 </style>
 
-<div style="text-align:center;padding:30px; margin:0px auto;">
-  <a class="nav-item" href="#home">Home</a>
+<div style="text-align:center; margin:0px auto 60px;">
+  <a class="nav-item" href="#home">Home</a> |
   <a class="nav-item" href="/specs/">Spec</a>
 </div>
 
