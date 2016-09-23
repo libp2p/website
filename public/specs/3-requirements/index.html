@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" 3 Requirements and considerations &middot;  libp2p" />
+  	<meta property="og:site_name" content="libp2p" />
+  	<meta property="og:url" content="/specs/3-requirements/" />
+    
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="0001-01-01T00:00:00Z" />
+
+    
+    
+
+  <title>
+     3 Requirements and considerations &middot;  libp2p
+  </title>
+
+    <meta name="description" content="make peer-to-peer great again" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+	  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    
+    <link rel="stylesheet" type="text/css" href="../../css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="index.xml" rel="alternate" type="application/rss+xml" title="libp2p" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.16" />
+
+    <link rel="canonical" href="../../specs/3-requirements/" />
+
+    
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="../../js/particles.js"></script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+<header class="main-header " style="background-image: url(images/user.jpg)">
+
+    <nav class="main-nav overlay clearfix">
+        
+    </nav>
+<div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+              <a class="btn-bootstrap-2" href="../../">libp2p</a>
+          </h1>
+          <h2 class="page-description">make peer-to-peer great again</h2>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+  <main id="content" class="content" role="main">
+
+
+  <article class="post specs">
+
+    <header class="post-header">
+        <h1 class="post-title">3 Requirements and considerations</h1>
+        <section class="post-meta">
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<h2 id="3-1-nat-traversal">3.1 NAT traversal</h2>
+
+<p>Network Address Translation is ubiquitous in the Internet. Not only are most consumer devices behind many layers of NAT, but most data center nodes are often behind NAT for security or virtualization reasons. As we move into containerized deployments, this is getting worse. IPFS implementations SHOULD provide a way to traverse NATs, otherwise it is likely that operation will be affected. Even nodes meant to run with real IP addresses must implement NAT traversal techniques, as they may need to establish connections to peers behind NAT.</p>
+
+<p><code>libp2p</code> accomplishes full NAT traversal using an ICE-like protocol. It is not exactly ICE, as IPFS networks provide the possibility of relaying communications over the IPFS protocol itself, for coordinating hole-punching or even relaying communication.</p>
+
+<p>It is recommended that implementations use one of the many NAT traversal libraries available, such as <code>libnice</code>, <code>libwebrtc</code>, or <code>natty</code>. However, NAT traversal must be interoperable.</p>
+
+<h2 id="3-2-relay">3.2 Relay</h2>
+
+<p>Unfortunately, due to symmetric NATs, container and VM NATs, and other impossible-to-bypass NATs, <code>libp2p</code> MUST fallback to relaying communication to establish a full connectivity graph. To be complete, implementations MUST support relay, though it SHOULD be optional and able to be turned off by end users.</p>
+
+<h2 id="3-3-encryption">3.3 Encryption</h2>
+
+<p>Communications on <code>libp2p</code> may be:</p>
+
+<ul>
+<li><strong>encrypted</strong></li>
+<li><strong>signed</strong> (not encrypted)</li>
+<li><strong>clear</strong> (not encrypted, not signed)</li>
+</ul>
+
+<p>We take both security and performance seriously. We recognize that encryption is not viable for some in-datacenter high performance use cases.</p>
+
+<p>We recommend that:</p>
+
+<ul>
+<li>implementations encrypt all communications by default</li>
+<li>implementations are audited</li>
+<li>unless absolutely necessary, users normally operate with encrypted communications only.</li>
+</ul>
+
+<p><code>libp2p</code> uses cyphersuites like TLS.</p>
+
+<p><strong>Note:</strong> We do not use TLS directly, because we do not want the CA system baggage. Most TLS implementations are very big. Since the <code>libp2p</code> model begins with keys, <code>libp2p</code> only needs to apply ciphers. This is a minimal portion of the whole TLS standard.</p>
+
+<h2 id="3-4-transport-agnostic">3.4 Transport agnostic</h2>
+
+<p><code>libp2p</code> is transport agnostic, so it can run over any transport protocol. It does not even depend on IP; it may run on top of NDN, XIA, and other new Internet architectures.</p>
+
+<p>In order to reason about possible transports, <code>libp2p</code> uses <a href="https://github.com/jbenet/multiaddr">multiaddr</a>, a self-describing addressing format. This makes it possible for <code>libp2p</code> to treat addresses opaquely everywhere in the system, and have support for various transport protocols in the network layer. The actual format of addresses in <code>libp2p</code> is <code>ipfs-addr</code>, a multiaddr that ends with an IPFS node id. For example, these are all valid <code>ipfs-addrs</code>:</p>
+
+<pre><code># IPFS over TCP over IPv6 (typical TCP)
+/ip6/fe80::8823:6dff:fee7:f172/tcp/4001/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over uTP over UDP over IPv4 (UDP-shimmed transport)
+/ip4/162.246.145.218/udp/4001/utp/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over IPv6 (unreliable)
+/ip6/fe80::8823:6dff:fee7:f172/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over TCP over IPv4 over TCP over IPv4 (proxy)
+/ip4/162.246.145.218/tcp/7650/ip4/192.168.0.1/tcp/4001/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over Ethernet (no IP)
+/ether/ac:fd:ec:0b:7c:fe/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+</code></pre>
+
+<p><strong>Note:</strong> At this time, no unreliable implementations exist. The protocol&rsquo;s interface for defining and using unreliable transport has not been defined.</p>
+
+<p><strong>TODO:</strong> Define how unreliable transport would work. Base it on WebRTC.</p>
+
+<h2 id="3-5-multi-multiplexing">3.5 Multi-multiplexing</h2>
+
+<p>The <code>libp2p</code> protocol is a collection of multiple protocols. In order to conserve resources, and to make connectivity easier, <code>libp2p</code> can perform all its operations through a single port, such as a TCP or UDP port, depending on the transports used. <code>libp2p</code> can multiplex its many protocols through point-to-point connections. This multiplexing is for both reliable streams and unreliable datagrams.</p>
+
+<p><code>libp2p</code> is pragmatic. It seeks to be usable in as many settings as possible, to be modular and flexible to fit various use cases, and to force as few choices as possible. Thus the <code>libp2p</code> network layer provides what we&rsquo;re loosely referring to as &ldquo;multi-multiplexing&rdquo;:</p>
+
+<ul>
+<li>can multiplex multiple listen network interfaces</li>
+<li>can multiplex multiple transport protocols</li>
+<li>can multiplex multiple connections per peer</li>
+<li>can multiplex multiple client protocols</li>
+<li>can multiplex multiple streams per protocol, per connection (SPDY, HTTP2, QUIC, SSH)</li>
+<li>has flow control (backpressure, fairness)</li>
+<li>encrypts each connection with a different ephemeral key</li>
+</ul>
+
+<p>To give an example, imagine a single IPFS node that:</p>
+
+<ul>
+<li>listens on a particular TCP/IP address</li>
+<li>listens on a different TCP/IP address</li>
+<li>listens on a SCTP/UDP/IP address</li>
+<li>listens on a UDT/UDP/IP address</li>
+<li>has multiple connections to another node X</li>
+<li>has multiple connections to another node Y</li>
+<li>has multiple streams open per connection</li>
+<li>multiplexes streams over HTTP2 to node X</li>
+<li>multiplexes streams over SSH to node Y</li>
+<li>one protocol mounted on top of <code>libp2p</code> uses one stream per peer</li>
+<li>one protocol mounted on top of <code>libp2p</code> uses multiple streams per peer</li>
+</ul>
+
+<p>Not providing this level of flexbility makes it impossible to use <code>libp2p</code> in various platforms, use cases, or network setups. It is not important that all implementations support all choices; what is critical is that the spec is flexible enough to allow implementations to use precisely what they need. This ensures that complex user or application constraints do not rule out <code>libp2p</code> as an option.</p>
+
+<h2 id="3-6-enable-several-network-topologies">3.6 Enable several network topologies</h2>
+
+<p>Different systems have different requirements and with that comes different topologies. In the P2P literature we can find these topologies being enumerated as: unstructured, structured, hybrid and centralized.</p>
+
+<p>Centralized topologies are the most common to find in Web Applications infrastructures, it requires for a given service or services to be present at all times in a known static location, so that other services can access them. Unstructured networks represent a type of P2P networks where the network topology is completely random, or at least non deterministic, while structured networks have a implicit way of organizing themselves. Hybrid networks are a mix of the last two.</p>
+
+<p>With this in consideration, <code>libp2p</code> must be ready to perform different routing mechanisms and peer discovery, in order to build the routing tables that will enable services to propagate messages or to find each other.</p>
+
+<h2 id="3-7-resource-discovery">3.7 Resource discovery</h2>
+
+<p><code>libp2p</code> also solves the problem with discoverability of resources inside of a network through <em>records</em>.  A record is a unit of data that can be digitally signed, timestamped and/or used with other methods to give it an ephemeral validity. These records hold pieces of information such as location or availability of resources present in the network. These resources can be data, storage, CPU cycles and other types of services.</p>
+
+<p><code>libp2p</code> must not put a constraint on the location of resources, but instead offer ways to find them easily in the network or use a side channel.</p>
+
+    </section>
+
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">libp2p</a> All rights reserved - 2016</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+
+</body>
+</html>
+

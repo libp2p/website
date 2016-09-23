@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" libp2p" />
+  	<meta property="og:site_name" content="libp2p" />
+  	<meta property="og:url" content="/" />
+    
+    
+    <meta property="og:type" content="website" />
+    
+
+  <title>
+     libp2p
+  </title>
+
+    <meta name="description" content="make peer-to-peer great again" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+	  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    
+    <link rel="stylesheet" type="text/css" href="./css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+      
+        <link href="./index.xml" rel="alternate" type="application/rss+xml" title="libp2p" />
+      
+    
+    <meta name="generator" content="Hugo 0.16" />
+
+    <link rel="canonical" href="./" />
+
+    
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="./js/particles.js"></script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header " style="background-image: url(images/user.jpg)">
+
+
+
+    <nav class="main-nav overlay clearfix">
+        
+    </nav>
+<div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+              <a class="btn-bootstrap-2 title-scroll" href="#content">libp2p</a>
+          </h1>
+          <h2 class="page-description">make peer-to-peer great again</h2>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+<main id="content" class="content" role="main">
+
+    
+        
+    
+        
+    
+         
+
+        <article class="post ">
+
+            <header class="post-header">
+                <h1 class="post-title"></h1>
+            </header>
+
+            <section class="post-content">
+              
+
+<style>
+  a.nav-item {
+    margin: 0px 20px;
+  }
+
+  .green {
+    color: #2ecc40;
+  }
+
+</style>
+
+<div style="text-align:center;padding:30px; margin:0px auto;">
+  <a class="nav-item" href="#home">Home</a>
+  <a class="nav-item" href="./specs/">Spec</a>
+</div>
+
+<p><strong>libp2p</strong>: a networking stack and library modularized out of <a href="https://ipfs.io">The IPFS Project</a>, and bundled separately for other tools to use.</p>
+
+<p>libp2p is the product of a long, and arduous quest of understanding &ndash; a deep dive into the internet&rsquo;s network stack, and plentiful peer-to-peer protocols from the past.</p>
+
+<p>Building large scale peer-to-peer systems has been complex and difficult in the last 15 years, and libp2p is a way to fix that. It is a &ldquo;network stack&rdquo; &ndash; a protocol suite &ndash; that cleanly separates concerns, and enables sophisticated applications to only use the protocols they absolutely need, without giving up interoperability and upgradeability. libp2p grew out of IPFS, but it is built so that lots of people can use it, for lots of different projects.</p>
+
+<p>We will be writing a set of docs, posts, tutorials, and talks to explain what p2p is, why it is tremendously useful, and how it can help your existing and new projects.</p>
+
+<h2 id="goals-and-requirements">Goals and Requirements</h2>
+
+<p>Our goals for the libp2p specification and its implementations are:</p>
+
+<ul>
+<li>Enabling the use of various transports (TCP, UDP, DTLS, uTP, etc),</li>
+<li>Efficient use of sockets (connection reuse),</li>
+<li>Enabling communications between peers to be multiplexed over one socket (avoiding handshake overhead),</li>
+<li>Enabling multiprotocols and respective versions to be used between peers, using a negotiation process,</li>
+<li>To be backwards compatible,</li>
+<li>To work in current systems,</li>
+<li>Using the current network technologies to its best capability,</li>
+<li>Having NAT Traversal,</li>
+<li>Enableing connections to be relayed,</li>
+<li>Enabling encrypted channels.</li>
+</ul>
+
+<h2 id="implementations-small-note-work-in-progress-small">Implementations <small>(note: work in progress!)</small></h2>
+
+<ul>
+<li><a href="https://github.com/ipfs/specs/tree/master/protocol/network">Specification</a></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">js</th>
+<th align="center">go</th>
+<th align="center">swift</th>
+<th align="center">python</th>
+<th align="center">rust</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">libp2p</td>
+<td align="center"><a href="https://github.com/libp2p/js-libp2p" class="green">js-libp2p</a></td>
+<td align="center"><a href="https://github.com/libp2p/go-libp2p" class="green">go-libp2p</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<!-- I'm not sure how best to display this information. Here are the modules we currently have in this org:
+
+go-libp2p
+go-testutil
+interface-connection
+interface-libp2p
+interface-peer-routing
+interface-record-store
+interface-stream-muxer
+interface-transport
+js-libp2p
+js-libp2p-crypto
+js-libp2p-distributed-record-store
+js-libp2p-half-closed-connection-upgrade
+js-libp2p-identify
+js-libp2p-kad-record-store
+js-libp2p-kad-routing
+js-libp2p-mdns-discovery
+js-libp2p-multiplex
+js-libp2p-ping
+js-libp2p-railing
+js-libp2p-random-walk
+js-libp2p-record
+js-libp2p-secio
+js-libp2p-spdy
+js-libp2p-swarm
+js-libp2p-tcp
+js-libp2p-udp
+js-libp2p-udt
+js-libp2p-utp
+js-libp2p-webrtc-star
+js-libp2p-websockets
+js-peer-book
+js-peer-id
+js-peer-info
+js-spdy-stream-muxer
+libp2p
+pubsub
+
+That is going to be a seriously js-* heavy graph. -->
+
+<h2 id="you-can-make-libp2p-better">You can make libp2p better!</h2>
+
+<p>Libp2p is a work in progress. As such, there&rsquo;s a few things you can do right now to help out:</p>
+
+<ul>
+<li><strong>Read the spec!</strong> If you have any questions or comments, issues or changes, weigh in on <a href="https://github.com/libp2p/specs">libp2p/specs</a>.</li>
+<li>Go through the modules above and <strong>check out existing issues</strong>. This would be especially useful for modules in active development. Some knowledge of IPFS/libp2p may be required, as well as the infrasture behind it - for instance, you may need to read up on p2p and more complex operations like muxing to be able to help technically.</li>
+<li><strong>Perform code reviews</strong>. Most of this has been developed by @diasdavid, which means that more eyes will help a) speed the project along b) ensure quality and c) reduce possible future bugs.</li>
+<li><strong>Add tests</strong>. There can never be enough tests.</li>
+<li><strong>Talk to us.</strong> You can find us on IRC at #ipfs on Freenode.</li>
+</ul>
+
+            </section>
+
+        </article>
+
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+</main>
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">libp2p</a> All rights reserved - 2016</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+</html>
+

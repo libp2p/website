@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" Specs &middot;  libp2p" />
+  	<meta property="og:site_name" content="libp2p" />
+  	<meta property="og:url" content="/specs/" />
+    
+    
+    <meta property="og:type" content="website" />
+    
+
+  <title>
+     Specs &middot;  libp2p
+  </title>
+
+    <meta name="description" content="make peer-to-peer great again" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+	  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    
+    <link rel="stylesheet" type="text/css" href="../css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="index.xml" rel="alternate" type="application/rss+xml" title="libp2p" />
+      
+      
+        <link href="../specs/index.xml" rel="alternate" type="application/rss+xml" title="Specs &middot; libp2p" />
+      
+    
+    <meta name="generator" content="Hugo 0.16" />
+
+    <link rel="canonical" href="../specs/" />
+
+    
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="../js/particles.js"></script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+	<header class="main-header" style="background-image: url(images/user.jpg)">
+
+    <nav class="main-nav overlay clearfix">
+      
+    </nav>
+    <div class="vertical">
+
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+
+              <a class="btn-bootstrap-2" href="../">libp2p</a>
+          </h1>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+<main id="content" class="content" role="main">
+    
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">libp2p</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>Authors:</p>
+
+<ul>
+<li><a href="https://github.com/jbenet">Juan Benet</a></li>
+<li><a href="https://github.com/diasdavid">David Dias</a></li>
+</ul>
+
+<blockquote>
+<p>tl;dr; This document presents <code>libp2p</code>, a modularized and extensible network stack to overcome the networking challenges faced when doing peer-to-peer applications. <code>libp2p</code> is used by IPFS as its networking library.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="abstract">Abstract</h2>
+
+<p>This describes the <a href="https://ipfs.io/">IPFS</a> network protocol. The network layer provides point-to-point transports (reliable and unreliable) between any two IPFS nodes in the network.</p>
+
+<p>This document defines the spec implemented in <code>libp2p</code>.</p>
+
+<h2 id="status-of-this-spec">Status of this spec</h2>
+
+<p><img src="https://img.shields.io/badge/status-wip-orange.svg?style=flat-square" alt="" /></p>
+
+<h2 id="organization-of-this-document">Organization of this document</h2>
+
+<p>This RFC is organized by chapters described on the <em>Table of contents</em> section. Each of the chapters can be found in its own file.</p>
+
+<h2 id="table-of-contents">Table of contents</h2>
+
+<ul>
+<li><a href="1-introduction/">1 Introduction</a>
+
+<ul>
+<li><a href="1-introduction/#1-1-motivation">1.1 Motivation</a></li>
+<li><a href="1-introduction/#12-goals">1.2 Goals</a></li>
+</ul></li>
+<li><a href="2-state-of-the-art/">2 An analysis the state of the art in network stacks</a>
+
+<ul>
+<li><a href="2-state-of-the-art/#21-the-client-server-model">2.1 The client-server model</a></li>
+<li><a href="2-state-of-the-art/#22-categorizing-the-network-stack-protocols-by-solutions">2.2 Categorizing the network stack protocols by solutions</a></li>
+<li><a href="2-state-of-the-art/#23-current-shortcommings">2.3 Current shortcommings</a></li>
+</ul></li>
+<li><a href="3-requirements/">3 Requirements</a>
+
+<ul>
+<li><a href="3-requirements/#31-nat-traversal">3.1 NAT traversal</a></li>
+<li><a href="3-requirements/#32-relay">3.2 Relay</a></li>
+<li><a href="3-requirements/#33-encryption">3.3 Encryption</a></li>
+<li><a href="3-requirements/#34-transport-agnostic">3.4 Transport agnostic</a></li>
+<li><a href="3-requirements/#35-multi-multiplexing">3.5 Multi-multiplexing</a></li>
+<li><a href="3-requirements/#36-enable-several-network-topologies">3.6 Enable several network topologies</a></li>
+<li><a href="3-requirements/#37-resource-discovery">3.7 Resource discovery</a></li>
+</ul></li>
+<li><a href="4-architecture/">4 Architecture</a>
+
+<ul>
+<li><a href="4-architecture/#41-peer-routing">4.1 Peer Routing</a></li>
+<li><a href="4-architecture/#42-swarm">4.2 Swarm</a></li>
+<li><a href="4-architecture/#43-distributed-record-store">4.3 Distributed Record Store</a></li>
+<li><a href="4-architecture/#44-discovery">4.4 Discovery</a></li>
+</ul></li>
+<li><a href="5-datastructures/">5 Data structures</a></li>
+<li><a href="6-interfaces/">6 Interfaces</a>
+
+<ul>
+<li><a href="6-interfaces/#61-libp2p">6.1 libp2p</a></li>
+<li><a href="6-interfaces/#62-peer-routing">6.2 Peer Routing</a></li>
+<li><a href="6-interfaces/#63-swarm">6.3 Swarm</a></li>
+<li><a href="6-interfaces/#64-distributed-record-store">6.4 Distributed Record Store</a></li>
+<li><a href="6-interfaces/#65-peer-discovery">6.5 Peer Discovery</a></li>
+<li><a href="6-interfaces/#66-libp2p-interface-and-ux">6.6 libp2p interface and UX</a></li>
+</ul></li>
+<li><a href="7-properties/">7 Properties</a>
+
+<ul>
+<li><a href="7-properties/#71-communication-model---streams">7.1 Communication Model - Streams</a></li>
+<li><a href="7-properties/#72-ports---constrained-entrypoints">7.2 Ports - Constrained Entrypoints</a></li>
+<li><a href="7-properties/#73-transport-protocols">7.3 Transport Protocol</a></li>
+<li><a href="7-properties/#74-non-ip-networks">7.4 Non-IP Networks</a></li>
+<li><a href="7-properties/#75-on-the-wire">7.5 On the wire</a>
+
+<ul>
+<li><a href="7-properties/#751-protocol-multiplexing">7.5.1 Protocol-Multiplexing</a></li>
+<li><a href="7-properties/#752-multistream---self-describing-protocol-stream">7.5.2 multistream - self-describing protocol stream</a></li>
+<li><a href="7-properties/#753-multistream-selector---self-describing-protocol-stream-selector">7.5.3 multistream-selector - self-describing protocol stream selector</a></li>
+<li><a href="7-properties/#754-stream-multiplexing">7.5.4 Stream Multiplexing</a></li>
+<li><a href="7-properties/#755-portable-encodings">7.5.5 Portable Encodings</a></li>
+<li><a href="7-properties/#756-secure-communications">7.5.6 Secure Communications</a></li>
+</ul></li>
+</ul></li>
+<li><a href="8-implementations/">8 Implementations</a></li>
+<li><a href="9-references/">9 References</a></li>
+</ul>
+
+<h2 id="contribute">Contribute</h2>
+
+<p>Please contribute! <a href="https://github.com/libp2p/spec/issues">Dive into the issues</a>!</p>
+
+<p>Please be aware that all interactions related to multiformats are subject to the IPFS <a href="https://github.com/ipfs/community/blob/master/code-of-conduct.md">Code of Conduct</a>.</p>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">1 Introduction</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>While developing <a href="https://ipfs.io/">IPFS, the InterPlanetary FileSystem</a>, we came to learn about several challenges imposed by having to run a distributed file system on top of heterogeneous devices, with diferent network setups and capabilities. During this process, we had to revisit the whole network stack and elaborate solutions to overcome the obstacles imposed by design decisions of the several layers and protocols, without breaking compatibility or recreating technologies.</p>
+
+<p>In order to build this library, we focused on tackling problems independently, creating less complex solutions with powerful abstractions that, when composed, can offer an environment for a peer-to-peer application to work sucessfuly.</p>
+
+<h2 id="1-1-motivation">1.1 Motivation</h2>
+
+<p><code>libp2p</code> is the result of our collective experience of building a distributed system, in that it puts responsibility on developers to decide how they want an app to interoperate with others in the network, and favors configuration and extensibility instead of making assumptions about the network setup.</p>
+
+<p>In essence, a peer using <code>libp2p</code> should be able to communicate with another peer using a variety of different transports, including connection relay, and talk over different protocols, negotiated on demand.</p>
+
+<h2 id="1-2-goals">1.2 Goals</h2>
+
+<p>Our goals for the <code>libp2p</code> specification and its implementations are:</p>
+
+<ul>
+<li>Enable the use of various:
+
+<ul>
+<li>transports: TCP, UDP, SCTP, UDT, uTP, QUIC, SSH, etc.</li>
+<li>authenticated transports: TLS, DTLS, CurveCP, SSH</li>
+</ul></li>
+<li>Make efficient use of sockets (connection reuse)</li>
+<li>Enable communications between peers to be multiplexed over one socket (avoiding handshake overhead)</li>
+<li>Enable multiprotocols and respective versions to be used between peers, using a negotiation process</li>
+<li>Be backwards compatible</li>
+<li>Work in current systems</li>
+<li>Use the full capabilities of current network technologies</li>
+<li>Have NAT traversal</li>
+<li>Enable connections to be relayed</li>
+<li>Enable encrypted channels</li>
+<li>Make efficient use of underlying transports (e.g. native stream muxing, native auth, etc.)</li>
+</ul>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">2 An analysis of the state of the art in network stacks</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>This section presents to the reader an analysis of the available protocols and architectures for network stacks. The goal is to provide the foundations from which to infer the conclusions and understand why <code>libp2p</code> has the requirements and architecture that it has.</p>
+
+<h2 id="2-1-the-client-server-model">2.1 The client-server model</h2>
+
+<p>The client-server model indicates that both parties at the ends of the channel have different roles, that they support different services and/or have different capabilities, or in other words, that they speak different protocols.</p>
+
+<p>Building client-server applications has been the natural tendency for a number of reasons:</p>
+
+<ul>
+<li>The bandwidth inside a data center is considerably higher than that available for clients to connect to each other.</li>
+<li>Data center resources are considerably cheaper, due to efficient usage and bulk stocking.</li>
+<li>It makes it easier for the developer and system admin to have fine grained control over the application.</li>
+<li>It reduces the number of heteregeneus systems to be handled (although the number is still considerable).</li>
+<li>Systems like NAT make it really hard for client machines to find and talk with each other, forcing a developer to perform very clever hacks to traverse these obstacles.</li>
+<li>Protocols started to be designed with the assumption that a developer will create a client-server application from the start.</li>
+</ul>
+
+<p>We even learned how to hide all the complexity of a distributed system behind gateways on the Internet, using protocols that were designed to perform a point-to-point operation, such as HTTP, making it opaque for the application to see and understand the cascade of service calls made for each request.</p>
+
+<p><code>libp2p</code> offers a move towards dialer-listener interactions, from the client-server listener, where it is not implicit which of the entities, dialer or listener, has which capabilities or is enabled to perform which actions. Setting up a connection between two applications today is a multilayered problem to solve, and these connections should not have a purpose bias, and should instead support several other protocols to work on top of the established connection. In a client-server model, a server sending data without a prior request from the client is known as a push model, which typically adds more complexity; in a dialer-listener model in comparison, both entities can perform requests independently.</p>
+
+<h2 id="2-2-categorizing-the-network-stack-protocols-by-solutions">2.2 Categorizing the network stack protocols by solutions</h2>
+
+<p>Before diving into the <code>libp2p</code> protocols, it is important to understand the large diversity of protocols already in wide use and deployment that help maintain today&rsquo;s simple abstractions. For example, when one thinks about an HTTP connection, one might naively just think that HTTP/TCP/IP are the main protocols involved, but in reality many more protocols participate, depending on the usage, the networks involved, and so on. Protocols like DNS, DHCP, ARP, OSPF, Ethernet, 802.11 (Wi-Fi) and many others get involved. Looking inside ISPs&rsquo; own networks would reveal dozens more.</p>
+
+<p>Additionally, it&rsquo;s worth noting that the traditional 7-layer OSI model characterization does not fit <code>libp2p</code>. Instead, we categorize protocols based on their role, i.e. the problem they solve. The upper layers of the OSI model are geared towards point-to-point links between applications, whereas the <code>libp2p</code> protocols speak more towards various sizes of networks, with various properties, under various different security models. Different <code>libp2p</code> protocols can have the same role (in the OSI model, this would be &ldquo;address the same layer&rdquo;), meaning that multiple protocols can run simultaneously, all addressing one role (instead of one-protocol-per-layer in traditional OSI stacking). For example, bootstrap lists, mDNS, DHT discovery, and PEX are all forms of the role &ldquo;Peer Discovery&rdquo;; they can coexist and even synergize.</p>
+
+<h3 id="2-2-1-establishing-the-physical-link">2.2.1 Establishing the physical link</h3>
+
+<ul>
+<li>Ethernet</li>
+<li>Wi-Fi</li>
+<li>Bluetooth</li>
+<li>USB</li>
+</ul>
+
+<h3 id="2-2-2-addressing-a-machine-or-process">2.2.2 Addressing a machine or process</h3>
+
+<ul>
+<li>IPv4</li>
+<li>IPv6</li>
+<li>Hidden addressing, like SDP</li>
+</ul>
+
+<h3 id="2-2-3-discovering-other-peers-or-services">2.2.3 Discovering other peers or services</h3>
+
+<ul>
+<li>ARP</li>
+<li>DHCP</li>
+<li>DNS</li>
+<li>Onion</li>
+</ul>
+
+<h3 id="2-2-4-routing-messages-through-the-network">2.2.4 Routing messages through the network</h3>
+
+<ul>
+<li>RIP(1, 2)</li>
+<li>OSPF</li>
+<li>PPP</li>
+<li>Tor</li>
+<li>I2P</li>
+<li>cjdns</li>
+</ul>
+
+<h3 id="2-2-5-transport">2.2.5 Transport</h3>
+
+<ul>
+<li>TCP</li>
+<li>UDP</li>
+<li>UDT</li>
+<li>QUIC</li>
+<li>WebRTC data channel</li>
+</ul>
+
+<h3 id="2-2-6-agreed-semantics-for-applications-to-talk-to-each-other">2.2.6 Agreed semantics for applications to talk to each other</h3>
+
+<ul>
+<li>RMI</li>
+<li>Remoting</li>
+<li>RPC</li>
+<li>HTTP</li>
+</ul>
+
+<h2 id="2-3-current-shortcommings">2.3 Current shortcommings</h2>
+
+<p>Although we currently have a panoply of protocols available for our services to communicate, the abundance and variety of solutions creates its own problems. It is currently difficult for an application to be able to support and be available through several transports (e.g. the lack of TCP/UDP stack in browser applications).</p>
+
+<p>There is also no &lsquo;presence linking&rsquo;, meaning that there isn&rsquo;t a notion for a peer to announce itself in several transports, so that other peers can guarantee that it is always the same peer.</p>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">3 Requirements and considerations</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<h2 id="3-1-nat-traversal">3.1 NAT traversal</h2>
+
+<p>Network Address Translation is ubiquitous in the Internet. Not only are most consumer devices behind many layers of NAT, but most data center nodes are often behind NAT for security or virtualization reasons. As we move into containerized deployments, this is getting worse. IPFS implementations SHOULD provide a way to traverse NATs, otherwise it is likely that operation will be affected. Even nodes meant to run with real IP addresses must implement NAT traversal techniques, as they may need to establish connections to peers behind NAT.</p>
+
+<p><code>libp2p</code> accomplishes full NAT traversal using an ICE-like protocol. It is not exactly ICE, as IPFS networks provide the possibility of relaying communications over the IPFS protocol itself, for coordinating hole-punching or even relaying communication.</p>
+
+<p>It is recommended that implementations use one of the many NAT traversal libraries available, such as <code>libnice</code>, <code>libwebrtc</code>, or <code>natty</code>. However, NAT traversal must be interoperable.</p>
+
+<h2 id="3-2-relay">3.2 Relay</h2>
+
+<p>Unfortunately, due to symmetric NATs, container and VM NATs, and other impossible-to-bypass NATs, <code>libp2p</code> MUST fallback to relaying communication to establish a full connectivity graph. To be complete, implementations MUST support relay, though it SHOULD be optional and able to be turned off by end users.</p>
+
+<h2 id="3-3-encryption">3.3 Encryption</h2>
+
+<p>Communications on <code>libp2p</code> may be:</p>
+
+<ul>
+<li><strong>encrypted</strong></li>
+<li><strong>signed</strong> (not encrypted)</li>
+<li><strong>clear</strong> (not encrypted, not signed)</li>
+</ul>
+
+<p>We take both security and performance seriously. We recognize that encryption is not viable for some in-datacenter high performance use cases.</p>
+
+<p>We recommend that:</p>
+
+<ul>
+<li>implementations encrypt all communications by default</li>
+<li>implementations are audited</li>
+<li>unless absolutely necessary, users normally operate with encrypted communications only.</li>
+</ul>
+
+<p><code>libp2p</code> uses cyphersuites like TLS.</p>
+
+<p><strong>Note:</strong> We do not use TLS directly, because we do not want the CA system baggage. Most TLS implementations are very big. Since the <code>libp2p</code> model begins with keys, <code>libp2p</code> only needs to apply ciphers. This is a minimal portion of the whole TLS standard.</p>
+
+<h2 id="3-4-transport-agnostic">3.4 Transport agnostic</h2>
+
+<p><code>libp2p</code> is transport agnostic, so it can run over any transport protocol. It does not even depend on IP; it may run on top of NDN, XIA, and other new Internet architectures.</p>
+
+<p>In order to reason about possible transports, <code>libp2p</code> uses <a href="https://github.com/jbenet/multiaddr">multiaddr</a>, a self-describing addressing format. This makes it possible for <code>libp2p</code> to treat addresses opaquely everywhere in the system, and have support for various transport protocols in the network layer. The actual format of addresses in <code>libp2p</code> is <code>ipfs-addr</code>, a multiaddr that ends with an IPFS node id. For example, these are all valid <code>ipfs-addrs</code>:</p>
+
+<pre><code># IPFS over TCP over IPv6 (typical TCP)
+/ip6/fe80::8823:6dff:fee7:f172/tcp/4001/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over uTP over UDP over IPv4 (UDP-shimmed transport)
+/ip4/162.246.145.218/udp/4001/utp/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over IPv6 (unreliable)
+/ip6/fe80::8823:6dff:fee7:f172/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over TCP over IPv4 over TCP over IPv4 (proxy)
+/ip4/162.246.145.218/tcp/7650/ip4/192.168.0.1/tcp/4001/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+
+# IPFS over Ethernet (no IP)
+/ether/ac:fd:ec:0b:7c:fe/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+</code></pre>
+
+<p><strong>Note:</strong> At this time, no unreliable implementations exist. The protocol&rsquo;s interface for defining and using unreliable transport has not been defined.</p>
+
+<p><strong>TODO:</strong> Define how unreliable transport would work. Base it on WebRTC.</p>
+
+<h2 id="3-5-multi-multiplexing">3.5 Multi-multiplexing</h2>
+
+<p>The <code>libp2p</code> protocol is a collection of multiple protocols. In order to conserve resources, and to make connectivity easier, <code>libp2p</code> can perform all its operations through a single port, such as a TCP or UDP port, depending on the transports used. <code>libp2p</code> can multiplex its many protocols through point-to-point connections. This multiplexing is for both reliable streams and unreliable datagrams.</p>
+
+<p><code>libp2p</code> is pragmatic. It seeks to be usable in as many settings as possible, to be modular and flexible to fit various use cases, and to force as few choices as possible. Thus the <code>libp2p</code> network layer provides what we&rsquo;re loosely referring to as &ldquo;multi-multiplexing&rdquo;:</p>
+
+<ul>
+<li>can multiplex multiple listen network interfaces</li>
+<li>can multiplex multiple transport protocols</li>
+<li>can multiplex multiple connections per peer</li>
+<li>can multiplex multiple client protocols</li>
+<li>can multiplex multiple streams per protocol, per connection (SPDY, HTTP2, QUIC, SSH)</li>
+<li>has flow control (backpressure, fairness)</li>
+<li>encrypts each connection with a different ephemeral key</li>
+</ul>
+
+<p>To give an example, imagine a single IPFS node that:</p>
+
+<ul>
+<li>listens on a particular TCP/IP address</li>
+<li>listens on a different TCP/IP address</li>
+<li>listens on a SCTP/UDP/IP address</li>
+<li>listens on a UDT/UDP/IP address</li>
+<li>has multiple connections to another node X</li>
+<li>has multiple connections to another node Y</li>
+<li>has multiple streams open per connection</li>
+<li>multiplexes streams over HTTP2 to node X</li>
+<li>multiplexes streams over SSH to node Y</li>
+<li>one protocol mounted on top of <code>libp2p</code> uses one stream per peer</li>
+<li>one protocol mounted on top of <code>libp2p</code> uses multiple streams per peer</li>
+</ul>
+
+<p>Not providing this level of flexbility makes it impossible to use <code>libp2p</code> in various platforms, use cases, or network setups. It is not important that all implementations support all choices; what is critical is that the spec is flexible enough to allow implementations to use precisely what they need. This ensures that complex user or application constraints do not rule out <code>libp2p</code> as an option.</p>
+
+<h2 id="3-6-enable-several-network-topologies">3.6 Enable several network topologies</h2>
+
+<p>Different systems have different requirements and with that comes different topologies. In the P2P literature we can find these topologies being enumerated as: unstructured, structured, hybrid and centralized.</p>
+
+<p>Centralized topologies are the most common to find in Web Applications infrastructures, it requires for a given service or services to be present at all times in a known static location, so that other services can access them. Unstructured networks represent a type of P2P networks where the network topology is completely random, or at least non deterministic, while structured networks have a implicit way of organizing themselves. Hybrid networks are a mix of the last two.</p>
+
+<p>With this in consideration, <code>libp2p</code> must be ready to perform different routing mechanisms and peer discovery, in order to build the routing tables that will enable services to propagate messages or to find each other.</p>
+
+<h2 id="3-7-resource-discovery">3.7 Resource discovery</h2>
+
+<p><code>libp2p</code> also solves the problem with discoverability of resources inside of a network through <em>records</em>.  A record is a unit of data that can be digitally signed, timestamped and/or used with other methods to give it an ephemeral validity. These records hold pieces of information such as location or availability of resources present in the network. These resources can be data, storage, CPU cycles and other types of services.</p>
+
+<p><code>libp2p</code> must not put a constraint on the location of resources, but instead offer ways to find them easily in the network or use a side channel.</p>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">4 Architecture</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p><code>libp2p</code> was designed around the Unix Philosophy of creating small components that are easy to understand and test. These components should also be able to be swapped in order to accomodate different technologies or scenarios and also make it feasible to upgrade them over time.</p>
+
+<p>Although different peers can support different protocols depending on their capabilities, any peer can act as a dialer and/or a listener for connections from other peers, connections that once established can be reused from both ends, removing the distinction between clients and servers.</p>
+
+<p>The <code>libp2p</code> interface acts as a thin veneer over a multitude of subsystems that are required in order for peers to be able to communicate. These subsystems are allowed to be built on top of other subsystems as long as they respect the standardized interface. The main areas where these subsystems fit are:</p>
+
+<ul>
+<li>Peer Routing - Mechanism to decide which peers to use for routing particular messages. This routing can be done recursively, iteratively or even in a broadcast/multicast mode.</li>
+<li>Swarm - Handles everything that touches the &lsquo;opening a stream&rsquo; part of <code>libp2p</code>, from protocol muxing, stream muxing, NAT traversal and connection relaying, while being multi-transport.</li>
+<li>Distributed Record Store - A system to store and distribute records. Records are small entries used by other systems for signaling, establishing links, announcing peers or content, and so on. They have a similar role to DNS in the broader Internet.</li>
+<li>Discovery - Finding or identifying other peers in the network.</li>
+</ul>
+
+<p>Each of these subsystems exposes a well known interface (see <a href="6-interfaces.md">chapter 6</a> for Interfaces) and may use each other in order to fulfil their goal. A global overview of the system is:</p>
+
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────┐
+│                                  libp2p                                         │
+└─────────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────┐┌─────────────────┐┌──────────────────────────┐┌───────────────┐
+│   Peer Routing  ││      Swarm      ││ Distributed Record Store ││  Discovery    │
+└─────────────────┘└─────────────────┘└──────────────────────────┘└───────────────┘
+</code></pre>
+
+<h2 id="4-1-peer-routing">4.1 Peer Routing</h2>
+
+<p>A Peer Routing subsystem exposes an interface to identify which peers a message should be routed to in the DHT. It receives a key and must return one or more <code>PeerInfo</code> objects.</p>
+
+<p>We present two examples of possible Peer Routing subsystems, the first based on a the Kademlia DHT and the second based on mDNS. Nevertheless, other Peer Routing mechanisms can be implemented, as long as they fulfil the same expectation and interface.</p>
+
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│       Peer Routing                                           │
+│                                                              │
+│┌──────────────┐┌────────────────┐┌──────────────────────────┐│
+││ kad-routing  ││ mDNS-routing   ││ other-routing-mechanisms ││
+││              ││                ││                          ││
+││              ││                ││                          ││
+│└──────────────┘└────────────────┘└──────────────────────────┘│
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+
+<h3 id="4-1-1-kad-routing">4.1.1 kad-routing</h3>
+
+<p>kad-routing implements the Kademlia Routing table, where each peer holds a set of k-buckets, each of them containing several <code>PeerInfo</code> objects from other peers in the network.</p>
+
+<h3 id="4-1-2-mdns-routing">4.1.2 mDNS-routing</h3>
+
+<p>mDNS-routing uses mDNS probes to identify if local area network peers have a given key or they are simply present.</p>
+
+<h2 id="4-2-swarm">4.2 Swarm</h2>
+
+<h3 id="4-2-1-stream-muxer">4.2.1 Stream Muxer</h3>
+
+<p>The stream muxer must implement the interface offered by <a href="https://github.com/diasdavid/interface-stream-muxer">interface-stream-muxer</a>.</p>
+
+<h3 id="4-2-2-protocol-muxer">4.2.2 Protocol Muxer</h3>
+
+<p>Protocol muxing is handled on the application level instead of the conventional way at the port level (where different services/protocols listen at different ports). This enables us to support several protocols to be muxed in the same socket, saving the cost of doing NAT traversal for more than one port.</p>
+
+<p>Protocol multiplexing is done through <a href="https://github.com/jbenet/multistream"><code>multistream</code></a>, a protocol to negotiate different types of streams (protocols) using <a href="https://github.com/jbenet/multicodec"><code>multicodec</code></a>.</p>
+
+<h3 id="4-2-3-transport">4.2.3 Transport</h3>
+
+<h3 id="4-2-4-crypto">4.2.4 Crypto</h3>
+
+<h3 id="4-2-5-identify">4.2.5 Identify</h3>
+
+<p><strong>Identify</strong> is one of the protocols mounted on top of Swarm, our Connection handler. However, it follows and respects the same pattern as any other protocol when it comes to mounting it on top of Swarm. Identify enables us to trade <code>listenAddrs</code> and <code>observedAddrs</code> between peers, which is crucial for the working of IPFS. Since every socket open implements <code>REUSEPORT</code>, an <code>observedAddr</code> by another peer can enable a third peer to connect to us, since the port will be already open and redirect to us on a NAT.</p>
+
+<h3 id="4-2-6-relay">4.2.6 Relay</h3>
+
+<h2 id="4-3-distributed-record-store">4.3 Distributed Record Store</h2>
+
+<h3 id="4-3-1-record">4.3.1 Record</h3>
+
+<p>Follows <a href="../iprs-interplanetary-record-system">IPRS</a>.</p>
+
+<h3 id="4-3-2-abstract-record-store">4.3.2 abstract-record-store</h3>
+
+<h3 id="4-3-3-kad-record-store">4.3.3 kad-record-store</h3>
+
+<h3 id="4-3-4-mdns-record-store">4.3.4 mDNS-record-store</h3>
+
+<h3 id="4-3-5-s3-record-store">4.3.5 s3-record-store</h3>
+
+<h2 id="4-4-discovery">4.4 Discovery</h2>
+
+<h3 id="4-4-1-mdns-discovery">4.4.1 mDNS-discovery</h3>
+
+<p>mDNS-discovery is a Discovery Protocol that uses <a href="https://en.wikipedia.org/wiki/Multicast_DNS">mDNS</a> over local area networks. It emits mDNS beacons to find if there are more peers available. Local area network peers are very useful to peer-to-peer protocols, because of their low latency links.</p>
+
+<p>mDNS-discovery is a standalone protocol and does not depend on any other <code>libp2p</code> protocol. mDNS-discovery can yield peers available in the local area network, without relying on other infrastructure. This is particularly useful in intranets, networks disconnected from the Internet backbone, and networks which temporarily lose links.</p>
+
+<p>mDNS-discovery can be configured per-service (i.e. discover only peers participating in a specific protocol, like IPFS), and with private networks (discover peers belonging to a private network).</p>
+
+<p>We are exploring ways to make mDNS-discovery beacons encrypted (so that other nodes in the local network cannot discern what service is being used), though the nature of mDNS will always reveal local IP addresses.</p>
+
+<p><strong>Privacy note:</strong> mDNS advertises in local area networks, which reveals IP addresses to listeners in the same local network. It is not recommended to use this with privacy-sensitive applications or oblivious routing protocols.</p>
+
+<h4 id="4-4-2-random-walk">4.4.2 random-walk</h4>
+
+<p>Random-Walk is a Discovery Protocol for DHTs (and other protocols with routing tables). It makes random DHT queries in order to learn about a large number of peers quickly. This causes the DHT (or other protocols) to converge much faster, at the expense of a small load at the very beginning.</p>
+
+<h4 id="4-4-3-bootstrap-list">4.4.3 bootstrap-list</h4>
+
+<p>Bootstrap-List is a Discovery Protocol that uses local storage to cache the addresses of highly stable (and somewhat trusted) peers available in the network. This allows protocols to &ldquo;find the rest of the network&rdquo;. This is essentially the same way that DNS bootstraps itself (though note that changing the DNS bootstrap list &ndash; the &ldquo;dot domain&rdquo; addresses &ndash; is not easy to do, by design).</p>
+
+<ul>
+<li>The list should be stored in long-term local storage, whatever that means to the local node (e.g. to disk).</li>
+<li>Protocols can ship a default list hardcoded or along with the standard code distribution (like DNS).</li>
+<li>In most cases (and certainly in the case of IPFS) the bootstrap list should be user configurable, as users may wish to establish separate networks, or place their reliance and trust in specific nodes.</li>
+</ul>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">5 Data Structures</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <p>=================</p>
+
+<p>The network protocol deals with these data structures:</p>
+
+<ul>
+<li>a <code>PrivateKey</code>, the private key of a node.</li>
+<li>a <code>PublicKey</code>, the public key of a node.</li>
+<li>a <code>PeerId</code>, a hash of a node&rsquo;s public key.</li>
+<li>a <code>PeerInfo</code>, an object containing a node&rsquo;s <code>PeerId</code> and its known multiaddrs.</li>
+<li>a <code>Transport</code>, a transport used to establish connections to other peers. See <a href="https://github.com/diasdavid/interface-transport">https://github.com/diasdavid/interface-transport</a>.</li>
+<li>a <code>Connection</code>, a point-to-point link between two nodes. Must implement <a href="https://github.com/diasdavid/interface-connection">https://github.com/diasdavid/interface-connection</a>.</li>
+<li>a <code>Muxed-Stream</code>, a duplex message channel.</li>
+<li>a <code>Stream-Muxer</code>, a stream multiplexer. Must implement <a href="https://github.com/diasdavid/interface-stream-muxer">https://github.com/diasdavid/interface-stream-muxer</a>.</li>
+<li>a <code>Record</code>, IPLD (IPFS Linked Data) described object that implements <a href="../records">IPRS</a>.</li>
+<li>a <code>multiaddr</code>, a self describable network address. See <a href="https://github.com/jbenet/multiaddr">https://github.com/jbenet/multiaddr</a>.</li>
+<li>a <code>multicodec</code>, a self describable encoding type. See <a href="https://github.com/jbenet/multicodec">https://github.com/jbenet/multicodec</a>.</li>
+<li>a <code>multihash</code>, a self describable hash. See <a href="https://github.com/jbenet/multihash">https://github.com/jbenet/multihash</a>.</li>
+</ul>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">6 Interfaces</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p><code>libp2p</code> is a collection of several protocols working together to offer a common solid interface that can talk with any other network addressable process. This is made possible by shimming currently existing protocols and implementations into a set of explicit interfaces: Peer Routing, Discovery, Stream Muxing, Transports, Connections and so on.</p>
+
+<h2 id="6-1-libp2p">6.1 libp2p</h2>
+
+<p><code>libp2p</code>, the top module that provides an interface to all the other modules that make a <code>libp2p</code> instance, must offer an interface for dialing to a peer and plugging in all of the modules (e.g. which transports) we want to support. We present the <code>libp2p</code> interface and UX in <a href="#66-libp2p-interface-and-ux">section 6.6</a>, after presenting every other module interface.</p>
+
+<h2 id="6-2-peer-routing">6.2 Peer Routing</h2>
+
+<p><img src="https://raw.githubusercontent.com/diasdavid/interface-peer-routing/master/img/badge.png" alt="" /></p>
+
+<p>A Peer Routing module offers a way for a <code>libp2p</code> <code>Node</code> to find the <code>PeerInfo</code> of another <code>Node</code>, so that it can dial that node. In its most pure form, a Peer Routing module should have an interface that takes a &lsquo;key&rsquo;, and returns a set of <code>PeerInfo</code>s.
+See <a href="https://github.com/diasdavid/interface-peer-routing">https://github.com/diasdavid/interface-peer-routing</a> for the interface and tests.</p>
+
+<h2 id="6-3-swarm">6.3 Swarm</h2>
+
+<p>Current interface available and updated at:</p>
+
+<p><a href="https://github.com/diasdavid/js-libp2p-swarm#usage">https://github.com/diasdavid/js-libp2p-swarm#usage</a></p>
+
+<h3 id="6-3-1-transport">6.3.1 Transport</h3>
+
+<p><img src="https://raw.githubusercontent.com/diasdavid/interface-transport/master/img/badge.png" alt="" /></p>
+
+<p><a href="https://github.com/diasdavid/interface-transport">https://github.com/diasdavid/interface-transport</a></p>
+
+<h3 id="6-3-2-connection">6.3.2 Connection</h3>
+
+<p><img src="https://raw.githubusercontent.com/diasdavid/interface-connection/master/img/badge.png" alt="" /></p>
+
+<p><a href="https://github.com/diasdavid/interface-connection">https://github.com/diasdavid/interface-connection</a></p>
+
+<h3 id="6-3-3-stream-muxing">6.3.3 Stream Muxing</h3>
+
+<p><img src="https://github.com/diasdavid/interface-stream-muxer/raw/master/img/badge.png" alt="" /></p>
+
+<p><a href="https://github.com/diasdavid/interface-stream-muxer">https://github.com/diasdavid/interface-stream-muxer</a></p>
+
+<h2 id="6-4-distributed-record-store">6.4 Distributed Record Store</h2>
+
+<p><img src="https://raw.githubusercontent.com/diasdavid/interface-record-store/master/img/badge.png" alt="" /></p>
+
+<p><a href="https://github.com/diasdavid/interface-record-store">https://github.com/diasdavid/interface-record-store</a></p>
+
+<h2 id="6-5-peer-discovery">6.5 Peer Discovery</h2>
+
+<p>A Peer Discovery module interface should return <code>PeerInfo</code> objects, as it finds new peers to be considered by our Peer Routing modules.</p>
+
+<h2 id="6-6-libp2p-interface-and-ux">6.6 libp2p interface and UX</h2>
+
+<p><code>libp2p</code> implementations should enable it to be instantiated programatically, or to use a previous compiled library with some of the protocol decisions already made, so that the user can reuse or expand.</p>
+
+<h3 id="constructing-a-libp2p-instance-programatically">Constructing a libp2p instance programatically</h3>
+
+<p>Example made with JavaScript, should be mapped to other languages:</p>
+
+<pre><code class="language-JavaScript">var Libp2p = require('libp2p')
+
+var node = new Libp2p()
+
+// add a swarm instance
+node.addSwarm(swarmInstance)
+
+// add one or more Peer Routing mechanisms
+node.addPeerRouting(peerRoutingInstance)
+
+// add a Distributed Record Store
+node.addDistributedRecordStore(distributedRecordStoreInstance)
+</code></pre>
+
+<p>Configuring <code>libp2p</code> is quite straightforward since most of the configuration comes from instantiating the several modules, one at a time.</p>
+
+<h3 id="dialing-and-listening-for-connections-to-from-a-peer">Dialing and Listening for connections to/from a peer</h3>
+
+<p>Ideally, <code>libp2p</code> uses its own mechanisms (PeerRouting and Record Store) to find a way to dial to a given peer:</p>
+
+<pre><code class="language-JavaScript">node.dial(PeerInfo)
+</code></pre>
+
+<p>To receive an incoming connection, specify one or more protocols to handle:</p>
+
+<pre><code class="language-JavaScript">node.handleProtocol('&lt;multicodec&gt;', function (duplexStream) {
+
+})
+</code></pre>
+
+<h3 id="finding-a-peer">Finding a peer</h3>
+
+<p>Finding a peer is done through Peer Routing, so the interface is the same.</p>
+
+<h3 id="storing-and-retrieving-records">Storing and Retrieving Records</h3>
+
+<p>Like Finding a peer, Storing and Retrieving records is done through Record Store, so the interface is the same.</p>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">7 Properties</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<h2 id="7-1-communication-model-streams">7.1 Communication Model - Streams</h2>
+
+<p>The Network layer handles all the problems of connecting to a peer, and exposes
+simple bidirectional streams. Users can both open a new stream
+(<code>NewStream</code>) and register a stream handler (<code>SetStreamHandler</code>). The user
+is then free to implement whatever wire messaging protocol she desires. This
+makes it easy to build peer-to-peer protocols, as the complexities of
+connectivity, multi-transport support, flow control, and so on, are handled.</p>
+
+<p>To help capture the model, consider that:</p>
+
+<ul>
+<li><code>NewStream</code> is similar to making a Request in an HTTP client.</li>
+<li><code>SetStreamHandler</code> is similar to registering a URL handler in an HTTP server</li>
+</ul>
+
+<p>So a protocol, such as a DHT, could:</p>
+
+<pre><code class="language-go">node := p2p.NewNode(peerid)
+
+// register a handler, here it is simply echoing everything.
+node.SetStreamHandler(&quot;/helloworld&quot;, func (s Stream) {
+  io.Copy(s, s)
+})
+
+// make a request.
+buf1 := []byte(&quot;Hello World!&quot;)
+buf2 := make([]byte, len(buf1))
+
+stream, _ := node.NewStream(&quot;/helloworld&quot;, peerid) // open a new stream
+stream.Write(buf1)  // write to the remote
+stream.Read(buf2)   // read what was sent back
+fmt.Println(buf2)   // print what was sent back
+</code></pre>
+
+<h2 id="7-2-ports-constrained-entrypoints">7.2 Ports - Constrained Entrypoints</h2>
+
+<p>In the Internet of 2015, we have a processing model where a program may be
+running without the ability to open multiple &ndash; or even single &ndash; network
+ports. Most hosts are behind NAT, whether of the household ISP variety or the new
+containerized data-center type. And some programs may even be running in
+browsers, with no ability to open sockets directly (sort of). This presents
+challenges to completely peer-to-peer networks that aspire to connect <em>any</em>
+hosts together &ndash; whether they&rsquo;re running on a page in the browser, or in
+a container within a container.</p>
+
+<p>IPFS only needs a single channel of communication with the rest of the
+network. This may be a single TCP or UDP port, or a single connection
+through WebSockets or WebRTC. In a sense, the role of the TCP/UDP network
+stack &ndash; i.e. multiplexing applications and connections &ndash; may now be forced
+to happen at the application level.</p>
+
+<h2 id="7-3-transport-protocols">7.3 Transport Protocols</h2>
+
+<p>IPFS is transport-agnostic. It can run on any transport protocol. The
+<code>ipfs-addr</code> format (which is an IPFS-specific
+<a href="https://github.com/jbenet/multiaddr">multiaddr</a>) describes the transport.
+For example:</p>
+
+<pre><code class="language-sh"># ipv4 + tcp
+/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC
+
+# ipv6 + tcp
+/ip6/2601:9:4f82:5fff:aefd:ecff:fe0b:7cfe/tcp/1031/ipfs/QmRzjtZsTqL1bMdoJDwsC6ZnDX1PW1vTiav1xewHYAPJNT
+
+# ipv4 + udp + udt
+/ip4/104.131.131.82/udp/4001/udt/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ
+
+# ipv4 + udp + utp
+/ip4/104.131.67.168/udp/1038/utp/ipfs/QmU184wLPg7afQjBjwUUFkeJ98Fp81GhHGurWvMqwvWEQN
+</code></pre>
+
+<p>IPFS delegates the transport dialing to a multiaddr-based network package, such
+as <a href="https://github.com/jbenet/go-multiaddr-net">go-multiaddr-net</a>. It is
+advisable to build modules like this in other languages, and scope the
+implementation of other transport protocols.</p>
+
+<p>Some of the transport protocols we will be using:</p>
+
+<ul>
+<li>UTP</li>
+<li>UDT</li>
+<li>SCTP</li>
+<li>WebRTC (SCTP, etc)</li>
+<li>WebSockets</li>
+<li>TCP Remy</li>
+</ul>
+
+<h2 id="7-4-non-ip-networks">7.4 Non-IP Networks</h2>
+
+<p>Efforts like <a href="http://named-data.net">NDN</a> and
+<a href="http://www.cs.cmu.edu/~xia/">XIA</a> are new architectures for the Internet,
+which are closer to the model IPFS uses than what IP provides today. IPFS
+will be able to operate on top of these architectures trivially, as there
+are no assumptions made about the network stack in the protocol. Implementations
+will likely need to change, but changing implementations is vastly easier than
+changing protocols.</p>
+
+<h2 id="7-5-on-the-wire">7.5 On the wire</h2>
+
+<p>We have the <strong>hard constraint</strong> of making IPFS work across <em>any</em> duplex stream (an outgoing and an incoming stream pair, any arbitrary connection) and work on <em>any</em> platform.</p>
+
+<p>To make this work, IPFS has to solve a few problems:</p>
+
+<ul>
+<li><a href="#751-protocol-multiplexing">Protocol Multiplexing</a> - running multiple protocols over the same stream
+
+<ul>
+<li><a href="#752-multistream-self-describing-protocol-stream">multistream</a> - self-describing protocol streams</li>
+<li><a href="#753-multistream-selector-self-describing-protocol-stream-selector">multistream-select</a> - a self-describing protocol selector</li>
+<li><a href="#754-stream-multiplexing">Stream Multiplexing</a> - running many independent streams over the same wire</li>
+</ul></li>
+<li><a href="#755-portable-encodings">Portable Encodings</a> - using portable serialization formats</li>
+<li><a href="#756-secure-communication">Secure Communications</a> - using ciphersuites to establish security and privacy (like TLS)</li>
+</ul>
+
+<h3 id="7-5-1-protocol-multiplexing">7.5.1 Protocol-Multiplexing</h3>
+
+<p>Protocol Multiplexing means running multiple different protocols over the same stream. This could happen sequentially (one after the other), or concurrently (at the same time, with their messages interleaved). We achieve protocol multiplexing using three pieces:</p>
+
+<ul>
+<li><a href="#752-multistream-self-describing-protocol-stream">multistream</a> - self-describing protocol streams</li>
+<li><a href="#753-multistream-selector-self-describing-protocol-stream-selector">multistream-select</a> - a self-describing protocol selector</li>
+<li><a href="#754-stream-multiplexing">Stream Multiplexing</a> - running many independent streams over the same wire</li>
+</ul>
+
+<h3 id="7-5-2-multistream-self-describing-protocol-stream">7.5.2 multistream - self-describing protocol stream</h3>
+
+<p><a href="https://github.com/jbenet/multistream">multistream</a> is a self-describing protocol stream format. It is extremely simple. Its goal is to define a way to add headers to protocols that describe the protocol itself. It is sort of like adding versions to a protocol, but extremely explicit.</p>
+
+<p>For example:</p>
+
+<pre><code>/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-dht/0.2.3
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+...
+</code></pre>
+
+<h3 id="7-5-3-multistream-selector-self-describing-protocol-stream-selector">7.5.3 multistream-selector - self-describing protocol stream selector</h3>
+
+<p><a href="https://github.com/jbenet/multistream/tree/master/multistream">multistream-select</a> is a simple <a href="https://github.com/jbenet/multistream">multistream</a> protocol that allows listing and selecting other protocols. This means that Protomux has a list of registered protocols, listens for one, and then <em>nests</em> (or upgrades) the connection to speak the registered protocol. This takes direct advantage of multistream: it enables interleaving multiple protocols, as well as inspecting what protocols might be spoken by the remote endpoint.</p>
+
+<p>For example:</p>
+
+<pre><code>/ipfs/QmdRKVhvzyATs3L6dosSb6w8hKuqfZK2SyPVqcYJ5VLYa2/multistream-select/0.3.0
+/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-dht/0.2.3
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+...
+</code></pre>
+
+<h3 id="7-5-4-stream-multiplexing">7.5.4 Stream Multiplexing</h3>
+
+<p>Stream Multiplexing is the process of multiplexing (or combining) many different streams into a single one. This is a complicated subject because it enables protocols to run concurrently over the same wire, and all sorts of notions regarding fairness, flow control, head-of-line blocking, etc. start affecting the protocols. In practice, stream multiplexing is well understood and there are many stream multiplexing protocols. To name a few:</p>
+
+<ul>
+<li>HTTP/2</li>
+<li>SPDY</li>
+<li>QUIC</li>
+<li>SSH</li>
+</ul>
+
+<p>IPFS nodes are free to support whatever stream multiplexors they wish, on top of the default one. The default one is there to enable even the simplest of nodes to speak multiple protocols at once. The default multiplexor will be HTTP/2 (or maybe QUIC?), but implementations for it are sparse, so we are beginning with SPDY. We simply select which protocol to use with a multistream header.</p>
+
+<p>For example:</p>
+
+<pre><code>/ipfs/QmdRKVhvzyATs3L6dosSb6w8hKuqfZK2SyPVqcYJ5VLYa2/multistream-select/0.3.0
+/ipfs/Qmb4d8ZLuqnnVptqTxwqt3aFqgPYruAbfeksvRV1Ds8Gri/spdy/3
+&lt;spdy-header-opening-a-stream-0&gt;
+/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-dht/0.2.3
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;spdy-header-opening-a-stream-1&gt;
+/ipfs/QmVXZiejj3sXEmxuQxF2RjmFbEiE9w7T82xDn3uYNuhbFb/ipfs-bitswap/0.3.0
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+&lt;spdy-header-selecting-stream-0&gt;
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;dht-message&gt;
+&lt;spdy-header-selecting-stream-1&gt;
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+&lt;bitswap-message&gt;
+...
+</code></pre>
+
+<h3 id="7-5-5-portable-encodings">7.5.5 Portable Encodings</h3>
+
+<p>In order to be ubiquitous, we <em>must</em> use hyper-portable format encodings, those that are easy to use in various other platforms. Ideally these encodings are well-tested in the wild, and widely used. There may be cases where multiple encodings have to be supported (and hence we may need a <a href="https://github.com/jbenet/multicodec">multicodec</a> self-describing encoding), but this has so far not been needed.
+For now, we use <a href="https://github.com/google/protobuf">protobuf</a> for all protocol messages exclusively, but other good candidates are <a href="https://capnproto.org/">capnp</a>, <a href="http://bsonspec.org/">bson</a>, and <a href="http://ubjson.org/">ubjson</a>.</p>
+
+<h3 id="7-5-6-secure-communications">7.5.6 Secure Communications</h3>
+
+<p>The wire protocol is &ndash; of course &ndash; wrapped with encryption. We use cyphersuites similar to TLS. This is explained further in the <a href="./#encryption">network spec</a>.</p>
+
+<h3 id="7-5-7-protocol-multicodecs">7.5.7 Protocol Multicodecs</h3>
+
+<p>Here, we present a table with the multicodecs defined for each IPFS protocol that has a wire componenent. This list may change over time and currently exists as a guide for implementation.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">protocol</th>
+<th align="left">multicodec</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">secio</td>
+<td align="left">/secio/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">TLS</td>
+<td align="left">/tls/1.3.0</td>
+</tr>
+
+<tr>
+<td align="left">plaintext</td>
+<td align="left">/plaintext/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">spdy</td>
+<td align="left">/spdy/3.1.0</td>
+</tr>
+
+<tr>
+<td align="left">yamux</td>
+<td align="left">/yamux/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">multiplex</td>
+<td align="left">/multiplex/6.7.0</td>
+</tr>
+
+<tr>
+<td align="left">identify</td>
+<td align="left">/ipfs/id/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">ping</td>
+<td align="left">/ipfs/ping/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">relay</td>
+<td align="left">/ipfs/relay/line/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">diagnostics</td>
+<td align="left">/ipfs/diag/net/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">Kademlia DHT</td>
+<td align="left">/ipfs/kad/1.0.0</td>
+</tr>
+
+<tr>
+<td align="left">bitswap</td>
+<td align="left">/ipfs/bitswap/1.0.0</td>
+</tr>
+</tbody>
+</table>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">8 Implementations</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>A <code>libp2p</code> implementation should (recommended) follow a certain level of granulatiry when implementing different modules and functionalities, so that common interfaces are easy to expose, test and check for interoperability with other implementations.</p>
+
+<p>This is the list of current modules available for <code>libp2p</code>:</p>
+
+<ul>
+<li>libp2p (entry point)</li>
+<li><strong>Swarm</strong>
+
+<ul>
+<li>libp2p-swarm</li>
+<li>libp2p-identify</li>
+<li>libp2p-ping</li>
+<li>Transports
+
+<ul>
+<li><a href="https://github.com/diasdavid/interface-transport">interface-transport</a></li>
+<li><a href="https://github.com/diasdavid/interface-connection">interface-connection</a></li>
+<li>libp2p-tcp</li>
+<li>libp2p-udp</li>
+<li>libp2p-udt</li>
+<li>libp2p-utp</li>
+<li>libp2p-webrtc</li>
+<li>libp2p-cjdns</li>
+</ul></li>
+<li>Stream Muxing
+
+<ul>
+<li><a href="https://github.com/diasdavid/interface-stream-muxer">interface-stream-muxer</a></li>
+<li>libp2p-spdy</li>
+<li>libp2p-multiplex</li>
+</ul></li>
+<li>Crypto Channel
+
+<ul>
+<li>libp2p-tls</li>
+<li>libp2p-secio</li>
+</ul></li>
+</ul></li>
+<li><strong>Peer Routing</strong>
+
+<ul>
+<li>libp2p-kad-routing</li>
+<li>libp2p-mDNS-routing</li>
+</ul></li>
+<li><strong>Discovery</strong>
+
+<ul>
+<li>libp2p-mdns-discovery</li>
+<li>libp2p-random-walk</li>
+<li>libp2p-railing</li>
+</ul></li>
+<li><strong>Distributed Record Store</strong>
+
+<ul>
+<li>libp2p-record</li>
+<li><a href="https://github.com/diasdavid/interface-record-store">interface-record-store</a></li>
+<li>libp2p-distributed-record-store</li>
+<li>libp2p-kad-record-store</li>
+</ul></li>
+<li><strong>Generic</strong>
+
+<ul>
+<li>PeerInfo</li>
+<li>PeerId</li>
+<li>multihash</li>
+<li>multiaddr</li>
+<li>multistream</li>
+<li>multicodec</li>
+<li>ipld</li>
+<li>repo</li>
+</ul></li>
+</ul>
+
+<p>Current known implementations (or WIP) are:</p>
+
+<ul>
+<li>JavaScript - <a href="https://github.com/diasdavid/js-libp2p">https://github.com/diasdavid/js-libp2p</a></li>
+<li>Go - <a href="https://github.com/ipfs/go-libp2p">https://github.com/ipfs/go-libp2p</a></li>
+<li>Python - <a href="https://github.com/candeira/py-ipfs/blob/readme-roadmap/README.md">https://github.com/candeira/py-ipfs/blob/readme-roadmap/README.md</a></li>
+<li>Rust - <a href="https://github.com/diasdavid/rust-libp2p">https://github.com/diasdavid/rust-libp2p</a></li>
+</ul>
+
+<h2 id="8-1-swarm">8.1 Swarm</h2>
+
+<h3 id="8-1-1-swarm-dialer">8.1.1 Swarm Dialer</h3>
+
+<p>The swarm dialer manages making a successful connection to a target peer, given a stream of addresses as inputs, and making sure to respect any and all rate limits imposed. To this end, we have designed the following logic for dialing:</p>
+
+<pre><code>DialPeer(peerID) {
+	if PeerIsBeingDialed(peerID) {
+		waitForDialToComplete(peerID)
+		return BestConnToPeer(peerID)
+	}
+	
+	StartDial(peerID)
+
+	waitForDialToComplete(peerID)
+	return BestConnToPeer(peerID)
+}
+
+	
+StartDial(peerID) {
+	addrs = getAddressStream(peerID)
+
+	addrs.onNewAddr(function(addr) {
+		if rateLimitCanDial(peerID, addr) {
+			doDialAsync(peerID, addr)
+		} else {
+			rateLimitScheduleDial(peerID, addr)
+		}
+	})
+}
+
+// doDialAsync starts dialing to a specific address without blocking.
+// when the dial returns, it releases rate limit tokens, and if it
+// succeeded, will finalize the dial process.
+doDialAsync(peerID, addr) {
+	go transportDial(addr, function(conn, err) {
+		rateLimitReleaseTokens(peerID, addr)
+
+		if err != null {
+			// handle error
+		}
+
+		dialSuccess(conn)
+	})
+}
+
+// rateLimitReleaseTokens checks for any tokens the given dial
+// took, and then for each of them, checks if any other dial is waiting
+// for any of those tokens. If waiting dials are found, those dials are started
+// immediately. Otherwise, the tokens are released to their pools.
+rateLimitReleaseTokens(peerID, addr) {
+	tokens = tokensForDial(peerID, addr)
+
+	for token in tokens {
+		dial = dialWaitingForToken(token)
+		if dial != null {
+			doDialAsync(dial.peer, dial.addr)
+		} else {
+			token.release()
+		}
+	}
+	
+}
+</code></pre>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+	   <article class="post specs">
+    <header class="post-header">
+        <h2 class="post-title">9 References</h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <ul>
+<li>State of Peer-to-Peer (P2P) Communication across Network Address Translators (NATs): <a href="https://tools.ietf.org/html/rfc5128">https://tools.ietf.org/html/rfc5128</a></li>
+</ul>
+
+          </section>
+      </p>
+    </section>
+
+</article>
+
+	
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">libp2p</a> All rights reserved - 2016</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+</html>
+

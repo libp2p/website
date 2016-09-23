@@ -1,0 +1,48 @@
+{{ partial "header.html" . }}
+
+<header class="main-header " style="background-image: url({{.Site.Params.cover}})">
+    <!--
+    <nav class="main-nav overlay clearfix">
+        {{ if .Site.Menus.main }}
+            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+        {{end}}
+    </nav>
+    -->
+<div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+              <a class="btn-bootstrap-2" href="/">{{ .Site.Title }}</a>
+          </h1>
+          <h2 class="page-description">{{ .Site.Params.description }}</h2>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+  <main id="content" class="content" role="main">
+
+
+  <article class="post {{ .Section }}">
+
+    <header class="post-header">
+        <h1 class="post-title">{{.Title}}</h1>
+        <section class="post-meta">
+        {{ if eq .Section "post"}}
+          <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </time>
+        {{end}}
+         {{ range .Params.tags }}
+          <span class="post-tag small"><a href="tags/{{ . | urlize }}/">#{{ . }}</a></span>
+         {{ end }}
+        </section>
+    </header>
+
+    <section class="post-content">
+      {{ .Content }}
+    </section>
+
+</article>
+
+</main>
+{{ partial "footer.html" . }}

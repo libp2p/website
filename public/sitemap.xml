@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/specs/test/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/test/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/1-introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/2-state-of-the-art/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/3-requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/4-architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/5-datastructures/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/6-interfaces/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/7-properties/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/8-implementations/</loc>
+  </url>
+  
+  <url>
+    <loc>/specs/9-references/</loc>
+  </url>
+  
+</urlset>
