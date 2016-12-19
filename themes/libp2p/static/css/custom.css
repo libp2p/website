@@ -10,7 +10,7 @@ body {
 
 a.nav-item {
 	color: white;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 47px;
 	vertical-align: text-bottom;
 }
@@ -34,12 +34,12 @@ a.nav-item.is-active {
 .title {
 	color: white;
 	font-weight: bolder;
-	font-size: 48px;
+	font-size: 54px;
 }
 
 .title-blue {
 	font-weight: bolder;
-	font-size: 48px;
+	font-size: 54px;
 	color: #60D2D5;
 }
 
@@ -59,8 +59,17 @@ a.nav-item.is-active {
 	pointer-events: auto;
 	border-radius: 3px;
 	font-weight: bold;
+	font-size: 22px;
 	border: 1px solid rgba(0,0,0,0.9);
 	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+	width: 50%;
+	margin: 0px auto;
+}
+
+@media (max-width: 600px) {
+  .fold-subtitle {
+		width: 80%;
+  }
 }
 
 #demo {
@@ -78,11 +87,6 @@ a.nav-item.is-active {
 	pointer-events: auto;
 }
 
-.subtitle.is-justified {
-	width: 630px;
-	margin: 0px auto;
-}
-
 .is-justified {
 	text-align: justify;
 	text-align-last: justify;
@@ -93,9 +97,13 @@ a.nav-item.is-active {
 }
 
 .feature-title {
-	font-size: 18px;
+	font-size: 28px;
 	font-weight: bold;
 	margin-bottom: 10px;
+}
+
+.feature-description {
+	font-size: 18px;
 }
 
 .language-title {

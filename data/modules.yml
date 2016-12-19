@@ -1,5 +1,5 @@
 languages:
-  - "JS"
+  - "JavaScript"
   - "Go"
 categories:
   - name: Transports
@@ -7,149 +7,149 @@ categories:
     libs:
     - name: libp2p-net
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: tcp-transport
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: libp2p-transport
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: udp-transport
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: udt-transport
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: xtp
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: libp2p-webrtc-star
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: libp2p-websockets
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
   - name: Stream Muxers
     interface: Not yet
     libs:
     - name: libp2p-spdy
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: libp2p-multiplex
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
   - name: Crypto Channels
     interface: Not yet
     libs:
       - name: libp2p-secio
         versions:
-          JS: wip
+          JavaScript: wip
           Go: done
   - name: Connection and Connection Upgrades
     libs:
     - name: libp2p-conn
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: half-closed-connection-upgrade
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
   - name: Peer Routing
     interface: interface-peer-routing
     libs:
       - name: libp2p-kad-dht
         versions:
-          JS: done
+          JavaScript: done
           Go: missing
       - name: libp2p-routing
         versions:
-          JS: done
+          JavaScript: done
           Go: wip
       - name: libp2p-kbucket
         versions:
-          JS: missing
+          JavaScript: missing
           Go: done
   - name: Record Stores
     interface: Not yet
     libs:
     - name: record
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: kad-record-store
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
   - name: NAT Traversal
     interface: Not yet
     libs:
     - name: libp2p-nat
       versions:
-        JS: wip
+        JavaScript: wip
         Go: done
   - name: Discovery
     interface: Not yet
     libs:
     - name: railing
       versions:
-        JS: wip
+        JavaScript: wip
         Go: missing
     - name: random-walk
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: mdns-discovery
       versions:
-        JS: done
+        JavaScript: done
         Go: wip
   - name: Utils
     interface: Not yet
     libs:
     - name: crypto
       versions:
-        JS: wip
+        JavaScript: wip
         Go: done
   - name: Generics
     interface: Not yet
     libs:
     - name: libp2p-peer
       versions:
-        JS: done
+        JavaScript: done
         Go: done
     - name: libp2p-id
       versions:
-        JS: done
+        JavaScript: done
         Go: done
     - name: libp2p-peer-info
       versions:
-        JS: done
+        JavaScript: done
         Go: done
     - name: libp2p-swarm
       versions:
-        JS: done
+        JavaScript: done
         Go: done
   - name: Others
     libs:
     - name: libp2p-floodsub
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: libp2p-ping
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
     - name: libp2p-metrics
       versions:
-        JS: wip
+        JavaScript: wip
         Go: wip
