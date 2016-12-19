@@ -1,17 +1,14 @@
-<h1 class="title section-title">Supported Languages</h1>
+<h1 class="title section-title">Implemented In</h1>
 <div class="columns is-multiline">
 	{{ range .Site.Params.languages }}
 		{{ $githubLink := printf "https://github.com/%s" .link }}
-		{{ $iconFile := printf "data/icons/%s" .icon }}
-			<div class="column">
-				<h1 class="language-title"><a href="{{$githubLink}}" target="_blank">{{ .name }}</a></h1>
-				<div class="language-title">
-				</div>
+			<div class="column language-column">
 				<div class="language-icon">
 					<a href="{{$githubLink}}" target="_blank">
-						{{ readFile $iconFile | safeHTML }}
+						<i class="icon colored {{ .icon }}-plain"></i>
 					</a>
 				</div>
+				<h1 class="language-title"><a href="{{$githubLink}}" target="_blank">{{ .name }}</a></h1>
 			</div>
 	{{ end }}
 </div>

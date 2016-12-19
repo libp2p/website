@@ -102,15 +102,23 @@ a.nav-item.is-active {
 	margin-bottom: 10px;
 }
 
+.language-column {
+	text-align: center;
+}
+
 .language-title a {
 	color: white;
 }
 
-.language-icon {
-	width: 100px;
-	margin: 0px auto;
+.language-icon .icon {
+	/* Original:
+	 * font-size: 21px;
+	 * original - 50px = 29px offset
+	 * */
+	font-size: 50px;
+	margin-left: -29px;
 	color: white;
-	fill: white;
+	margin-bottom: 40px;
 }
 
 .talk-title {

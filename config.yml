@@ -42,15 +42,15 @@ params:
     - name: "Good for high latency scenarios"
       description: Using a packet switching routing (soon), libp2p can make your application work in networks where other transports would simply fail.
   languages:
-    - name: JavaScript
-      icon: "javascript.svg"
-      link: "libp2p/js-libp2p"
+    - name: JavaScript - Browser
+      icon: "devicon-javascript"
+      link: "ipfs/js-libp2p-ipfs-browser"
+    - name: NodeJS
+      icon: "devicon-nodejs"
+      link: "ipfs/js-libp2p-ipfs-nodejs"
     - name: Go
-      icon: "go.svg"
+      icon: "devicon-go"
       link: "libp2p/go-libp2p"
-    - name: Future languages
-      icon: "question-mark.svg"
-      link: "libp2p/libp2p#implementations"
   talks:
     - name: "libp2p ❤ devp2p"
       link: "https://www.youtube.com/watch?v=HxueJbeMVG4"
