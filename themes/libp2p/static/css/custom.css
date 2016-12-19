@@ -11,6 +11,8 @@ body {
 a.nav-item {
 	color: white;
 	font-size: 16px;
+	line-height: 47px;
+	vertical-align: text-bottom;
 }
 a.nav-item:hover {
 	color: #60D2D5;
@@ -20,11 +22,11 @@ a.nav-item.is-active {
 	font-weight: bold;
 }
 
-.nav-center a.nav-item {
+.is-faded {
 	opacity: 0.5;
 }
 
-.nav-center a.nav-item:hover {
+.is-faded:hover {
 	opacity: 1.0;
 	color: white;
 }

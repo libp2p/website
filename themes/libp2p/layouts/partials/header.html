@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="{{ $basePath }}css/bulma.min.css">
 <link rel="stylesheet" href="{{ $basePath }}css/custom.css">
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <link rel="alternate" href="index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
 <link rel="icon" type="image/png" href="../favicon.png">
@@ -38,14 +39,6 @@
 				</div>
 			</a>
 		</div>
-		<div class="nav-center">
-			<a class="nav-item" href="https://github.com/libp2p/libp2p" target="_blank">
-				Github
-			</a>
-			<a class="nav-item" href="https://github.com/libp2p/specs" target="_blank">
-				Specification
-			</a>
-		</div>
 		<div class="nav-right nav-menu">
 			{{ range .Site.Params.navigation }}
 				{{ if and (eq .name "Home") (eq $currentPageTitle $siteTitle) }}
@@ -58,6 +51,17 @@
 					{{ end }}
 				{{ end }}
 			{{ end }}
+			<span class="nav-item">|</span>
+			<a class="nav-item is-faded" href="https://github.com/libp2p/libp2p" target="_blank">
+				<i class="fa fa-github" aria-hidden="true"></i>
+				&nbsp;
+				Github
+			</a>
+			<a class="nav-item is-faded" href="https://github.com/libp2p/specs" target="_blank">
+				<i class="fa fa-file-text" aria-hidden="true"></i>
+				&nbsp;
+				Specification
+			</a>
 		</div>
 	</div>
 	<!--
