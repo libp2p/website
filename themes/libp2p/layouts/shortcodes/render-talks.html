@@ -1,0 +1,9 @@
+<h1 class="title section-title">Talks & Conferences</h1>
+<div class="columns is-multiline">
+	{{ range .Site.Params.talks }}
+		<div class="column">
+			<h1 class="talk-title"><a href="{{.link}}" target="_blank">{{ .name }}</a></h1>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/{{.id}}" frameborder="0" allowfullscreen></iframe>
+		</div>
+	{{ end }}
+</div>

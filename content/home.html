@@ -1,0 +1,67 @@
++++
+type = "page"
+title = "Home"
+description = "A description"
+tags = [ "page" ]
+date = "2016-11-10"
++++
+
+
+<section class="hero is-dark is-bold is-fullheight">
+  <div class="hero-body">
+		<div id="demo">
+		</div>
+    <div class="container has-text-centered demo-section">
+      <h2 class="subtitle is-justified fold-subtitle">
+				A modular network stack, run your network applications free from runtime and address services independently of their location
+      </h2>
+			<div class='demo-section-buttons'>
+				<a class="button is-large is-success">Get Started</a>
+				<a class="button is-large is-info is-outlined">Community</a>
+			</div>
+    </div>
+  </div>
+</section>
+<section class="hero is-info is-bold is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+			{{% render-features %}}
+    </div>
+  </div>
+</section>
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+			{{% render-languages %}}
+    </div>
+  </div>
+</section>
+<section class="hero is-danger is-bold is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+			{{% render-talks %}}
+    </div>
+  </div>
+</section>
+<section class="hero is-success is-bold">
+  <div class="hero-body contribute-section">
+    <div class="container has-text-centered">
+			<h1 class="title">Contribute & Community</h1>
+			<div class="contribute-body is-justified">
+				libp2p is an open source project from the IPFS community. There are many ways you can contribute by getting involved: you can help write the specification, code implementations and tools using libp2p, craft examples and tutorials, and join our regular product calls to discuss libp2p with us.
+			</div>
+			<br>
+				<h2 class="subtitle">
+					Join us on GitHub at <a href="https://github.com/libp2p/libp2p" class="is-info">libp2p/libp2p</a>
+				</h2>
+    </div>
+  </div>
+</section>
+
+<script src="/libp2pgraph.js"></script>
+<script src="libp2pgraph.js"></script>
+<script>
+window.onload = () => {
+	Libp2pAutoGraph('demo')
+}
+</script>
