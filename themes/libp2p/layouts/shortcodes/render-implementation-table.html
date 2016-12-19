@@ -1,0 +1,32 @@
+{{ range $.Site.Data.modules.categories }}
+	<div class="implementation-table">
+		{{ $moduleName := .name }}
+		<h2 class="subtitle">{{ $moduleName }}</h2>
+		<h2>Interface: <a href="https://github.com/libp2p/{{ .interface }}">{{ .interface }}</a></h2>
+		<table class="table">
+			<tr>
+				<th class="has-text-left">{{ .name }}</th>
+				{{ range $.Site.Data.modules.languages }}
+					<th class="has-text-centered">{{ . }}</th>
+				{{ end }}
+			</tr>
+			{{ range $lib := .libs }}
+			<tr>
+				<td>{{ .name }}</td>
+				{{ range $language := $.Site.Data.modules.languages }}
+					{{ $status := index $lib.versions $language }}
+					<td class="status status-{{ $status }}">
+						<a href="https://github.com/libp2p/{{$language | lower }}-{{ $lib.name}}">
+							<div class="gh">
+								 <i class="icon devicon-github-plain colored"></i>
+							</div>
+							<div class="text"> </div>
+						</a>
+					</td>
+				{{ end }}
+			</tr>
+			{{ end }}
+			</tr>
+		</table>
+	</div>
+{{ end }}

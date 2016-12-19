@@ -143,3 +143,84 @@ footer {
 	padding: 10px;
 	text-align: right;
 }
+
+/* implementations */
+
+.implementations-section {
+	padding-top: 150px;
+}
+
+.implementation-table {
+	margin-bottom: 50px;
+}
+
+.implementation-table th {
+	text-align: center;
+	border: 1px solid rgba(0,0,0,0.3) !important;
+}
+
+.implementation-table td {
+	border: 1px solid rgba(0,0,0,0.3) !important;
+}
+
+.has-text-left {
+	text-align: left !important;
+}
+
+.status {
+	border: 1px solid rgba(0,0,0,0.3) !important;
+	color: white !important;
+	text-align: center;
+}
+
+.status .text {
+	display: inline;
+	line-height: 16px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.status a {
+	color: black;
+	transition: none;
+}
+
+.status a:hover {
+	text-decoration: none;
+}
+
+.status a:hover .icon {
+	color: #0074D9 !important;
+}
+
+.status a:hover {
+	color: #0074D9 !important;
+}
+
+.status .gh {
+	display: inline;
+	line-height: 16px;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+}
+
+.status-wip {
+	background-color: #FFDC00 !important;
+}
+
+.status-done {
+	background-color: #2ECC40 !important;
+}
+
+.status-missing {
+	background-color: #FF4136 !important;
+}
+
+.green {
+	color: #2ecc40;
+}
+
+.implementation-table .subtitle {
+	font-size: 24px;
+}
