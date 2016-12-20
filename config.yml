@@ -1,12 +1,12 @@
 baseurl: "http://example.org/"
 
-title: "LibP2P"
+title: "libp2p"
 author: "Protocol Labs"
 languageCode: "en-us"
 theme: "libp2p"
 pygmentsstyle: "autumn"
 
-copyright: "LibP2P - All rights reserved."
+copyright: "libp2p - All rights reserved."
 
 params:
   navigation:

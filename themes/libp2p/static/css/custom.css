@@ -3,13 +3,13 @@ body {
 }
 
 .nav {
-	background-color: rgba(0,0,0,0.3);
+	background-color: white;
 	position: fixed;
 	width: 100%;
 }
 
 a.nav-item {
-	color: white;
+	color: #363636;
 	font-size: 20px;
 	line-height: 47px;
 	vertical-align: text-bottom;
@@ -32,7 +32,7 @@ a.nav-item.is-active {
 }
 
 .title {
-	color: white;
+	color: #363636;
 	font-weight: bolder;
 	font-size: 54px;
 }
@@ -53,15 +53,13 @@ a.nav-item.is-active {
 
 .fold-subtitle {
 	margin-bottom: 300px !important;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(255, 255, 255, 0.7);
 	padding: 30px;
 	box-sizing: border-box;
 	pointer-events: auto;
 	border-radius: 3px;
-	font-weight: bold;
 	font-size: 22px;
-	border: 1px solid rgba(0,0,0,0.9);
-	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+	border: 1px solid white;
 	width: 50%;
 	margin: 0px auto;
 }
@@ -96,20 +94,28 @@ a.nav-item.is-active {
 	margin-bottom: 50px !important;
 }
 
+.section-features .column {
+	padding: 30px;
+}
+
 .feature-title {
 	font-size: 28px;
 	font-weight: bold;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .feature-description {
 	font-size: 18px;
 }
 
+.section-languages h1 {
+	color: #363636;
+}
+
 .language-title {
 	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .language-column {
@@ -117,7 +123,7 @@ a.nav-item.is-active {
 }
 
 .language-title a {
-	color: white;
+	color: #363636;
 }
 
 .language-icon .icon {
@@ -127,8 +133,12 @@ a.nav-item.is-active {
 	 * */
 	font-size: 50px;
 	margin-left: -29px;
-	color: white;
+	color: #363636;
 	margin-bottom: 40px;
+}
+
+.section-talks .hero-body {
+	margin: 100px;
 }
 
 .talk-title {
@@ -149,9 +159,20 @@ a.nav-item.is-active {
 	color: white !important;
 }
 
+.contribute-section .subtitle {
+	font-size: 24px;
+	line-height: 30px;
+	vertical-align: bottom;
+}
+
+.contribute-section .subtitle a.button {
+	color: #3273dc;
+}
+
 .contribute-body {
 	width: 500px;
-	margin: 0px auto;
+	margin: 30px auto;
+	font-size: 22px;
 }
 
 
