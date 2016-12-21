@@ -21616,9 +21616,9 @@ var Libp2pAutoGraph =
 	var PEER_DISCONNECTED = 'PEER_DISCONNECTED';
 
 	var PROTOCOL = '/libp2p.io/0.0.1';
-	// const SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/178.62.241.75/tcp/9090/ws/ipfs/:peer-id'
+	var SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/178.62.241.75/tcp/9090/ws/ipfs/:peer-id';
 	// Dev server
-	var SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/127.0.0.1/tcp/9090/ws/ipfs/:peer-id';
+	// const SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/127.0.0.1/tcp/9090/ws/ipfs/:peer-id'
 
 	var startOwnPeer = function startOwnPeer(callback) {
 	  PeerId.create(function (err, peerId) {
@@ -105790,9 +105790,7 @@ var Libp2pAutoGraph =
 
 	    node.exit().remove();
 
-	    force.linkDistance(function (d) {
-	      return d.linkDistance;
-	    }).charge(-1000 * scale()).linkStrength(0.01).start();
+	    force.linkDistance(100 * scale()).charge(-1000 * scale()).linkStrength(0.01).start();
 	  }
 
 	  function refresh(e) {
@@ -105884,13 +105882,7 @@ var Libp2pAutoGraph =
 	    if (getLink(sourceNode.index, targetNode.index)) {
 	      throw new Error('connect: cannot make duplicate connection');
 	    }
-	    var linkDistance = Math.floor(Math.random() * 1000);
-	    model.links.push({
-	      source: sourceNode.index,
-	      target: targetNode.index,
-	      sending: false,
-	      linkDistance: linkDistance
-	    });
+	    model.links.push({ source: sourceNode.index, target: targetNode.index, sending: false });
 	    update();
 	  }
 
