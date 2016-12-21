@@ -189,6 +189,20 @@ footer {
 	padding-top: 150px;
 }
 
+.implementations-description {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.interface-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.implementation-table .subtitle {
+	font-size: 30px;
+}
+
 .implementation-table {
 	margin-bottom: 50px;
 }
@@ -258,10 +272,6 @@ footer {
 
 .green {
 	color: #2ecc40;
-}
-
-.implementation-table .subtitle {
-	font-size: 24px;
 }
 
 /* bundles */
