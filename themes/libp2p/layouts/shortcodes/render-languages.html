@@ -3,12 +3,12 @@
 	{{ range .Site.Params.languages }}
 		{{ $githubLink := printf "https://github.com/%s" .link }}
 			<div class="column language-column">
+				<a href="{{$githubLink}}" target="_blank">
 				<div class="language-icon">
-					<a href="{{$githubLink}}" target="_blank">
 						<i class="icon colored {{ .icon }}-plain"></i>
-					</a>
 				</div>
-				<h1 class="language-title"><a href="{{$githubLink}}" target="_blank">{{ .name }}</a></h1>
-			</div>
+				<h1 class="language-title">{{ .name }}</h1>
+			</a>
+		</div>
 	{{ end }}
 </div>

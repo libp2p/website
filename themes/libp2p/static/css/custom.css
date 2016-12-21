@@ -108,10 +108,6 @@ a.nav-item.is-active {
 	font-size: 18px;
 }
 
-.section-languages h1 {
-	color: #363636;
-}
-
 .language-title {
 	font-size: 24px;
 	font-weight: bold;
@@ -122,8 +118,12 @@ a.nav-item.is-active {
 	text-align: center;
 }
 
-.language-title a {
+.language-column a {
 	color: #363636;
+}
+
+.language-column a:hover {
+	color: #60D2D5 !important;
 }
 
 .language-icon .icon {
@@ -133,7 +133,6 @@ a.nav-item.is-active {
 	 * */
 	font-size: 50px;
 	margin-left: -29px;
-	color: #363636;
 	margin-bottom: 40px;
 }
 
