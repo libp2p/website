@@ -21650,6 +21650,14 @@ var Libp2pAutoGraph =
 
 	var REMOVED_PEERS = [];
 
+	var MY_COUNTRY = 'Unknown';
+	// Lets hope this finishes before we tell other peers about it
+	window.fetch('https://ipinfo.io/json').then(function (text) {
+	  return text.json();
+	}).then(function (info) {
+	  MY_COUNTRY = info.country;
+	});
+
 	var Graph = function (_React$Component) {
 	  _inherits(Graph, _React$Component);
 
@@ -21682,7 +21690,7 @@ var Libp2pAutoGraph =
 	          var id = peerInfo.id.toB58String();
 	          if (type === PEER_CONNECTED && REMOVED_PEERS.indexOf(id) === -1 && _this2.state.peers.indexOf(id) === -1) {
 	            try {
-	              graph.add({ id: id });
+	              graph.add({ id: id, name: 'U' });
 	              graph.connect(myId, id);
 	            } catch (err) {
 	              // err
@@ -21700,7 +21708,8 @@ var Libp2pAutoGraph =
 	                    var connStream = pullToStream(conn);
 	                    var value = JSON.stringify({
 	                      from: myId,
-	                      peers: node.peerBook.getAll()
+	                      peers: node.peerBook.getAll(),
+	                      country: MY_COUNTRY
 	                    });
 	                    connStream.write(new Buffer(value));
 	                    setImmediate(function () {
@@ -21740,6 +21749,7 @@ var Libp2pAutoGraph =
 	          connStream.on('end', function () {
 	            var fullCollection = JSON.parse(peerCollection.join(''));
 	            var fromId = fullCollection.from;
+	            graph.setNodeName(fromId, fullCollection.country);
 	            try {
 	              graph.indicateConnect(myId, fromId);
 	            } catch (err) {
@@ -105743,7 +105753,7 @@ var Libp2pAutoGraph =
 	      return d.id;
 	    });
 
-	    link.enter().insert('line', '.node').attr('class', 'link').style('opacity', 0.5);
+	    link.enter().insert('line', '.node').attr('class', 'link').style('opacity', 0.2);
 
 	    link.style('stroke', function (d) {
 	      if (d.sending) {
@@ -105751,7 +105761,7 @@ var Libp2pAutoGraph =
 	      } else {
 	        return d3.hsl(184, 0.52, 0.62);
 	      }
-	    }).style('stroke-width', 2);
+	    }).style('stroke-width', 3);
 
 	    link.exit().remove();
 
@@ -105773,13 +105783,15 @@ var Libp2pAutoGraph =
 
 	    node.select('circle').attr('r', function (d) {
 	      return scale() * 10;
-	    }).style('fill', COLORS.nodes.method);
+	    }).style('fill', COLORS.nodes.method).style('stroke', 'white').style('stroke-width', 1);
 
 	    g.append('text').attr('class', 'text').text(function (d) {
 	      return d.name;
 	    });
 
-	    node.select('text').attr('font-size', function (d) {
+	    node.select('text').text(function (d) {
+	      return d.name;
+	    }).attr('font-size', function (d) {
 	      return d.me ? 16 * scale() : 12 * scale();
 	    }).style('fill', function () {
 	      return d3.hsl(32, 0.91, 0.55);
@@ -105790,7 +105802,7 @@ var Libp2pAutoGraph =
 
 	    node.exit().remove();
 
-	    force.linkDistance(100 * scale()).charge(-1000 * scale()).linkStrength(0.01).start();
+	    force.linkDistance(500 * scale()).charge(-500 * scale()).linkStrength(0.01).start();
 	  }
 
 	  function refresh(e) {
@@ -105926,6 +105938,13 @@ var Libp2pAutoGraph =
 	    }, 250);
 	  }
 
+	  function setNodeName(id, name) {
+	    var sourceNode = getNode(id);
+	    if (!sourceNode) throw new Error('setNodeName: invalid id');
+	    sourceNode.name = name;
+	    update();
+	  }
+
 	  function choke(sourceId, targetId) {
 	    debug('choke %s %s', sourceId, targetId);
 	  }
@@ -105940,7 +105959,8 @@ var Libp2pAutoGraph =
 	    disconnect: disconnect,
 	    disconnectAll: disconnectAll,
 	    indicateConnect: indicateConnect,
-	    choke: choke
+	    choke: choke,
+	    setNodeName: setNodeName
 	  };
 	}
 
