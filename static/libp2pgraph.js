@@ -52,7 +52,7 @@ var Libp2pAutoGraph =
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -74,7 +74,7 @@ var Libp2pAutoGraph =
 	  _reactDom2.default.render(_react2.default.createElement(_graph2.default, null), document.getElementById(id));
 	};
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "wrapper-component.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "wrapper-component.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 2 */
@@ -848,12 +848,18 @@ var Libp2pAutoGraph =
 	 * will remain to ensure logic does not differ in production.
 	 */
 
-	function invariant(condition, format, a, b, c, d, e, f) {
-	  if (process.env.NODE_ENV !== 'production') {
+	var validateFormat = function validateFormat(format) {};
+
+	if (process.env.NODE_ENV !== 'production') {
+	  validateFormat = function validateFormat(format) {
 	    if (format === undefined) {
 	      throw new Error('invariant requires an error message argument');
 	    }
-	  }
+	  };
+	}
+
+	function invariant(condition, format, a, b, c, d, e, f) {
+	  validateFormat(format);
 
 	  if (!condition) {
 	    var error;
@@ -21576,7 +21582,7 @@ var Libp2pAutoGraph =
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer, setImmediate) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* WEBPACK VAR INJECTION */(function(Buffer, setImmediate) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -21599,20 +21605,20 @@ var Libp2pAutoGraph =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Node = __webpack_require__(187).Node;
-	var PeerInfo = __webpack_require__(333);
-	var PeerId = __webpack_require__(334);
-	var Multiaddr = __webpack_require__(427);
-	var P2PGraph = __webpack_require__(658);
-	var pullToStream = __webpack_require__(639);
-	__webpack_require__(662);
+	var PeerInfo = __webpack_require__(741);
+	var PeerId = __webpack_require__(742);
+	var Multiaddr = __webpack_require__(743);
+	var P2PGraph = __webpack_require__(747);
+	var pullToStream = __webpack_require__(751);
+	__webpack_require__(752);
 
 	var PEER_CONNECTED = 'PEER_CONNECTED';
 	var PEER_DISCONNECTED = 'PEER_DISCONNECTED';
 
 	var PROTOCOL = '/libp2p.io/0.0.1';
-	var SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/178.62.241.75/tcp/9090/ws/ipfs/:peer-id';
+	// const SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/178.62.241.75/tcp/9090/ws/ipfs/:peer-id'
 	// Dev server
-	// const SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/127.0.0.1/tcp/9090/ws/ipfs/:peer-id'
+	var SIGNAL_SERVER = '/libp2p-webrtc-star/ip4/127.0.0.1/tcp/9090/ws/ipfs/:peer-id';
 
 	var startOwnPeer = function startOwnPeer(callback) {
 	  PeerId.create(function (err, peerId) {
@@ -21676,10 +21682,7 @@ var Libp2pAutoGraph =
 	          var id = peerInfo.id.toB58String();
 	          if (type === PEER_CONNECTED && REMOVED_PEERS.indexOf(id) === -1 && _this2.state.peers.indexOf(id) === -1) {
 	            try {
-	              graph.add({
-	                id: id,
-	                name: id
-	              });
+	              graph.add({ id: id });
 	              graph.connect(myId, id);
 	            } catch (err) {
 	              // err
@@ -21781,7 +21784,7 @@ var Libp2pAutoGraph =
 
 	exports.default = Graph;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "graph.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "graph.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer, __webpack_require__(185).setImmediate))
 
 /***/ },
@@ -24060,16 +24063,16 @@ var Libp2pAutoGraph =
 	'use strict'
 
 	const Swarm = __webpack_require__(188)
-	const WS = __webpack_require__(439)
-	const WebRTCStar = __webpack_require__(534)
-	const spdy = __webpack_require__(591)
-	const secio = __webpack_require__(643)
-	const PeerInfo = __webpack_require__(333)
-	const PeerId = __webpack_require__(334)
+	const WS = __webpack_require__(475)
+	const WebRTCStar = __webpack_require__(574)
+	const spdy = __webpack_require__(638)
+	const secio = __webpack_require__(690)
+	const PeerInfo = __webpack_require__(734)
+	const PeerId = __webpack_require__(735)
 	const EE = __webpack_require__(192).EventEmitter
-	const multiaddr = __webpack_require__(427)
-	const PeerBook = __webpack_require__(657)
-	const mafmt = __webpack_require__(455)
+	const multiaddr = __webpack_require__(736)
+	const PeerBook = __webpack_require__(740)
+	const mafmt = __webpack_require__(491)
 
 	exports = module.exports
 
@@ -24273,14 +24276,15 @@ var Libp2pAutoGraph =
 
 	const util = __webpack_require__(189)
 	const EE = __webpack_require__(192).EventEmitter
-	const parallel = __webpack_require__(193)
-	const includes = __webpack_require__(238)
+	const each = __webpack_require__(193)
+	const series = __webpack_require__(234)
+	const includes = __webpack_require__(241)
 
-	const transport = __webpack_require__(239)
-	const connection = __webpack_require__(313)
-	const dial = __webpack_require__(438)
-	const protocolMuxer = __webpack_require__(248)
-	const plaintext = __webpack_require__(437)
+	const transport = __webpack_require__(242)
+	const connection = __webpack_require__(320)
+	const dial = __webpack_require__(474)
+	const protocolMuxer = __webpack_require__(254)
+	const plaintext = __webpack_require__(473)
 
 	exports = module.exports = Swarm
 
@@ -24355,10 +24359,10 @@ var Libp2pAutoGraph =
 
 	  // Start listening on all available transports
 	  this.listen = (callback) => {
-	    parallel(this.availableTransports(peerInfo).map((ts) => (cb) => {
+	    each(this.availableTransports(peerInfo), (ts, cb) => {
 	      // Listen on the given transport
 	      this.transport.listen(ts, {}, null, cb)
-	    }), callback)
+	    }, callback)
 	  }
 
 	  this.handle = (protocol, handlerFunc, matchFunc) => {
@@ -24395,20 +24399,24 @@ var Libp2pAutoGraph =
 	  }
 
 	  this.close = (callback) => {
-	    Object.keys(this.muxedConns).forEach((key) => {
-	      this.muxedConns[key].muxer.end()
-	    })
-
-	    const transports = this.transports
-
-	    parallel(
-	      Object.keys(transports).map((key) => (cb) => {
-	        parallel(transports[key].listeners.map((listener) => {
-	          return (cb) => listener.close(cb)
-	        }), cb)
-	      }),
-	      callback
-	    )
+	    series([
+	      (cb) => each(this.muxedConns, (conn, cb) => {
+	        conn.muxer.end((err) => {
+	          // If OK things are fine, and someone just shut down
+	          if (err && err.message !== 'Fatal error: OK') {
+	            return cb(err)
+	          }
+	          cb()
+	        })
+	      }, cb),
+	      (cb) => {
+	        each(this.transports, (transport, cb) => {
+	          each(transport.listeners, (listener, cb) => {
+	            listener.close(cb)
+	          }, cb)
+	        }, cb)
+	      }
+	    ], callback)
 	  }
 	}
 
@@ -25363,86 +25371,79 @@ var Libp2pAutoGraph =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.default = parallelLimit;
+	exports.default = eachLimit;
 
 	var _eachOf = __webpack_require__(194);
 
 	var _eachOf2 = _interopRequireDefault(_eachOf);
 
-	var _parallel = __webpack_require__(233);
+	var _withoutIndex = __webpack_require__(233);
 
-	var _parallel2 = _interopRequireDefault(_parallel);
+	var _withoutIndex2 = _interopRequireDefault(_withoutIndex);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	/**
-	 * Run the `tasks` collection of functions in parallel, without waiting until
-	 * the previous function has completed. If any of the functions pass an error to
-	 * its callback, the main `callback` is immediately called with the value of the
-	 * error. Once the `tasks` have completed, the results are passed to the final
-	 * `callback` as an array.
+	 * Applies the function `iteratee` to each item in `coll`, in parallel.
+	 * The `iteratee` is called with an item from the list, and a callback for when
+	 * it has finished. If the `iteratee` passes an error to its `callback`, the
+	 * main `callback` (for the `each` function) is immediately called with the
+	 * error.
 	 *
-	 * **Note:** `parallel` is about kicking-off I/O tasks in parallel, not about
-	 * parallel execution of code.  If your tasks do not use any timers or perform
-	 * any I/O, they will actually be executed in series.  Any synchronous setup
-	 * sections for each task will happen one after the other.  JavaScript remains
-	 * single-threaded.
+	 * Note, that since this function applies `iteratee` to each item in parallel,
+	 * there is no guarantee that the iteratee functions will complete in order.
 	 *
-	 * It is also possible to use an object instead of an array. Each property will
-	 * be run as a function and the results will be passed to the final `callback`
-	 * as an object instead of an array. This can be a more readable way of handling
-	 * results from {@link async.parallel}.
-	 *
-	 * @name parallel
+	 * @name each
 	 * @static
-	 * @memberOf module:ControlFlow
+	 * @memberOf module:Collections
 	 * @method
-	 * @category Control Flow
-	 * @param {Array|Iterable|Object} tasks - A collection containing functions to run.
-	 * Each function is passed a `callback(err, result)` which it must call on
-	 * completion with an error `err` (which can be `null`) and an optional `result`
-	 * value.
-	 * @param {Function} [callback] - An optional callback to run once all the
-	 * functions have completed successfully. This function gets a results array
-	 * (or object) containing all the result arguments passed to the task callbacks.
-	 * Invoked with (err, results).
+	 * @alias forEach
+	 * @category Collection
+	 * @param {Array|Iterable|Object} coll - A collection to iterate over.
+	 * @param {Function} iteratee - A function to apply to each item
+	 * in `coll`. The iteratee is passed a `callback(err)` which must be called once
+	 * it has completed. If no error has occurred, the `callback` should be run
+	 * without arguments or with an explicit `null` argument. The array index is not
+	 * passed to the iteratee. Invoked with (item, callback). If you need the index,
+	 * use `eachOf`.
+	 * @param {Function} [callback] - A callback which is called when all
+	 * `iteratee` functions have finished, or an error occurs. Invoked with (err).
 	 * @example
-	 * async.parallel([
-	 *     function(callback) {
-	 *         setTimeout(function() {
-	 *             callback(null, 'one');
-	 *         }, 200);
-	 *     },
-	 *     function(callback) {
-	 *         setTimeout(function() {
-	 *             callback(null, 'two');
-	 *         }, 100);
-	 *     }
-	 * ],
-	 * // optional callback
-	 * function(err, results) {
-	 *     // the results array will equal ['one','two'] even though
-	 *     // the second function had a shorter timeout.
+	 *
+	 * // assuming openFiles is an array of file names and saveFile is a function
+	 * // to save the modified contents of that file:
+	 *
+	 * async.each(openFiles, saveFile, function(err){
+	 *   // if any of the saves produced an error, err would equal that error
 	 * });
 	 *
-	 * // an example using an object instead of an array
-	 * async.parallel({
-	 *     one: function(callback) {
-	 *         setTimeout(function() {
-	 *             callback(null, 1);
-	 *         }, 200);
-	 *     },
-	 *     two: function(callback) {
-	 *         setTimeout(function() {
-	 *             callback(null, 2);
-	 *         }, 100);
+	 * // assuming openFiles is an array of file names
+	 * async.each(openFiles, function(file, callback) {
+	 *
+	 *     // Perform operation on file here.
+	 *     console.log('Processing file ' + file);
+	 *
+	 *     if( file.length > 32 ) {
+	 *       console.log('This file name is too long');
+	 *       callback('File name too long');
+	 *     } else {
+	 *       // Do work to process file here
+	 *       console.log('File processed');
+	 *       callback();
 	 *     }
-	 * }, function(err, results) {
-	 *     // results is now equals to: {one: 1, two: 2}
+	 * }, function(err) {
+	 *     // if any of the file processing produced an error, err would equal that error
+	 *     if( err ) {
+	 *       // One of the iterations produced an error.
+	 *       // All processing will now stop.
+	 *       console.log('A file failed to process');
+	 *     } else {
+	 *       console.log('All files have been processed successfully');
+	 *     }
 	 * });
 	 */
-	function parallelLimit(tasks, callback) {
-	  (0, _parallel2.default)(_eachOf2.default, tasks, callback);
+	function eachLimit(coll, iteratee, callback) {
+	  (0, _eachOf2.default)(coll, (0, _withoutIndex2.default)(iteratee), callback);
 	}
 	module.exports = exports['default'];
 
@@ -26777,6 +26778,113 @@ var Libp2pAutoGraph =
 
 /***/ },
 /* 233 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = _withoutIndex;
+	function _withoutIndex(iteratee) {
+	    return function (value, index, callback) {
+	        return iteratee(value, callback);
+	    };
+	}
+	module.exports = exports["default"];
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = series;
+
+	var _parallel = __webpack_require__(235);
+
+	var _parallel2 = _interopRequireDefault(_parallel);
+
+	var _eachOfSeries = __webpack_require__(240);
+
+	var _eachOfSeries2 = _interopRequireDefault(_eachOfSeries);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Run the functions in the `tasks` collection in series, each one running once
+	 * the previous function has completed. If any functions in the series pass an
+	 * error to its callback, no more functions are run, and `callback` is
+	 * immediately called with the value of the error. Otherwise, `callback`
+	 * receives an array of results when `tasks` have completed.
+	 *
+	 * It is also possible to use an object instead of an array. Each property will
+	 * be run as a function, and the results will be passed to the final `callback`
+	 * as an object instead of an array. This can be a more readable way of handling
+	 *  results from {@link async.series}.
+	 *
+	 * **Note** that while many implementations preserve the order of object
+	 * properties, the [ECMAScript Language Specification](http://www.ecma-international.org/ecma-262/5.1/#sec-8.6)
+	 * explicitly states that
+	 *
+	 * > The mechanics and order of enumerating the properties is not specified.
+	 *
+	 * So if you rely on the order in which your series of functions are executed,
+	 * and want this to work on all platforms, consider using an array.
+	 *
+	 * @name series
+	 * @static
+	 * @memberOf module:ControlFlow
+	 * @method
+	 * @category Control Flow
+	 * @param {Array|Iterable|Object} tasks - A collection containing functions to run, each
+	 * function is passed a `callback(err, result)` it must call on completion with
+	 * an error `err` (which can be `null`) and an optional `result` value.
+	 * @param {Function} [callback] - An optional callback to run once all the
+	 * functions have completed. This function gets a results array (or object)
+	 * containing all the result arguments passed to the `task` callbacks. Invoked
+	 * with (err, result).
+	 * @example
+	 * async.series([
+	 *     function(callback) {
+	 *         // do some stuff ...
+	 *         callback(null, 'one');
+	 *     },
+	 *     function(callback) {
+	 *         // do some more stuff ...
+	 *         callback(null, 'two');
+	 *     }
+	 * ],
+	 * // optional callback
+	 * function(err, results) {
+	 *     // results is now equal to ['one', 'two']
+	 * });
+	 *
+	 * async.series({
+	 *     one: function(callback) {
+	 *         setTimeout(function() {
+	 *             callback(null, 1);
+	 *         }, 200);
+	 *     },
+	 *     two: function(callback){
+	 *         setTimeout(function() {
+	 *             callback(null, 2);
+	 *         }, 100);
+	 *     }
+	 * }, function(err, results) {
+	 *     // results is now equal to: {one: 1, two: 2}
+	 * });
+	 */
+	function series(tasks, callback) {
+	  (0, _parallel2.default)(_eachOfSeries2.default, tasks, callback);
+	}
+	module.exports = exports['default'];
+
+/***/ },
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26794,7 +26902,7 @@ var Libp2pAutoGraph =
 
 	var _isArrayLike2 = _interopRequireDefault(_isArrayLike);
 
-	var _rest = __webpack_require__(234);
+	var _rest = __webpack_require__(236);
 
 	var _rest2 = _interopRequireDefault(_rest);
 
@@ -26819,7 +26927,7 @@ var Libp2pAutoGraph =
 	module.exports = exports['default'];
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26829,11 +26937,11 @@ var Libp2pAutoGraph =
 	});
 	exports.default = rest;
 
-	var _overRest2 = __webpack_require__(235);
+	var _overRest2 = __webpack_require__(237);
 
 	var _overRest3 = _interopRequireDefault(_overRest2);
 
-	var _identity = __webpack_require__(237);
+	var _identity = __webpack_require__(239);
 
 	var _identity2 = _interopRequireDefault(_identity);
 
@@ -26847,10 +26955,10 @@ var Libp2pAutoGraph =
 	module.exports = exports['default'];
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var apply = __webpack_require__(236);
+	var apply = __webpack_require__(238);
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeMax = Math.max;
@@ -26889,7 +26997,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 236 */
+/* 238 */
 /***/ function(module, exports) {
 
 	/**
@@ -26916,7 +27024,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 237 */
+/* 239 */
 /***/ function(module, exports) {
 
 	/**
@@ -26943,7 +27051,49 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 238 */
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _eachOfLimit = __webpack_require__(205);
+
+	var _eachOfLimit2 = _interopRequireDefault(_eachOfLimit);
+
+	var _doLimit = __webpack_require__(232);
+
+	var _doLimit2 = _interopRequireDefault(_doLimit);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * The same as [`eachOf`]{@link module:Collections.eachOf} but runs only a single async operation at a time.
+	 *
+	 * @name eachOfSeries
+	 * @static
+	 * @memberOf module:Collections
+	 * @method
+	 * @see [async.eachOf]{@link module:Collections.eachOf}
+	 * @alias forEachOfSeries
+	 * @category Collection
+	 * @param {Array|Iterable|Object} coll - A collection to iterate over.
+	 * @param {Function} iteratee - A function to apply to each item in `coll`. The
+	 * `key` is the item's key, or index in the case of an array. The iteratee is
+	 * passed a `callback(err)` which must be called once it has completed. If no
+	 * error has occurred, the callback should be run without arguments or with an
+	 * explicit `null` argument. Invoked with (item, key, callback).
+	 * @param {Function} [callback] - A callback which is called when all `iteratee`
+	 * functions have finished, or an error occurs. Invoked with (err).
+	 */
+	exports.default = (0, _doLimit2.default)(_eachOfLimit2.default, 1);
+	module.exports = exports['default'];
+
+/***/ },
+/* 241 */
 /***/ function(module, exports) {
 
 	/**
@@ -27694,17 +27844,18 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 239 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const Connection = __webpack_require__(240).Connection
-	const parallel = __webpack_require__(193)
-	const debug = __webpack_require__(245)
+	const Connection = __webpack_require__(243).Connection
+	const parallel = __webpack_require__(248)
+	const once = __webpack_require__(249)
+	const debug = __webpack_require__(251)
 	const log = debug('libp2p:swarm:transport')
 
-	const protocolMuxer = __webpack_require__(248)
+	const protocolMuxer = __webpack_require__(254)
 
 	module.exports = function (swarm) {
 	  return {
@@ -27780,19 +27931,19 @@ var Libp2pAutoGraph =
 
 	      const createListeners = multiaddrs.map((ma) => {
 	        return (cb) => {
+	          const done = once(cb)
 	          const listener = transport.createListener(handler)
-
-	          listener.once('error', cb)
+	          listener.once('error', done)
 
 	          listener.listen(ma, () => {
-	            listener.removeListener('error', cb)
+	            listener.removeListener('error', done)
 	            listener.getAddrs((err, addrs) => {
 	              if (err) {
-	                return cb(err)
+	                return done(err)
 	              }
 	              freshMultiaddrs = freshMultiaddrs.concat(addrs)
 	              transport.listeners.push(listener)
-	              cb()
+	              done()
 	            })
 	          })
 	        }
@@ -27833,21 +27984,21 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 240 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	exports.Connection = __webpack_require__(241)
+	exports.Connection = __webpack_require__(244)
 
 
 /***/ },
-/* 241 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const defer = __webpack_require__(242)
+	const defer = __webpack_require__(245)
 
 	module.exports = class Connection {
 	  constructor (conn, info) {
@@ -27908,12 +28059,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 242 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	var Source = __webpack_require__(243)
-	var Sink = __webpack_require__(244)
+	var Source = __webpack_require__(246)
+	var Sink = __webpack_require__(247)
 
 	module.exports = function () {
 
@@ -27935,7 +28086,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 243 */
+/* 246 */
 /***/ function(module, exports) {
 
 	
@@ -27971,7 +28122,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 244 */
+/* 247 */
 /***/ function(module, exports) {
 
 	module.exports = function (stream) {
@@ -27996,7 +28147,186 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 245 */
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = parallelLimit;
+
+	var _eachOf = __webpack_require__(194);
+
+	var _eachOf2 = _interopRequireDefault(_eachOf);
+
+	var _parallel = __webpack_require__(235);
+
+	var _parallel2 = _interopRequireDefault(_parallel);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Run the `tasks` collection of functions in parallel, without waiting until
+	 * the previous function has completed. If any of the functions pass an error to
+	 * its callback, the main `callback` is immediately called with the value of the
+	 * error. Once the `tasks` have completed, the results are passed to the final
+	 * `callback` as an array.
+	 *
+	 * **Note:** `parallel` is about kicking-off I/O tasks in parallel, not about
+	 * parallel execution of code.  If your tasks do not use any timers or perform
+	 * any I/O, they will actually be executed in series.  Any synchronous setup
+	 * sections for each task will happen one after the other.  JavaScript remains
+	 * single-threaded.
+	 *
+	 * It is also possible to use an object instead of an array. Each property will
+	 * be run as a function and the results will be passed to the final `callback`
+	 * as an object instead of an array. This can be a more readable way of handling
+	 * results from {@link async.parallel}.
+	 *
+	 * @name parallel
+	 * @static
+	 * @memberOf module:ControlFlow
+	 * @method
+	 * @category Control Flow
+	 * @param {Array|Iterable|Object} tasks - A collection containing functions to run.
+	 * Each function is passed a `callback(err, result)` which it must call on
+	 * completion with an error `err` (which can be `null`) and an optional `result`
+	 * value.
+	 * @param {Function} [callback] - An optional callback to run once all the
+	 * functions have completed successfully. This function gets a results array
+	 * (or object) containing all the result arguments passed to the task callbacks.
+	 * Invoked with (err, results).
+	 * @example
+	 * async.parallel([
+	 *     function(callback) {
+	 *         setTimeout(function() {
+	 *             callback(null, 'one');
+	 *         }, 200);
+	 *     },
+	 *     function(callback) {
+	 *         setTimeout(function() {
+	 *             callback(null, 'two');
+	 *         }, 100);
+	 *     }
+	 * ],
+	 * // optional callback
+	 * function(err, results) {
+	 *     // the results array will equal ['one','two'] even though
+	 *     // the second function had a shorter timeout.
+	 * });
+	 *
+	 * // an example using an object instead of an array
+	 * async.parallel({
+	 *     one: function(callback) {
+	 *         setTimeout(function() {
+	 *             callback(null, 1);
+	 *         }, 200);
+	 *     },
+	 *     two: function(callback) {
+	 *         setTimeout(function() {
+	 *             callback(null, 2);
+	 *         }, 100);
+	 *     }
+	 * }, function(err, results) {
+	 *     // results is now equals to: {one: 1, two: 2}
+	 * });
+	 */
+	function parallelLimit(tasks, callback) {
+	  (0, _parallel2.default)(_eachOf2.default, tasks, callback);
+	}
+	module.exports = exports['default'];
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var wrappy = __webpack_require__(250)
+	module.exports = wrappy(once)
+	module.exports.strict = wrappy(onceStrict)
+
+	once.proto = once(function () {
+	  Object.defineProperty(Function.prototype, 'once', {
+	    value: function () {
+	      return once(this)
+	    },
+	    configurable: true
+	  })
+
+	  Object.defineProperty(Function.prototype, 'onceStrict', {
+	    value: function () {
+	      return onceStrict(this)
+	    },
+	    configurable: true
+	  })
+	})
+
+	function once (fn) {
+	  var f = function () {
+	    if (f.called) return f.value
+	    f.called = true
+	    return f.value = fn.apply(this, arguments)
+	  }
+	  f.called = false
+	  return f
+	}
+
+	function onceStrict (fn) {
+	  var f = function () {
+	    if (f.called)
+	      throw new Error(f.onceError)
+	    f.called = true
+	    return f.value = fn.apply(this, arguments)
+	  }
+	  var name = fn.name || 'Function wrapped with `once`'
+	  f.onceError = name + " shouldn't be called more than once"
+	  f.called = false
+	  return f
+	}
+
+
+/***/ },
+/* 250 */
+/***/ function(module, exports) {
+
+	// Returns a wrapper function that returns a wrapped callback
+	// The wrapper function should do some stuff, and return a
+	// presumably different callback function.
+	// This makes sure that own properties are retained, so that
+	// decorations and such are not lost along the way.
+	module.exports = wrappy
+	function wrappy (fn, cb) {
+	  if (fn && cb) return wrappy(fn)(cb)
+
+	  if (typeof fn !== 'function')
+	    throw new TypeError('need wrapper function')
+
+	  Object.keys(fn).forEach(function (k) {
+	    wrapper[k] = fn[k]
+	  })
+
+	  return wrapper
+
+	  function wrapper() {
+	    var args = new Array(arguments.length)
+	    for (var i = 0; i < args.length; i++) {
+	      args[i] = arguments[i]
+	    }
+	    var ret = fn.apply(this, args)
+	    var cb = args[args.length-1]
+	    if (typeof ret === 'function' && ret !== cb) {
+	      Object.keys(cb).forEach(function (k) {
+	        ret[k] = cb[k]
+	      })
+	    }
+	    return ret
+	  }
+	}
+
+
+/***/ },
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -28005,15 +28335,15 @@ var Libp2pAutoGraph =
 	 * Expose `debug()` as the module.
 	 */
 
-	exports = module.exports = __webpack_require__(246);
+	exports = module.exports = __webpack_require__(252);
 	exports.log = log;
 	exports.formatArgs = formatArgs;
 	exports.save = save;
 	exports.load = load;
 	exports.useColors = useColors;
-	exports.storage = 'undefined' != typeof chrome
-	               && 'undefined' != typeof chrome.storage
-	                  ? chrome.storage.local
+	exports.storage = 'undefined' != typeof window.chrome
+	               && 'undefined' != typeof window.chrome.storage
+	                  ? window.chrome.storage.local
 	                  : localstorage();
 
 	/**
@@ -28052,9 +28382,9 @@ var Libp2pAutoGraph =
 	    (typeof window !== 'undefined' && window.console && (console.firebug || (console.exception && console.table))) ||
 	    // is firefox >= v31?
 	    // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-	    (navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+	    (navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
 	    // double check webkit in userAgent just in case we are in a worker
-	    (navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
+	    (navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
 	}
 
 	/**
@@ -28149,7 +28479,6 @@ var Libp2pAutoGraph =
 	 */
 
 	function load() {
-	  var r;
 	  try {
 	    return exports.storage.debug;
 	  } catch(e) {}
@@ -28186,7 +28515,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 246 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -28202,7 +28531,7 @@ var Libp2pAutoGraph =
 	exports.disable = disable;
 	exports.enable = enable;
 	exports.enabled = enabled;
-	exports.humanize = __webpack_require__(247);
+	exports.humanize = __webpack_require__(253);
 
 	/**
 	 * The currently active debug mode names, and names to skip.
@@ -28301,7 +28630,7 @@ var Libp2pAutoGraph =
 	    // apply env-specific formatting (colors, etc.)
 	    exports.formatArgs.call(self, args);
 
-	    var logFn = enabled.log || exports.log || console.log.bind(console);
+	    var logFn = debug.log || exports.log || console.log.bind(console);
 	    logFn.apply(self, args);
 	  }
 
@@ -28391,7 +28720,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 247 */
+/* 253 */
 /***/ function(module, exports) {
 
 	/**
@@ -28546,12 +28875,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 248 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const multistream = __webpack_require__(249)
+	const multistream = __webpack_require__(255)
 
 	module.exports = function protocolMuxer (protocols, conn) {
 	  const ms = new multistream.Listener()
@@ -28573,34 +28902,34 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 249 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	exports.Listener = exports.listener = __webpack_require__(250)
-	exports.Dialer = exports.dialer = __webpack_require__(310)
-	exports.matchSemver = __webpack_require__(311)
+	exports.Listener = exports.listener = __webpack_require__(256)
+	exports.Dialer = exports.dialer = __webpack_require__(317)
+	exports.matchSemver = __webpack_require__(318)
 
 
 /***/ },
-/* 250 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const pull = __webpack_require__(251)
-	const isFunction = __webpack_require__(282)
-	const assert = __webpack_require__(283)
-	const select = __webpack_require__(284)
-	const selectHandler = __webpack_require__(300)
-	const lsHandler = __webpack_require__(303)
-	const matchExact = __webpack_require__(308)
+	const pull = __webpack_require__(257)
+	const isFunction = __webpack_require__(288)
+	const assert = __webpack_require__(289)
+	const select = __webpack_require__(290)
+	const selectHandler = __webpack_require__(307)
+	const lsHandler = __webpack_require__(310)
+	const matchExact = __webpack_require__(315)
 
-	const util = __webpack_require__(299)
-	const Connection = __webpack_require__(240).Connection
+	const util = __webpack_require__(306)
+	const Connection = __webpack_require__(243).Connection
 
-	const PROTOCOL_ID = __webpack_require__(309).PROTOCOL_ID
+	const PROTOCOL_ID = __webpack_require__(316).PROTOCOL_ID
 
 	module.exports = class Listener {
 	  constructor () {
@@ -28665,16 +28994,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 251 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var sources  = __webpack_require__(252)
-	var sinks    = __webpack_require__(261)
-	var throughs = __webpack_require__(270)
+	var sources  = __webpack_require__(258)
+	var sinks    = __webpack_require__(267)
+	var throughs = __webpack_require__(276)
 
-	exports = module.exports = __webpack_require__(281)
+	exports = module.exports = __webpack_require__(287)
 
 	for(var k in sources)
 	  exports[k] = sources[k]
@@ -28688,27 +29017,27 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 252 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 	module.exports = {
-	  keys: __webpack_require__(253),
-	  once: __webpack_require__(256),
-	  values: __webpack_require__(254),
-	  count: __webpack_require__(257),
-	  infinite: __webpack_require__(258),
-	  empty: __webpack_require__(259),
-	  error: __webpack_require__(260)
+	  keys: __webpack_require__(259),
+	  once: __webpack_require__(262),
+	  values: __webpack_require__(260),
+	  count: __webpack_require__(263),
+	  infinite: __webpack_require__(264),
+	  empty: __webpack_require__(265),
+	  error: __webpack_require__(266)
 	}
 
 
 /***/ },
-/* 253 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
-	var values = __webpack_require__(254)
+	var values = __webpack_require__(260)
 	module.exports = function (object) {
 	  return values(Object.keys(object))
 	}
@@ -28717,11 +29046,11 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 254 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
-	var abortCb = __webpack_require__(255)
+	var abortCb = __webpack_require__(261)
 
 	module.exports = function values (array, onAbort) {
 	  if(!array)
@@ -28746,7 +29075,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 255 */
+/* 261 */
 /***/ function(module, exports) {
 
 	module.exports = function abortCb(cb, abort, onAbort) {
@@ -28758,11 +29087,11 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 256 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
-	var abortCb = __webpack_require__(255)
+	var abortCb = __webpack_require__(261)
 
 	module.exports = function once (value, onAbort) {
 	  return function (abort, cb) {
@@ -28780,7 +29109,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 257 */
+/* 263 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -28799,7 +29128,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 258 */
+/* 264 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -28815,7 +29144,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 259 */
+/* 265 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -28828,7 +29157,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 260 */
+/* 266 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -28842,25 +29171,25 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 261 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	module.exports = {
-	  drain: __webpack_require__(262),
-	  onEnd: __webpack_require__(263),
-	  log: __webpack_require__(264),
-	  find: __webpack_require__(265),
-	  reduce: __webpack_require__(267),
-	  collect: __webpack_require__(268),
-	  concat: __webpack_require__(269)
+	  drain: __webpack_require__(268),
+	  onEnd: __webpack_require__(269),
+	  log: __webpack_require__(270),
+	  find: __webpack_require__(271),
+	  reduce: __webpack_require__(273),
+	  collect: __webpack_require__(274),
+	  concat: __webpack_require__(275)
 	}
 
 
 
 /***/ },
-/* 262 */
+/* 268 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -28914,12 +29243,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 263 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var drain = __webpack_require__(262)
+	var drain = __webpack_require__(268)
 
 	module.exports = function onEnd (done) {
 	  return drain(null, done)
@@ -28927,12 +29256,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 264 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var drain = __webpack_require__(262)
+	var drain = __webpack_require__(268)
 
 	module.exports = function log (done) {
 	  return drain(function (data) {
@@ -28942,14 +29271,14 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 265 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	function id (e) { return e }
-	var prop = __webpack_require__(266)
-	var drain = __webpack_require__(262)
+	var prop = __webpack_require__(272)
+	var drain = __webpack_require__(268)
 
 	module.exports = function find (test, cb) {
 	  var ended = false
@@ -28976,7 +29305,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 266 */
+/* 272 */
 /***/ function(module, exports) {
 
 	module.exports = function prop (key) {
@@ -28991,12 +29320,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 267 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var drain = __webpack_require__(262)
+	var drain = __webpack_require__(268)
 
 	module.exports = function reduce (reducer, acc, cb ) {
 	  if(!cb) cb = acc, acc = null
@@ -29019,12 +29348,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 268 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var reduce = __webpack_require__(267)
+	var reduce = __webpack_require__(273)
 
 	module.exports = function collect (cb) {
 	  return reduce(function (arr, item) {
@@ -29035,12 +29364,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 269 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var reduce = __webpack_require__(267)
+	var reduce = __webpack_require__(273)
 
 	module.exports = function concat (cb) {
 	  return reduce(function (a, b) {
@@ -29050,21 +29379,21 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 270 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	module.exports = {
-	  map: __webpack_require__(271),
-	  asyncMap: __webpack_require__(272),
-	  filter: __webpack_require__(273),
-	  filterNot: __webpack_require__(275),
-	  through: __webpack_require__(276),
-	  take: __webpack_require__(277),
-	  unique: __webpack_require__(278),
-	  nonUnique: __webpack_require__(279),
-	  flatten: __webpack_require__(280)
+	  map: __webpack_require__(277),
+	  asyncMap: __webpack_require__(278),
+	  filter: __webpack_require__(279),
+	  filterNot: __webpack_require__(281),
+	  through: __webpack_require__(282),
+	  take: __webpack_require__(283),
+	  unique: __webpack_require__(284),
+	  nonUnique: __webpack_require__(285),
+	  flatten: __webpack_require__(286)
 	}
 
 
@@ -29072,13 +29401,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 271 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	function id (e) { return e }
-	var prop = __webpack_require__(266)
+	var prop = __webpack_require__(272)
 
 	module.exports = function map (mapper) {
 	  if(!mapper) return id
@@ -29101,13 +29430,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 272 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	function id (e) { return e }
-	var prop = __webpack_require__(266)
+	var prop = __webpack_require__(272)
 
 	module.exports = function asyncMap (map) {
 	  if(!map) return id
@@ -29150,12 +29479,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 273 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var tester = __webpack_require__(274)
+	var tester = __webpack_require__(280)
 
 	module.exports = function filter (test) {
 	  //regexp
@@ -29180,10 +29509,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 274 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var prop = __webpack_require__(266)
+	var prop = __webpack_require__(272)
 
 	function id (e) { return e }
 
@@ -29197,13 +29526,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 275 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var tester = __webpack_require__(274)
-	var filter = __webpack_require__(273)
+	var tester = __webpack_require__(280)
+	var filter = __webpack_require__(279)
 
 	module.exports = function filterNot (test) {
 	  test = tester(test)
@@ -29212,7 +29541,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 276 */
+/* 282 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -29241,7 +29570,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 277 */
+/* 283 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -29288,14 +29617,14 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 278 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	function id (e) { return e }
-	var prop = __webpack_require__(266)
-	var filter = __webpack_require__(273)
+	var prop = __webpack_require__(272)
+	var filter = __webpack_require__(279)
 
 	//drop items you have already seen.
 	module.exports = function unique (field, invert) {
@@ -29312,12 +29641,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 279 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var unique = __webpack_require__(278)
+	var unique = __webpack_require__(284)
 
 	//passes an item through when you see it for the second time.
 	module.exports = function nonUnique (field) {
@@ -29326,13 +29655,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 280 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var values = __webpack_require__(254)
-	var once = __webpack_require__(256)
+	var values = __webpack_require__(260)
+	var once = __webpack_require__(262)
 
 	//convert a stream of arrays or streams into just a stream.
 	module.exports = function flatten () {
@@ -29379,7 +29708,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 281 */
+/* 287 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -29434,7 +29763,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 282 */
+/* 288 */
 /***/ function(module, exports) {
 
 	/**
@@ -29515,7 +29844,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 283 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -30012,14 +30341,14 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 284 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const handshake = __webpack_require__(285)
-	const pullLP = __webpack_require__(291)
-	const util = __webpack_require__(299)
+	const handshake = __webpack_require__(291)
+	const pullLP = __webpack_require__(297)
+	const util = __webpack_require__(306)
 	const writeEncoded = util.writeEncoded
 
 	function select (multicodec, callback, log) {
@@ -30054,13 +30383,13 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 285 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Reader = __webpack_require__(286)
-	var Writer = __webpack_require__(288)
-	var cat = __webpack_require__(289)
-	var pair = __webpack_require__(290)
+	var Reader = __webpack_require__(292)
+	var Writer = __webpack_require__(294)
+	var cat = __webpack_require__(295)
+	var pair = __webpack_require__(296)
 
 	function once (cb) {
 	  var called = 0
@@ -30109,11 +30438,11 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 286 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
-	var State = __webpack_require__(287)
+	var State = __webpack_require__(293)
 
 	function isInteger (i) {
 	  return Number.isFinite(i)
@@ -30237,7 +30566,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 287 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {
@@ -30317,7 +30646,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 288 */
+/* 294 */
 /***/ function(module, exports) {
 
 	module.exports = pullPushable
@@ -30397,7 +30726,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 289 */
+/* 295 */
 /***/ function(module, exports) {
 
 	var noop = function () {}
@@ -30444,7 +30773,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 290 */
+/* 296 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -30480,25 +30809,25 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 291 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var encode = __webpack_require__(292);
-	var d = __webpack_require__(298);
+	var encode = __webpack_require__(298);
+	var d = __webpack_require__(304);
 
 	exports.encode = encode;
 	exports.decode = d.decode;
 	exports.decodeFromReader = d.decodeFromReader;
 
 /***/ },
-/* 292 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Buffer = __webpack_require__(293).Buffer;
+	var Buffer = __webpack_require__(299).Buffer;
 
 	module.exports = encode;
 
@@ -30511,7 +30840,7 @@ var Libp2pAutoGraph =
 	  }, opts || {});
 
 	  // Only needed for varint
-	  var varint = __webpack_require__(294);
+	  var varint = __webpack_require__(300);
 	  var pool = opts.fixed ? null : createPool();
 	  var used = 0;
 
@@ -30557,25 +30886,25 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 293 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(181)
 
 
 /***/ },
-/* 294 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    encode: __webpack_require__(295)
-	  , decode: __webpack_require__(296)
-	  , encodingLength: __webpack_require__(297)
+	    encode: __webpack_require__(301)
+	  , decode: __webpack_require__(302)
+	  , encodingLength: __webpack_require__(303)
 	}
 
 
 /***/ },
-/* 295 */
+/* 301 */
 /***/ function(module, exports) {
 
 	module.exports = encode
@@ -30607,7 +30936,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 296 */
+/* 302 */
 /***/ function(module, exports) {
 
 	module.exports = read
@@ -30643,7 +30972,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 297 */
+/* 303 */
 /***/ function(module, exports) {
 
 	
@@ -30674,15 +31003,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 298 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var varint = __webpack_require__(294);
-	var Reader = __webpack_require__(286);
-	var Buffer = __webpack_require__(293).Buffer;
-	var pushable = __webpack_require__(288);
+	var varint = __webpack_require__(300);
+	var Reader = __webpack_require__(292);
+	var Buffer = __webpack_require__(299).Buffer;
+	var pushable = __webpack_require__(305);
 
 	exports.decode = decode;
 	exports.decodeFromReader = decodeFromReader;
@@ -30786,14 +31115,94 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 299 */
+/* 305 */
+/***/ function(module, exports) {
+
+	module.exports = pullPushable
+
+	function pullPushable (onClose) {
+	  // create a buffer for data
+	  // that have been pushed
+	  // but not yet pulled.
+	  var buffer = []
+
+	  // a pushable is a source stream
+	  // (abort, cb) => cb(end, data)
+	  //
+	  // when pushable is pulled,
+	  // keep references to abort and cb
+	  // so we can call back after
+	  // .end(end) or .push(data)
+	  var abort, cb
+	  function read (_abort, _cb) {
+	    if (_abort) {
+	      abort = _abort
+	      // if there is already a cb waiting, abort it.
+	      if (cb) callback(abort)
+	    }
+	    cb = _cb
+	    drain()
+	  }
+
+	  var ended
+	  read.end = function (end) {
+	    ended = ended || end || true
+	    // attempt to drain
+	    drain()
+	  }
+
+	  read.push = function (data) {
+	    if (ended) return
+	    // if sink already waiting,
+	    // we can call back directly.
+	    if (cb) {
+	      callback(abort, data)
+	      return
+	    }
+	    // otherwise push data and
+	    // attempt to drain
+	    buffer.push(data)
+	    drain()
+	  }
+
+	  return read
+
+	  // `drain` calls back to (if any) waiting
+	  // sink with abort, end, or next data.
+	  function drain () {
+	    if (!cb) return
+
+	    if (abort) callback(abort)
+	    else if (!buffer.length && ended) callback(ended)
+	    else if (buffer.length) callback(null, buffer.shift())
+	  }
+
+	  // `callback` calls back to waiting sink,
+	  // and removes references to sink cb.
+	  function callback (err, val) {
+	    var _cb = cb
+	    // if error and pushable passed onClose, call it
+	    // the first time this stream ends or errors.
+	    if (err && onClose) {
+	      var c = onClose
+	      onClose = null
+	      c(err === true ? null : err)
+	    }
+	    cb = null
+	    _cb(err, val)
+	  }
+	}
+
+
+/***/ },
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const pull = __webpack_require__(251)
-	const pullLP = __webpack_require__(291)
-	const debug = __webpack_require__(245)
+	const pull = __webpack_require__(257)
+	const pullLP = __webpack_require__(297)
+	const debug = __webpack_require__(251)
 
 	exports = module.exports
 
@@ -30857,16 +31266,16 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 300 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const handshake = __webpack_require__(285)
-	const lp = __webpack_require__(291)
-	const Connection = __webpack_require__(240).Connection
-	const writeEncoded = __webpack_require__(299).writeEncoded
-	const some = __webpack_require__(301)
+	const handshake = __webpack_require__(291)
+	const lp = __webpack_require__(297)
+	const Connection = __webpack_require__(243).Connection
+	const writeEncoded = __webpack_require__(306).writeEncoded
+	const some = __webpack_require__(308)
 
 	function selectHandler (rawConn, handlersMap, log) {
 	  const cb = (err) => {
@@ -30940,7 +31349,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 301 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30949,7 +31358,7 @@ var Libp2pAutoGraph =
 	  value: true
 	});
 
-	var _createTester = __webpack_require__(302);
+	var _createTester = __webpack_require__(309);
 
 	var _createTester2 = _interopRequireDefault(_createTester);
 
@@ -30957,7 +31366,7 @@ var Libp2pAutoGraph =
 
 	var _eachOf2 = _interopRequireDefault(_eachOf);
 
-	var _identity = __webpack_require__(237);
+	var _identity = __webpack_require__(239);
 
 	var _identity2 = _interopRequireDefault(_identity);
 
@@ -30997,7 +31406,7 @@ var Libp2pAutoGraph =
 	module.exports = exports['default'];
 
 /***/ },
-/* 302 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31052,14 +31461,14 @@ var Libp2pAutoGraph =
 	module.exports = exports['default'];
 
 /***/ },
-/* 303 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const pull = __webpack_require__(251)
-	const pullLP = __webpack_require__(291)
-	const varint = __webpack_require__(304)
+	const pull = __webpack_require__(257)
+	const pullLP = __webpack_require__(297)
+	const varint = __webpack_require__(311)
 
 	function lsHandler (self, conn) {
 	  const protos = Object.keys(self.handlers)
@@ -31096,18 +31505,18 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 304 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    encode: __webpack_require__(305)
-	  , decode: __webpack_require__(306)
-	  , encodingLength: __webpack_require__(307)
+	    encode: __webpack_require__(312)
+	  , decode: __webpack_require__(313)
+	  , encodingLength: __webpack_require__(314)
 	}
 
 
 /***/ },
-/* 305 */
+/* 312 */
 /***/ function(module, exports) {
 
 	module.exports = encode
@@ -31139,7 +31548,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 306 */
+/* 313 */
 /***/ function(module, exports) {
 
 	module.exports = read
@@ -31175,7 +31584,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 307 */
+/* 314 */
 /***/ function(module, exports) {
 
 	
@@ -31206,7 +31615,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 308 */
+/* 315 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -31220,7 +31629,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 309 */
+/* 316 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -31230,19 +31639,19 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 310 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const varint = __webpack_require__(304)
-	const pull = __webpack_require__(251)
-	const pullLP = __webpack_require__(291)
-	const Connection = __webpack_require__(240).Connection
-	const util = __webpack_require__(299)
-	const select = __webpack_require__(284)
+	const varint = __webpack_require__(311)
+	const pull = __webpack_require__(257)
+	const pullLP = __webpack_require__(297)
+	const Connection = __webpack_require__(243).Connection
+	const util = __webpack_require__(306)
+	const select = __webpack_require__(290)
 
-	const PROTOCOL_ID = __webpack_require__(309).PROTOCOL_ID
+	const PROTOCOL_ID = __webpack_require__(316).PROTOCOL_ID
 
 	module.exports = class Dialer {
 	  constructor () {
@@ -31341,12 +31750,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 311 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const semver = __webpack_require__(312)
+	const semver = __webpack_require__(319)
 
 	function matchSemver (myProtocol, senderProtocol, callback) {
 	  const mps = myProtocol.split('/')
@@ -31370,7 +31779,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 312 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {exports = module.exports = SemVer;
@@ -32580,19 +32989,19 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 313 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const identify = __webpack_require__(314)
-	const multistream = __webpack_require__(249)
-	const waterfall = __webpack_require__(426)
-	const debug = __webpack_require__(245)
+	const identify = __webpack_require__(321)
+	const multistream = __webpack_require__(255)
+	const waterfall = __webpack_require__(462)
+	const debug = __webpack_require__(251)
 	const log = debug('libp2p:swarm:connection')
 
-	const protocolMuxer = __webpack_require__(248)
-	const plaintext = __webpack_require__(437)
+	const protocolMuxer = __webpack_require__(254)
+	const plaintext = __webpack_require__(473)
 
 	module.exports = function connection (swarm) {
 	  return {
@@ -32681,27 +33090,27 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 314 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	exports = module.exports
 	exports.multicodec = '/ipfs/id/1.0.0'
-	exports.listener = __webpack_require__(315)
-	exports.dialer = __webpack_require__(332)
+	exports.listener = __webpack_require__(322)
+	exports.dialer = __webpack_require__(370)
 
 
 /***/ },
-/* 315 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const pull = __webpack_require__(251)
-	const lp = __webpack_require__(291)
+	const pull = __webpack_require__(323)
+	const lp = __webpack_require__(297)
 
-	const msg = __webpack_require__(316)
+	const msg = __webpack_require__(354)
 
 	module.exports = (conn, pInfoSelf) => {
 	  // send what I see from the other + my Info
@@ -32733,12 +33142,781 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 316 */
+/* 323 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var sources  = __webpack_require__(324)
+	var sinks    = __webpack_require__(333)
+	var throughs = __webpack_require__(342)
+
+	exports = module.exports = __webpack_require__(353)
+
+	for(var k in sources)
+	  exports[k] = sources[k]
+
+	for(var k in throughs)
+	  exports[k] = throughs[k]
+
+	for(var k in sinks)
+	  exports[k] = sinks[k]
+
+
+
+/***/ },
+/* 324 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	module.exports = {
+	  keys: __webpack_require__(325),
+	  once: __webpack_require__(328),
+	  values: __webpack_require__(326),
+	  count: __webpack_require__(329),
+	  infinite: __webpack_require__(330),
+	  empty: __webpack_require__(331),
+	  error: __webpack_require__(332)
+	}
+
+
+/***/ },
+/* 325 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	var values = __webpack_require__(326)
+	module.exports = function (object) {
+	  return values(Object.keys(object))
+	}
+
+
+
+
+/***/ },
+/* 326 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	var abortCb = __webpack_require__(327)
+
+	module.exports = function values (array, onAbort) {
+	  if(!array)
+	    return function (abort, cb) {
+	      if(abort) return abortCb(cb, abort, onAbort)
+	      return cb(true)
+	    }
+	  if(!Array.isArray(array))
+	    array = Object.keys(array).map(function (k) {
+	      return array[k]
+	    })
+	  var i = 0
+	  return function (abort, cb) {
+	    if(abort)
+	      return abortCb(cb, abort, onAbort)
+	    if(i >= array.length)
+	      cb(true)
+	    else
+	      cb(null, array[i++])
+	  }
+	}
+
+
+/***/ },
+/* 327 */
+/***/ function(module, exports) {
+
+	module.exports = function abortCb(cb, abort, onAbort) {
+	  cb(abort)
+	  onAbort && onAbort(abort === true ? null: abort)
+	  return
+	}
+
+
+
+/***/ },
+/* 328 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	var abortCb = __webpack_require__(327)
+
+	module.exports = function once (value, onAbort) {
+	  return function (abort, cb) {
+	    if(abort)
+	      return abortCb(cb, abort, onAbort)
+	    if(value != null) {
+	      var _value = value; value = null
+	      cb(null, _value)
+	    } else
+	      cb(true)
+	  }
+	}
+
+
+
+
+/***/ },
+/* 329 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	module.exports = function count (max) {
+	  var i = 0; max = max || Infinity
+	  return function (end, cb) {
+	    if(end) return cb && cb(end)
+	    if(i > max)
+	      return cb(true)
+	    cb(null, i++)
+	  }
+	}
+
+
+
+
+/***/ },
+/* 330 */
+/***/ function(module, exports) {
+
+	'use strict'
+	module.exports = function infinite (generate) {
+	  generate = generate || Math.random
+	  return function (end, cb) {
+	    if(end) return cb && cb(end)
+	    return cb(null, generate())
+	  }
+	}
+
+
+
+
+/***/ },
+/* 331 */
+/***/ function(module, exports) {
+
+	'use strict'
+	//a stream that ends immediately.
+	module.exports = function empty () {
+	  return function (abort, cb) {
+	    cb(true)
+	  }
+	}
+
+
+/***/ },
+/* 332 */
+/***/ function(module, exports) {
+
+	'use strict'
+	//a stream that errors immediately.
+	module.exports = function error (err) {
+	  return function (abort, cb) {
+	    cb(err)
+	  }
+	}
+
+
+
+/***/ },
+/* 333 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	module.exports = {
+	  drain: __webpack_require__(334),
+	  onEnd: __webpack_require__(335),
+	  log: __webpack_require__(336),
+	  find: __webpack_require__(337),
+	  reduce: __webpack_require__(339),
+	  collect: __webpack_require__(340),
+	  concat: __webpack_require__(341)
+	}
+
+
+
+/***/ },
+/* 334 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	module.exports = function drain (op, done) {
+	  var read, abort
+
+	  function sink (_read) {
+	    read = _read
+	    if(abort) return sink.abort()
+	    //this function is much simpler to write if you
+	    //just use recursion, but by using a while loop
+	    //we do not blow the stack if the stream happens to be sync.
+	    ;(function next() {
+	        var loop = true, cbed = false
+	        while(loop) {
+	          cbed = false
+	          read(null, function (end, data) {
+	            cbed = true
+	            if(end = end || abort) {
+	              loop = false
+	              if(done) done(end === true ? null : end)
+	              else if(end && end !== true)
+	                throw end
+	            }
+	            else if(op && false === op(data) || abort) {
+	              loop = false
+	              read(abort || true, done || function () {})
+	            }
+	            else if(!loop){
+	              next()
+	            }
+	          })
+	          if(!cbed) {
+	            loop = false
+	            return
+	          }
+	        }
+	      })()
+	  }
+
+	  sink.abort = function (err, cb) {
+	    if('function' == typeof err)
+	      cb = err, err = true
+	    abort = err || true
+	    if(read) return read(abort, cb || function () {})
+	  }
+
+	  return sink
+	}
+
+
+/***/ },
+/* 335 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var drain = __webpack_require__(334)
+
+	module.exports = function onEnd (done) {
+	  return drain(null, done)
+	}
+
+
+/***/ },
+/* 336 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var drain = __webpack_require__(334)
+
+	module.exports = function log (done) {
+	  return drain(function (data) {
+	    console.log(data)
+	  }, done)
+	}
+
+
+/***/ },
+/* 337 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(338)
+	var drain = __webpack_require__(334)
+
+	module.exports = function find (test, cb) {
+	  var ended = false
+	  if(!cb)
+	    cb = test, test = id
+	  else
+	    test = prop(test) || id
+
+	  return drain(function (data) {
+	    if(test(data)) {
+	      ended = true
+	      cb(null, data)
+	    return false
+	    }
+	  }, function (err) {
+	    if(ended) return //already called back
+	    cb(err === true ? null : err, null)
+	  })
+	}
+
+
+
+
+
+
+/***/ },
+/* 338 */
+/***/ function(module, exports) {
+
+	module.exports = function prop (key) {
+	  return key && (
+	    'string' == typeof key
+	    ? function (data) { return data[key] }
+	    : 'object' === typeof key && 'function' === typeof key.exec //regexp
+	    ? function (data) { var v = key.exec(data); return v && v[0] }
+	    : key
+	  )
+	}
+
+
+/***/ },
+/* 339 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var drain = __webpack_require__(334)
+
+	module.exports = function reduce (reducer, acc, cb ) {
+	  if(!cb) cb = acc, acc = null
+	  var sink = drain(function (data) {
+	    acc = reducer(acc, data)
+	  }, function (err) {
+	    cb(err, acc)
+	  })
+	  if (arguments.length === 2)
+	    return function (source) {
+	      source(null, function (end, data) {
+	        //if ended immediately, and no initial...
+	        if(end) return cb(end === true ? null : end)
+	        acc = data; sink(source)
+	      })
+	    }
+	  else
+	    return sink
+	}
+
+
+/***/ },
+/* 340 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var reduce = __webpack_require__(339)
+
+	module.exports = function collect (cb) {
+	  return reduce(function (arr, item) {
+	    arr.push(item)
+	    return arr
+	  }, [], cb)
+	}
+
+
+/***/ },
+/* 341 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var reduce = __webpack_require__(339)
+
+	module.exports = function concat (cb) {
+	  return reduce(function (a, b) {
+	    return a + b
+	  }, '', cb)
+	}
+
+
+/***/ },
+/* 342 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	module.exports = {
+	  map: __webpack_require__(343),
+	  asyncMap: __webpack_require__(344),
+	  filter: __webpack_require__(345),
+	  filterNot: __webpack_require__(347),
+	  through: __webpack_require__(348),
+	  take: __webpack_require__(349),
+	  unique: __webpack_require__(350),
+	  nonUnique: __webpack_require__(351),
+	  flatten: __webpack_require__(352)
+	}
+
+
+
+
+
+/***/ },
+/* 343 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(338)
+
+	module.exports = function map (mapper) {
+	  if(!mapper) return id
+	  mapper = prop(mapper)
+	  return function (read) {
+	    return function (abort, cb) {
+	      read(abort, function (end, data) {
+	        try {
+	        data = !end ? mapper(data) : null
+	        } catch (err) {
+	          return read(err, function () {
+	            return cb(err)
+	          })
+	        }
+	        cb(end, data)
+	      })
+	    }
+	  }
+	}
+
+
+/***/ },
+/* 344 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(338)
+
+	module.exports = function asyncMap (map) {
+	  if(!map) return id
+	  map = prop(map)
+	  var busy = false, abortCb, aborted
+	  return function (read) {
+	    return function next (abort, cb) {
+	      if(aborted) return cb(aborted)
+	      if(abort) {
+	        aborted = abort
+	        if(!busy) read(abort, cb)
+	        else read(abort, function () {
+	          //if we are still busy, wait for the mapper to complete.
+	          if(busy) abortCb = cb
+	          else cb(abort)
+	        })
+	      }
+	      else
+	        read(null, function (end, data) {
+	          if(end) cb(end)
+	          else if(aborted) cb(aborted)
+	          else {
+	            busy = true
+	            map(data, function (err, data) {
+	              busy = false
+	              if(aborted) {
+	                cb(aborted)
+	                abortCb(aborted)
+	              }
+	              else if(err) next (err, cb)
+	              else cb(null, data)
+	            })
+	          }
+	        })
+	    }
+	  }
+	}
+
+
+
+
+/***/ },
+/* 345 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var tester = __webpack_require__(346)
+
+	module.exports = function filter (test) {
+	  //regexp
+	  test = tester(test)
+	  return function (read) {
+	    return function next (end, cb) {
+	      var sync, loop = true
+	      while(loop) {
+	        loop = false
+	        sync = true
+	        read(end, function (end, data) {
+	          if(!end && !test(data))
+	            return sync ? loop = true : next(end, cb)
+	          cb(end, data)
+	        })
+	        sync = false
+	      }
+	    }
+	  }
+	}
+
+
+
+/***/ },
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var prop = __webpack_require__(338)
+
+	function id (e) { return e }
+
+	module.exports = function tester (test) {
+	  return (
+	    'object' === typeof test && 'function' === typeof test.test //regexp
+	    ? function (data) { return test.test(data) }
+	    : prop (test) || id
+	  )
+	}
+
+
+/***/ },
+/* 347 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var tester = __webpack_require__(346)
+	var filter = __webpack_require__(345)
+
+	module.exports = function filterNot (test) {
+	  test = tester(test)
+	  return filter(function (data) { return !test(data) })
+	}
+
+
+/***/ },
+/* 348 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	//a pass through stream that doesn't change the value.
+	module.exports = function through (op, onEnd) {
+	  var a = false
+
+	  function once (abort) {
+	    if(a || !onEnd) return
+	    a = true
+	    onEnd(abort === true ? null : abort)
+	  }
+
+	  return function (read) {
+	    return function (end, cb) {
+	      if(end) once(end)
+	      return read(end, function (end, data) {
+	        if(!end) op && op(data)
+	        else once(end)
+	        cb(end, data)
+	      })
+	    }
+	  }
+	}
+
+
+/***/ },
+/* 349 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	//read a number of items and then stop.
+	module.exports = function take (test, opts) {
+	  opts = opts || {}
+	  var last = opts.last || false // whether the first item for which !test(item) should still pass
+	  var ended = false
+	  if('number' === typeof test) {
+	    last = true
+	    var n = test; test = function () {
+	      return --n
+	    }
+	  }
+
+	  return function (read) {
+
+	    function terminate (cb) {
+	      read(true, function (err) {
+	        last = false; cb(err || true)
+	      })
+	    }
+
+	    return function (end, cb) {
+	      if(ended)            last ? terminate(cb) : cb(ended)
+	      else if(ended = end) read(ended, cb)
+	      else
+	        read(null, function (end, data) {
+	          if(ended = ended || end) {
+	            //last ? terminate(cb) :
+	            cb(ended)
+	          }
+	          else if(!test(data)) {
+	            ended = true
+	            last ? cb(null, data) : terminate(cb)
+	          }
+	          else
+	            cb(null, data)
+	        })
+	    }
+	  }
+	}
+
+
+/***/ },
+/* 350 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(338)
+	var filter = __webpack_require__(345)
+
+	//drop items you have already seen.
+	module.exports = function unique (field, invert) {
+	  field = prop(field) || id
+	  var seen = {}
+	  return filter(function (data) {
+	    var key = field(data)
+	    if(seen[key]) return !!invert //false, by default
+	    else seen[key] = true
+	    return !invert //true by default
+	  })
+	}
+
+
+
+/***/ },
+/* 351 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var unique = __webpack_require__(350)
+
+	//passes an item through when you see it for the second time.
+	module.exports = function nonUnique (field) {
+	  return unique(field, true)
+	}
+
+
+/***/ },
+/* 352 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var values = __webpack_require__(326)
+	var once = __webpack_require__(328)
+
+	//convert a stream of arrays or streams into just a stream.
+	module.exports = function flatten () {
+	  return function (read) {
+	    var _read
+	    return function (abort, cb) {
+	      if (abort) { //abort the current stream, and then stream of streams.
+	        _read ? _read(abort, function(err) {
+	          read(err || abort, cb)
+	        }) : read(abort, cb)
+	      }
+	      else if(_read) nextChunk()
+	      else nextStream()
+
+	      function nextChunk () {
+	        _read(null, function (err, data) {
+	          if (err === true) nextStream()
+	          else if (err) {
+	            read(true, function(abortErr) {
+	              // TODO: what do we do with the abortErr?
+	              cb(err)
+	            })
+	          }
+	          else cb(null, data)
+	        })
+	      }
+	      function nextStream () {
+	        _read = null
+	        read(null, function (end, stream) {
+	          if(end)
+	            return cb(end)
+	          if(Array.isArray(stream) || stream && 'object' === typeof stream)
+	            stream = values(stream)
+	          else if('function' != typeof stream)
+	            stream = once(stream)
+	          _read = stream
+	          nextChunk()
+	        })
+	      }
+	    }
+	  }
+	}
+
+
+
+/***/ },
+/* 353 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	module.exports = function pull (a) {
+	  var length = arguments.length
+	  if (typeof a === 'function' && a.length === 1) {
+	    var args = new Array(length)
+	    for(var i = 0; i < length; i++)
+	      args[i] = arguments[i]
+	    return function (read) {
+	      if (args == null) {
+	        throw new TypeError("partial sink should only be called once!")
+	      }
+
+	      // Grab the reference after the check, because it's always an array now
+	      // (engines like that kind of consistency).
+	      var ref = args
+	      args = null
+
+	      // Prioritize common case of small number of pulls.
+	      switch (length) {
+	      case 1: return pull(read, ref[0])
+	      case 2: return pull(read, ref[0], ref[1])
+	      case 3: return pull(read, ref[0], ref[1], ref[2])
+	      case 4: return pull(read, ref[0], ref[1], ref[2], ref[3])
+	      default:
+	        ref.unshift(read)
+	        return pull.apply(null, ref)
+	      }
+	    }
+	  }
+
+	  var read = a
+
+	  if (read && typeof read.source === 'function') {
+	    read = read.source
+	  }
+
+	  for (var i = 1; i < length; i++) {
+	    var s = arguments[i]
+	    if (typeof s === 'function') {
+	      read = s(read)
+	    } else if (s && typeof s === 'object') {
+	      s.sink(read)
+	      read = s.source
+	    }
+	  }
+
+	  return read
+	}
+
+
+/***/ },
+/* 354 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const protobuf = __webpack_require__(317)
+	const protobuf = __webpack_require__(355)
 	const schema = new Buffer(`
 	message Identify {
 	  // protocolVersion determines compatibility between peers
@@ -32771,11 +33949,11 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 317 */
+/* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var schema = __webpack_require__(318)
-	var compile = __webpack_require__(322)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var schema = __webpack_require__(356)
+	var compile = __webpack_require__(360)
 
 	var flatten = function (values) {
 	  if (!values) return null
@@ -32815,11 +33993,11 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 318 */
+/* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var parse = __webpack_require__(319)
-	var stringify = __webpack_require__(321)
+	var parse = __webpack_require__(357)
+	var stringify = __webpack_require__(359)
 
 	module.exports = parse
 	module.exports.parse = parse
@@ -32827,10 +34005,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 319 */
+/* 357 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var tokenize = __webpack_require__(320)
+	var tokenize = __webpack_require__(358)
 	var MAX_RANGE = 0x1FFFFFFF
 
 	var onfieldoptions = function (tokens) {
@@ -33458,7 +34636,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 320 */
+/* 358 */
 /***/ function(module, exports) {
 
 	module.exports = function (sch) {
@@ -33501,7 +34679,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 321 */
+/* 359 */
 /***/ function(module, exports) {
 
 	var onfield = function (f, result) {
@@ -33699,15 +34877,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 322 */
+/* 360 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {/* eslint-disable no-spaced-func */
 	/* eslint-disable no-unexpected-multiline */
-	var encodings = __webpack_require__(323)
-	var varint = __webpack_require__(324)
-	var genobj = __webpack_require__(329)
-	var genfun = __webpack_require__(331)
+	var encodings = __webpack_require__(361)
+	var varint = __webpack_require__(362)
+	var genobj = __webpack_require__(367)
+	var genfun = __webpack_require__(369)
 
 	var flatten = function (values) {
 	  if (!values) return null
@@ -34223,11 +35401,11 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 323 */
+/* 361 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var varint = __webpack_require__(324)
-	var svarint = __webpack_require__(328)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var varint = __webpack_require__(362)
+	var svarint = __webpack_require__(366)
 
 	var encoder = function (type, encode, decode, encodingLength) {
 	  encode.bytes = decode.bytes = 0
@@ -34520,18 +35698,18 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 324 */
+/* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    encode: __webpack_require__(325)
-	  , decode: __webpack_require__(326)
-	  , encodingLength: __webpack_require__(327)
+	    encode: __webpack_require__(363)
+	  , decode: __webpack_require__(364)
+	  , encodingLength: __webpack_require__(365)
 	}
 
 
 /***/ },
-/* 325 */
+/* 363 */
 /***/ function(module, exports) {
 
 	module.exports = encode
@@ -34563,7 +35741,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 326 */
+/* 364 */
 /***/ function(module, exports) {
 
 	module.exports = read
@@ -34598,7 +35776,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 327 */
+/* 365 */
 /***/ function(module, exports) {
 
 	
@@ -34629,10 +35807,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 328 */
+/* 366 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var varint = __webpack_require__(324)
+	var varint = __webpack_require__(362)
 	exports.encode = function encode (v, b, o) {
 	  v = v >= 0 ? v*2 : v*-2 - 1
 	  var r = varint.encode(v, b, o)
@@ -34651,10 +35829,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 329 */
+/* 367 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isProperty = __webpack_require__(330)
+	var isProperty = __webpack_require__(368)
 
 	var gen = function(obj, prop) {
 	  return isProperty(prop) ? obj+'.'+prop : obj+'['+JSON.stringify(prop)+']'
@@ -34669,7 +35847,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 330 */
+/* 368 */
 /***/ function(module, exports) {
 
 	"use strict"
@@ -34679,7 +35857,7 @@ var Libp2pAutoGraph =
 	module.exports = isProperty
 
 /***/ },
-/* 331 */
+/* 369 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var util = __webpack_require__(189)
@@ -34746,17 +35924,17 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 332 */
+/* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
-	const PeerInfo = __webpack_require__(333)
-	const PeerId = __webpack_require__(334)
-	const multiaddr = __webpack_require__(427)
-	const pull = __webpack_require__(251)
-	const lp = __webpack_require__(291)
+	const PeerInfo = __webpack_require__(371)
+	const PeerId = __webpack_require__(372)
+	const multiaddr = __webpack_require__(463)
+	const pull = __webpack_require__(323)
+	const lp = __webpack_require__(297)
 
-	const msg = __webpack_require__(316)
+	const msg = __webpack_require__(354)
 
 	module.exports = (conn, callback) => {
 	  pull(
@@ -34806,14 +35984,14 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 333 */
+/* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const Id = __webpack_require__(334)
-	const multiaddr = __webpack_require__(427)
-	const uniqBy = __webpack_require__(436).uniqBy
+	const Id = __webpack_require__(372)
+	const multiaddr = __webpack_require__(463)
+	const uniqBy = __webpack_require__(472).uniqBy
 
 	exports = module.exports = PeerInfo
 
@@ -34931,7 +36109,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 334 */
+/* 372 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -34940,10 +36118,10 @@ var Libp2pAutoGraph =
 
 	'use strict'
 
-	const mh = __webpack_require__(335)
-	const crypto = __webpack_require__(339)
-	const assert = __webpack_require__(283)
-	const waterfall = __webpack_require__(426)
+	const mh = __webpack_require__(373)
+	const crypto = __webpack_require__(377)
+	const assert = __webpack_require__(289)
+	const waterfall = __webpack_require__(462)
 
 	class PeerId {
 	  constructor (id, privKey, pubKey) {
@@ -34953,9 +36131,18 @@ var Libp2pAutoGraph =
 	      assert(privKey.public.bytes.equals(pubKey.bytes), 'inconsistent arguments')
 	    }
 
-	    this.id = id
+	    this._id = id
+	    this._idB58String = mh.toB58String(this.id)
 	    this._privKey = privKey
 	    this._pubKey = pubKey
+	  }
+
+	  get id () {
+	    return this._id
+	  }
+
+	  set id (val) {
+	    throw new Error('Id is immutable')
 	  }
 
 	  get privKey () {
@@ -34997,7 +36184,7 @@ var Libp2pAutoGraph =
 	  // of go-ipfs for its config file
 	  toJSON () {
 	    return {
-	      id: mh.toB58String(this.id),
+	      id: this.toB58String(),
 	      privKey: toB64Opt(this.marshalPrivKey()),
 	      pubKey: toB64Opt(this.marshalPubKey())
 	    }
@@ -35013,7 +36200,7 @@ var Libp2pAutoGraph =
 	  }
 
 	  toB58String () {
-	    return mh.toB58String(this.id)
+	    return this._idB58String
 	  }
 	}
 
@@ -35155,164 +36342,243 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 335 */
+/* 373 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
+	/* WEBPACK VAR INJECTION */(function(Buffer) {/**
+	 * Multihash implementation in JavaScript.
+	 *
+	 * @module multihash
+	 */
+	'use strict'
 
-	var bs58 = __webpack_require__(336);
+	const bs58 = __webpack_require__(374)
 
-	var cs = __webpack_require__(338);
+	const cs = __webpack_require__(376)
 
-	exports.toHexString = function toHexString(m) {
-	  if (!Buffer.isBuffer(m)) {
-	    throw new Error('must be passed a buffer');
+	/**
+	 * Convert the given multihash to a hex encoded string.
+	 *
+	 * @param {Buffer} hash
+	 * @returns {string}
+	 */
+	exports.toHexString = function toHexString (hash) {
+	  if (!Buffer.isBuffer(hash)) {
+	    throw new Error('must be passed a buffer')
 	  }
 
-	  return m.toString('hex');
-	};
+	  return hash.toString('hex')
+	}
 
-	exports.fromHexString = function fromHexString(s) {
-	  return new Buffer(s, 'hex');
-	};
+	/**
+	 * Convert the given hex encoded string to a multihash.
+	 *
+	 * @param {string} hash
+	 * @returns {Buffer}
+	 */
+	exports.fromHexString = function fromHexString (hash) {
+	  return new Buffer(hash, 'hex')
+	}
 
-	exports.toB58String = function toB58String(m) {
-	  if (!Buffer.isBuffer(m)) {
-	    throw new Error('must be passed a buffer');
+	/**
+	 * Convert the given multihash to a base58 encoded string.
+	 *
+	 * @param {Buffer} hash
+	 * @returns {string}
+	 */
+	exports.toB58String = function toB58String (hash) {
+	  if (!Buffer.isBuffer(hash)) {
+	    throw new Error('must be passed a buffer')
 	  }
 
-	  return bs58.encode(m);
-	};
+	  return bs58.encode(hash)
+	}
 
-	exports.fromB58String = function fromB58String(s) {
-	  var encoded = s;
-	  if (Buffer.isBuffer(s)) {
-	    encoded = s.toString();
+	/**
+	 * Convert the given base58 encoded string to a multihash.
+	 *
+	 * @param {string|Buffer} hash
+	 * @returns {Buffer}
+	 */
+	exports.fromB58String = function fromB58String (hash) {
+	  let encoded = hash
+	  if (Buffer.isBuffer(hash)) {
+	    encoded = hash.toString()
 	  }
 
-	  return new Buffer(bs58.decode(encoded));
-	};
+	  return new Buffer(bs58.decode(encoded))
+	}
 
-	// Decode a hash from the given Multihash.
-	exports.decode = function decode(buf) {
-	  exports.validate(buf);
+	/**
+	 * Decode a hash from the given multihash.
+	 *
+	 * @param {Buffer} buf
+	 * @returns {{code: number, name: string, length: number, digest: Buffer}} result
+	 */
+	exports.decode = function decode (buf) {
+	  exports.validate(buf)
 
-	  var code = buf[0];
+	  const code = buf[0]
 
 	  return {
 	    code: code,
 	    name: cs.codes[code],
 	    length: buf[1],
 	    digest: buf.slice(2)
-	  };
-	};
+	  }
+	}
 
-	// Encode a hash digest along with the specified function code.
-	// Note: the length is derived from the length of the digest itself.
-	exports.encode = function encode(digest, code, length) {
+	/**
+	 *  Encode a hash digest along with the specified function code.
+	 *
+	 * > **Note:** the length is derived from the length of the digest itself.
+	 *
+	 * @param {Buffer} digest
+	 * @param {string|number} code
+	 * @param {number} [length]
+	 * @returns {Buffer}
+	 */
+	exports.encode = function encode (digest, code, length) {
 	  if (!digest || !code) {
-	    throw new Error('multihash encode requires at least two args: digest, code');
+	    throw new Error('multihash encode requires at least two args: digest, code')
 	  }
 
 	  // ensure it's a hashfunction code.
-	  var hashfn = exports.coerceCode(code);
+	  const hashfn = exports.coerceCode(code)
 
-	  if (!Buffer.isBuffer(digest)) {
-	    throw new Error('digest should be a Buffer');
+	  if (!(Buffer.isBuffer(digest))) {
+	    throw new Error('digest should be a Buffer')
 	  }
 
 	  if (length == null) {
-	    length = digest.length;
+	    length = digest.length
 	  }
 
 	  if (length && digest.length !== length) {
-	    throw new Error('digest length should be equal to specified length.');
+	    throw new Error('digest length should be equal to specified length.')
 	  }
 
 	  if (length > 127) {
-	    throw new Error('multihash does not yet support digest lengths greater than 127 bytes.');
+	    throw new Error('multihash does not yet support digest lengths greater than 127 bytes.')
 	  }
 
-	  return Buffer.concat([new Buffer([hashfn, length]), digest]);
-	};
+	  return Buffer.concat([new Buffer([hashfn, length]), digest])
+	}
 
-	// Converts a hashfn name into the matching code
-	exports.coerceCode = function coerceCode(name) {
-	  var code = name;
+	/**
+	 * Converts a hash function name into the matching code.
+	 * If passed a number it will return the number if it's a valid code.
+	 * @param {string|number} name
+	 * @returns {number}
+	 */
+	exports.coerceCode = function coerceCode (name) {
+	  let code = name
 
 	  if (typeof name === 'string') {
 	    if (!cs.names[name]) {
-	      throw new Error('Unrecognized hash function named: ' + name);
+	      throw new Error(`Unrecognized hash function named: ${name}`)
 	    }
-	    code = cs.names[name];
+	    code = cs.names[name]
 	  }
 
 	  if (typeof code !== 'number') {
-	    throw new Error('Hash function code should be a number. Got: ' + code);
+	    throw new Error(`Hash function code should be a number. Got: ${code}`)
 	  }
 
 	  if (!cs.codes[code] && !exports.isAppCode(code)) {
-	    throw new Error('Unrecognized function code: ' + code);
+	    throw new Error(`Unrecognized function code: ${code}`)
 	  }
 
-	  return code;
-	};
+	  return code
+	}
 
-	// Checks wether a code is part of the app range
-	exports.isAppCode = function appCode(code) {
-	  return code > 0 && code < 0x10;
-	};
+	/**
+	 * Checks wether a code is part of the app range
+	 *
+	 * @param {number} code
+	 * @returns {boolean}
+	 */
+	exports.isAppCode = function appCode (code) {
+	  return code > 0 && code < 0x10
+	}
 
-	// Checks whether a multihash code is valid.
-	exports.isValidCode = function validCode(code) {
+	/**
+	 * Checks whether a multihash code is valid.
+	 *
+	 * @param {number} code
+	 * @returns {boolean}
+	 */
+	exports.isValidCode = function validCode (code) {
 	  if (exports.isAppCode(code)) {
-	    return true;
+	    return true
 	  }
 
 	  if (cs.codes[code]) {
-	    return true;
+	    return true
 	  }
 
-	  return false;
-	};
+	  return false
+	}
 
-	exports.validate = function validate(multihash) {
-	  if (!Buffer.isBuffer(multihash)) {
-	    throw new Error('multihash must be a Buffer');
+	/**
+	 * Check if the given buffer is a valid multihash. Throws an error if it is not valid.
+	 *
+	 * @param {Buffer} multihash
+	 * @returns {undefined}
+	 * @throws {Error}
+	 */
+	function validate (multihash) {
+	  if (!(Buffer.isBuffer(multihash))) {
+	    throw new Error('multihash must be a Buffer')
 	  }
 
 	  if (multihash.length < 3) {
-	    throw new Error('multihash too short. must be > 3 bytes.');
+	    throw new Error('multihash too short. must be > 3 bytes.')
 	  }
 
 	  if (multihash.length > 129) {
-	    throw new Error('multihash too long. must be < 129 bytes.');
+	    throw new Error('multihash too long. must be < 129 bytes.')
 	  }
 
-	  var code = multihash[0];
+	  let code = multihash[0]
 
 	  if (!exports.isValidCode(code)) {
-	    throw new Error('multihash unknown function code: 0x' + code.toString(16));
+	    throw new Error(`multihash unknown function code: 0x${code.toString(16)}`)
 	  }
 
 	  if (multihash.slice(2).length !== multihash[1]) {
-	    throw new Error('multihash length inconsistent: 0x' + multihash.toString('hex'));
+	    throw new Error(`multihash length inconsistent: 0x${multihash.toString('hex')}`)
 	  }
-	};
+	}
+	exports.validate = validate
+
+	/**
+	 * Returns a prefix from a valid multihash. Throws an error if it is not valid.
+	 *
+	 * @param {Buffer} multihash
+	 * @returns {undefined}
+	 * @throws {Error}
+	 */
+	exports.prefix = function prefix (multihash) {
+	  validate(multihash)
+
+	  return multihash.slice(0, 2)
+	}
+
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 336 */
+/* 374 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var basex = __webpack_require__(337)
+	var basex = __webpack_require__(375)
 	var ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
 
 	module.exports = basex(ALPHABET)
 
 
 /***/ },
-/* 337 */
+/* 375 */
 /***/ function(module, exports) {
 
 	// base-x encoding
@@ -35404,55 +36670,85 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 338 */
+/* 376 */
 /***/ function(module, exports) {
 
-	'use strict';
+	/* eslint quote-props: off */
+	/* eslint key-spacing: off */
+	'use strict'
 
 	exports.names = {
-	  sha1: 0x11,
-	  'sha2-256': 0x12,
-	  'sha2-512': 0x13,
-	  sha3: 0x14,
-	  blake2b: 0x40,
-	  blake2s: 0x41
-	};
+	  'sha1':       0x11,
+	  'sha2-256':   0x12,
+	  'sha2-512':   0x13,
+	  'sha3-224':   0x17,
+	  'sha3-256':   0x16,
+	  'sha3-384':   0x15,
+	  'sha3-512':   0x14,
+	  'shake-128':  0x18,
+	  'shake-256':  0x19,
+	  'keccak-224': 0x1A,
+	  'keccak-256': 0x1B,
+	  'keccak-384': 0x1C,
+	  'keccak-512': 0x1D,
+	  'blake2b':    0x40,
+	  'blake2s':    0x41
+	}
 
 	exports.codes = {
 	  0x11: 'sha1',
 	  0x12: 'sha2-256',
 	  0x13: 'sha2-512',
-	  0x14: 'sha3',
+	  0x17: 'sha3-224',
+	  0x16: 'sha3-256',
+	  0x15: 'sha3-384',
+	  0x14: 'sha3-512',
+	  0x18: 'shake-128',
+	  0x19: 'shake-256',
+	  0x1A: 'keccak-224',
+	  0x1B: 'keccak-256',
+	  0x1C: 'keccak-384',
+	  0x1D: 'keccak-512',
 	  0x40: 'blake2b',
 	  0x41: 'blake2s'
-	};
+	}
 
 	exports.defaultLengths = {
 	  0x11: 20,
 	  0x12: 32,
 	  0x13: 64,
+	  0x17: 28,
+	  0x16: 32,
+	  0x15: 48,
 	  0x14: 64,
+	  0x18: 32,
+	  0x19: 64,
+	  0x1A: 28,
+	  0x1B: 32,
+	  0x1C: 48,
+	  0x1D: 64,
 	  0x40: 64,
 	  0x41: 32
-	};
+	}
+
 
 /***/ },
-/* 339 */
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const protobuf = __webpack_require__(317)
-	const pbm = protobuf(__webpack_require__(340))
-	const c = __webpack_require__(341)
+	const protobuf = __webpack_require__(355)
+	const pbm = protobuf(__webpack_require__(378))
+	const c = __webpack_require__(379)
 
 	exports.hmac = c.hmac
 	exports.aes = c.aes
 	exports.webcrypto = c.webcrypto
 
-	const keys = exports.keys = __webpack_require__(412)
-	exports.keyStretcher = __webpack_require__(423)
-	exports.generateEphemeralKeyPair = __webpack_require__(425)
+	const keys = exports.keys = __webpack_require__(450)
+	exports.keyStretcher = __webpack_require__(459)
+	exports.generateEphemeralKeyPair = __webpack_require__(461)
 
 	// Generates a keypair of the given type and bitsize
 	exports.generateKeyPair = (type, bits, cb) => {
@@ -35526,7 +36822,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 340 */
+/* 378 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -35547,20 +36843,20 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 341 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	exports.webcrypto = __webpack_require__(342)()
-	exports.hmac = __webpack_require__(344)
-	exports.ecdh = __webpack_require__(349)
-	exports.aes = __webpack_require__(370)
-	exports.rsa = __webpack_require__(410)
+	exports.webcrypto = __webpack_require__(380)()
+	exports.hmac = __webpack_require__(382)
+	exports.ecdh = __webpack_require__(387)
+	exports.aes = __webpack_require__(408)
+	exports.rsa = __webpack_require__(448)
 
 
 /***/ },
-/* 342 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
@@ -35568,7 +36864,7 @@ var Libp2pAutoGraph =
 	module.exports = function getWebCrypto () {
 	  if (typeof window !== 'undefined') {
 	    // This is only a shim for interfaces, not for functionality
-	    __webpack_require__(343)(window)
+	    __webpack_require__(381)(window)
 
 	    if (window.crypto) {
 	      return window.crypto
@@ -35580,7 +36876,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 343 */
+/* 381 */
 /***/ function(module, exports) {
 
 	/**
@@ -36184,15 +37480,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 344 */
+/* 382 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const nodeify = __webpack_require__(345)
+	const nodeify = __webpack_require__(383)
 
-	const crypto = __webpack_require__(342)()
-	const lengths = __webpack_require__(348)
+	const crypto = __webpack_require__(380)()
+	const lengths = __webpack_require__(386)
 
 	const hashTypes = {
 	  SHA1: 'SHA-1',
@@ -36229,11 +37525,11 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 345 */
+/* 383 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var Promise = __webpack_require__(346);
-	var isPromise = __webpack_require__(347);
+	/* WEBPACK VAR INJECTION */(function(process) {var Promise = __webpack_require__(384);
+	var isPromise = __webpack_require__(385);
 
 	var nextTick;
 	if (typeof setImediate === 'function') nextTick = setImediate
@@ -36289,10 +37585,10 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 346 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var isPromise = __webpack_require__(347)
+	/* WEBPACK VAR INJECTION */(function(process) {var isPromise = __webpack_require__(385)
 
 	var nextTick;
 	if (typeof setImediate === 'function') nextTick = setImediate
@@ -36393,7 +37689,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 347 */
+/* 385 */
 /***/ function(module, exports) {
 
 	module.exports = isPromise;
@@ -36403,7 +37699,7 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 348 */
+/* 386 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -36416,16 +37712,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 349 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const crypto = __webpack_require__(342)()
-	const nodeify = __webpack_require__(345)
-	const BN = __webpack_require__(350).bignum
+	const crypto = __webpack_require__(380)()
+	const nodeify = __webpack_require__(383)
+	const BN = __webpack_require__(388).bignum
 
-	const util = __webpack_require__(369)
+	const util = __webpack_require__(407)
 	const toBase64 = util.toBase64
 	const toBn = util.toBn
 
@@ -36552,22 +37848,22 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 350 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var asn1 = exports;
 
-	asn1.bignum = __webpack_require__(351);
+	asn1.bignum = __webpack_require__(389);
 
-	asn1.define = __webpack_require__(352).define;
-	asn1.base = __webpack_require__(356);
-	asn1.constants = __webpack_require__(361);
-	asn1.decoders = __webpack_require__(363);
-	asn1.encoders = __webpack_require__(366);
+	asn1.define = __webpack_require__(390).define;
+	asn1.base = __webpack_require__(394);
+	asn1.constants = __webpack_require__(399);
+	asn1.decoders = __webpack_require__(401);
+	asn1.encoders = __webpack_require__(404);
 
 
 /***/ },
-/* 351 */
+/* 389 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -40001,11 +41297,11 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(219)(module)))
 
 /***/ },
-/* 352 */
+/* 390 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var asn1 = __webpack_require__(350);
-	var inherits = __webpack_require__(353);
+	var asn1 = __webpack_require__(388);
+	var inherits = __webpack_require__(391);
 
 	var api = exports;
 
@@ -40024,7 +41320,7 @@ var Libp2pAutoGraph =
 	Entity.prototype._createNamed = function createNamed(base) {
 	  var named;
 	  try {
-	    named = __webpack_require__(354).runInThisContext(
+	    named = __webpack_require__(392).runInThisContext(
 	      '(function ' + this.name + '(entity) {\n' +
 	      '  this._initNamed(entity);\n' +
 	      '})'
@@ -40068,7 +41364,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 353 */
+/* 391 */
 /***/ function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -40097,10 +41393,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 354 */
+/* 392 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var indexOf = __webpack_require__(355);
+	var indexOf = __webpack_require__(393);
 
 	var Object_keys = function (obj) {
 	    if (Object.keys) return Object.keys(obj)
@@ -40241,7 +41537,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 355 */
+/* 393 */
 /***/ function(module, exports) {
 
 	
@@ -40256,22 +41552,22 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 356 */
+/* 394 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var base = exports;
 
-	base.Reporter = __webpack_require__(357).Reporter;
-	base.DecoderBuffer = __webpack_require__(358).DecoderBuffer;
-	base.EncoderBuffer = __webpack_require__(358).EncoderBuffer;
-	base.Node = __webpack_require__(359);
+	base.Reporter = __webpack_require__(395).Reporter;
+	base.DecoderBuffer = __webpack_require__(396).DecoderBuffer;
+	base.EncoderBuffer = __webpack_require__(396).EncoderBuffer;
+	base.Node = __webpack_require__(397);
 
 
 /***/ },
-/* 357 */
+/* 395 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(353);
+	var inherits = __webpack_require__(391);
 
 	function Reporter(options) {
 	  this._reporterState = {
@@ -40395,11 +41691,11 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 358 */
+/* 396 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(353);
-	var Reporter = __webpack_require__(356).Reporter;
+	var inherits = __webpack_require__(391);
+	var Reporter = __webpack_require__(394).Reporter;
 	var Buffer = __webpack_require__(181).Buffer;
 
 	function DecoderBuffer(base, options) {
@@ -40517,13 +41813,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 359 */
+/* 397 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Reporter = __webpack_require__(356).Reporter;
-	var EncoderBuffer = __webpack_require__(356).EncoderBuffer;
-	var DecoderBuffer = __webpack_require__(356).DecoderBuffer;
-	var assert = __webpack_require__(360);
+	var Reporter = __webpack_require__(394).Reporter;
+	var EncoderBuffer = __webpack_require__(394).EncoderBuffer;
+	var DecoderBuffer = __webpack_require__(394).DecoderBuffer;
+	var assert = __webpack_require__(398);
 
 	// Supported tags
 	var tags = [
@@ -41157,7 +42453,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 360 */
+/* 398 */
 /***/ function(module, exports) {
 
 	module.exports = assert;
@@ -41174,7 +42470,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 361 */
+/* 399 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var constants = exports;
@@ -41195,14 +42491,14 @@ var Libp2pAutoGraph =
 	  return res;
 	};
 
-	constants.der = __webpack_require__(362);
+	constants.der = __webpack_require__(400);
 
 
 /***/ },
-/* 362 */
+/* 400 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var constants = __webpack_require__(361);
+	var constants = __webpack_require__(399);
 
 	exports.tagClass = {
 	  0: 'universal',
@@ -41247,22 +42543,22 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 363 */
+/* 401 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var decoders = exports;
 
-	decoders.der = __webpack_require__(364);
-	decoders.pem = __webpack_require__(365);
+	decoders.der = __webpack_require__(402);
+	decoders.pem = __webpack_require__(403);
 
 
 /***/ },
-/* 364 */
+/* 402 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(353);
+	var inherits = __webpack_require__(391);
 
-	var asn1 = __webpack_require__(350);
+	var asn1 = __webpack_require__(388);
 	var base = asn1.base;
 	var bignum = asn1.bignum;
 
@@ -41587,13 +42883,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 365 */
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(353);
+	var inherits = __webpack_require__(391);
 	var Buffer = __webpack_require__(181).Buffer;
 
-	var DERDecoder = __webpack_require__(364);
+	var DERDecoder = __webpack_require__(402);
 
 	function PEMDecoder(entity) {
 	  DERDecoder.call(this, entity);
@@ -41642,23 +42938,23 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 366 */
+/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var encoders = exports;
 
-	encoders.der = __webpack_require__(367);
-	encoders.pem = __webpack_require__(368);
+	encoders.der = __webpack_require__(405);
+	encoders.pem = __webpack_require__(406);
 
 
 /***/ },
-/* 367 */
+/* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(353);
+	var inherits = __webpack_require__(391);
 	var Buffer = __webpack_require__(181).Buffer;
 
-	var asn1 = __webpack_require__(350);
+	var asn1 = __webpack_require__(388);
 	var base = asn1.base;
 
 	// Import DER constants
@@ -41953,12 +43249,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 368 */
+/* 406 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(353);
+	var inherits = __webpack_require__(391);
 
-	var DEREncoder = __webpack_require__(367);
+	var DEREncoder = __webpack_require__(405);
 
 	function PEMEncoder(entity) {
 	  DEREncoder.call(this, entity);
@@ -41980,12 +43276,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 369 */
+/* 407 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const BN = __webpack_require__(350).bignum
+	const BN = __webpack_require__(388).bignum
 
 	// Convert a BN.js instance to a base64 encoded string without padding
 	// Adapted from https://tools.ietf.org/html/draft-ietf-jose-json-web-signature-41#appendix-C
@@ -42006,12 +43302,12 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 370 */
+/* 408 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const ciphers = __webpack_require__(371)
+	const ciphers = __webpack_require__(409)
 
 	const CIPHER_MODES = {
 	  16: 'aes-128-ctr',
@@ -42042,12 +43338,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 371 */
+/* 409 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const crypto = __webpack_require__(372)
+	const crypto = __webpack_require__(410)
 
 	module.exports = {
 	  createCipheriv: crypto.createCipheriv,
@@ -42056,16 +43352,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 372 */
+/* 410 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ciphers = __webpack_require__(373)
+	var ciphers = __webpack_require__(411)
 	exports.createCipher = exports.Cipher = ciphers.createCipher
 	exports.createCipheriv = exports.Cipheriv = ciphers.createCipheriv
-	var deciphers = __webpack_require__(409)
+	var deciphers = __webpack_require__(447)
 	exports.createDecipher = exports.Decipher = deciphers.createDecipher
 	exports.createDecipheriv = exports.Decipheriv = deciphers.createDecipheriv
-	var modes = __webpack_require__(394)
+	var modes = __webpack_require__(432)
 	function getCiphers () {
 	  return Object.keys(modes)
 	}
@@ -42073,16 +43369,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 373 */
+/* 411 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(374)
-	var Transform = __webpack_require__(375)
-	var inherits = __webpack_require__(353)
-	var modes = __webpack_require__(394)
-	var ebtk = __webpack_require__(395)
-	var StreamCipher = __webpack_require__(398)
-	var AuthCipher = __webpack_require__(399)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(412)
+	var Transform = __webpack_require__(413)
+	var inherits = __webpack_require__(391)
+	var modes = __webpack_require__(432)
+	var ebtk = __webpack_require__(433)
+	var StreamCipher = __webpack_require__(436)
+	var AuthCipher = __webpack_require__(437)
 	inherits(Cipher, Transform)
 	function Cipher (mode, key, iv) {
 	  if (!(this instanceof Cipher)) {
@@ -42153,14 +43449,14 @@ var Libp2pAutoGraph =
 	  return out
 	}
 	var modelist = {
-	  ECB: __webpack_require__(402),
-	  CBC: __webpack_require__(403),
-	  CFB: __webpack_require__(404),
-	  CFB8: __webpack_require__(405),
-	  CFB1: __webpack_require__(406),
-	  OFB: __webpack_require__(407),
-	  CTR: __webpack_require__(408),
-	  GCM: __webpack_require__(408)
+	  ECB: __webpack_require__(440),
+	  CBC: __webpack_require__(441),
+	  CFB: __webpack_require__(442),
+	  CFB8: __webpack_require__(443),
+	  CFB1: __webpack_require__(444),
+	  OFB: __webpack_require__(445),
+	  CTR: __webpack_require__(446),
+	  GCM: __webpack_require__(446)
 	}
 
 	function createCipheriv (suite, password, iv) {
@@ -42202,7 +43498,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 374 */
+/* 412 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {// based on the aes implimentation in triple sec
@@ -42386,12 +43682,12 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 375 */
+/* 413 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var Transform = __webpack_require__(376).Transform
-	var inherits = __webpack_require__(353)
-	var StringDecoder = __webpack_require__(387).StringDecoder
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var Transform = __webpack_require__(414).Transform
+	var inherits = __webpack_require__(391)
+	var StringDecoder = __webpack_require__(425).StringDecoder
 	module.exports = CipherBase
 	inherits(CipherBase, Transform)
 	function CipherBase (hashMode) {
@@ -42483,7 +43779,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 376 */
+/* 414 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -42510,14 +43806,14 @@ var Libp2pAutoGraph =
 	module.exports = Stream;
 
 	var EE = __webpack_require__(192).EventEmitter;
-	var inherits = __webpack_require__(353);
+	var inherits = __webpack_require__(391);
 
 	inherits(Stream, EE);
-	Stream.Readable = __webpack_require__(377);
-	Stream.Writable = __webpack_require__(390);
-	Stream.Duplex = __webpack_require__(391);
-	Stream.Transform = __webpack_require__(392);
-	Stream.PassThrough = __webpack_require__(393);
+	Stream.Readable = __webpack_require__(415);
+	Stream.Writable = __webpack_require__(428);
+	Stream.Duplex = __webpack_require__(429);
+	Stream.Transform = __webpack_require__(430);
+	Stream.PassThrough = __webpack_require__(431);
 
 	// Backwards-compat with node 0.4.x
 	Stream.Stream = Stream;
@@ -42616,21 +43912,21 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 377 */
+/* 415 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {var Stream = (function (){
 	  try {
-	    return __webpack_require__(376); // hack to fix a circular dependency issue when used with browserify
+	    return __webpack_require__(414); // hack to fix a circular dependency issue when used with browserify
 	  } catch(_){}
 	}());
-	exports = module.exports = __webpack_require__(378);
+	exports = module.exports = __webpack_require__(416);
 	exports.Stream = Stream || exports;
 	exports.Readable = exports;
-	exports.Writable = __webpack_require__(385);
-	exports.Duplex = __webpack_require__(384);
-	exports.Transform = __webpack_require__(388);
-	exports.PassThrough = __webpack_require__(389);
+	exports.Writable = __webpack_require__(423);
+	exports.Duplex = __webpack_require__(422);
+	exports.Transform = __webpack_require__(426);
+	exports.PassThrough = __webpack_require__(427);
 
 	if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 	  module.exports = Stream;
@@ -42639,7 +43935,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 378 */
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -42647,7 +43943,7 @@ var Libp2pAutoGraph =
 	module.exports = Readable;
 
 	/*<replacement>*/
-	var processNextTick = __webpack_require__(379);
+	var processNextTick = __webpack_require__(417);
 	/*</replacement>*/
 
 	/*<replacement>*/
@@ -42672,7 +43968,7 @@ var Libp2pAutoGraph =
 	var Stream;
 	(function () {
 	  try {
-	    Stream = __webpack_require__(376);
+	    Stream = __webpack_require__(414);
 	  } catch (_) {} finally {
 	    if (!Stream) Stream = __webpack_require__(192).EventEmitter;
 	  }
@@ -42681,16 +43977,16 @@ var Libp2pAutoGraph =
 
 	var Buffer = __webpack_require__(181).Buffer;
 	/*<replacement>*/
-	var bufferShim = __webpack_require__(380);
+	var bufferShim = __webpack_require__(418);
 	/*</replacement>*/
 
 	/*<replacement>*/
-	var util = __webpack_require__(381);
-	util.inherits = __webpack_require__(353);
+	var util = __webpack_require__(419);
+	util.inherits = __webpack_require__(391);
 	/*</replacement>*/
 
 	/*<replacement>*/
-	var debugUtil = __webpack_require__(382);
+	var debugUtil = __webpack_require__(420);
 	var debug = void 0;
 	if (debugUtil && debugUtil.debuglog) {
 	  debug = debugUtil.debuglog('stream');
@@ -42699,7 +43995,7 @@ var Libp2pAutoGraph =
 	}
 	/*</replacement>*/
 
-	var BufferList = __webpack_require__(383);
+	var BufferList = __webpack_require__(421);
 	var StringDecoder;
 
 	util.inherits(Readable, Stream);
@@ -42719,7 +44015,7 @@ var Libp2pAutoGraph =
 	}
 
 	function ReadableState(options, stream) {
-	  Duplex = Duplex || __webpack_require__(384);
+	  Duplex = Duplex || __webpack_require__(422);
 
 	  options = options || {};
 
@@ -42781,14 +44077,14 @@ var Libp2pAutoGraph =
 	  this.decoder = null;
 	  this.encoding = null;
 	  if (options.encoding) {
-	    if (!StringDecoder) StringDecoder = __webpack_require__(387).StringDecoder;
+	    if (!StringDecoder) StringDecoder = __webpack_require__(425).StringDecoder;
 	    this.decoder = new StringDecoder(options.encoding);
 	    this.encoding = options.encoding;
 	  }
 	}
 
 	function Readable(options) {
-	  Duplex = Duplex || __webpack_require__(384);
+	  Duplex = Duplex || __webpack_require__(422);
 
 	  if (!(this instanceof Readable)) return new Readable(options);
 
@@ -42891,7 +44187,7 @@ var Libp2pAutoGraph =
 
 	// backwards compatibility.
 	Readable.prototype.setEncoding = function (enc) {
-	  if (!StringDecoder) StringDecoder = __webpack_require__(387).StringDecoder;
+	  if (!StringDecoder) StringDecoder = __webpack_require__(425).StringDecoder;
 	  this._readableState.decoder = new StringDecoder(enc);
 	  this._readableState.encoding = enc;
 	  return this;
@@ -43586,7 +44882,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 379 */
+/* 417 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -43636,7 +44932,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 380 */
+/* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -43751,7 +45047,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 381 */
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {// Copyright Joyent, Inc. and other Node contributors.
@@ -43865,20 +45161,20 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 382 */
+/* 420 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 383 */
+/* 421 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var Buffer = __webpack_require__(181).Buffer;
 	/*<replacement>*/
-	var bufferShim = __webpack_require__(380);
+	var bufferShim = __webpack_require__(418);
 	/*</replacement>*/
 
 	module.exports = BufferList;
@@ -43940,7 +45236,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 384 */
+/* 422 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// a duplex stream is just a stream that is both readable and writable.
@@ -43963,16 +45259,16 @@ var Libp2pAutoGraph =
 	module.exports = Duplex;
 
 	/*<replacement>*/
-	var processNextTick = __webpack_require__(379);
+	var processNextTick = __webpack_require__(417);
 	/*</replacement>*/
 
 	/*<replacement>*/
-	var util = __webpack_require__(381);
-	util.inherits = __webpack_require__(353);
+	var util = __webpack_require__(419);
+	util.inherits = __webpack_require__(391);
 	/*</replacement>*/
 
-	var Readable = __webpack_require__(378);
-	var Writable = __webpack_require__(385);
+	var Readable = __webpack_require__(416);
+	var Writable = __webpack_require__(423);
 
 	util.inherits(Duplex, Readable);
 
@@ -44020,7 +45316,7 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 385 */
+/* 423 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, setImmediate) {// A bit simpler than readable streams.
@@ -44032,7 +45328,7 @@ var Libp2pAutoGraph =
 	module.exports = Writable;
 
 	/*<replacement>*/
-	var processNextTick = __webpack_require__(379);
+	var processNextTick = __webpack_require__(417);
 	/*</replacement>*/
 
 	/*<replacement>*/
@@ -44046,13 +45342,13 @@ var Libp2pAutoGraph =
 	Writable.WritableState = WritableState;
 
 	/*<replacement>*/
-	var util = __webpack_require__(381);
-	util.inherits = __webpack_require__(353);
+	var util = __webpack_require__(419);
+	util.inherits = __webpack_require__(391);
 	/*</replacement>*/
 
 	/*<replacement>*/
 	var internalUtil = {
-	  deprecate: __webpack_require__(386)
+	  deprecate: __webpack_require__(424)
 	};
 	/*</replacement>*/
 
@@ -44060,7 +45356,7 @@ var Libp2pAutoGraph =
 	var Stream;
 	(function () {
 	  try {
-	    Stream = __webpack_require__(376);
+	    Stream = __webpack_require__(414);
 	  } catch (_) {} finally {
 	    if (!Stream) Stream = __webpack_require__(192).EventEmitter;
 	  }
@@ -44069,7 +45365,7 @@ var Libp2pAutoGraph =
 
 	var Buffer = __webpack_require__(181).Buffer;
 	/*<replacement>*/
-	var bufferShim = __webpack_require__(380);
+	var bufferShim = __webpack_require__(418);
 	/*</replacement>*/
 
 	util.inherits(Writable, Stream);
@@ -44084,7 +45380,7 @@ var Libp2pAutoGraph =
 	}
 
 	function WritableState(options, stream) {
-	  Duplex = Duplex || __webpack_require__(384);
+	  Duplex = Duplex || __webpack_require__(422);
 
 	  options = options || {};
 
@@ -44218,7 +45514,7 @@ var Libp2pAutoGraph =
 	}
 
 	function Writable(options) {
-	  Duplex = Duplex || __webpack_require__(384);
+	  Duplex = Duplex || __webpack_require__(422);
 
 	  // Writable ctor is applied to Duplexes, too.
 	  // `realHasInstance` is necessary because using plain `instanceof`
@@ -44580,7 +45876,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(185).setImmediate))
 
 /***/ },
-/* 386 */
+/* 424 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -44654,7 +45950,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 387 */
+/* 425 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -44881,7 +46177,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 388 */
+/* 426 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// a transform stream is a readable/writable stream where you do
@@ -44930,11 +46226,11 @@ var Libp2pAutoGraph =
 
 	module.exports = Transform;
 
-	var Duplex = __webpack_require__(384);
+	var Duplex = __webpack_require__(422);
 
 	/*<replacement>*/
-	var util = __webpack_require__(381);
-	util.inherits = __webpack_require__(353);
+	var util = __webpack_require__(419);
+	util.inherits = __webpack_require__(391);
 	/*</replacement>*/
 
 	util.inherits(Transform, Duplex);
@@ -45068,7 +46364,7 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 389 */
+/* 427 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// a passthrough stream.
@@ -45079,11 +46375,11 @@ var Libp2pAutoGraph =
 
 	module.exports = PassThrough;
 
-	var Transform = __webpack_require__(388);
+	var Transform = __webpack_require__(426);
 
 	/*<replacement>*/
-	var util = __webpack_require__(381);
-	util.inherits = __webpack_require__(353);
+	var util = __webpack_require__(419);
+	util.inherits = __webpack_require__(391);
 	/*</replacement>*/
 
 	util.inherits(PassThrough, Transform);
@@ -45099,35 +46395,35 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 390 */
+/* 428 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(385)
+	module.exports = __webpack_require__(423)
 
 
 /***/ },
-/* 391 */
+/* 429 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(384)
+	module.exports = __webpack_require__(422)
 
 
 /***/ },
-/* 392 */
+/* 430 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(388)
+	module.exports = __webpack_require__(426)
 
 
 /***/ },
-/* 393 */
+/* 431 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(389)
+	module.exports = __webpack_require__(427)
 
 
 /***/ },
-/* 394 */
+/* 432 */
 /***/ function(module, exports) {
 
 	exports['aes-128-ecb'] = {
@@ -45304,10 +46600,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 395 */
+/* 433 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var md5 = __webpack_require__(396)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var md5 = __webpack_require__(434)
 	module.exports = EVP_BytesToKey
 	function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 	  if (!Buffer.isBuffer(password)) {
@@ -45379,7 +46675,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 396 */
+/* 434 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45392,7 +46688,7 @@ var Libp2pAutoGraph =
 	 * See http://pajhome.org.uk/crypt/md5 for more info.
 	 */
 
-	var helpers = __webpack_require__(397);
+	var helpers = __webpack_require__(435);
 
 	/*
 	 * Calculate the MD5 of an array of little-endian words, and a bit length
@@ -45540,7 +46836,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 397 */
+/* 435 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -45580,12 +46876,12 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 398 */
+/* 436 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(374)
-	var Transform = __webpack_require__(375)
-	var inherits = __webpack_require__(353)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(412)
+	var Transform = __webpack_require__(413)
+	var inherits = __webpack_require__(391)
 
 	inherits(StreamCipher, Transform)
 	module.exports = StreamCipher
@@ -45612,14 +46908,14 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 399 */
+/* 437 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(374)
-	var Transform = __webpack_require__(375)
-	var inherits = __webpack_require__(353)
-	var GHASH = __webpack_require__(400)
-	var xor = __webpack_require__(401)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(412)
+	var Transform = __webpack_require__(413)
+	var inherits = __webpack_require__(391)
+	var GHASH = __webpack_require__(438)
+	var xor = __webpack_require__(439)
 	inherits(StreamCipher, Transform)
 	module.exports = StreamCipher
 
@@ -45716,7 +47012,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 400 */
+/* 438 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {var zeros = new Buffer(16)
@@ -45821,7 +47117,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 401 */
+/* 439 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {module.exports = function xor (a, b) {
@@ -45838,7 +47134,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 402 */
+/* 440 */
 /***/ function(module, exports) {
 
 	exports.encrypt = function (self, block) {
@@ -45850,10 +47146,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 403 */
+/* 441 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var xor = __webpack_require__(401)
+	var xor = __webpack_require__(439)
 
 	exports.encrypt = function (self, block) {
 	  var data = xor(block, self._prev)
@@ -45873,10 +47169,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 404 */
+/* 442 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(401)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(439)
 
 	exports.encrypt = function (self, data, decrypt) {
 	  var out = new Buffer('')
@@ -45911,7 +47207,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 405 */
+/* 443 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {function encryptByte (self, byteParam, decrypt) {
@@ -45933,7 +47229,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 406 */
+/* 444 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {function encryptByte (self, byteParam, decrypt) {
@@ -45974,10 +47270,10 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 407 */
+/* 445 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(401)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(439)
 
 	function getBlock (self) {
 	  self._prev = self._cipher.encryptBlock(self._prev)
@@ -45997,10 +47293,10 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 408 */
+/* 446 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(401)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(439)
 
 	function incr32 (iv) {
 	  var len = iv.length
@@ -46035,16 +47331,16 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 409 */
+/* 447 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(374)
-	var Transform = __webpack_require__(375)
-	var inherits = __webpack_require__(353)
-	var modes = __webpack_require__(394)
-	var StreamCipher = __webpack_require__(398)
-	var AuthCipher = __webpack_require__(399)
-	var ebtk = __webpack_require__(395)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var aes = __webpack_require__(412)
+	var Transform = __webpack_require__(413)
+	var inherits = __webpack_require__(391)
+	var modes = __webpack_require__(432)
+	var StreamCipher = __webpack_require__(436)
+	var AuthCipher = __webpack_require__(437)
+	var ebtk = __webpack_require__(433)
 
 	inherits(Decipher, Transform)
 	function Decipher (mode, key, iv) {
@@ -46130,14 +47426,14 @@ var Libp2pAutoGraph =
 	}
 
 	var modelist = {
-	  ECB: __webpack_require__(402),
-	  CBC: __webpack_require__(403),
-	  CFB: __webpack_require__(404),
-	  CFB8: __webpack_require__(405),
-	  CFB1: __webpack_require__(406),
-	  OFB: __webpack_require__(407),
-	  CTR: __webpack_require__(408),
-	  GCM: __webpack_require__(408)
+	  ECB: __webpack_require__(440),
+	  CBC: __webpack_require__(441),
+	  CFB: __webpack_require__(442),
+	  CFB8: __webpack_require__(443),
+	  CFB1: __webpack_require__(444),
+	  OFB: __webpack_require__(445),
+	  CTR: __webpack_require__(446),
+	  GCM: __webpack_require__(446)
 	}
 
 	function createDecipheriv (suite, password, iv) {
@@ -46179,16 +47475,16 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 410 */
+/* 448 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const nodeify = __webpack_require__(345)
+	const nodeify = __webpack_require__(383)
 
-	const crypto = __webpack_require__(342)()
+	const crypto = __webpack_require__(380)()
 
-	exports.utils = __webpack_require__(411)
+	exports.utils = __webpack_require__(449)
 
 	exports.generateKey = function (bits, callback) {
 	  nodeify(crypto.subtle.generateKey(
@@ -46305,14 +47601,14 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 411 */
+/* 449 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const asn1 = __webpack_require__(350)
+	const asn1 = __webpack_require__(388)
 
-	const util = __webpack_require__(369)
+	const util = __webpack_require__(407)
 	const toBase64 = util.toBase64
 	const toBn = util.toBn
 
@@ -46425,27 +47721,27 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 412 */
+/* 450 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	module.exports = {
-	  rsa: __webpack_require__(413)
+	  rsa: __webpack_require__(451)
 	}
 
 
 /***/ },
-/* 413 */
+/* 451 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const multihashing = __webpack_require__(414)
-	const protobuf = __webpack_require__(317)
+	const multihashing = __webpack_require__(452)
+	const protobuf = __webpack_require__(355)
 
-	const crypto = __webpack_require__(341).rsa
-	const pbm = protobuf(__webpack_require__(340))
+	const crypto = __webpack_require__(379).rsa
+	const pbm = protobuf(__webpack_require__(378))
 
 	class RsaPublicKey {
 	  constructor (key) {
@@ -46575,13 +47871,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 414 */
+/* 452 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const multihash = __webpack_require__(415)
-	const crypto = __webpack_require__(417)
+	const multihash = __webpack_require__(373)
+	const crypto = __webpack_require__(453)
 
 	module.exports = Multihashing
 
@@ -46683,226 +47979,15 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 415 */
+/* 453 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const bs58 = __webpack_require__(336)
+	const sha3 = __webpack_require__(454)
 
-	const cs = __webpack_require__(416)
-
-	exports.toHexString = function toHexString (m) {
-	  if (!Buffer.isBuffer(m)) {
-	    throw new Error('must be passed a buffer')
-	  }
-
-	  return m.toString('hex')
-	}
-
-	exports.fromHexString = function fromHexString (s) {
-	  return new Buffer(s, 'hex')
-	}
-
-	exports.toB58String = function toB58String (m) {
-	  if (!Buffer.isBuffer(m)) {
-	    throw new Error('must be passed a buffer')
-	  }
-
-	  return bs58.encode(m)
-	}
-
-	exports.fromB58String = function fromB58String (s) {
-	  let encoded = s
-	  if (Buffer.isBuffer(s)) {
-	    encoded = s.toString()
-	  }
-
-	  return new Buffer(bs58.decode(encoded))
-	}
-
-	// Decode a hash from the given Multihash.
-	exports.decode = function decode (buf) {
-	  exports.validate(buf)
-
-	  const code = buf[0]
-
-	  return {
-	    code: code,
-	    name: cs.codes[code],
-	    length: buf[1],
-	    digest: buf.slice(2)
-	  }
-	}
-
-	// Encode a hash digest along with the specified function code.
-	// Note: the length is derived from the length of the digest itself.
-	exports.encode = function encode (digest, code, length) {
-	  if (!digest || !code) {
-	    throw new Error('multihash encode requires at least two args: digest, code')
-	  }
-
-	  // ensure it's a hashfunction code.
-	  const hashfn = exports.coerceCode(code)
-
-	  if (!(Buffer.isBuffer(digest))) {
-	    throw new Error('digest should be a Buffer')
-	  }
-
-	  if (length == null) {
-	    length = digest.length
-	  }
-
-	  if (length && digest.length !== length) {
-	    throw new Error('digest length should be equal to specified length.')
-	  }
-
-	  if (length > 127) {
-	    throw new Error('multihash does not yet support digest lengths greater than 127 bytes.')
-	  }
-
-	  return Buffer.concat([new Buffer([hashfn, length]), digest])
-	}
-
-	// Converts a hashfn name into the matching code
-	exports.coerceCode = function coerceCode (name) {
-	  let code = name
-
-	  if (typeof name === 'string') {
-	    if (!cs.names[name]) {
-	      throw new Error(`Unrecognized hash function named: ${name}`)
-	    }
-	    code = cs.names[name]
-	  }
-
-	  if (typeof code !== 'number') {
-	    throw new Error(`Hash function code should be a number. Got: ${code}`)
-	  }
-
-	  if (!cs.codes[code] && !exports.isAppCode(code)) {
-	    throw new Error(`Unrecognized function code: ${code}`)
-	  }
-
-	  return code
-	}
-
-	// Checks wether a code is part of the app range
-	exports.isAppCode = function appCode (code) {
-	  return code > 0 && code < 0x10
-	}
-
-	// Checks whether a multihash code is valid.
-	exports.isValidCode = function validCode (code) {
-	  if (exports.isAppCode(code)) {
-	    return true
-	  }
-
-	  if (cs.codes[code]) {
-	    return true
-	  }
-
-	  return false
-	}
-
-	exports.validate = function validate (multihash) {
-	  if (!(Buffer.isBuffer(multihash))) {
-	    throw new Error('multihash must be a Buffer')
-	  }
-
-	  if (multihash.length < 3) {
-	    throw new Error('multihash too short. must be > 3 bytes.')
-	  }
-
-	  if (multihash.length > 129) {
-	    throw new Error('multihash too long. must be < 129 bytes.')
-	  }
-
-	  let code = multihash[0]
-
-	  if (!exports.isValidCode(code)) {
-	    throw new Error(`multihash unknown function code: 0x${code.toString(16)}`)
-	  }
-
-	  if (multihash.slice(2).length !== multihash[1]) {
-	    throw new Error(`multihash length inconsistent: 0x${multihash.toString('hex')}`)
-	  }
-	}
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
-
-/***/ },
-/* 416 */
-/***/ function(module, exports) {
-
-	/* eslint quote-props: off */
-	/* eslint key-spacing: off */
-	'use strict'
-
-	exports.names = {
-	  'sha1':       0x11,
-	  'sha2-256':   0x12,
-	  'sha2-512':   0x13,
-	  'sha3-224':   0x17,
-	  'sha3-256':   0x16,
-	  'sha3-384':   0x15,
-	  'sha3-512':   0x14,
-	  'shake-128':  0x18,
-	  'shake-256':  0x19,
-	  'keccak-224': 0x1A,
-	  'keccak-256': 0x1B,
-	  'keccak-384': 0x1C,
-	  'keccak-512': 0x1D,
-	  'blake2b':    0x40,
-	  'blake2s':    0x41
-	}
-
-	exports.codes = {
-	  0x11: 'sha1',
-	  0x12: 'sha2-256',
-	  0x13: 'sha2-512',
-	  0x17: 'sha3-224',
-	  0x16: 'sha3-256',
-	  0x15: 'sha3-384',
-	  0x14: 'sha3-512',
-	  0x18: 'shake-128',
-	  0x19: 'shake-256',
-	  0x1A: 'keccak-224',
-	  0x1B: 'keccak-256',
-	  0x1C: 'keccak-384',
-	  0x1D: 'keccak-512',
-	  0x40: 'blake2b',
-	  0x41: 'blake2s'
-	}
-
-	exports.defaultLengths = {
-	  0x11: 20,
-	  0x12: 32,
-	  0x13: 64,
-	  0x17: 28,
-	  0x16: 32,
-	  0x15: 48,
-	  0x14: 64,
-	  0x18: 32,
-	  0x19: 64,
-	  0x1A: 28,
-	  0x1B: 32,
-	  0x1C: 48,
-	  0x1D: 64,
-	  0x40: 64,
-	  0x41: 32
-	}
-
-
-/***/ },
-/* 417 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
-
-	const sha3 = __webpack_require__(418)
-
-	const toCallback = __webpack_require__(419)
-	const sha = __webpack_require__(422)
+	const toCallback = __webpack_require__(455)
+	const sha = __webpack_require__(458)
 
 	const toBuf = (doWork, other) => (input) => {
 	  return new Buffer(doWork(input, other), 'hex')
@@ -46927,7 +48012,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 418 */
+/* 454 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, global) {/**
@@ -47405,12 +48490,12 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), (function() { return this; }())))
 
 /***/ },
-/* 419 */
+/* 455 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const setImmediate = __webpack_require__(420)
+	const setImmediate = __webpack_require__(456)
 
 	module.exports = function toCallback (doWork) {
 	  return function (input, callback) {
@@ -47432,7 +48517,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 420 */
+/* 456 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47441,7 +48526,7 @@ var Libp2pAutoGraph =
 	  value: true
 	});
 
-	var _setImmediate = __webpack_require__(421);
+	var _setImmediate = __webpack_require__(457);
 
 	var _setImmediate2 = _interopRequireDefault(_setImmediate);
 
@@ -47482,7 +48567,7 @@ var Libp2pAutoGraph =
 	module.exports = exports['default'];
 
 /***/ },
-/* 421 */
+/* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(setImmediate, process) {'use strict';
@@ -47494,7 +48579,7 @@ var Libp2pAutoGraph =
 	exports.fallback = fallback;
 	exports.wrap = wrap;
 
-	var _rest = __webpack_require__(234);
+	var _rest = __webpack_require__(236);
 
 	var _rest2 = _interopRequireDefault(_rest);
 
@@ -47529,12 +48614,12 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185).setImmediate, __webpack_require__(4)))
 
 /***/ },
-/* 422 */
+/* 458 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const nodeify = __webpack_require__(345)
+	const nodeify = __webpack_require__(383)
 
 	const webCrypto = getWebCrypto()
 
@@ -47596,13 +48681,13 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 423 */
+/* 459 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const crypto = __webpack_require__(341)
-	const whilst = __webpack_require__(424)
+	const crypto = __webpack_require__(379)
+	const whilst = __webpack_require__(460)
 
 	const cipherMap = {
 	  'AES-128': {
@@ -47711,7 +48796,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 424 */
+/* 460 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47725,7 +48810,7 @@ var Libp2pAutoGraph =
 
 	var _noop2 = _interopRequireDefault(_noop);
 
-	var _rest = __webpack_require__(234);
+	var _rest = __webpack_require__(236);
 
 	var _rest2 = _interopRequireDefault(_rest);
 
@@ -47783,12 +48868,12 @@ var Libp2pAutoGraph =
 	module.exports = exports['default'];
 
 /***/ },
-/* 425 */
+/* 461 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const crypto = __webpack_require__(341)
+	const crypto = __webpack_require__(379)
 
 	// Generates an ephemeral public key and returns a function that will compute
 	// the shared secret key.
@@ -47800,7 +48885,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 426 */
+/* 462 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47848,7 +48933,7 @@ var Libp2pAutoGraph =
 
 	var _once2 = _interopRequireDefault(_once);
 
-	var _rest = __webpack_require__(234);
+	var _rest = __webpack_require__(236);
 
 	var _rest2 = _interopRequireDefault(_rest);
 
@@ -47919,17 +49004,17 @@ var Libp2pAutoGraph =
 	 */
 
 /***/ },
-/* 427 */
+/* 463 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	var map = __webpack_require__(428)
-	var extend = __webpack_require__(429)
-	var codec = __webpack_require__(430)
-	var protocols = __webpack_require__(435)
+	var map = __webpack_require__(464)
+	var extend = __webpack_require__(465)
+	var codec = __webpack_require__(466)
+	var protocols = __webpack_require__(471)
 	var NotImplemented = new Error('Sorry, Not Implemented Yet.')
-	var varint = __webpack_require__(324)
+	var varint = __webpack_require__(362)
 
 	exports = module.exports = Multiaddr
 
@@ -48106,7 +49191,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 428 */
+/* 464 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -50479,7 +51564,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(219)(module)))
 
 /***/ },
-/* 429 */
+/* 465 */
 /***/ function(module, exports) {
 
 	module.exports = extend
@@ -50504,16 +51589,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 430 */
+/* 466 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	var map = __webpack_require__(428)
-	var filter = __webpack_require__(431)
-	var convert = __webpack_require__(432)
-	var protocols = __webpack_require__(435)
-	var varint = __webpack_require__(324)
+	var map = __webpack_require__(464)
+	var filter = __webpack_require__(467)
+	var convert = __webpack_require__(468)
+	var protocols = __webpack_require__(471)
+	var varint = __webpack_require__(362)
 
 	// export codec
 	module.exports = {
@@ -50721,7 +51806,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 431 */
+/* 467 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -53094,15 +54179,15 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(219)(module)))
 
 /***/ },
-/* 432 */
+/* 468 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	var ip = __webpack_require__(433)
-	var protocols = __webpack_require__(435)
-	var bs58 = __webpack_require__(336)
-	var varint = __webpack_require__(324)
+	var ip = __webpack_require__(469)
+	var protocols = __webpack_require__(471)
+	var bs58 = __webpack_require__(374)
+	var varint = __webpack_require__(362)
 
 	module.exports = Convert
 
@@ -53186,14 +54271,14 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 433 */
+/* 469 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var ip = exports;
 	var Buffer = __webpack_require__(181).Buffer;
-	var os = __webpack_require__(434);
+	var os = __webpack_require__(470);
 
 	ip.toBuffer = function(ip, buff, offset) {
 	  offset = ~~offset;
@@ -53604,7 +54689,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 434 */
+/* 470 */
 /***/ function(module, exports) {
 
 	exports.endianness = function () { return 'LE' };
@@ -53655,12 +54740,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 435 */
+/* 471 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	var map = __webpack_require__(428)
+	var map = __webpack_require__(464)
 
 	module.exports = Protocols
 
@@ -53723,7 +54808,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 436 */
+/* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -70795,7 +71880,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(219)(module)))
 
 /***/ },
-/* 437 */
+/* 473 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -70809,17 +71894,17 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 438 */
+/* 474 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const multistream = __webpack_require__(249)
-	const Connection = __webpack_require__(240).Connection
-	const debug = __webpack_require__(245)
+	const multistream = __webpack_require__(255)
+	const Connection = __webpack_require__(243).Connection
+	const debug = __webpack_require__(251)
 	const log = debug('libp2p:swarm:dial')
 
-	const protocolMuxer = __webpack_require__(248)
+	const protocolMuxer = __webpack_require__(254)
 
 	module.exports = function dial (swarm) {
 	  return (pi, protocol, callback) => {
@@ -71012,19 +72097,19 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 439 */
+/* 475 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const connect = __webpack_require__(440)
-	const mafmt = __webpack_require__(455)
-	const contains = __webpack_require__(509)
-	const Connection = __webpack_require__(240).Connection
-	const debug = __webpack_require__(245)
+	const connect = __webpack_require__(476)
+	const mafmt = __webpack_require__(491)
+	const contains = __webpack_require__(549)
+	const Connection = __webpack_require__(243).Connection
+	const debug = __webpack_require__(251)
 	const log = debug('libp2p:websockets:dialer')
 
-	const createListener = __webpack_require__(532)
+	const createListener = __webpack_require__(572)
 
 	module.exports = class WebSockets {
 	  dial (ma, options, callback) {
@@ -71078,15 +72163,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 440 */
+/* 476 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	//load websocket library if we are not in the browser
-	var WebSocket = __webpack_require__(441)
-	var duplex = __webpack_require__(443)
-	var wsurl = __webpack_require__(447)
+	var WebSocket = __webpack_require__(477)
+	var duplex = __webpack_require__(479)
+	var wsurl = __webpack_require__(483)
 
 	function isFunction (f) {
 	  return 'function' === typeof f
@@ -71122,25 +72207,25 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 441 */
+/* 477 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	module.exports = 'undefined' === typeof WebSocket ? __webpack_require__(442) : WebSocket
+	module.exports = 'undefined' === typeof WebSocket ? __webpack_require__(478) : WebSocket
 
 
 /***/ },
-/* 442 */
+/* 478 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 443 */
+/* 479 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var source = __webpack_require__(444)
-	var sink = __webpack_require__(445)
+	var source = __webpack_require__(480)
+	var sink = __webpack_require__(481)
 
 	module.exports = duplex
 
@@ -71165,7 +72250,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 444 */
+/* 480 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {/**
@@ -71250,10 +72335,10 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 445 */
+/* 481 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(setImmediate, process) {var ready = __webpack_require__(446);
+	/* WEBPACK VAR INJECTION */(function(setImmediate, process) {var ready = __webpack_require__(482);
 
 	/**
 	  ### `sink(socket, opts?)`
@@ -71311,7 +72396,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185).setImmediate, __webpack_require__(4)))
 
 /***/ },
-/* 446 */
+/* 482 */
 /***/ function(module, exports) {
 
 	module.exports = function(socket, callback) {
@@ -71348,10 +72433,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 447 */
+/* 483 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var rurl = __webpack_require__(448)
+	var rurl = __webpack_require__(484)
 	var map = {http:'ws', https:'wss'}
 	var def = 'ws'
 	module.exports = function (url, location) {
@@ -71362,12 +72447,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 448 */
+/* 484 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	//normalize a ws url.
-	var URL = __webpack_require__(449)
+	var URL = __webpack_require__(485)
 	module.exports = function (url, location, protocolMap, defaultProtocol) {
 	  protocolMap = protocolMap ||{}
 	  /*
@@ -71464,7 +72549,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 449 */
+/* 485 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -71490,8 +72575,8 @@ var Libp2pAutoGraph =
 
 	'use strict';
 
-	var punycode = __webpack_require__(450);
-	var util = __webpack_require__(451);
+	var punycode = __webpack_require__(486);
+	var util = __webpack_require__(487);
 
 	exports.parse = urlParse;
 	exports.resolve = urlResolve;
@@ -71566,7 +72651,7 @@ var Libp2pAutoGraph =
 	      'gopher:': true,
 	      'file:': true
 	    },
-	    querystring = __webpack_require__(452);
+	    querystring = __webpack_require__(488);
 
 	function urlParse(url, parseQueryString, slashesDenoteHost) {
 	  if (url && util.isObject(url) && url instanceof Url) return url;
@@ -72202,7 +73287,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 450 */
+/* 486 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/*! https://mths.be/punycode v1.3.2 by @mathias */
@@ -72737,7 +73822,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(219)(module), (function() { return this; }())))
 
 /***/ },
-/* 451 */
+/* 487 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -72759,17 +73844,17 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 452 */
+/* 488 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	exports.decode = exports.parse = __webpack_require__(453);
-	exports.encode = exports.stringify = __webpack_require__(454);
+	exports.decode = exports.parse = __webpack_require__(489);
+	exports.encode = exports.stringify = __webpack_require__(490);
 
 
 /***/ },
-/* 453 */
+/* 489 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -72855,7 +73940,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 454 */
+/* 490 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -72925,18 +74010,18 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 455 */
+/* 491 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _from = __webpack_require__(456);
+	var _from = __webpack_require__(492);
 
 	var _from2 = _interopRequireDefault(_from);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var multiaddr = __webpack_require__(427);
+	var multiaddr = __webpack_require__(545);
 
 	var IP = or(base('ip4'), base('ip6'));
 	var TCP = and(IP, base('tcp'));
@@ -73072,28 +74157,28 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 456 */
+/* 492 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(457), __esModule: true };
+	module.exports = { "default": __webpack_require__(493), __esModule: true };
 
 /***/ },
-/* 457 */
+/* 493 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(458);
-	__webpack_require__(502);
-	module.exports = __webpack_require__(466).Array.from;
+	__webpack_require__(494);
+	__webpack_require__(538);
+	module.exports = __webpack_require__(502).Array.from;
 
 /***/ },
-/* 458 */
+/* 494 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $at  = __webpack_require__(459)(true);
+	var $at  = __webpack_require__(495)(true);
 
 	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(462)(String, 'String', function(iterated){
+	__webpack_require__(498)(String, 'String', function(iterated){
 	  this._t = String(iterated); // target
 	  this._i = 0;                // next index
 	// 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -73108,11 +74193,11 @@ var Libp2pAutoGraph =
 	});
 
 /***/ },
-/* 459 */
+/* 495 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(460)
-	  , defined   = __webpack_require__(461);
+	var toInteger = __webpack_require__(496)
+	  , defined   = __webpack_require__(497);
 	// true  -> String#at
 	// false -> String#codePointAt
 	module.exports = function(TO_STRING){
@@ -73130,7 +74215,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 460 */
+/* 496 */
 /***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
@@ -73141,7 +74226,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 461 */
+/* 497 */
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -73151,20 +74236,20 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 462 */
+/* 498 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var LIBRARY        = __webpack_require__(463)
-	  , $export        = __webpack_require__(464)
-	  , redefine       = __webpack_require__(479)
-	  , hide           = __webpack_require__(469)
-	  , has            = __webpack_require__(480)
-	  , Iterators      = __webpack_require__(481)
-	  , $iterCreate    = __webpack_require__(482)
-	  , setToStringTag = __webpack_require__(498)
-	  , getPrototypeOf = __webpack_require__(500)
-	  , ITERATOR       = __webpack_require__(499)('iterator')
+	var LIBRARY        = __webpack_require__(499)
+	  , $export        = __webpack_require__(500)
+	  , redefine       = __webpack_require__(515)
+	  , hide           = __webpack_require__(505)
+	  , has            = __webpack_require__(516)
+	  , Iterators      = __webpack_require__(517)
+	  , $iterCreate    = __webpack_require__(518)
+	  , setToStringTag = __webpack_require__(534)
+	  , getPrototypeOf = __webpack_require__(536)
+	  , ITERATOR       = __webpack_require__(535)('iterator')
 	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
 	  , FF_ITERATOR    = '@@iterator'
 	  , KEYS           = 'keys'
@@ -73226,19 +74311,19 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 463 */
+/* 499 */
 /***/ function(module, exports) {
 
 	module.exports = true;
 
 /***/ },
-/* 464 */
+/* 500 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global    = __webpack_require__(465)
-	  , core      = __webpack_require__(466)
-	  , ctx       = __webpack_require__(467)
-	  , hide      = __webpack_require__(469)
+	var global    = __webpack_require__(501)
+	  , core      = __webpack_require__(502)
+	  , ctx       = __webpack_require__(503)
+	  , hide      = __webpack_require__(505)
 	  , PROTOTYPE = 'prototype';
 
 	var $export = function(type, name, source){
@@ -73298,7 +74383,7 @@ var Libp2pAutoGraph =
 	module.exports = $export;
 
 /***/ },
-/* 465 */
+/* 501 */
 /***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -73307,18 +74392,18 @@ var Libp2pAutoGraph =
 	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ },
-/* 466 */
+/* 502 */
 /***/ function(module, exports) {
 
 	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
-/* 467 */
+/* 503 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
-	var aFunction = __webpack_require__(468);
+	var aFunction = __webpack_require__(504);
 	module.exports = function(fn, that, length){
 	  aFunction(fn);
 	  if(that === undefined)return fn;
@@ -73339,7 +74424,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 468 */
+/* 504 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -73348,12 +74433,12 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 469 */
+/* 505 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var dP         = __webpack_require__(470)
-	  , createDesc = __webpack_require__(478);
-	module.exports = __webpack_require__(474) ? function(object, key, value){
+	var dP         = __webpack_require__(506)
+	  , createDesc = __webpack_require__(514);
+	module.exports = __webpack_require__(510) ? function(object, key, value){
 	  return dP.f(object, key, createDesc(1, value));
 	} : function(object, key, value){
 	  object[key] = value;
@@ -73361,15 +74446,15 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 470 */
+/* 506 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var anObject       = __webpack_require__(471)
-	  , IE8_DOM_DEFINE = __webpack_require__(473)
-	  , toPrimitive    = __webpack_require__(477)
+	var anObject       = __webpack_require__(507)
+	  , IE8_DOM_DEFINE = __webpack_require__(509)
+	  , toPrimitive    = __webpack_require__(513)
 	  , dP             = Object.defineProperty;
 
-	exports.f = __webpack_require__(474) ? Object.defineProperty : function defineProperty(O, P, Attributes){
+	exports.f = __webpack_require__(510) ? Object.defineProperty : function defineProperty(O, P, Attributes){
 	  anObject(O);
 	  P = toPrimitive(P, true);
 	  anObject(Attributes);
@@ -73382,17 +74467,17 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 471 */
+/* 507 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(472);
+	var isObject = __webpack_require__(508);
 	module.exports = function(it){
 	  if(!isObject(it))throw TypeError(it + ' is not an object!');
 	  return it;
 	};
 
 /***/ },
-/* 472 */
+/* 508 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -73400,24 +74485,24 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 473 */
+/* 509 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = !__webpack_require__(474) && !__webpack_require__(475)(function(){
-	  return Object.defineProperty(__webpack_require__(476)('div'), 'a', {get: function(){ return 7; }}).a != 7;
+	module.exports = !__webpack_require__(510) && !__webpack_require__(511)(function(){
+	  return Object.defineProperty(__webpack_require__(512)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
 /***/ },
-/* 474 */
+/* 510 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(475)(function(){
+	module.exports = !__webpack_require__(511)(function(){
 	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
 /***/ },
-/* 475 */
+/* 511 */
 /***/ function(module, exports) {
 
 	module.exports = function(exec){
@@ -73429,11 +74514,11 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 476 */
+/* 512 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(472)
-	  , document = __webpack_require__(465).document
+	var isObject = __webpack_require__(508)
+	  , document = __webpack_require__(501).document
 	  // in old IE typeof document.createElement is 'object'
 	  , is = isObject(document) && isObject(document.createElement);
 	module.exports = function(it){
@@ -73441,11 +74526,11 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 477 */
+/* 513 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.1 ToPrimitive(input [, PreferredType])
-	var isObject = __webpack_require__(472);
+	var isObject = __webpack_require__(508);
 	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
 	// and the second argument - flag - preferred type is a string
 	module.exports = function(it, S){
@@ -73458,7 +74543,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 478 */
+/* 514 */
 /***/ function(module, exports) {
 
 	module.exports = function(bitmap, value){
@@ -73471,13 +74556,13 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 479 */
+/* 515 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(469);
+	module.exports = __webpack_require__(505);
 
 /***/ },
-/* 480 */
+/* 516 */
 /***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
@@ -73486,23 +74571,23 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 481 */
+/* 517 */
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ },
-/* 482 */
+/* 518 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var create         = __webpack_require__(483)
-	  , descriptor     = __webpack_require__(478)
-	  , setToStringTag = __webpack_require__(498)
+	var create         = __webpack_require__(519)
+	  , descriptor     = __webpack_require__(514)
+	  , setToStringTag = __webpack_require__(534)
 	  , IteratorPrototype = {};
 
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(469)(IteratorPrototype, __webpack_require__(499)('iterator'), function(){ return this; });
+	__webpack_require__(505)(IteratorPrototype, __webpack_require__(535)('iterator'), function(){ return this; });
 
 	module.exports = function(Constructor, NAME, next){
 	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
@@ -73510,27 +74595,27 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 483 */
+/* 519 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	var anObject    = __webpack_require__(471)
-	  , dPs         = __webpack_require__(484)
-	  , enumBugKeys = __webpack_require__(496)
-	  , IE_PROTO    = __webpack_require__(493)('IE_PROTO')
+	var anObject    = __webpack_require__(507)
+	  , dPs         = __webpack_require__(520)
+	  , enumBugKeys = __webpack_require__(532)
+	  , IE_PROTO    = __webpack_require__(529)('IE_PROTO')
 	  , Empty       = function(){ /* empty */ }
 	  , PROTOTYPE   = 'prototype';
 
 	// Create object with fake `null` prototype: use iframe Object with cleared prototype
 	var createDict = function(){
 	  // Thrash, waste and sodomy: IE GC bug
-	  var iframe = __webpack_require__(476)('iframe')
+	  var iframe = __webpack_require__(512)('iframe')
 	    , i      = enumBugKeys.length
 	    , lt     = '<'
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
-	  __webpack_require__(497).appendChild(iframe);
+	  __webpack_require__(533).appendChild(iframe);
 	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
 	  // createDict = iframe.contentWindow.Object;
 	  // html.removeChild(iframe);
@@ -73557,14 +74642,14 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 484 */
+/* 520 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var dP       = __webpack_require__(470)
-	  , anObject = __webpack_require__(471)
-	  , getKeys  = __webpack_require__(485);
+	var dP       = __webpack_require__(506)
+	  , anObject = __webpack_require__(507)
+	  , getKeys  = __webpack_require__(521);
 
-	module.exports = __webpack_require__(474) ? Object.defineProperties : function defineProperties(O, Properties){
+	module.exports = __webpack_require__(510) ? Object.defineProperties : function defineProperties(O, Properties){
 	  anObject(O);
 	  var keys   = getKeys(Properties)
 	    , length = keys.length
@@ -73575,25 +74660,25 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 485 */
+/* 521 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(486)
-	  , enumBugKeys = __webpack_require__(496);
+	var $keys       = __webpack_require__(522)
+	  , enumBugKeys = __webpack_require__(532);
 
 	module.exports = Object.keys || function keys(O){
 	  return $keys(O, enumBugKeys);
 	};
 
 /***/ },
-/* 486 */
+/* 522 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var has          = __webpack_require__(480)
-	  , toIObject    = __webpack_require__(487)
-	  , arrayIndexOf = __webpack_require__(490)(false)
-	  , IE_PROTO     = __webpack_require__(493)('IE_PROTO');
+	var has          = __webpack_require__(516)
+	  , toIObject    = __webpack_require__(523)
+	  , arrayIndexOf = __webpack_require__(526)(false)
+	  , IE_PROTO     = __webpack_require__(529)('IE_PROTO');
 
 	module.exports = function(object, names){
 	  var O      = toIObject(object)
@@ -73609,28 +74694,28 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 487 */
+/* 523 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(488)
-	  , defined = __webpack_require__(461);
+	var IObject = __webpack_require__(524)
+	  , defined = __webpack_require__(497);
 	module.exports = function(it){
 	  return IObject(defined(it));
 	};
 
 /***/ },
-/* 488 */
+/* 524 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(489);
+	var cof = __webpack_require__(525);
 	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-/* 489 */
+/* 525 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -73640,14 +74725,14 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 490 */
+/* 526 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
 	// true  -> Array#includes
-	var toIObject = __webpack_require__(487)
-	  , toLength  = __webpack_require__(491)
-	  , toIndex   = __webpack_require__(492);
+	var toIObject = __webpack_require__(523)
+	  , toLength  = __webpack_require__(527)
+	  , toIndex   = __webpack_require__(528);
 	module.exports = function(IS_INCLUDES){
 	  return function($this, el, fromIndex){
 	    var O      = toIObject($this)
@@ -73666,21 +74751,21 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 491 */
+/* 527 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(460)
+	var toInteger = __webpack_require__(496)
 	  , min       = Math.min;
 	module.exports = function(it){
 	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 	};
 
 /***/ },
-/* 492 */
+/* 528 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(460)
+	var toInteger = __webpack_require__(496)
 	  , max       = Math.max
 	  , min       = Math.min;
 	module.exports = function(index, length){
@@ -73689,20 +74774,20 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 493 */
+/* 529 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var shared = __webpack_require__(494)('keys')
-	  , uid    = __webpack_require__(495);
+	var shared = __webpack_require__(530)('keys')
+	  , uid    = __webpack_require__(531);
 	module.exports = function(key){
 	  return shared[key] || (shared[key] = uid(key));
 	};
 
 /***/ },
-/* 494 */
+/* 530 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global = __webpack_require__(465)
+	var global = __webpack_require__(501)
 	  , SHARED = '__core-js_shared__'
 	  , store  = global[SHARED] || (global[SHARED] = {});
 	module.exports = function(key){
@@ -73710,7 +74795,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 495 */
+/* 531 */
 /***/ function(module, exports) {
 
 	var id = 0
@@ -73720,7 +74805,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 496 */
+/* 532 */
 /***/ function(module, exports) {
 
 	// IE 8- don't enum bug keys
@@ -73729,30 +74814,30 @@ var Libp2pAutoGraph =
 	).split(',');
 
 /***/ },
-/* 497 */
+/* 533 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(465).document && document.documentElement;
+	module.exports = __webpack_require__(501).document && document.documentElement;
 
 /***/ },
-/* 498 */
+/* 534 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var def = __webpack_require__(470).f
-	  , has = __webpack_require__(480)
-	  , TAG = __webpack_require__(499)('toStringTag');
+	var def = __webpack_require__(506).f
+	  , has = __webpack_require__(516)
+	  , TAG = __webpack_require__(535)('toStringTag');
 
 	module.exports = function(it, tag, stat){
 	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 	};
 
 /***/ },
-/* 499 */
+/* 535 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var store      = __webpack_require__(494)('wks')
-	  , uid        = __webpack_require__(495)
-	  , Symbol     = __webpack_require__(465).Symbol
+	var store      = __webpack_require__(530)('wks')
+	  , uid        = __webpack_require__(531)
+	  , Symbol     = __webpack_require__(501).Symbol
 	  , USE_SYMBOL = typeof Symbol == 'function';
 
 	var $exports = module.exports = function(name){
@@ -73763,13 +74848,13 @@ var Libp2pAutoGraph =
 	$exports.store = store;
 
 /***/ },
-/* 500 */
+/* 536 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(480)
-	  , toObject    = __webpack_require__(501)
-	  , IE_PROTO    = __webpack_require__(493)('IE_PROTO')
+	var has         = __webpack_require__(516)
+	  , toObject    = __webpack_require__(537)
+	  , IE_PROTO    = __webpack_require__(529)('IE_PROTO')
 	  , ObjectProto = Object.prototype;
 
 	module.exports = Object.getPrototypeOf || function(O){
@@ -73781,30 +74866,30 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 501 */
+/* 537 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(461);
+	var defined = __webpack_require__(497);
 	module.exports = function(it){
 	  return Object(defined(it));
 	};
 
 /***/ },
-/* 502 */
+/* 538 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var ctx            = __webpack_require__(467)
-	  , $export        = __webpack_require__(464)
-	  , toObject       = __webpack_require__(501)
-	  , call           = __webpack_require__(503)
-	  , isArrayIter    = __webpack_require__(504)
-	  , toLength       = __webpack_require__(491)
-	  , createProperty = __webpack_require__(505)
-	  , getIterFn      = __webpack_require__(506);
+	var ctx            = __webpack_require__(503)
+	  , $export        = __webpack_require__(500)
+	  , toObject       = __webpack_require__(537)
+	  , call           = __webpack_require__(539)
+	  , isArrayIter    = __webpack_require__(540)
+	  , toLength       = __webpack_require__(527)
+	  , createProperty = __webpack_require__(541)
+	  , getIterFn      = __webpack_require__(542);
 
-	$export($export.S + $export.F * !__webpack_require__(508)(function(iter){ Array.from(iter); }), 'Array', {
+	$export($export.S + $export.F * !__webpack_require__(544)(function(iter){ Array.from(iter); }), 'Array', {
 	  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
 	  from: function from(arrayLike/*, mapfn = undefined, thisArg = undefined*/){
 	    var O       = toObject(arrayLike)
@@ -73834,11 +74919,11 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 503 */
+/* 539 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// call something on iterator step with safe closing on error
-	var anObject = __webpack_require__(471);
+	var anObject = __webpack_require__(507);
 	module.exports = function(iterator, fn, value, entries){
 	  try {
 	    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
@@ -73851,12 +74936,12 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 504 */
+/* 540 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// check on default Array iterator
-	var Iterators  = __webpack_require__(481)
-	  , ITERATOR   = __webpack_require__(499)('iterator')
+	var Iterators  = __webpack_require__(517)
+	  , ITERATOR   = __webpack_require__(535)('iterator')
 	  , ArrayProto = Array.prototype;
 
 	module.exports = function(it){
@@ -73864,12 +74949,12 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 505 */
+/* 541 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $defineProperty = __webpack_require__(470)
-	  , createDesc      = __webpack_require__(478);
+	var $defineProperty = __webpack_require__(506)
+	  , createDesc      = __webpack_require__(514);
 
 	module.exports = function(object, index, value){
 	  if(index in object)$defineProperty.f(object, index, createDesc(0, value));
@@ -73877,25 +74962,25 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 506 */
+/* 542 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var classof   = __webpack_require__(507)
-	  , ITERATOR  = __webpack_require__(499)('iterator')
-	  , Iterators = __webpack_require__(481);
-	module.exports = __webpack_require__(466).getIteratorMethod = function(it){
+	var classof   = __webpack_require__(543)
+	  , ITERATOR  = __webpack_require__(535)('iterator')
+	  , Iterators = __webpack_require__(517);
+	module.exports = __webpack_require__(502).getIteratorMethod = function(it){
 	  if(it != undefined)return it[ITERATOR]
 	    || it['@@iterator']
 	    || Iterators[classof(it)];
 	};
 
 /***/ },
-/* 507 */
+/* 543 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// getting tag from 19.1.3.6 Object.prototype.toString()
-	var cof = __webpack_require__(489)
-	  , TAG = __webpack_require__(499)('toStringTag')
+	var cof = __webpack_require__(525)
+	  , TAG = __webpack_require__(535)('toStringTag')
 	  // ES3 wrong here
 	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
 
@@ -73918,10 +75003,10 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 508 */
+/* 544 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ITERATOR     = __webpack_require__(499)('iterator')
+	var ITERATOR     = __webpack_require__(535)('iterator')
 	  , SAFE_CLOSING = false;
 
 	try {
@@ -73944,7 +75029,571 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 509 */
+/* 545 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var extend = __webpack_require__(465)
+	var codec = __webpack_require__(546)
+	var protocols = __webpack_require__(548)
+	var NotImplemented = new Error('Sorry, Not Implemented Yet.')
+	var varint = __webpack_require__(362)
+
+	exports = module.exports = Multiaddr
+
+	function Multiaddr (addr) {
+	  if (!(this instanceof Multiaddr)) {
+	    return new Multiaddr(addr)
+	  }
+
+	  // defaults
+	  if (!addr) {
+	    addr = ''
+	  }
+
+	  if (addr instanceof Buffer) {
+	    this.buffer = codec.fromBuffer(addr)
+	  } else if (typeof (addr) === 'string' || addr instanceof String) {
+	    this.buffer = codec.fromString(addr)
+	  } else if (addr.buffer && addr.protos && addr.protoCodes) { // Multiaddr
+	    this.buffer = codec.fromBuffer(addr.buffer) // validate + copy buffer
+	  } else {
+	    throw new Error('addr must be a string, Buffer, or another Multiaddr')
+	  }
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.toString = function toString () {
+	  return codec.bufferToString(this.buffer)
+	}
+
+	// get the multiaddr as a convinent options object to be dropped in net.createConnection
+	Multiaddr.prototype.toOptions = function toOptions () {
+	  var opts = {}
+	  var parsed = this.toString().split('/')
+	  opts.family = parsed[1] === 'ip4' ? 'ipv4' : 'ipv6'
+	  opts.host = parsed[2]
+	  opts.transport = parsed[3]
+	  opts.port = parsed[4]
+	  return opts
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.inspect = function inspect () {
+	  return '<Multiaddr ' +
+	  this.buffer.toString('hex') + ' - ' +
+	  codec.bufferToString(this.buffer) + '>'
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.protos = function protos () {
+	  return map(this.protoCodes(), function (code) {
+	    return extend(protocols(code))
+	    // copy to prevent users from modifying the internal objs.
+	  })
+	}
+
+	// get the multiaddr protocol codes
+	Multiaddr.prototype.protoCodes = function protoCodes () {
+	  const codes = []
+	  const buf = this.buffer
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+	    const size = codec.sizeForAddr(p, buf.slice(i + n))
+
+	    i += (size + n)
+	    codes.push(code)
+	  }
+
+	  return codes
+	}
+
+	// get the multiaddr protocol string names
+	Multiaddr.prototype.protoNames = function protoNames () {
+	  return map(this.protos(), function (proto) {
+	    return proto.name
+	  })
+	}
+
+	// Returns a tuple of parts:
+	Multiaddr.prototype.tuples = function tuples () {
+	  return codec.bufferToTuples(this.buffer)
+	}
+
+	// Returns a tuple of string parts:
+	Multiaddr.prototype.stringTuples = function stringTuples () {
+	  var t = codec.bufferToTuples(this.buffer)
+	  return codec.tuplesToStringTuples(t)
+	}
+
+	Multiaddr.prototype.encapsulate = function encapsulate (addr) {
+	  addr = Multiaddr(addr)
+	  return Multiaddr(this.toString() + addr.toString())
+	}
+
+	Multiaddr.prototype.decapsulate = function decapsulate (addr) {
+	  addr = addr.toString()
+	  var s = this.toString()
+	  var i = s.lastIndexOf(addr)
+	  if (i < 0) {
+	    throw new Error('Address ' + this + ' does not contain subaddress: ' + addr)
+	  }
+	  return Multiaddr(s.slice(0, i))
+	}
+
+	Multiaddr.prototype.equals = function equals (addr) {
+	  return this.buffer.equals(addr.buffer)
+	}
+
+	// get a node friendly address object
+	Multiaddr.prototype.nodeAddress = function nodeAddress () {
+	  if (!this.isThinWaistAddress()) {
+	    throw new Error('Multiaddr must be "thin waist" address for nodeAddress.')
+	  }
+
+	  var codes = this.protoCodes()
+	  var parts = this.toString().split('/').slice(1)
+	  return {
+	    family: (codes[0] === 41) ? 'IPv6' : 'IPv4',
+	    address: parts[1], // ip addr
+	    port: parts[3] // tcp or udp port
+	  }
+	}
+
+	// from a node friendly address object
+	Multiaddr.fromNodeAddress = function fromNodeAddress (addr, transport) {
+	  if (!addr) throw new Error('requires node address object')
+	  if (!transport) throw new Error('requires transport protocol')
+	  var ip = (addr.family === 'IPv6') ? 'ip6' : 'ip4'
+	  return Multiaddr('/' + [ip, addr.address, transport, addr.port].join('/'))
+	}
+
+	// returns whether this address is a standard combination:
+	// /{IPv4, IPv6}/{TCP, UDP}
+	Multiaddr.prototype.isThinWaistAddress = function isThinWaistAddress (addr) {
+	  var protos = (addr || this).protos()
+
+	  if (protos.length !== 2) {
+	    return false
+	  }
+
+	  if (protos[0].code !== 4 && protos[0].code !== 41) {
+	    return false
+	  }
+	  if (protos[1].code !== 6 && protos[1].code !== 17) {
+	    return false
+	  }
+	  return true
+	}
+
+	// parses the "stupid string" format:
+	// <proto><IPv>://<IP Addr>[:<proto port>]
+	// udp4://1.2.3.4:5678
+	Multiaddr.prototype.fromStupidString = function fromStupidString (str) {
+	  throw NotImplemented
+	}
+
+	// patch this in
+	Multiaddr.protocols = protocols
+
+	Multiaddr.isMultiaddr = function isMultiaddr (addr) {
+	  if (addr.constructor && addr.constructor.name) {
+	    return addr.constructor.name === 'Multiaddr'
+	  }
+
+	  return Boolean(
+	    addr.fromStupidString &&
+	    addr.protos
+	  )
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 546 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var filter = __webpack_require__(467)
+	var convert = __webpack_require__(547)
+	var protocols = __webpack_require__(548)
+	var varint = __webpack_require__(362)
+
+	// export codec
+	module.exports = {
+	  stringToStringTuples: stringToStringTuples,
+	  stringTuplesToString: stringTuplesToString,
+
+	  tuplesToStringTuples: tuplesToStringTuples,
+	  stringTuplesToTuples: stringTuplesToTuples,
+
+	  bufferToTuples: bufferToTuples,
+	  tuplesToBuffer: tuplesToBuffer,
+
+	  bufferToString: bufferToString,
+	  stringToBuffer: stringToBuffer,
+
+	  fromString: fromString,
+	  fromBuffer: fromBuffer,
+	  validateBuffer: validateBuffer,
+	  isValidBuffer: isValidBuffer,
+	  cleanPath: cleanPath,
+
+	  ParseError: ParseError,
+	  protoFromTuple: protoFromTuple,
+
+	  sizeForAddr: sizeForAddr
+	}
+
+	// string -> [[str name, str addr]... ]
+	function stringToStringTuples (str) {
+	  var tuples = []
+	  var parts = str.split('/').slice(1) // skip first empty elem
+	  if (parts.length === 1 && parts[0] === '') {
+	    return []
+	  }
+
+	  for (var p = 0; p < parts.length; p++) {
+	    var part = parts[p]
+	    var proto = protocols(part)
+
+	    if (proto.size === 0) {
+	      tuples.push([part])
+	      continue
+	    }
+
+	    p++ // advance addr part
+	    if (p >= parts.length) {
+	      throw ParseError('invalid address: ' + str)
+	    }
+
+	    tuples.push([part, parts[p]])
+	  }
+
+	  return tuples
+	}
+
+	// [[str name, str addr]... ] -> string
+	function stringTuplesToString (tuples) {
+	  var parts = []
+	  map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    parts.push(proto.name)
+	    if (tup.length > 1) {
+	      parts.push(tup[1])
+	    }
+	  })
+
+	  return '/' + parts.join('/')
+	}
+
+	// [[str name, str addr]... ] -> [[int code, Buffer]... ]
+	function stringTuplesToTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    if (!Array.isArray(tup)) {
+	      tup = [tup]
+	    }
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toBuffer(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer]... ] -> [[str name, str addr]... ]
+	function tuplesToStringTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toString(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer ]... ] -> Buffer
+	function tuplesToBuffer (tuples) {
+	  return fromBuffer(Buffer.concat(map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    var buf = new Buffer(varint.encode(proto.code))
+
+	    if (tup.length > 1) {
+	      buf = Buffer.concat([buf, tup[1]]) // add address buffer
+	    }
+
+	    return buf
+	  })))
+	}
+
+	function sizeForAddr (p, addr) {
+	  if (p.size > 0) {
+	    return p.size / 8
+	  } else if (p.size === 0) {
+	    return 0
+	  } else {
+	    const size = varint.decode(addr)
+	    return size + varint.decode.bytes
+	  }
+	}
+
+	// Buffer -> [[int code, Buffer ]... ]
+	function bufferToTuples (buf) {
+	  const tuples = []
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+
+	    const size = sizeForAddr(p, buf.slice(i + n))
+
+	    if (size === 0) {
+	      tuples.push([code])
+	      i += n
+	      continue
+	    }
+
+	    const addr = buf.slice(i + n, i + n + size)
+
+	    i += (size + n)
+
+	    if (i > buf.length) { // did not end _exactly_ at buffer.length
+	      throw ParseError('Invalid address buffer: ' + buf.toString('hex'))
+	    }
+
+	    // ok, tuple seems good.
+	    tuples.push([code, addr])
+	  }
+
+	  return tuples
+	}
+
+	// Buffer -> String
+	function bufferToString (buf) {
+	  var a = bufferToTuples(buf)
+	  var b = tuplesToStringTuples(a)
+	  return stringTuplesToString(b)
+	}
+
+	// String -> Buffer
+	function stringToBuffer (str) {
+	  str = cleanPath(str)
+	  var a = stringToStringTuples(str)
+	  var b = stringTuplesToTuples(a)
+	  return tuplesToBuffer(b)
+	}
+
+	// String -> Buffer
+	function fromString (str) {
+	  return stringToBuffer(str)
+	}
+
+	// Buffer -> Buffer
+	function fromBuffer (buf) {
+	  var err = validateBuffer(buf)
+	  if (err) throw err
+	  return new Buffer(buf) // copy
+	}
+
+	function validateBuffer (buf) {
+	  try {
+	    bufferToTuples(buf) // try to parse. will throw if breaks
+	  } catch (err) {
+	    return err
+	  }
+	}
+
+	function isValidBuffer (buf) {
+	  return validateBuffer(buf) === undefined
+	}
+
+	function cleanPath (str) {
+	  return '/' + filter(str.trim().split('/')).join('/')
+	}
+
+	function ParseError (str) {
+	  return new Error('Error parsing address: ' + str)
+	}
+
+	function protoFromTuple (tup) {
+	  var proto = protocols(tup[0])
+	  return proto
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 547 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var ip = __webpack_require__(469)
+	var protocols = __webpack_require__(548)
+	var bs58 = __webpack_require__(374)
+	var varint = __webpack_require__(362)
+
+	module.exports = Convert
+
+	// converts (serializes) addresses
+	function Convert (proto, a) {
+	  if (a instanceof Buffer) {
+	    return Convert.toString(proto, a)
+	  } else {
+	    return Convert.toBuffer(proto, a)
+	  }
+	}
+
+	Convert.toString = function convertToString (proto, buf) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toString(buf)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return buf2port(buf)
+
+	    case 421: // ipfs
+	      return buf2mh(buf)
+	    default:
+	      return buf.toString('hex') // no clue. convert to hex
+	  }
+	}
+
+	Convert.toBuffer = function convertToBuffer (proto, str) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toBuffer(str)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return port2buf(parseInt(str, 10))
+
+	    case 421: // ipfs
+	      return mh2buf(str)
+	    default:
+	      return new Buffer(str, 'hex') // no clue. convert from hex
+	  }
+	}
+
+	function port2buf (port) {
+	  var buf = new Buffer(2)
+	  buf.writeUInt16BE(port, 0)
+	  return buf
+	}
+
+	function buf2port (buf) {
+	  return buf.readUInt16BE(0)
+	}
+
+	function mh2buf (hash) {
+	  // the address is a varint prefixed multihash string representation
+	  const mh = new Buffer(bs58.decode(hash))
+	  const size = new Buffer(varint.encode(mh.length))
+	  return Buffer.concat([size, mh])
+	}
+
+	function buf2mh (buf) {
+	  const size = varint.decode(buf)
+	  const address = buf.slice(varint.decode.bytes)
+
+	  if (address.length !== size) {
+	    throw new Error('inconsistent lengths')
+	  }
+
+	  return bs58.encode(address)
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 548 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var map = __webpack_require__(464)
+
+	module.exports = Protocols
+
+	function Protocols (proto) {
+	  if (typeof (proto) === 'number') {
+	    if (Protocols.codes[proto]) {
+	      return Protocols.codes[proto]
+	    }
+
+	    throw new Error('no protocol with code: ' + proto)
+	  } else if (typeof (proto) === 'string' || proto instanceof String) {
+	    if (Protocols.names[proto]) {
+	      return Protocols.names[proto]
+	    }
+
+	    throw new Error('no protocol with name: ' + proto)
+	  }
+
+	  throw new Error('invalid protocol id type: ' + proto)
+	}
+
+	Protocols.lengthPrefixedVarSize = -1
+
+	// replicating table here to:
+	// 1. avoid parsing the csv
+	// 2. ensuring errors in the csv don't screw up code.
+	// 3. changing a number has to happen in two places.
+
+	Protocols.table = [
+	  [4, 32, 'ip4'],
+	  [6, 16, 'tcp'],
+	  [17, 16, 'udp'],
+	  [33, 16, 'dccp'],
+	  [41, 128, 'ip6'],
+	  [132, 16, 'sctp'],
+	  // these require varint for the protocol code
+	  [302, 0, 'utp'],
+	  [421, Protocols.lengthPrefixedVarSize, 'ipfs'],
+	  [480, 0, 'http'],
+	  [443, 0, 'https'],
+	  [477, 0, 'ws'],
+	  [275, 0, 'libp2p-webrtc-star']
+	]
+
+	Protocols.names = {}
+	Protocols.codes = {}
+
+	// populate tables
+	map(Protocols.table, function (e) {
+	  var proto = p.apply(this, e)
+	  Protocols.codes[proto.code] = proto
+	  Protocols.names[proto.name] = proto
+	})
+
+	Protocols.object = p
+
+	function p (code, size, name) {
+	  return {code: code, size: size, name: name}
+	}
+
+
+/***/ },
+/* 549 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -73955,10 +75604,10 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var baseIndexOf = __webpack_require__(510),
-	    forOwn = __webpack_require__(511),
-	    isArray = __webpack_require__(530),
-	    isString = __webpack_require__(531);
+	var baseIndexOf = __webpack_require__(550),
+	    forOwn = __webpack_require__(551),
+	    isArray = __webpack_require__(570),
+	    isString = __webpack_require__(571);
 
 	/* Native method shortcuts for methods with the same name as other `lodash` methods */
 	var nativeMax = Math.max;
@@ -74015,7 +75664,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 510 */
+/* 550 */
 /***/ function(module, exports) {
 
 	/**
@@ -74053,7 +75702,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 511 */
+/* 551 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74064,9 +75713,9 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var baseCreateCallback = __webpack_require__(512),
-	    keys = __webpack_require__(528),
-	    objectTypes = __webpack_require__(519);
+	var baseCreateCallback = __webpack_require__(552),
+	    keys = __webpack_require__(568),
+	    objectTypes = __webpack_require__(559);
 
 	/**
 	 * Iterates over own enumerable properties of an object, executing the callback
@@ -74109,7 +75758,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 512 */
+/* 552 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74120,10 +75769,10 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var bind = __webpack_require__(513),
-	    identity = __webpack_require__(526),
-	    setBindData = __webpack_require__(521),
-	    support = __webpack_require__(527);
+	var bind = __webpack_require__(553),
+	    identity = __webpack_require__(566),
+	    setBindData = __webpack_require__(561),
+	    support = __webpack_require__(567);
 
 	/** Used to detected named functions */
 	var reFuncName = /^\s*function[ \n\r\t]+\w/;
@@ -74195,7 +75844,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 513 */
+/* 553 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74206,8 +75855,8 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var createWrapper = __webpack_require__(514),
-	    slice = __webpack_require__(523);
+	var createWrapper = __webpack_require__(554),
+	    slice = __webpack_require__(563);
 
 	/**
 	 * Creates a function that, when called, invokes `func` with the `this`
@@ -74241,7 +75890,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 514 */
+/* 554 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74252,10 +75901,10 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var baseBind = __webpack_require__(515),
-	    baseCreateWrapper = __webpack_require__(524),
-	    isFunction = __webpack_require__(525),
-	    slice = __webpack_require__(523);
+	var baseBind = __webpack_require__(555),
+	    baseCreateWrapper = __webpack_require__(564),
+	    isFunction = __webpack_require__(565),
+	    slice = __webpack_require__(563);
 
 	/**
 	 * Used for `Array` method references.
@@ -74353,7 +76002,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 515 */
+/* 555 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74364,10 +76013,10 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var baseCreate = __webpack_require__(516),
-	    isObject = __webpack_require__(518),
-	    setBindData = __webpack_require__(521),
-	    slice = __webpack_require__(523);
+	var baseCreate = __webpack_require__(556),
+	    isObject = __webpack_require__(558),
+	    setBindData = __webpack_require__(561),
+	    slice = __webpack_require__(563);
 
 	/**
 	 * Used for `Array` method references.
@@ -74421,7 +76070,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 516 */
+/* 556 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -74432,9 +76081,9 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var isNative = __webpack_require__(517),
-	    isObject = __webpack_require__(518),
-	    noop = __webpack_require__(520);
+	var isNative = __webpack_require__(557),
+	    isObject = __webpack_require__(558),
+	    noop = __webpack_require__(560);
 
 	/* Native method shortcuts for methods with the same name as other `lodash` methods */
 	var nativeCreate = isNative(nativeCreate = Object.create) && nativeCreate;
@@ -74470,7 +76119,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 517 */
+/* 557 */
 /***/ function(module, exports) {
 
 	/**
@@ -74510,7 +76159,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 518 */
+/* 558 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74521,7 +76170,7 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var objectTypes = __webpack_require__(519);
+	var objectTypes = __webpack_require__(559);
 
 	/**
 	 * Checks if `value` is the language type of Object.
@@ -74555,7 +76204,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 519 */
+/* 559 */
 /***/ function(module, exports) {
 
 	/**
@@ -74581,7 +76230,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 520 */
+/* 560 */
 /***/ function(module, exports) {
 
 	/**
@@ -74613,7 +76262,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 521 */
+/* 561 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74624,8 +76273,8 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var isNative = __webpack_require__(517),
-	    noop = __webpack_require__(522);
+	var isNative = __webpack_require__(557),
+	    noop = __webpack_require__(562);
 
 	/** Used as the property descriptor for `__bindData__` */
 	var descriptor = {
@@ -74662,7 +76311,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 522 */
+/* 562 */
 /***/ function(module, exports) {
 
 	/**
@@ -74694,7 +76343,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 523 */
+/* 563 */
 /***/ function(module, exports) {
 
 	/**
@@ -74738,7 +76387,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 524 */
+/* 564 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74749,10 +76398,10 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var baseCreate = __webpack_require__(516),
-	    isObject = __webpack_require__(518),
-	    setBindData = __webpack_require__(521),
-	    slice = __webpack_require__(523);
+	var baseCreate = __webpack_require__(556),
+	    isObject = __webpack_require__(558),
+	    setBindData = __webpack_require__(561),
+	    slice = __webpack_require__(563);
 
 	/**
 	 * Used for `Array` method references.
@@ -74822,7 +76471,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 525 */
+/* 565 */
 /***/ function(module, exports) {
 
 	/**
@@ -74855,7 +76504,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 526 */
+/* 566 */
 /***/ function(module, exports) {
 
 	/**
@@ -74889,7 +76538,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 527 */
+/* 567 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -74900,7 +76549,7 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var isNative = __webpack_require__(517);
+	var isNative = __webpack_require__(557);
 
 	/** Used to detect functions containing a `this` reference */
 	var reThis = /\bthis\b/;
@@ -74936,7 +76585,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 528 */
+/* 568 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74947,9 +76596,9 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var isNative = __webpack_require__(517),
-	    isObject = __webpack_require__(518),
-	    shimKeys = __webpack_require__(529);
+	var isNative = __webpack_require__(557),
+	    isObject = __webpack_require__(558),
+	    shimKeys = __webpack_require__(569);
 
 	/* Native method shortcuts for methods with the same name as other `lodash` methods */
 	var nativeKeys = isNative(nativeKeys = Object.keys) && nativeKeys;
@@ -74978,7 +76627,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 529 */
+/* 569 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -74989,7 +76638,7 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var objectTypes = __webpack_require__(519);
+	var objectTypes = __webpack_require__(559);
 
 	/** Used for native method references */
 	var objectProto = Object.prototype;
@@ -75022,7 +76671,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 530 */
+/* 570 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -75033,7 +76682,7 @@ var Libp2pAutoGraph =
 	 * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <http://lodash.com/license>
 	 */
-	var isNative = __webpack_require__(517);
+	var isNative = __webpack_require__(557);
 
 	/** `Object#toString` result shortcuts */
 	var arrayClass = '[object Array]';
@@ -75073,7 +76722,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 531 */
+/* 571 */
 /***/ function(module, exports) {
 
 	/**
@@ -75116,17 +76765,17 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 532 */
+/* 572 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const Connection = __webpack_require__(240).Connection
-	const contains = __webpack_require__(509)
+	const Connection = __webpack_require__(243).Connection
+	const contains = __webpack_require__(549)
 
 	// const IPFS_CODE = 421
 
-	let createServer = __webpack_require__(533)
+	let createServer = __webpack_require__(573)
 
 	if (!createServer) {
 	  createServer = () => {}
@@ -75165,37 +76814,37 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 533 */
+/* 573 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 534 */
+/* 574 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	module.exports = __webpack_require__(535)
+	module.exports = __webpack_require__(575)
 
 
 /***/ },
-/* 535 */
+/* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict'
 
-	const debug = __webpack_require__(245)
+	const debug = __webpack_require__(251)
 	const log = debug('libp2p:webrtc-star')
-	const multiaddr = __webpack_require__(427)
-	const mafmt = __webpack_require__(455)
-	const io = __webpack_require__(536)
+	const multiaddr = __webpack_require__(576)
+	const mafmt = __webpack_require__(491)
+	const io = __webpack_require__(580)
 	const EE = __webpack_require__(192).EventEmitter
-	const SimplePeer = __webpack_require__(586)
-	const peerId = __webpack_require__(334)
-	const PeerInfo = __webpack_require__(333)
-	const Connection = __webpack_require__(240).Connection
-	const toPull = __webpack_require__(589)
+	const SimplePeer = __webpack_require__(630)
+	const peerId = __webpack_require__(633)
+	const PeerInfo = __webpack_require__(634)
+	const Connection = __webpack_require__(243).Connection
+	const toPull = __webpack_require__(635)
 
 	exports = module.exports = WebRTCStar
 
@@ -75368,7 +77017,571 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 536 */
+/* 576 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var extend = __webpack_require__(465)
+	var codec = __webpack_require__(577)
+	var protocols = __webpack_require__(579)
+	var NotImplemented = new Error('Sorry, Not Implemented Yet.')
+	var varint = __webpack_require__(362)
+
+	exports = module.exports = Multiaddr
+
+	function Multiaddr (addr) {
+	  if (!(this instanceof Multiaddr)) {
+	    return new Multiaddr(addr)
+	  }
+
+	  // defaults
+	  if (!addr) {
+	    addr = ''
+	  }
+
+	  if (addr instanceof Buffer) {
+	    this.buffer = codec.fromBuffer(addr)
+	  } else if (typeof (addr) === 'string' || addr instanceof String) {
+	    this.buffer = codec.fromString(addr)
+	  } else if (addr.buffer && addr.protos && addr.protoCodes) { // Multiaddr
+	    this.buffer = codec.fromBuffer(addr.buffer) // validate + copy buffer
+	  } else {
+	    throw new Error('addr must be a string, Buffer, or another Multiaddr')
+	  }
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.toString = function toString () {
+	  return codec.bufferToString(this.buffer)
+	}
+
+	// get the multiaddr as a convinent options object to be dropped in net.createConnection
+	Multiaddr.prototype.toOptions = function toOptions () {
+	  var opts = {}
+	  var parsed = this.toString().split('/')
+	  opts.family = parsed[1] === 'ip4' ? 'ipv4' : 'ipv6'
+	  opts.host = parsed[2]
+	  opts.transport = parsed[3]
+	  opts.port = parsed[4]
+	  return opts
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.inspect = function inspect () {
+	  return '<Multiaddr ' +
+	  this.buffer.toString('hex') + ' - ' +
+	  codec.bufferToString(this.buffer) + '>'
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.protos = function protos () {
+	  return map(this.protoCodes(), function (code) {
+	    return extend(protocols(code))
+	    // copy to prevent users from modifying the internal objs.
+	  })
+	}
+
+	// get the multiaddr protocol codes
+	Multiaddr.prototype.protoCodes = function protoCodes () {
+	  const codes = []
+	  const buf = this.buffer
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+	    const size = codec.sizeForAddr(p, buf.slice(i + n))
+
+	    i += (size + n)
+	    codes.push(code)
+	  }
+
+	  return codes
+	}
+
+	// get the multiaddr protocol string names
+	Multiaddr.prototype.protoNames = function protoNames () {
+	  return map(this.protos(), function (proto) {
+	    return proto.name
+	  })
+	}
+
+	// Returns a tuple of parts:
+	Multiaddr.prototype.tuples = function tuples () {
+	  return codec.bufferToTuples(this.buffer)
+	}
+
+	// Returns a tuple of string parts:
+	Multiaddr.prototype.stringTuples = function stringTuples () {
+	  var t = codec.bufferToTuples(this.buffer)
+	  return codec.tuplesToStringTuples(t)
+	}
+
+	Multiaddr.prototype.encapsulate = function encapsulate (addr) {
+	  addr = Multiaddr(addr)
+	  return Multiaddr(this.toString() + addr.toString())
+	}
+
+	Multiaddr.prototype.decapsulate = function decapsulate (addr) {
+	  addr = addr.toString()
+	  var s = this.toString()
+	  var i = s.lastIndexOf(addr)
+	  if (i < 0) {
+	    throw new Error('Address ' + this + ' does not contain subaddress: ' + addr)
+	  }
+	  return Multiaddr(s.slice(0, i))
+	}
+
+	Multiaddr.prototype.equals = function equals (addr) {
+	  return this.buffer.equals(addr.buffer)
+	}
+
+	// get a node friendly address object
+	Multiaddr.prototype.nodeAddress = function nodeAddress () {
+	  if (!this.isThinWaistAddress()) {
+	    throw new Error('Multiaddr must be "thin waist" address for nodeAddress.')
+	  }
+
+	  var codes = this.protoCodes()
+	  var parts = this.toString().split('/').slice(1)
+	  return {
+	    family: (codes[0] === 41) ? 'IPv6' : 'IPv4',
+	    address: parts[1], // ip addr
+	    port: parts[3] // tcp or udp port
+	  }
+	}
+
+	// from a node friendly address object
+	Multiaddr.fromNodeAddress = function fromNodeAddress (addr, transport) {
+	  if (!addr) throw new Error('requires node address object')
+	  if (!transport) throw new Error('requires transport protocol')
+	  var ip = (addr.family === 'IPv6') ? 'ip6' : 'ip4'
+	  return Multiaddr('/' + [ip, addr.address, transport, addr.port].join('/'))
+	}
+
+	// returns whether this address is a standard combination:
+	// /{IPv4, IPv6}/{TCP, UDP}
+	Multiaddr.prototype.isThinWaistAddress = function isThinWaistAddress (addr) {
+	  var protos = (addr || this).protos()
+
+	  if (protos.length !== 2) {
+	    return false
+	  }
+
+	  if (protos[0].code !== 4 && protos[0].code !== 41) {
+	    return false
+	  }
+	  if (protos[1].code !== 6 && protos[1].code !== 17) {
+	    return false
+	  }
+	  return true
+	}
+
+	// parses the "stupid string" format:
+	// <proto><IPv>://<IP Addr>[:<proto port>]
+	// udp4://1.2.3.4:5678
+	Multiaddr.prototype.fromStupidString = function fromStupidString (str) {
+	  throw NotImplemented
+	}
+
+	// patch this in
+	Multiaddr.protocols = protocols
+
+	Multiaddr.isMultiaddr = function isMultiaddr (addr) {
+	  if (addr.constructor && addr.constructor.name) {
+	    return addr.constructor.name === 'Multiaddr'
+	  }
+
+	  return Boolean(
+	    addr.fromStupidString &&
+	    addr.protos
+	  )
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 577 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var filter = __webpack_require__(467)
+	var convert = __webpack_require__(578)
+	var protocols = __webpack_require__(579)
+	var varint = __webpack_require__(362)
+
+	// export codec
+	module.exports = {
+	  stringToStringTuples: stringToStringTuples,
+	  stringTuplesToString: stringTuplesToString,
+
+	  tuplesToStringTuples: tuplesToStringTuples,
+	  stringTuplesToTuples: stringTuplesToTuples,
+
+	  bufferToTuples: bufferToTuples,
+	  tuplesToBuffer: tuplesToBuffer,
+
+	  bufferToString: bufferToString,
+	  stringToBuffer: stringToBuffer,
+
+	  fromString: fromString,
+	  fromBuffer: fromBuffer,
+	  validateBuffer: validateBuffer,
+	  isValidBuffer: isValidBuffer,
+	  cleanPath: cleanPath,
+
+	  ParseError: ParseError,
+	  protoFromTuple: protoFromTuple,
+
+	  sizeForAddr: sizeForAddr
+	}
+
+	// string -> [[str name, str addr]... ]
+	function stringToStringTuples (str) {
+	  var tuples = []
+	  var parts = str.split('/').slice(1) // skip first empty elem
+	  if (parts.length === 1 && parts[0] === '') {
+	    return []
+	  }
+
+	  for (var p = 0; p < parts.length; p++) {
+	    var part = parts[p]
+	    var proto = protocols(part)
+
+	    if (proto.size === 0) {
+	      tuples.push([part])
+	      continue
+	    }
+
+	    p++ // advance addr part
+	    if (p >= parts.length) {
+	      throw ParseError('invalid address: ' + str)
+	    }
+
+	    tuples.push([part, parts[p]])
+	  }
+
+	  return tuples
+	}
+
+	// [[str name, str addr]... ] -> string
+	function stringTuplesToString (tuples) {
+	  var parts = []
+	  map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    parts.push(proto.name)
+	    if (tup.length > 1) {
+	      parts.push(tup[1])
+	    }
+	  })
+
+	  return '/' + parts.join('/')
+	}
+
+	// [[str name, str addr]... ] -> [[int code, Buffer]... ]
+	function stringTuplesToTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    if (!Array.isArray(tup)) {
+	      tup = [tup]
+	    }
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toBuffer(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer]... ] -> [[str name, str addr]... ]
+	function tuplesToStringTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toString(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer ]... ] -> Buffer
+	function tuplesToBuffer (tuples) {
+	  return fromBuffer(Buffer.concat(map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    var buf = new Buffer(varint.encode(proto.code))
+
+	    if (tup.length > 1) {
+	      buf = Buffer.concat([buf, tup[1]]) // add address buffer
+	    }
+
+	    return buf
+	  })))
+	}
+
+	function sizeForAddr (p, addr) {
+	  if (p.size > 0) {
+	    return p.size / 8
+	  } else if (p.size === 0) {
+	    return 0
+	  } else {
+	    const size = varint.decode(addr)
+	    return size + varint.decode.bytes
+	  }
+	}
+
+	// Buffer -> [[int code, Buffer ]... ]
+	function bufferToTuples (buf) {
+	  const tuples = []
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+
+	    const size = sizeForAddr(p, buf.slice(i + n))
+
+	    if (size === 0) {
+	      tuples.push([code])
+	      i += n
+	      continue
+	    }
+
+	    const addr = buf.slice(i + n, i + n + size)
+
+	    i += (size + n)
+
+	    if (i > buf.length) { // did not end _exactly_ at buffer.length
+	      throw ParseError('Invalid address buffer: ' + buf.toString('hex'))
+	    }
+
+	    // ok, tuple seems good.
+	    tuples.push([code, addr])
+	  }
+
+	  return tuples
+	}
+
+	// Buffer -> String
+	function bufferToString (buf) {
+	  var a = bufferToTuples(buf)
+	  var b = tuplesToStringTuples(a)
+	  return stringTuplesToString(b)
+	}
+
+	// String -> Buffer
+	function stringToBuffer (str) {
+	  str = cleanPath(str)
+	  var a = stringToStringTuples(str)
+	  var b = stringTuplesToTuples(a)
+	  return tuplesToBuffer(b)
+	}
+
+	// String -> Buffer
+	function fromString (str) {
+	  return stringToBuffer(str)
+	}
+
+	// Buffer -> Buffer
+	function fromBuffer (buf) {
+	  var err = validateBuffer(buf)
+	  if (err) throw err
+	  return new Buffer(buf) // copy
+	}
+
+	function validateBuffer (buf) {
+	  try {
+	    bufferToTuples(buf) // try to parse. will throw if breaks
+	  } catch (err) {
+	    return err
+	  }
+	}
+
+	function isValidBuffer (buf) {
+	  return validateBuffer(buf) === undefined
+	}
+
+	function cleanPath (str) {
+	  return '/' + filter(str.trim().split('/')).join('/')
+	}
+
+	function ParseError (str) {
+	  return new Error('Error parsing address: ' + str)
+	}
+
+	function protoFromTuple (tup) {
+	  var proto = protocols(tup[0])
+	  return proto
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 578 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var ip = __webpack_require__(469)
+	var protocols = __webpack_require__(579)
+	var bs58 = __webpack_require__(374)
+	var varint = __webpack_require__(362)
+
+	module.exports = Convert
+
+	// converts (serializes) addresses
+	function Convert (proto, a) {
+	  if (a instanceof Buffer) {
+	    return Convert.toString(proto, a)
+	  } else {
+	    return Convert.toBuffer(proto, a)
+	  }
+	}
+
+	Convert.toString = function convertToString (proto, buf) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toString(buf)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return buf2port(buf)
+
+	    case 421: // ipfs
+	      return buf2mh(buf)
+	    default:
+	      return buf.toString('hex') // no clue. convert to hex
+	  }
+	}
+
+	Convert.toBuffer = function convertToBuffer (proto, str) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toBuffer(str)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return port2buf(parseInt(str, 10))
+
+	    case 421: // ipfs
+	      return mh2buf(str)
+	    default:
+	      return new Buffer(str, 'hex') // no clue. convert from hex
+	  }
+	}
+
+	function port2buf (port) {
+	  var buf = new Buffer(2)
+	  buf.writeUInt16BE(port, 0)
+	  return buf
+	}
+
+	function buf2port (buf) {
+	  return buf.readUInt16BE(0)
+	}
+
+	function mh2buf (hash) {
+	  // the address is a varint prefixed multihash string representation
+	  const mh = new Buffer(bs58.decode(hash))
+	  const size = new Buffer(varint.encode(mh.length))
+	  return Buffer.concat([size, mh])
+	}
+
+	function buf2mh (buf) {
+	  const size = varint.decode(buf)
+	  const address = buf.slice(varint.decode.bytes)
+
+	  if (address.length !== size) {
+	    throw new Error('inconsistent lengths')
+	  }
+
+	  return bs58.encode(address)
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 579 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var map = __webpack_require__(464)
+
+	module.exports = Protocols
+
+	function Protocols (proto) {
+	  if (typeof (proto) === 'number') {
+	    if (Protocols.codes[proto]) {
+	      return Protocols.codes[proto]
+	    }
+
+	    throw new Error('no protocol with code: ' + proto)
+	  } else if (typeof (proto) === 'string' || proto instanceof String) {
+	    if (Protocols.names[proto]) {
+	      return Protocols.names[proto]
+	    }
+
+	    throw new Error('no protocol with name: ' + proto)
+	  }
+
+	  throw new Error('invalid protocol id type: ' + proto)
+	}
+
+	Protocols.lengthPrefixedVarSize = -1
+
+	// replicating table here to:
+	// 1. avoid parsing the csv
+	// 2. ensuring errors in the csv don't screw up code.
+	// 3. changing a number has to happen in two places.
+
+	Protocols.table = [
+	  [4, 32, 'ip4'],
+	  [6, 16, 'tcp'],
+	  [17, 16, 'udp'],
+	  [33, 16, 'dccp'],
+	  [41, 128, 'ip6'],
+	  [132, 16, 'sctp'],
+	  // these require varint for the protocol code
+	  [302, 0, 'utp'],
+	  [421, Protocols.lengthPrefixedVarSize, 'ipfs'],
+	  [480, 0, 'http'],
+	  [443, 0, 'https'],
+	  [477, 0, 'ws'],
+	  [275, 0, 'libp2p-webrtc-star']
+	]
+
+	Protocols.names = {}
+	Protocols.codes = {}
+
+	// populate tables
+	map(Protocols.table, function (e) {
+	  var proto = p.apply(this, e)
+	  Protocols.codes[proto.code] = proto
+	  Protocols.names[proto.name] = proto
+	})
+
+	Protocols.object = p
+
+	function p (code, size, name) {
+	  return {code: code, size: size, name: name}
+	}
+
+
+/***/ },
+/* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -75376,10 +77589,10 @@ var Libp2pAutoGraph =
 	 * Module dependencies.
 	 */
 
-	var url = __webpack_require__(537);
-	var parser = __webpack_require__(541);
-	var Manager = __webpack_require__(551);
-	var debug = __webpack_require__(539)('socket.io-client');
+	var url = __webpack_require__(581);
+	var parser = __webpack_require__(585);
+	var Manager = __webpack_require__(595);
+	var debug = __webpack_require__(583)('socket.io-client');
 
 	/**
 	 * Module exports.
@@ -75478,12 +77691,12 @@ var Libp2pAutoGraph =
 	 * @api public
 	 */
 
-	exports.Manager = __webpack_require__(551);
-	exports.Socket = __webpack_require__(580);
+	exports.Manager = __webpack_require__(595);
+	exports.Socket = __webpack_require__(624);
 
 
 /***/ },
-/* 537 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -75491,8 +77704,8 @@ var Libp2pAutoGraph =
 	 * Module dependencies.
 	 */
 
-	var parseuri = __webpack_require__(538);
-	var debug = __webpack_require__(539)('socket.io-client:url');
+	var parseuri = __webpack_require__(582);
+	var debug = __webpack_require__(583)('socket.io-client:url');
 
 	/**
 	 * Module exports.
@@ -75565,7 +77778,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 538 */
+/* 582 */
 /***/ function(module, exports) {
 
 	/**
@@ -75610,7 +77823,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 539 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {
@@ -75620,7 +77833,7 @@ var Libp2pAutoGraph =
 	 * Expose `debug()` as the module.
 	 */
 
-	exports = module.exports = __webpack_require__(540);
+	exports = module.exports = __webpack_require__(584);
 	exports.log = log;
 	exports.formatArgs = formatArgs;
 	exports.save = save;
@@ -75794,7 +78007,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 540 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -75810,7 +78023,7 @@ var Libp2pAutoGraph =
 	exports.disable = disable;
 	exports.enable = enable;
 	exports.enabled = enabled;
-	exports.humanize = __webpack_require__(247);
+	exports.humanize = __webpack_require__(253);
 
 	/**
 	 * The currently active debug mode names, and names to skip.
@@ -76000,7 +78213,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 541 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -76008,11 +78221,11 @@ var Libp2pAutoGraph =
 	 * Module dependencies.
 	 */
 
-	var debug = __webpack_require__(542)('socket.io-parser');
-	var json = __webpack_require__(545);
-	var Emitter = __webpack_require__(547);
-	var binary = __webpack_require__(548);
-	var isBuf = __webpack_require__(550);
+	var debug = __webpack_require__(586)('socket.io-parser');
+	var json = __webpack_require__(589);
+	var Emitter = __webpack_require__(591);
+	var binary = __webpack_require__(592);
+	var isBuf = __webpack_require__(594);
 
 	/**
 	 * Protocol version.
@@ -76410,7 +78623,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 542 */
+/* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -76420,7 +78633,7 @@ var Libp2pAutoGraph =
 	 * Expose `debug()` as the module.
 	 */
 
-	exports = module.exports = __webpack_require__(543);
+	exports = module.exports = __webpack_require__(587);
 	exports.log = log;
 	exports.formatArgs = formatArgs;
 	exports.save = save;
@@ -76584,7 +78797,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 543 */
+/* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -76600,7 +78813,7 @@ var Libp2pAutoGraph =
 	exports.disable = disable;
 	exports.enable = enable;
 	exports.enabled = enabled;
-	exports.humanize = __webpack_require__(544);
+	exports.humanize = __webpack_require__(588);
 
 	/**
 	 * The currently active debug mode names, and names to skip.
@@ -76787,7 +79000,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 544 */
+/* 588 */
 /***/ function(module, exports) {
 
 	/**
@@ -76918,14 +79131,14 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 545 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/*! JSON v3.3.2 | http://bestiejs.github.io/json3 | Copyright 2012-2014, Kit Cambridge | http://kit.mit-license.org */
 	;(function () {
 	  // Detect the `define` function exposed by asynchronous module loaders. The
 	  // strict `define` check is necessary for compatibility with `r.js`.
-	  var isLoader = "function" === "function" && __webpack_require__(546);
+	  var isLoader = "function" === "function" && __webpack_require__(590);
 
 	  // A set of types used to distinguish objects from primitives.
 	  var objectTypes = {
@@ -77827,7 +80040,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(219)(module), (function() { return this; }())))
 
 /***/ },
-/* 546 */
+/* 590 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
@@ -77835,7 +80048,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ },
-/* 547 */
+/* 591 */
 /***/ function(module, exports) {
 
 	
@@ -78005,7 +80218,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 548 */
+/* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*global Blob,File*/
@@ -78014,8 +80227,8 @@ var Libp2pAutoGraph =
 	 * Module requirements
 	 */
 
-	var isArray = __webpack_require__(549);
-	var isBuf = __webpack_require__(550);
+	var isArray = __webpack_require__(593);
+	var isBuf = __webpack_require__(594);
 
 	/**
 	 * Replaces every Buffer | ArrayBuffer in packet with a numbered placeholder.
@@ -78153,7 +80366,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 549 */
+/* 593 */
 /***/ function(module, exports) {
 
 	module.exports = Array.isArray || function (arr) {
@@ -78162,7 +80375,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 550 */
+/* 594 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -78182,7 +80395,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 551 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -78190,15 +80403,15 @@ var Libp2pAutoGraph =
 	 * Module dependencies.
 	 */
 
-	var eio = __webpack_require__(552);
-	var Socket = __webpack_require__(580);
-	var Emitter = __webpack_require__(581);
-	var parser = __webpack_require__(541);
-	var on = __webpack_require__(583);
-	var bind = __webpack_require__(584);
-	var debug = __webpack_require__(539)('socket.io-client:manager');
-	var indexOf = __webpack_require__(355);
-	var Backoff = __webpack_require__(585);
+	var eio = __webpack_require__(596);
+	var Socket = __webpack_require__(624);
+	var Emitter = __webpack_require__(625);
+	var parser = __webpack_require__(585);
+	var on = __webpack_require__(627);
+	var bind = __webpack_require__(628);
+	var debug = __webpack_require__(583)('socket.io-client:manager');
+	var indexOf = __webpack_require__(393);
+	var Backoff = __webpack_require__(629);
 
 	/**
 	 * IE6+ hasOwnProperty
@@ -78748,19 +80961,19 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 552 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	module.exports = __webpack_require__(553);
+	module.exports = __webpack_require__(597);
 
 
 /***/ },
-/* 553 */
+/* 597 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	module.exports = __webpack_require__(554);
+	module.exports = __webpack_require__(598);
 
 	/**
 	 * Exports parser
@@ -78768,25 +80981,25 @@ var Libp2pAutoGraph =
 	 * @api public
 	 *
 	 */
-	module.exports.parser = __webpack_require__(561);
+	module.exports.parser = __webpack_require__(605);
 
 
 /***/ },
-/* 554 */
+/* 598 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
 	 * Module dependencies.
 	 */
 
-	var transports = __webpack_require__(555);
-	var Emitter = __webpack_require__(570);
-	var debug = __webpack_require__(574)('engine.io-client:socket');
-	var index = __webpack_require__(355);
-	var parser = __webpack_require__(561);
-	var parseuri = __webpack_require__(538);
-	var parsejson = __webpack_require__(579);
-	var parseqs = __webpack_require__(571);
+	var transports = __webpack_require__(599);
+	var Emitter = __webpack_require__(614);
+	var debug = __webpack_require__(618)('engine.io-client:socket');
+	var index = __webpack_require__(393);
+	var parser = __webpack_require__(605);
+	var parseuri = __webpack_require__(582);
+	var parsejson = __webpack_require__(623);
+	var parseqs = __webpack_require__(615);
 
 	/**
 	 * Module exports.
@@ -78918,9 +81131,9 @@ var Libp2pAutoGraph =
 	 */
 
 	Socket.Socket = Socket;
-	Socket.Transport = __webpack_require__(560);
-	Socket.transports = __webpack_require__(555);
-	Socket.parser = __webpack_require__(561);
+	Socket.Transport = __webpack_require__(604);
+	Socket.transports = __webpack_require__(599);
+	Socket.parser = __webpack_require__(605);
 
 	/**
 	 * Creates transport of the given type.
@@ -79517,17 +81730,17 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 555 */
+/* 599 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
 	 * Module dependencies
 	 */
 
-	var XMLHttpRequest = __webpack_require__(556);
-	var XHR = __webpack_require__(558);
-	var JSONP = __webpack_require__(576);
-	var websocket = __webpack_require__(577);
+	var XMLHttpRequest = __webpack_require__(600);
+	var XHR = __webpack_require__(602);
+	var JSONP = __webpack_require__(620);
+	var websocket = __webpack_require__(621);
 
 	/**
 	 * Export transports.
@@ -79577,12 +81790,12 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 556 */
+/* 600 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {// browser shim for xmlhttprequest module
 
-	var hasCORS = __webpack_require__(557);
+	var hasCORS = __webpack_require__(601);
 
 	module.exports = function (opts) {
 	  var xdomain = opts.xdomain;
@@ -79621,7 +81834,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 557 */
+/* 601 */
 /***/ function(module, exports) {
 
 	
@@ -79644,18 +81857,18 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 558 */
+/* 602 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
 	 * Module requirements.
 	 */
 
-	var XMLHttpRequest = __webpack_require__(556);
-	var Polling = __webpack_require__(559);
-	var Emitter = __webpack_require__(570);
-	var inherit = __webpack_require__(572);
-	var debug = __webpack_require__(574)('engine.io-client:polling-xhr');
+	var XMLHttpRequest = __webpack_require__(600);
+	var Polling = __webpack_require__(603);
+	var Emitter = __webpack_require__(614);
+	var inherit = __webpack_require__(616);
+	var debug = __webpack_require__(618)('engine.io-client:polling-xhr');
 
 	/**
 	 * Module exports.
@@ -80075,19 +82288,19 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 559 */
+/* 603 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Module dependencies.
 	 */
 
-	var Transport = __webpack_require__(560);
-	var parseqs = __webpack_require__(571);
-	var parser = __webpack_require__(561);
-	var inherit = __webpack_require__(572);
-	var yeast = __webpack_require__(573);
-	var debug = __webpack_require__(574)('engine.io-client:polling');
+	var Transport = __webpack_require__(604);
+	var parseqs = __webpack_require__(615);
+	var parser = __webpack_require__(605);
+	var inherit = __webpack_require__(616);
+	var yeast = __webpack_require__(617);
+	var debug = __webpack_require__(618)('engine.io-client:polling');
 
 	/**
 	 * Module exports.
@@ -80100,7 +82313,7 @@ var Libp2pAutoGraph =
 	 */
 
 	var hasXHR2 = (function () {
-	  var XMLHttpRequest = __webpack_require__(556);
+	  var XMLHttpRequest = __webpack_require__(600);
 	  var xhr = new XMLHttpRequest({ xdomain: false });
 	  return null != xhr.responseType;
 	})();
@@ -80326,15 +82539,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 560 */
+/* 604 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Module dependencies.
 	 */
 
-	var parser = __webpack_require__(561);
-	var Emitter = __webpack_require__(570);
+	var parser = __webpack_require__(605);
+	var Emitter = __webpack_require__(614);
 
 	/**
 	 * Module exports.
@@ -80489,22 +82702,22 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 561 */
+/* 605 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
 	 * Module dependencies.
 	 */
 
-	var keys = __webpack_require__(562);
-	var hasBinary = __webpack_require__(563);
-	var sliceBuffer = __webpack_require__(565);
-	var after = __webpack_require__(566);
-	var utf8 = __webpack_require__(567);
+	var keys = __webpack_require__(606);
+	var hasBinary = __webpack_require__(607);
+	var sliceBuffer = __webpack_require__(609);
+	var after = __webpack_require__(610);
+	var utf8 = __webpack_require__(611);
 
 	var base64encoder;
 	if (global && global.ArrayBuffer) {
-	  base64encoder = __webpack_require__(568);
+	  base64encoder = __webpack_require__(612);
 	}
 
 	/**
@@ -80562,7 +82775,7 @@ var Libp2pAutoGraph =
 	 * Create a blob api even for blob builder when vendor prefixes exist
 	 */
 
-	var Blob = __webpack_require__(569);
+	var Blob = __webpack_require__(613);
 
 	/**
 	 * Encodes a packet.
@@ -81105,7 +83318,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 562 */
+/* 606 */
 /***/ function(module, exports) {
 
 	
@@ -81130,7 +83343,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 563 */
+/* 607 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -81138,7 +83351,7 @@ var Libp2pAutoGraph =
 	 * Module requirements.
 	 */
 
-	var isArray = __webpack_require__(564);
+	var isArray = __webpack_require__(608);
 
 	/**
 	 * Module exports.
@@ -81196,7 +83409,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 564 */
+/* 608 */
 /***/ function(module, exports) {
 
 	module.exports = Array.isArray || function (arr) {
@@ -81205,7 +83418,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 565 */
+/* 609 */
 /***/ function(module, exports) {
 
 	/**
@@ -81240,7 +83453,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 566 */
+/* 610 */
 /***/ function(module, exports) {
 
 	module.exports = after
@@ -81274,7 +83487,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 567 */
+/* 611 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/*! https://mths.be/wtf8 v1.0.0 by @mathias */
@@ -81513,7 +83726,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(219)(module), (function() { return this; }())))
 
 /***/ },
-/* 568 */
+/* 612 */
 /***/ function(module, exports) {
 
 	/*
@@ -81586,7 +83799,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 569 */
+/* 613 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -81689,7 +83902,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 570 */
+/* 614 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -81858,7 +84071,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 571 */
+/* 615 */
 /***/ function(module, exports) {
 
 	/**
@@ -81901,7 +84114,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 572 */
+/* 616 */
 /***/ function(module, exports) {
 
 	
@@ -81913,7 +84126,7 @@ var Libp2pAutoGraph =
 	};
 
 /***/ },
-/* 573 */
+/* 617 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -81987,7 +84200,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 574 */
+/* 618 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {
@@ -81997,7 +84210,7 @@ var Libp2pAutoGraph =
 	 * Expose `debug()` as the module.
 	 */
 
-	exports = module.exports = __webpack_require__(575);
+	exports = module.exports = __webpack_require__(619);
 	exports.log = log;
 	exports.formatArgs = formatArgs;
 	exports.save = save;
@@ -82171,7 +84384,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 575 */
+/* 619 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -82187,7 +84400,7 @@ var Libp2pAutoGraph =
 	exports.disable = disable;
 	exports.enable = enable;
 	exports.enabled = enabled;
-	exports.humanize = __webpack_require__(247);
+	exports.humanize = __webpack_require__(253);
 
 	/**
 	 * The currently active debug mode names, and names to skip.
@@ -82377,7 +84590,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 576 */
+/* 620 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -82385,8 +84598,8 @@ var Libp2pAutoGraph =
 	 * Module requirements.
 	 */
 
-	var Polling = __webpack_require__(559);
-	var inherit = __webpack_require__(572);
+	var Polling = __webpack_require__(603);
+	var inherit = __webpack_require__(616);
 
 	/**
 	 * Module exports.
@@ -82615,24 +84828,24 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 577 */
+/* 621 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
 	 * Module dependencies.
 	 */
 
-	var Transport = __webpack_require__(560);
-	var parser = __webpack_require__(561);
-	var parseqs = __webpack_require__(571);
-	var inherit = __webpack_require__(572);
-	var yeast = __webpack_require__(573);
-	var debug = __webpack_require__(574)('engine.io-client:websocket');
+	var Transport = __webpack_require__(604);
+	var parser = __webpack_require__(605);
+	var parseqs = __webpack_require__(615);
+	var inherit = __webpack_require__(616);
+	var yeast = __webpack_require__(617);
+	var debug = __webpack_require__(618)('engine.io-client:websocket');
 	var BrowserWebSocket = global.WebSocket || global.MozWebSocket;
 	var NodeWebSocket;
 	if (typeof window === 'undefined') {
 	  try {
-	    NodeWebSocket = __webpack_require__(578);
+	    NodeWebSocket = __webpack_require__(622);
 	  } catch (e) { }
 	}
 
@@ -82907,13 +85120,13 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 578 */
+/* 622 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 579 */
+/* 623 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -82951,7 +85164,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 580 */
+/* 624 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -82959,13 +85172,13 @@ var Libp2pAutoGraph =
 	 * Module dependencies.
 	 */
 
-	var parser = __webpack_require__(541);
-	var Emitter = __webpack_require__(581);
-	var toArray = __webpack_require__(582);
-	var on = __webpack_require__(583);
-	var bind = __webpack_require__(584);
-	var debug = __webpack_require__(539)('socket.io-client:socket');
-	var hasBin = __webpack_require__(563);
+	var parser = __webpack_require__(585);
+	var Emitter = __webpack_require__(625);
+	var toArray = __webpack_require__(626);
+	var on = __webpack_require__(627);
+	var bind = __webpack_require__(628);
+	var debug = __webpack_require__(583)('socket.io-client:socket');
+	var hasBin = __webpack_require__(607);
 
 	/**
 	 * Module exports.
@@ -83376,7 +85589,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 581 */
+/* 625 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -83545,7 +85758,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 582 */
+/* 626 */
 /***/ function(module, exports) {
 
 	module.exports = toArray
@@ -83564,7 +85777,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 583 */
+/* 627 */
 /***/ function(module, exports) {
 
 	
@@ -83594,7 +85807,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 584 */
+/* 628 */
 /***/ function(module, exports) {
 
 	/**
@@ -83623,7 +85836,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 585 */
+/* 629 */
 /***/ function(module, exports) {
 
 	
@@ -83714,16 +85927,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 586 */
+/* 630 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {module.exports = Peer
 
-	var debug = __webpack_require__(245)('simple-peer')
-	var getBrowserRTC = __webpack_require__(587)
-	var inherits = __webpack_require__(353)
-	var randombytes = __webpack_require__(588)
-	var stream = __webpack_require__(377)
+	var debug = __webpack_require__(251)('simple-peer')
+	var getBrowserRTC = __webpack_require__(631)
+	var inherits = __webpack_require__(391)
+	var randombytes = __webpack_require__(632)
+	var stream = __webpack_require__(415)
 
 	inherits(Peer, stream.Duplex)
 
@@ -84322,7 +86535,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 587 */
+/* 631 */
 /***/ function(module, exports) {
 
 	// originally pulled out of simple-peer
@@ -84343,7 +86556,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 588 */
+/* 632 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, Buffer, process) {'use strict'
@@ -84386,11 +86599,369 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(181).Buffer, __webpack_require__(4)))
 
 /***/ },
-/* 589 */
+/* 633 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var pull = __webpack_require__(281)
-	var looper = __webpack_require__(590)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {/*
+	 * Id is an object representation of a peer Id. a peer Id is a multihash
+	 */
+
+	'use strict'
+
+	const mh = __webpack_require__(373)
+	const crypto = __webpack_require__(377)
+	const assert = __webpack_require__(289)
+	const waterfall = __webpack_require__(462)
+
+	class PeerId {
+	  constructor (id, privKey, pubKey) {
+	    assert(Buffer.isBuffer(id), 'invalid id provided')
+
+	    if (privKey && pubKey) {
+	      assert(privKey.public.bytes.equals(pubKey.bytes), 'inconsistent arguments')
+	    }
+
+	    this._id = id
+	    this._idB58String = mh.toB58String(this.id)
+	    this._privKey = privKey
+	    this._pubKey = pubKey
+	  }
+
+	  get id () {
+	    return this._id
+	  }
+
+	  set id (val) {
+	    throw new Error('Id is immutable')
+	  }
+
+	  get privKey () {
+	    return this._privKey
+	  }
+
+	  get pubKey () {
+	    if (this._pubKey) {
+	      return this._pubKey
+	    }
+
+	    if (this.privKey) {
+	      return this.privKey.public
+	    }
+	  }
+
+	  // Return the protobuf version of the public key,
+	  // matching go ipfs formatting
+	  marshalPubKey () {
+	    if (this.pubKey) {
+	      return crypto.marshalPublicKey(this.pubKey)
+	    }
+	  }
+
+	  // Return the protobuf version of the private key,
+	  // matching go ipfs formatting
+	  marshalPrivKey () {
+	    if (this.privKey) {
+	      return crypto.marshalPrivateKey(this.privKey)
+	    }
+	  }
+
+	  // pretty print
+	  toPrint () {
+	    return this.toJSON()
+	  }
+
+	  // return the jsonified version of the key, matching the formatting
+	  // of go-ipfs for its config file
+	  toJSON () {
+	    return {
+	      id: this.toB58String(),
+	      privKey: toB64Opt(this.marshalPrivKey()),
+	      pubKey: toB64Opt(this.marshalPubKey())
+	    }
+	  }
+
+	  // encode/decode functions
+	  toHexString () {
+	    return mh.toHexString(this.id)
+	  }
+
+	  toBytes () {
+	    return this.id
+	  }
+
+	  toB58String () {
+	    return this._idB58String
+	  }
+	}
+
+	exports = module.exports = PeerId
+	exports.Buffer = Buffer
+
+	// generation
+	exports.create = function (opts, callback) {
+	  if (typeof opts === 'function') {
+	    callback = opts
+	    opts = {}
+	  }
+	  opts = opts || {}
+	  opts.bits = opts.bits || 2048
+
+	  waterfall([
+	    (cb) => crypto.generateKeyPair('RSA', opts.bits, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromHexString = function (str) {
+	  return new PeerId(mh.fromHexString(str))
+	}
+
+	exports.createFromBytes = function (buf) {
+	  return new PeerId(buf)
+	}
+
+	exports.createFromB58String = function (str) {
+	  return new PeerId(mh.fromB58String(str))
+	}
+
+	// Public Key input will be a buffer
+	exports.createFromPubKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const pubKey = crypto.unmarshalPublicKey(buf)
+	  pubKey.hash((err, digest) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, null, pubKey))
+	  })
+	}
+
+	// Private key input will be a string
+	exports.createFromPrivKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  waterfall([
+	    (cb) => crypto.unmarshalPrivateKey(buf, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromJSON = function (obj, callback) {
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const id = mh.fromB58String(obj.id)
+	  const rawPrivKey = obj.privKey && new Buffer(obj.privKey, 'base64')
+	  const rawPubKey = obj.pubKey && new Buffer(obj.pubKey, 'base64')
+	  const pub = rawPubKey && crypto.unmarshalPublicKey(rawPubKey)
+
+	  if (rawPrivKey) {
+	    waterfall([
+	      (cb) => crypto.unmarshalPrivateKey(rawPrivKey, cb),
+	      (priv, cb) => priv.public.hash((err, digest) => {
+	        cb(err, digest, priv)
+	      }),
+	      (privDigest, priv, cb) => {
+	        if (pub) {
+	          pub.hash((err, pubDigest) => {
+	            cb(err, privDigest, priv, pubDigest)
+	          })
+	        } else {
+	          cb(null, privDigest, priv)
+	        }
+	      }
+	    ], (err, privDigest, priv, pubDigest) => {
+	      if (err) {
+	        return callback(err)
+	      }
+
+	      if (pub && !privDigest.equals(pubDigest)) {
+	        return callback(new Error('Public and private key do not match'))
+	      }
+
+	      if (id && !privDigest.equals(id)) {
+	        return callback(new Error('Id and private key do not match'))
+	      }
+
+	      callback(null, new PeerId(id, priv, pub))
+	    })
+	  } else {
+	    callback(null, new PeerId(id, null, pub))
+	  }
+	}
+
+	function toB64Opt (val) {
+	  if (val) {
+	    return val.toString('base64')
+	  }
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 634 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	const Id = __webpack_require__(633)
+	const multiaddr = __webpack_require__(576)
+	const uniqBy = __webpack_require__(472).uniqBy
+
+	exports = module.exports = PeerInfo
+
+	function ensureMultiaddr (addr) {
+	  if (multiaddr.isMultiaddr(addr)) {
+	    return addr
+	  }
+
+	  return multiaddr(addr)
+	}
+
+	// Peer represents a peer on the IPFS network
+	function PeerInfo (peerId) {
+	  if (!(this instanceof PeerInfo)) {
+	    return new PeerInfo(peerId)
+	  }
+
+	  if (!peerId) {
+	    throw new Error('Missing peerId. Use Peer.create(cb) to create one')
+	  }
+
+	  this.id = peerId
+
+	  this.multiaddrs = []
+	  const observedMultiaddrs = []
+
+	  this.multiaddr = {}
+
+	  this.multiaddr.add = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    var exists = false
+	    this.multiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        exists = true
+	        return true
+	      }
+	    })
+	    if (!exists) {
+	      this.multiaddrs.push(addr)
+	    }
+	  }
+
+	  // to prevent multiaddr explosion
+	  this.multiaddr.addSafe = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    var check = false
+	    observedMultiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        this.multiaddr.add(addr)
+	        observedMultiaddrs.splice(i, 1)
+	        check = true
+	      }
+	    })
+	    if (!check) {
+	      observedMultiaddrs.push(addr)
+	    }
+	  }
+
+	  this.multiaddr.rm = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    this.multiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        this.multiaddrs.splice(i, 1)
+	        return true
+	      }
+	    })
+	  }
+
+	  this.multiaddr.replace = (existing, fresh) => {
+	    if (!Array.isArray(existing)) {
+	      existing = [existing]
+	    }
+	    if (!Array.isArray(fresh)) {
+	      fresh = [fresh]
+	    }
+	    existing.forEach((m) => {
+	      this.multiaddr.rm(m)
+	    })
+	    fresh.forEach((m) => {
+	      this.multiaddr.add(m)
+	    })
+	  }
+
+	  this.distinctMultiaddr = () => {
+	    var result = uniqBy(this.multiaddrs, function (item) {
+	      return [item.toOptions().port, item.toOptions().transport].join()
+	    })
+	    return result
+	  }
+
+	  // TODO: add features to fetch multiaddr using filters
+	  // look at https://github.com/whyrusleeping/js-mafmt/blob/master/src/index.js
+	}
+
+	PeerInfo.create = (id, callback) => {
+	  if (typeof id === 'function') {
+	    callback = id
+	    id = null
+
+	    Id.create((err, id) => {
+	      if (err) {
+	        return callback(err)
+	      }
+
+	      callback(null, new PeerInfo(id))
+	    })
+	    return
+	  }
+
+	  callback(null, new PeerInfo(id))
+	}
+
+
+/***/ },
+/* 635 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {var pull = __webpack_require__(636)
+	var looper = __webpack_require__(637)
 
 	function destroy(stream, cb) {
 	  function onClose () {
@@ -84630,7 +87201,62 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 590 */
+/* 636 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	module.exports = function pull (a) {
+	  var length = arguments.length
+	  if (typeof a === 'function' && a.length === 1) {
+	    var args = new Array(length)
+	    for(var i = 0; i < length; i++)
+	      args[i] = arguments[i]
+	    return function (read) {
+	      if (args == null) {
+	        throw new TypeError("partial sink should only be called once!")
+	      }
+
+	      // Grab the reference after the check, because it's always an array now
+	      // (engines like that kind of consistency).
+	      var ref = args
+	      args = null
+
+	      // Prioritize common case of small number of pulls.
+	      switch (length) {
+	      case 1: return pull(read, ref[0])
+	      case 2: return pull(read, ref[0], ref[1])
+	      case 3: return pull(read, ref[0], ref[1], ref[2])
+	      case 4: return pull(read, ref[0], ref[1], ref[2], ref[3])
+	      default:
+	        ref.unshift(read)
+	        return pull.apply(null, ref)
+	      }
+	    }
+	  }
+
+	  var read = a
+
+	  if (read && typeof read.source === 'function') {
+	    read = read.source
+	  }
+
+	  for (var i = 1; i < length; i++) {
+	    var s = arguments[i]
+	    if (typeof s === 'function') {
+	      read = s(read)
+	    } else if (s && typeof s === 'object') {
+	      s.sink(read)
+	      read = s.source
+	    }
+	  }
+
+	  return read
+	}
+
+
+/***/ },
+/* 637 */
 /***/ function(module, exports) {
 
 	
@@ -84650,16 +87276,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 591 */
+/* 638 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const spdy = __webpack_require__(592)
-	const toStream = __webpack_require__(639)
+	const spdy = __webpack_require__(639)
+	const toStream = __webpack_require__(686)
 
-	const Muxer = __webpack_require__(640)
-	const SPDY_CODEC = __webpack_require__(642)
+	const Muxer = __webpack_require__(687)
+	const SPDY_CODEC = __webpack_require__(689)
 
 	function create (rawConn, isListener) {
 	  const conn = toStream(rawConn)
@@ -84688,7 +87314,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 592 */
+/* 639 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84696,30 +87322,30 @@ var Libp2pAutoGraph =
 	var transport = exports;
 
 	// Exports utils
-	transport.utils = __webpack_require__(593);
+	transport.utils = __webpack_require__(640);
 
 	// Export parser&framer
 	transport.protocol = {};
-	transport.protocol.base = __webpack_require__(594);
-	transport.protocol.spdy = __webpack_require__(601);
-	transport.protocol.http2 = __webpack_require__(621);
+	transport.protocol.base = __webpack_require__(641);
+	transport.protocol.spdy = __webpack_require__(648);
+	transport.protocol.http2 = __webpack_require__(668);
 
 	// Window
-	transport.Window = __webpack_require__(635);
+	transport.Window = __webpack_require__(682);
 
 	// Priority Tree
-	transport.Priority = __webpack_require__(636);
+	transport.Priority = __webpack_require__(683);
 
 	// Export Connection and Stream
-	transport.Stream = __webpack_require__(637).Stream;
-	transport.Connection = __webpack_require__(638).Connection;
+	transport.Stream = __webpack_require__(684).Stream;
+	transport.Connection = __webpack_require__(685).Connection;
 
 	// Just for `transport.connection.create()`
 	transport.connection = transport.Connection;
 
 
 /***/ },
-/* 593 */
+/* 640 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -84918,20 +87544,20 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 594 */
+/* 641 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	exports.utils = __webpack_require__(595);
-	exports.constants = __webpack_require__(596);
-	exports.Scheduler = __webpack_require__(597);
-	exports.Parser = __webpack_require__(598);
-	exports.Framer = __webpack_require__(600);
+	exports.utils = __webpack_require__(642);
+	exports.constants = __webpack_require__(643);
+	exports.Scheduler = __webpack_require__(644);
+	exports.Parser = __webpack_require__(645);
+	exports.Framer = __webpack_require__(647);
 
 
 /***/ },
-/* 595 */
+/* 642 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -85030,7 +87656,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 596 */
+/* 643 */
 /***/ function(module, exports) {
 
 	exports.DEFAULT_METHOD = 'GET';
@@ -85040,18 +87666,18 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 597 */
+/* 644 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 	var utils = transport.utils;
 
-	var assert = __webpack_require__(283);
+	var assert = __webpack_require__(289);
 	var util = __webpack_require__(189);
-	var debug = __webpack_require__(245)('spdy:scheduler');
-	var Readable = __webpack_require__(377).Readable;
+	var debug = __webpack_require__(251)('spdy:scheduler');
+	var Readable = __webpack_require__(415).Readable;
 
 	/*
 	 * We create following structure in `pending`:
@@ -85249,17 +87875,17 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 598 */
+/* 645 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 
 	var util = __webpack_require__(189);
-	var utils = __webpack_require__(594).utils;
-	var OffsetBuffer = __webpack_require__(599);
-	var Transform = __webpack_require__(377).Transform;
+	var utils = __webpack_require__(641).utils;
+	var OffsetBuffer = __webpack_require__(646);
+	var Transform = __webpack_require__(415).Transform;
 
 	function Parser(options) {
 	  Transform.call(this, {
@@ -85359,7 +87985,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 599 */
+/* 646 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Buffer = __webpack_require__(181).Buffer;
@@ -85761,15 +88387,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 600 */
+/* 647 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	var util = __webpack_require__(189);
 
-	var transport = __webpack_require__(592);
-	var base = __webpack_require__(594);
+	var transport = __webpack_require__(639);
+	var base = __webpack_require__(641);
 	var Scheduler = base.Scheduler;
 
 	function Framer(options) {
@@ -85825,22 +88451,22 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 601 */
+/* 648 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.name = 'spdy';
 
-	exports.dictionary = __webpack_require__(602);
-	exports.constants = __webpack_require__(603);
-	exports.parser = __webpack_require__(604);
-	exports.framer = __webpack_require__(605);
-	exports.compressionPool = __webpack_require__(607);
+	exports.dictionary = __webpack_require__(649);
+	exports.constants = __webpack_require__(650);
+	exports.parser = __webpack_require__(651);
+	exports.framer = __webpack_require__(652);
+	exports.compressionPool = __webpack_require__(654);
 
 
 /***/ },
-/* 602 */
+/* 649 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -86051,12 +88677,12 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 603 */
+/* 650 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 	var base = transport.protocol.base;
 
 	exports.FRAME_HEADER_SIZE = 8;
@@ -86203,21 +88829,21 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 604 */
+/* 651 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var parser = exports;
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 	var base = transport.protocol.base;
 	var utils = base.utils;
-	var constants = __webpack_require__(603);
+	var constants = __webpack_require__(650);
 
-	var assert = __webpack_require__(283);
+	var assert = __webpack_require__(289);
 	var util = __webpack_require__(189);
-	var OffsetBuffer = __webpack_require__(599);
+	var OffsetBuffer = __webpack_require__(646);
 
 	function Parser(options) {
 	  base.Parser.call(this, options);
@@ -86678,22 +89304,22 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 605 */
+/* 652 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var transport = __webpack_require__(592);
-	var constants = __webpack_require__(601).constants;
+	var transport = __webpack_require__(639);
+	var constants = __webpack_require__(648).constants;
 	var base = transport.protocol.base;
 	var utils = base.utils;
 
-	var assert = __webpack_require__(283);
+	var assert = __webpack_require__(289);
 	var util = __webpack_require__(189);
 	var Buffer = __webpack_require__(181).Buffer;
-	var WriteBuffer = __webpack_require__(606);
+	var WriteBuffer = __webpack_require__(653);
 
-	var debug = __webpack_require__(245)('spdy:framer');
+	var debug = __webpack_require__(251)('spdy:framer');
 
 	function Framer(options) {
 	  base.Framer.call(this, options);
@@ -87197,10 +89823,10 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 606 */
+/* 653 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assert = __webpack_require__(360);
+	var assert = __webpack_require__(398);
 	var Buffer = __webpack_require__(181).Buffer;
 
 	function WBuf() {
@@ -87611,15 +90237,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 607 */
+/* 654 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var zlibpool = exports;
-	var zlib = __webpack_require__(608);
+	var zlib = __webpack_require__(655);
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 
 	// TODO(indutny): think about it, why has it always been Z_SYNC_FLUSH here.
 	// It should be possible to manually flush stuff after the write instead
@@ -87683,16 +90309,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 608 */
+/* 655 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	var Buffer = __webpack_require__(181).Buffer;
-	var Transform = __webpack_require__(376).Transform;
-	var binding = __webpack_require__(609);
+	var Transform = __webpack_require__(414).Transform;
+	var binding = __webpack_require__(656);
 	var util = __webpack_require__(189);
-	var assert = __webpack_require__(283).ok;
+	var assert = __webpack_require__(289).ok;
 	var kMaxLength = __webpack_require__(181).kMaxLength;
 	var kRangeErrorMessage = 'Cannot create final Buffer. It would be larger ' + 'than 0x' + kMaxLength.toString(16) + ' bytes';
 
@@ -88297,18 +90923,18 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 609 */
+/* 656 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer, process) {'use strict';
 	/* eslint camelcase: "off" */
 
-	var assert = __webpack_require__(283);
+	var assert = __webpack_require__(289);
 
-	var Zstream = __webpack_require__(610);
-	var zlib_deflate = __webpack_require__(611);
-	var zlib_inflate = __webpack_require__(617);
-	var constants = __webpack_require__(620);
+	var Zstream = __webpack_require__(657);
+	var zlib_deflate = __webpack_require__(658);
+	var zlib_inflate = __webpack_require__(664);
+	var constants = __webpack_require__(667);
 
 	for (var key in constants) {
 	  exports[key] = constants[key];
@@ -88712,7 +91338,7 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer, __webpack_require__(4)))
 
 /***/ },
-/* 610 */
+/* 657 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -88747,16 +91373,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 611 */
+/* 658 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils   = __webpack_require__(612);
-	var trees   = __webpack_require__(613);
-	var adler32 = __webpack_require__(614);
-	var crc32   = __webpack_require__(615);
-	var msg     = __webpack_require__(616);
+	var utils   = __webpack_require__(659);
+	var trees   = __webpack_require__(660);
+	var adler32 = __webpack_require__(661);
+	var crc32   = __webpack_require__(662);
+	var msg     = __webpack_require__(663);
 
 	/* Public constants ==========================================================*/
 	/* ===========================================================================*/
@@ -90608,7 +93234,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 612 */
+/* 659 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -90716,13 +93342,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 613 */
+/* 660 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 
-	var utils = __webpack_require__(612);
+	var utils = __webpack_require__(659);
 
 	/* Public constants ==========================================================*/
 	/* ===========================================================================*/
@@ -91924,7 +94550,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 614 */
+/* 661 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -91962,7 +94588,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 615 */
+/* 662 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -92009,7 +94635,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 616 */
+/* 663 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -92028,17 +94654,17 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 617 */
+/* 664 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 
-	var utils         = __webpack_require__(612);
-	var adler32       = __webpack_require__(614);
-	var crc32         = __webpack_require__(615);
-	var inflate_fast  = __webpack_require__(618);
-	var inflate_table = __webpack_require__(619);
+	var utils         = __webpack_require__(659);
+	var adler32       = __webpack_require__(661);
+	var crc32         = __webpack_require__(662);
+	var inflate_fast  = __webpack_require__(665);
+	var inflate_table = __webpack_require__(666);
 
 	var CODES = 0;
 	var LENS = 1;
@@ -93572,7 +96198,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 618 */
+/* 665 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -93904,13 +96530,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 619 */
+/* 666 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 
-	var utils = __webpack_require__(612);
+	var utils = __webpack_require__(659);
 
 	var MAXBITS = 15;
 	var ENOUGH_LENS = 852;
@@ -94235,7 +96861,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 620 */
+/* 667 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -94291,26 +96917,26 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 621 */
+/* 668 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.name = 'h2';
 
-	exports.constants = __webpack_require__(622);
-	exports.parser = __webpack_require__(623);
-	exports.framer = __webpack_require__(624);
-	exports.compressionPool = __webpack_require__(625);
+	exports.constants = __webpack_require__(669);
+	exports.parser = __webpack_require__(670);
+	exports.framer = __webpack_require__(671);
+	exports.compressionPool = __webpack_require__(672);
 
 
 /***/ },
-/* 622 */
+/* 669 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 	var base = transport.protocol.base;
 
 	var util = __webpack_require__(189);
@@ -94407,19 +97033,19 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 623 */
+/* 670 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var parser = exports;
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 	var base = transport.protocol.base;
 	var utils = base.utils;
-	var constants = __webpack_require__(621).constants;
+	var constants = __webpack_require__(668).constants;
 
-	var assert = __webpack_require__(283);
+	var assert = __webpack_require__(289);
 	var util = __webpack_require__(189);
 
 	function Parser(options) {
@@ -94988,22 +97614,22 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 624 */
+/* 671 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 	var base = transport.protocol.base;
-	var constants = __webpack_require__(621).constants;
+	var constants = __webpack_require__(668).constants;
 
-	var assert = __webpack_require__(283);
+	var assert = __webpack_require__(289);
 	var util = __webpack_require__(189);
-	var WriteBuffer = __webpack_require__(606);
-	var OffsetBuffer = __webpack_require__(599);
+	var WriteBuffer = __webpack_require__(653);
+	var OffsetBuffer = __webpack_require__(646);
 	var Buffer = __webpack_require__(181).Buffer;
-	var debug = __webpack_require__(245)('spdy:framer');
-	var debugExtra = __webpack_require__(245)('spdy:framer:extra');
+	var debug = __webpack_require__(251)('spdy:framer');
+	var debugExtra = __webpack_require__(251)('spdy:framer:extra');
 
 	function Framer(options) {
 	  base.Framer.call(this, options);
@@ -95528,15 +98154,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 625 */
+/* 672 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var transport = __webpack_require__(592);
-	var constants = __webpack_require__(621).constants;
+	var transport = __webpack_require__(639);
+	var constants = __webpack_require__(668).constants;
 
-	var hpack = __webpack_require__(626);
+	var hpack = __webpack_require__(673);
 
 	function Pool() {
 	}
@@ -95569,25 +98195,25 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 626 */
+/* 673 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var hpack = exports;
 
-	hpack.utils = __webpack_require__(627);
-	hpack.huffman = __webpack_require__(628);
-	hpack['static-table'] = __webpack_require__(629);
-	hpack.table = __webpack_require__(630);
+	hpack.utils = __webpack_require__(674);
+	hpack.huffman = __webpack_require__(675);
+	hpack['static-table'] = __webpack_require__(676);
+	hpack.table = __webpack_require__(677);
 
-	hpack.decoder = __webpack_require__(631);
-	hpack.decompressor = __webpack_require__(632);
+	hpack.decoder = __webpack_require__(678);
+	hpack.decompressor = __webpack_require__(679);
 
-	hpack.encoder = __webpack_require__(633);
-	hpack.compressor = __webpack_require__(634);
+	hpack.encoder = __webpack_require__(680);
+	hpack.compressor = __webpack_require__(681);
 
 
 /***/ },
-/* 627 */
+/* 674 */
 /***/ function(module, exports) {
 
 	exports.assert = function assert(cond, text) {
@@ -95618,7 +98244,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 628 */
+/* 675 */
 /***/ function(module, exports) {
 
 	exports.decode =
@@ -95783,7 +98409,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 629 */
+/* 676 */
 /***/ function(module, exports) {
 
 	exports.table = [
@@ -96480,10 +99106,10 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 630 */
+/* 677 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hpack = __webpack_require__(626);
+	var hpack = __webpack_require__(673);
 	var utils = hpack.utils;
 	var assert = utils.assert;
 
@@ -96571,15 +99197,15 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 631 */
+/* 678 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hpack = __webpack_require__(626);
+	var hpack = __webpack_require__(673);
 	var utils = hpack.utils;
 	var huffman = hpack.huffman.decode;
 	var assert = utils.assert;
 
-	var OffsetBuffer = __webpack_require__(599);
+	var OffsetBuffer = __webpack_require__(646);
 
 	function Decoder() {
 	  this.buffer = new OffsetBuffer();
@@ -96746,17 +99372,17 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 632 */
+/* 679 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var hpack = __webpack_require__(626);
+	/* WEBPACK VAR INJECTION */(function(process) {var hpack = __webpack_require__(673);
 	var utils = hpack.utils;
 	var decoder = hpack.decoder;
 	var table = hpack.table;
 	var assert = utils.assert;
 
-	var inherits = __webpack_require__(353);
-	var Duplex = __webpack_require__(377).Duplex;
+	var inherits = __webpack_require__(391);
+	var Duplex = __webpack_require__(415).Duplex;
 
 	function Decompressor(options) {
 	  Duplex.call(this, {
@@ -96869,15 +99495,15 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 633 */
+/* 680 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hpack = __webpack_require__(626);
+	var hpack = __webpack_require__(673);
 	var utils = hpack.utils;
 	var huffman = hpack.huffman.encode;
 	var assert = utils.assert;
 
-	var WBuf = __webpack_require__(606);
+	var WBuf = __webpack_require__(653);
 
 	function Encoder() {
 	  this.buffer = new WBuf();
@@ -97004,17 +99630,17 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 634 */
+/* 681 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hpack = __webpack_require__(626);
+	var hpack = __webpack_require__(673);
 	var utils = hpack.utils;
 	var encoder = hpack.encoder;
 	var table = hpack.table;
 	var assert = utils.assert;
 
-	var inherits = __webpack_require__(353);
-	var Duplex = __webpack_require__(377).Duplex;
+	var inherits = __webpack_require__(391);
+	var Duplex = __webpack_require__(415).Duplex;
 
 	function Compressor(options) {
 	  Duplex.call(this, {
@@ -97137,7 +99763,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 635 */
+/* 682 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -97145,8 +99771,8 @@ var Libp2pAutoGraph =
 	var util = __webpack_require__(189);
 	var EventEmitter = __webpack_require__(192).EventEmitter;
 	var debug = {
-	  server: __webpack_require__(245)('spdy:window:server'),
-	  client: __webpack_require__(245)('spdy:window:client')
+	  server: __webpack_require__(251)('spdy:window:server'),
+	  client: __webpack_require__(251)('spdy:window:client')
 	};
 
 	function Side(window, name, options) {
@@ -97317,16 +99943,16 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 636 */
+/* 683 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 	var utils = transport.utils;
 
-	var assert = __webpack_require__(283);
-	var debug = __webpack_require__(245)('spdy:priority');
+	var assert = __webpack_require__(289);
+	var debug = __webpack_require__(251)('spdy:priority');
 
 	function PriorityNode(tree, options) {
 	  this.tree = tree;
@@ -97503,21 +100129,21 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 637 */
+/* 684 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 
-	var assert = __webpack_require__(283);
+	var assert = __webpack_require__(289);
 	var util = __webpack_require__(189);
 	var debug = {
-	  client: __webpack_require__(245)('spdy:stream:client'),
-	  server: __webpack_require__(245)('spdy:stream:server')
+	  client: __webpack_require__(251)('spdy:stream:client'),
+	  server: __webpack_require__(251)('spdy:stream:server')
 	};
 	var Buffer = __webpack_require__(181).Buffer;
-	var Duplex = __webpack_require__(377).Duplex;
+	var Duplex = __webpack_require__(415).Duplex;
 
 	function Stream(connection, options) {
 	  Duplex.call(this);
@@ -98208,17 +100834,17 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 638 */
+/* 685 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer, process) {'use strict';
 
 	var util = __webpack_require__(189);
-	var transport = __webpack_require__(592);
+	var transport = __webpack_require__(639);
 
 	var debug = {
-	  server: __webpack_require__(245)('spdy:connection:server'),
-	  client: __webpack_require__(245)('spdy:connection:client')
+	  server: __webpack_require__(251)('spdy:connection:server'),
+	  client: __webpack_require__(251)('spdy:connection:client')
 	};
 	var EventEmitter = __webpack_require__(192).EventEmitter;
 
@@ -99041,11 +101667,11 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer, __webpack_require__(4)))
 
 /***/ },
-/* 639 */
+/* 686 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(setImmediate, process) {
-	var Stream = __webpack_require__(376)
+	var Stream = __webpack_require__(414)
 
 	module.exports = duplex
 
@@ -99195,17 +101821,17 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185).setImmediate, __webpack_require__(4)))
 
 /***/ },
-/* 640 */
+/* 687 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
 	const EventEmitter = __webpack_require__(192).EventEmitter
-	const noop = __webpack_require__(641)
-	const Connection = __webpack_require__(240).Connection
-	const toPull = __webpack_require__(589)
+	const noop = __webpack_require__(688)
+	const Connection = __webpack_require__(243).Connection
+	const toPull = __webpack_require__(635)
 
-	const SPDY_CODEC = __webpack_require__(642)
+	const SPDY_CODEC = __webpack_require__(689)
 
 	module.exports = class Muxer extends EventEmitter {
 	  constructor (conn, spdy) {
@@ -99247,21 +101873,25 @@ var Libp2pAutoGraph =
 	      path: '/',
 	      headers: {}
 	    }, (err, stream) => {
+	      if (err) {
+	        return callback(err)
+	      }
 	      conn.setInnerConn(toPull.duplex(stream), this.conn)
-	      callback(err, conn)
+	      callback(null, conn)
 	    })
 
 	    return conn
 	  }
 
 	  end (cb) {
+	    this.spdy.destroyStreams()
 	    this.spdy.end(cb)
 	  }
 	}
 
 
 /***/ },
-/* 641 */
+/* 688 */
 /***/ function(module, exports) {
 
 	/**
@@ -99295,7 +101925,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 642 */
+/* 689 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -99304,16 +101934,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 643 */
+/* 690 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const pull = __webpack_require__(251)
-	const Connection = __webpack_require__(240).Connection
+	const pull = __webpack_require__(691)
+	const Connection = __webpack_require__(243).Connection
 
-	const handshake = __webpack_require__(644)
-	const State = __webpack_require__(654)
+	const handshake = __webpack_require__(722)
+	const State = __webpack_require__(731)
 
 	module.exports = {
 	  tag: '/secio/1.0.0',
@@ -99352,16 +101982,785 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 644 */
+/* 691 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const series = __webpack_require__(645)
+	var sources  = __webpack_require__(692)
+	var sinks    = __webpack_require__(701)
+	var throughs = __webpack_require__(710)
 
-	const propose = __webpack_require__(647)
-	const exchange = __webpack_require__(651)
-	const finish = __webpack_require__(652)
+	exports = module.exports = __webpack_require__(721)
+
+	for(var k in sources)
+	  exports[k] = sources[k]
+
+	for(var k in throughs)
+	  exports[k] = throughs[k]
+
+	for(var k in sinks)
+	  exports[k] = sinks[k]
+
+
+
+/***/ },
+/* 692 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	module.exports = {
+	  keys: __webpack_require__(693),
+	  once: __webpack_require__(696),
+	  values: __webpack_require__(694),
+	  count: __webpack_require__(697),
+	  infinite: __webpack_require__(698),
+	  empty: __webpack_require__(699),
+	  error: __webpack_require__(700)
+	}
+
+
+/***/ },
+/* 693 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	var values = __webpack_require__(694)
+	module.exports = function (object) {
+	  return values(Object.keys(object))
+	}
+
+
+
+
+/***/ },
+/* 694 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	var abortCb = __webpack_require__(695)
+
+	module.exports = function values (array, onAbort) {
+	  if(!array)
+	    return function (abort, cb) {
+	      if(abort) return abortCb(cb, abort, onAbort)
+	      return cb(true)
+	    }
+	  if(!Array.isArray(array))
+	    array = Object.keys(array).map(function (k) {
+	      return array[k]
+	    })
+	  var i = 0
+	  return function (abort, cb) {
+	    if(abort)
+	      return abortCb(cb, abort, onAbort)
+	    if(i >= array.length)
+	      cb(true)
+	    else
+	      cb(null, array[i++])
+	  }
+	}
+
+
+/***/ },
+/* 695 */
+/***/ function(module, exports) {
+
+	module.exports = function abortCb(cb, abort, onAbort) {
+	  cb(abort)
+	  onAbort && onAbort(abort === true ? null: abort)
+	  return
+	}
+
+
+
+/***/ },
+/* 696 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	var abortCb = __webpack_require__(695)
+
+	module.exports = function once (value, onAbort) {
+	  return function (abort, cb) {
+	    if(abort)
+	      return abortCb(cb, abort, onAbort)
+	    if(value != null) {
+	      var _value = value; value = null
+	      cb(null, _value)
+	    } else
+	      cb(true)
+	  }
+	}
+
+
+
+
+/***/ },
+/* 697 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	module.exports = function count (max) {
+	  var i = 0; max = max || Infinity
+	  return function (end, cb) {
+	    if(end) return cb && cb(end)
+	    if(i > max)
+	      return cb(true)
+	    cb(null, i++)
+	  }
+	}
+
+
+
+
+/***/ },
+/* 698 */
+/***/ function(module, exports) {
+
+	'use strict'
+	module.exports = function infinite (generate) {
+	  generate = generate || Math.random
+	  return function (end, cb) {
+	    if(end) return cb && cb(end)
+	    return cb(null, generate())
+	  }
+	}
+
+
+
+
+/***/ },
+/* 699 */
+/***/ function(module, exports) {
+
+	'use strict'
+	//a stream that ends immediately.
+	module.exports = function empty () {
+	  return function (abort, cb) {
+	    cb(true)
+	  }
+	}
+
+
+/***/ },
+/* 700 */
+/***/ function(module, exports) {
+
+	'use strict'
+	//a stream that errors immediately.
+	module.exports = function error (err) {
+	  return function (abort, cb) {
+	    cb(err)
+	  }
+	}
+
+
+
+/***/ },
+/* 701 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	module.exports = {
+	  drain: __webpack_require__(702),
+	  onEnd: __webpack_require__(703),
+	  log: __webpack_require__(704),
+	  find: __webpack_require__(705),
+	  reduce: __webpack_require__(707),
+	  collect: __webpack_require__(708),
+	  concat: __webpack_require__(709)
+	}
+
+
+
+/***/ },
+/* 702 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	module.exports = function drain (op, done) {
+	  var read, abort
+
+	  function sink (_read) {
+	    read = _read
+	    if(abort) return sink.abort()
+	    //this function is much simpler to write if you
+	    //just use recursion, but by using a while loop
+	    //we do not blow the stack if the stream happens to be sync.
+	    ;(function next() {
+	        var loop = true, cbed = false
+	        while(loop) {
+	          cbed = false
+	          read(null, function (end, data) {
+	            cbed = true
+	            if(end = end || abort) {
+	              loop = false
+	              if(done) done(end === true ? null : end)
+	              else if(end && end !== true)
+	                throw end
+	            }
+	            else if(op && false === op(data) || abort) {
+	              loop = false
+	              read(abort || true, done || function () {})
+	            }
+	            else if(!loop){
+	              next()
+	            }
+	          })
+	          if(!cbed) {
+	            loop = false
+	            return
+	          }
+	        }
+	      })()
+	  }
+
+	  sink.abort = function (err, cb) {
+	    if('function' == typeof err)
+	      cb = err, err = true
+	    abort = err || true
+	    if(read) return read(abort, cb || function () {})
+	  }
+
+	  return sink
+	}
+
+
+/***/ },
+/* 703 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var drain = __webpack_require__(702)
+
+	module.exports = function onEnd (done) {
+	  return drain(null, done)
+	}
+
+
+/***/ },
+/* 704 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var drain = __webpack_require__(702)
+
+	module.exports = function log (done) {
+	  return drain(function (data) {
+	    console.log(data)
+	  }, done)
+	}
+
+
+/***/ },
+/* 705 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(706)
+	var drain = __webpack_require__(702)
+
+	module.exports = function find (test, cb) {
+	  var ended = false
+	  if(!cb)
+	    cb = test, test = id
+	  else
+	    test = prop(test) || id
+
+	  return drain(function (data) {
+	    if(test(data)) {
+	      ended = true
+	      cb(null, data)
+	    return false
+	    }
+	  }, function (err) {
+	    if(ended) return //already called back
+	    cb(err === true ? null : err, null)
+	  })
+	}
+
+
+
+
+
+
+/***/ },
+/* 706 */
+/***/ function(module, exports) {
+
+	module.exports = function prop (key) {
+	  return key && (
+	    'string' == typeof key
+	    ? function (data) { return data[key] }
+	    : 'object' === typeof key && 'function' === typeof key.exec //regexp
+	    ? function (data) { var v = key.exec(data); return v && v[0] }
+	    : key
+	  )
+	}
+
+
+/***/ },
+/* 707 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var drain = __webpack_require__(702)
+
+	module.exports = function reduce (reducer, acc, cb ) {
+	  if(!cb) cb = acc, acc = null
+	  var sink = drain(function (data) {
+	    acc = reducer(acc, data)
+	  }, function (err) {
+	    cb(err, acc)
+	  })
+	  if (arguments.length === 2)
+	    return function (source) {
+	      source(null, function (end, data) {
+	        //if ended immediately, and no initial...
+	        if(end) return cb(end === true ? null : end)
+	        acc = data; sink(source)
+	      })
+	    }
+	  else
+	    return sink
+	}
+
+
+/***/ },
+/* 708 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var reduce = __webpack_require__(707)
+
+	module.exports = function collect (cb) {
+	  return reduce(function (arr, item) {
+	    arr.push(item)
+	    return arr
+	  }, [], cb)
+	}
+
+
+/***/ },
+/* 709 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var reduce = __webpack_require__(707)
+
+	module.exports = function concat (cb) {
+	  return reduce(function (a, b) {
+	    return a + b
+	  }, '', cb)
+	}
+
+
+/***/ },
+/* 710 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	module.exports = {
+	  map: __webpack_require__(711),
+	  asyncMap: __webpack_require__(712),
+	  filter: __webpack_require__(713),
+	  filterNot: __webpack_require__(715),
+	  through: __webpack_require__(716),
+	  take: __webpack_require__(717),
+	  unique: __webpack_require__(718),
+	  nonUnique: __webpack_require__(719),
+	  flatten: __webpack_require__(720)
+	}
+
+
+
+
+
+/***/ },
+/* 711 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(706)
+
+	module.exports = function map (mapper) {
+	  if(!mapper) return id
+	  mapper = prop(mapper)
+	  return function (read) {
+	    return function (abort, cb) {
+	      read(abort, function (end, data) {
+	        try {
+	        data = !end ? mapper(data) : null
+	        } catch (err) {
+	          return read(err, function () {
+	            return cb(err)
+	          })
+	        }
+	        cb(end, data)
+	      })
+	    }
+	  }
+	}
+
+
+/***/ },
+/* 712 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(706)
+
+	module.exports = function asyncMap (map) {
+	  if(!map) return id
+	  map = prop(map)
+	  var busy = false, abortCb, aborted
+	  return function (read) {
+	    return function next (abort, cb) {
+	      if(aborted) return cb(aborted)
+	      if(abort) {
+	        aborted = abort
+	        if(!busy) read(abort, cb)
+	        else read(abort, function () {
+	          //if we are still busy, wait for the mapper to complete.
+	          if(busy) abortCb = cb
+	          else cb(abort)
+	        })
+	      }
+	      else
+	        read(null, function (end, data) {
+	          if(end) cb(end)
+	          else if(aborted) cb(aborted)
+	          else {
+	            busy = true
+	            map(data, function (err, data) {
+	              busy = false
+	              if(aborted) {
+	                cb(aborted)
+	                abortCb(aborted)
+	              }
+	              else if(err) next (err, cb)
+	              else cb(null, data)
+	            })
+	          }
+	        })
+	    }
+	  }
+	}
+
+
+
+
+/***/ },
+/* 713 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var tester = __webpack_require__(714)
+
+	module.exports = function filter (test) {
+	  //regexp
+	  test = tester(test)
+	  return function (read) {
+	    return function next (end, cb) {
+	      var sync, loop = true
+	      while(loop) {
+	        loop = false
+	        sync = true
+	        read(end, function (end, data) {
+	          if(!end && !test(data))
+	            return sync ? loop = true : next(end, cb)
+	          cb(end, data)
+	        })
+	        sync = false
+	      }
+	    }
+	  }
+	}
+
+
+
+/***/ },
+/* 714 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var prop = __webpack_require__(706)
+
+	function id (e) { return e }
+
+	module.exports = function tester (test) {
+	  return (
+	    'object' === typeof test && 'function' === typeof test.test //regexp
+	    ? function (data) { return test.test(data) }
+	    : prop (test) || id
+	  )
+	}
+
+
+/***/ },
+/* 715 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var tester = __webpack_require__(714)
+	var filter = __webpack_require__(713)
+
+	module.exports = function filterNot (test) {
+	  test = tester(test)
+	  return filter(function (data) { return !test(data) })
+	}
+
+
+/***/ },
+/* 716 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	//a pass through stream that doesn't change the value.
+	module.exports = function through (op, onEnd) {
+	  var a = false
+
+	  function once (abort) {
+	    if(a || !onEnd) return
+	    a = true
+	    onEnd(abort === true ? null : abort)
+	  }
+
+	  return function (read) {
+	    return function (end, cb) {
+	      if(end) once(end)
+	      return read(end, function (end, data) {
+	        if(!end) op && op(data)
+	        else once(end)
+	        cb(end, data)
+	      })
+	    }
+	  }
+	}
+
+
+/***/ },
+/* 717 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	//read a number of items and then stop.
+	module.exports = function take (test, opts) {
+	  opts = opts || {}
+	  var last = opts.last || false // whether the first item for which !test(item) should still pass
+	  var ended = false
+	  if('number' === typeof test) {
+	    last = true
+	    var n = test; test = function () {
+	      return --n
+	    }
+	  }
+
+	  return function (read) {
+
+	    function terminate (cb) {
+	      read(true, function (err) {
+	        last = false; cb(err || true)
+	      })
+	    }
+
+	    return function (end, cb) {
+	      if(ended)            last ? terminate(cb) : cb(ended)
+	      else if(ended = end) read(ended, cb)
+	      else
+	        read(null, function (end, data) {
+	          if(ended = ended || end) {
+	            //last ? terminate(cb) :
+	            cb(ended)
+	          }
+	          else if(!test(data)) {
+	            ended = true
+	            last ? cb(null, data) : terminate(cb)
+	          }
+	          else
+	            cb(null, data)
+	        })
+	    }
+	  }
+	}
+
+
+/***/ },
+/* 718 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	function id (e) { return e }
+	var prop = __webpack_require__(706)
+	var filter = __webpack_require__(713)
+
+	//drop items you have already seen.
+	module.exports = function unique (field, invert) {
+	  field = prop(field) || id
+	  var seen = {}
+	  return filter(function (data) {
+	    var key = field(data)
+	    if(seen[key]) return !!invert //false, by default
+	    else seen[key] = true
+	    return !invert //true by default
+	  })
+	}
+
+
+
+/***/ },
+/* 719 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var unique = __webpack_require__(718)
+
+	//passes an item through when you see it for the second time.
+	module.exports = function nonUnique (field) {
+	  return unique(field, true)
+	}
+
+
+/***/ },
+/* 720 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var values = __webpack_require__(694)
+	var once = __webpack_require__(696)
+
+	//convert a stream of arrays or streams into just a stream.
+	module.exports = function flatten () {
+	  return function (read) {
+	    var _read
+	    return function (abort, cb) {
+	      if (abort) { //abort the current stream, and then stream of streams.
+	        _read ? _read(abort, function(err) {
+	          read(err || abort, cb)
+	        }) : read(abort, cb)
+	      }
+	      else if(_read) nextChunk()
+	      else nextStream()
+
+	      function nextChunk () {
+	        _read(null, function (err, data) {
+	          if (err === true) nextStream()
+	          else if (err) {
+	            read(true, function(abortErr) {
+	              // TODO: what do we do with the abortErr?
+	              cb(err)
+	            })
+	          }
+	          else cb(null, data)
+	        })
+	      }
+	      function nextStream () {
+	        _read = null
+	        read(null, function (end, stream) {
+	          if(end)
+	            return cb(end)
+	          if(Array.isArray(stream) || stream && 'object' === typeof stream)
+	            stream = values(stream)
+	          else if('function' != typeof stream)
+	            stream = once(stream)
+	          _read = stream
+	          nextChunk()
+	        })
+	      }
+	    }
+	  }
+	}
+
+
+
+/***/ },
+/* 721 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	module.exports = function pull (a) {
+	  var length = arguments.length
+	  if (typeof a === 'function' && a.length === 1) {
+	    var args = new Array(length)
+	    for(var i = 0; i < length; i++)
+	      args[i] = arguments[i]
+	    return function (read) {
+	      if (args == null) {
+	        throw new TypeError("partial sink should only be called once!")
+	      }
+
+	      // Grab the reference after the check, because it's always an array now
+	      // (engines like that kind of consistency).
+	      var ref = args
+	      args = null
+
+	      // Prioritize common case of small number of pulls.
+	      switch (length) {
+	      case 1: return pull(read, ref[0])
+	      case 2: return pull(read, ref[0], ref[1])
+	      case 3: return pull(read, ref[0], ref[1], ref[2])
+	      case 4: return pull(read, ref[0], ref[1], ref[2], ref[3])
+	      default:
+	        ref.unshift(read)
+	        return pull.apply(null, ref)
+	      }
+	    }
+	  }
+
+	  var read = a
+
+	  if (read && typeof read.source === 'function') {
+	    read = read.source
+	  }
+
+	  for (var i = 1; i < length; i++) {
+	    var s = arguments[i]
+	    if (typeof s === 'function') {
+	      read = s(read)
+	    } else if (s && typeof s === 'object') {
+	      s.sink(read)
+	      read = s.source
+	    }
+	  }
+
+	  return read
+	}
+
+
+/***/ },
+/* 722 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	const series = __webpack_require__(234)
+
+	const propose = __webpack_require__(723)
+	const exchange = __webpack_require__(728)
+	const finish = __webpack_require__(729)
 
 	// Performs initial communication over insecure channel to share
 	// keys, IDs, and initiate communication, assigning all necessary params.
@@ -99386,148 +102785,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 645 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = series;
-
-	var _parallel = __webpack_require__(233);
-
-	var _parallel2 = _interopRequireDefault(_parallel);
-
-	var _eachOfSeries = __webpack_require__(646);
-
-	var _eachOfSeries2 = _interopRequireDefault(_eachOfSeries);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * Run the functions in the `tasks` collection in series, each one running once
-	 * the previous function has completed. If any functions in the series pass an
-	 * error to its callback, no more functions are run, and `callback` is
-	 * immediately called with the value of the error. Otherwise, `callback`
-	 * receives an array of results when `tasks` have completed.
-	 *
-	 * It is also possible to use an object instead of an array. Each property will
-	 * be run as a function, and the results will be passed to the final `callback`
-	 * as an object instead of an array. This can be a more readable way of handling
-	 *  results from {@link async.series}.
-	 *
-	 * **Note** that while many implementations preserve the order of object
-	 * properties, the [ECMAScript Language Specification](http://www.ecma-international.org/ecma-262/5.1/#sec-8.6)
-	 * explicitly states that
-	 *
-	 * > The mechanics and order of enumerating the properties is not specified.
-	 *
-	 * So if you rely on the order in which your series of functions are executed,
-	 * and want this to work on all platforms, consider using an array.
-	 *
-	 * @name series
-	 * @static
-	 * @memberOf module:ControlFlow
-	 * @method
-	 * @category Control Flow
-	 * @param {Array|Iterable|Object} tasks - A collection containing functions to run, each
-	 * function is passed a `callback(err, result)` it must call on completion with
-	 * an error `err` (which can be `null`) and an optional `result` value.
-	 * @param {Function} [callback] - An optional callback to run once all the
-	 * functions have completed. This function gets a results array (or object)
-	 * containing all the result arguments passed to the `task` callbacks. Invoked
-	 * with (err, result).
-	 * @example
-	 * async.series([
-	 *     function(callback) {
-	 *         // do some stuff ...
-	 *         callback(null, 'one');
-	 *     },
-	 *     function(callback) {
-	 *         // do some more stuff ...
-	 *         callback(null, 'two');
-	 *     }
-	 * ],
-	 * // optional callback
-	 * function(err, results) {
-	 *     // results is now equal to ['one', 'two']
-	 * });
-	 *
-	 * async.series({
-	 *     one: function(callback) {
-	 *         setTimeout(function() {
-	 *             callback(null, 1);
-	 *         }, 200);
-	 *     },
-	 *     two: function(callback){
-	 *         setTimeout(function() {
-	 *             callback(null, 2);
-	 *         }, 100);
-	 *     }
-	 * }, function(err, results) {
-	 *     // results is now equal to: {one: 1, two: 2}
-	 * });
-	 */
-	function series(tasks, callback) {
-	  (0, _parallel2.default)(_eachOfSeries2.default, tasks, callback);
-	}
-	module.exports = exports['default'];
-
-/***/ },
-/* 646 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _eachOfLimit = __webpack_require__(205);
-
-	var _eachOfLimit2 = _interopRequireDefault(_eachOfLimit);
-
-	var _doLimit = __webpack_require__(232);
-
-	var _doLimit2 = _interopRequireDefault(_doLimit);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * The same as [`eachOf`]{@link module:Collections.eachOf} but runs only a single async operation at a time.
-	 *
-	 * @name eachOfSeries
-	 * @static
-	 * @memberOf module:Collections
-	 * @method
-	 * @see [async.eachOf]{@link module:Collections.eachOf}
-	 * @alias forEachOfSeries
-	 * @category Collection
-	 * @param {Array|Iterable|Object} coll - A collection to iterate over.
-	 * @param {Function} iteratee - A function to apply to each item in `coll`. The
-	 * `key` is the item's key, or index in the case of an array. The iteratee is
-	 * passed a `callback(err)` which must be called once it has completed. If no
-	 * error has occurred, the callback should be run without arguments or with an
-	 * explicit `null` argument. Invoked with (item, key, callback).
-	 * @param {Function} [callback] - A callback which is called when all `iteratee`
-	 * functions have finished, or an error occurs. Invoked with (err).
-	 */
-	exports.default = (0, _doLimit2.default)(_eachOfLimit2.default, 1);
-	module.exports = exports['default'];
-
-/***/ },
-/* 647 */
+/* 723 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const debug = __webpack_require__(245)
-	const waterfall = __webpack_require__(426)
+	const debug = __webpack_require__(251)
+	const waterfall = __webpack_require__(462)
 
-	const support = __webpack_require__(648)
-	const crypto = __webpack_require__(649)
+	const support = __webpack_require__(724)
+	const crypto = __webpack_require__(725)
 
 	const log = debug('libp2p:secio')
 	log.error = debug('libp2p:secio:error')
@@ -99559,16 +102826,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 648 */
+/* 724 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const mh = __webpack_require__(414)
-	const lp = __webpack_require__(291)
-	const pull = __webpack_require__(251)
-	const crypto = __webpack_require__(339)
-	const parallel = __webpack_require__(193)
+	const mh = __webpack_require__(452)
+	const lp = __webpack_require__(297)
+	const pull = __webpack_require__(691)
+	const crypto = __webpack_require__(377)
+	const parallel = __webpack_require__(248)
 
 	exports.exchanges = [
 	  'P-256',
@@ -99705,23 +102972,23 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 649 */
+/* 725 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const protobuf = __webpack_require__(317)
-	const PeerId = __webpack_require__(334)
-	const crypto = __webpack_require__(339)
-	const parallel = __webpack_require__(193)
-	const waterfall = __webpack_require__(426)
-	const debug = __webpack_require__(245)
+	const protobuf = __webpack_require__(355)
+	const PeerId = __webpack_require__(726)
+	const crypto = __webpack_require__(377)
+	const parallel = __webpack_require__(248)
+	const waterfall = __webpack_require__(462)
+	const debug = __webpack_require__(251)
 	const log = debug('libp2p:secio')
 	log.error = debug('libp2p:secio:error')
 
-	const pbm = protobuf(__webpack_require__(650))
+	const pbm = protobuf(__webpack_require__(727))
 
-	const support = __webpack_require__(648)
+	const support = __webpack_require__(724)
 
 	// nonceSize is the size of our nonces (in bytes)
 	const nonceSize = 16
@@ -99910,7 +103177,240 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 650 */
+/* 726 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {/*
+	 * Id is an object representation of a peer Id. a peer Id is a multihash
+	 */
+
+	'use strict'
+
+	const mh = __webpack_require__(373)
+	const crypto = __webpack_require__(377)
+	const assert = __webpack_require__(289)
+	const waterfall = __webpack_require__(462)
+
+	class PeerId {
+	  constructor (id, privKey, pubKey) {
+	    assert(Buffer.isBuffer(id), 'invalid id provided')
+
+	    if (privKey && pubKey) {
+	      assert(privKey.public.bytes.equals(pubKey.bytes), 'inconsistent arguments')
+	    }
+
+	    this._id = id
+	    this._idB58String = mh.toB58String(this.id)
+	    this._privKey = privKey
+	    this._pubKey = pubKey
+	  }
+
+	  get id () {
+	    return this._id
+	  }
+
+	  set id (val) {
+	    throw new Error('Id is immutable')
+	  }
+
+	  get privKey () {
+	    return this._privKey
+	  }
+
+	  get pubKey () {
+	    if (this._pubKey) {
+	      return this._pubKey
+	    }
+
+	    if (this.privKey) {
+	      return this.privKey.public
+	    }
+	  }
+
+	  // Return the protobuf version of the public key,
+	  // matching go ipfs formatting
+	  marshalPubKey () {
+	    if (this.pubKey) {
+	      return crypto.marshalPublicKey(this.pubKey)
+	    }
+	  }
+
+	  // Return the protobuf version of the private key,
+	  // matching go ipfs formatting
+	  marshalPrivKey () {
+	    if (this.privKey) {
+	      return crypto.marshalPrivateKey(this.privKey)
+	    }
+	  }
+
+	  // pretty print
+	  toPrint () {
+	    return this.toJSON()
+	  }
+
+	  // return the jsonified version of the key, matching the formatting
+	  // of go-ipfs for its config file
+	  toJSON () {
+	    return {
+	      id: this.toB58String(),
+	      privKey: toB64Opt(this.marshalPrivKey()),
+	      pubKey: toB64Opt(this.marshalPubKey())
+	    }
+	  }
+
+	  // encode/decode functions
+	  toHexString () {
+	    return mh.toHexString(this.id)
+	  }
+
+	  toBytes () {
+	    return this.id
+	  }
+
+	  toB58String () {
+	    return this._idB58String
+	  }
+	}
+
+	exports = module.exports = PeerId
+	exports.Buffer = Buffer
+
+	// generation
+	exports.create = function (opts, callback) {
+	  if (typeof opts === 'function') {
+	    callback = opts
+	    opts = {}
+	  }
+	  opts = opts || {}
+	  opts.bits = opts.bits || 2048
+
+	  waterfall([
+	    (cb) => crypto.generateKeyPair('RSA', opts.bits, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromHexString = function (str) {
+	  return new PeerId(mh.fromHexString(str))
+	}
+
+	exports.createFromBytes = function (buf) {
+	  return new PeerId(buf)
+	}
+
+	exports.createFromB58String = function (str) {
+	  return new PeerId(mh.fromB58String(str))
+	}
+
+	// Public Key input will be a buffer
+	exports.createFromPubKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const pubKey = crypto.unmarshalPublicKey(buf)
+	  pubKey.hash((err, digest) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, null, pubKey))
+	  })
+	}
+
+	// Private key input will be a string
+	exports.createFromPrivKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  waterfall([
+	    (cb) => crypto.unmarshalPrivateKey(buf, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromJSON = function (obj, callback) {
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const id = mh.fromB58String(obj.id)
+	  const rawPrivKey = obj.privKey && new Buffer(obj.privKey, 'base64')
+	  const rawPubKey = obj.pubKey && new Buffer(obj.pubKey, 'base64')
+	  const pub = rawPubKey && crypto.unmarshalPublicKey(rawPubKey)
+
+	  if (rawPrivKey) {
+	    waterfall([
+	      (cb) => crypto.unmarshalPrivateKey(rawPrivKey, cb),
+	      (priv, cb) => priv.public.hash((err, digest) => {
+	        cb(err, digest, priv)
+	      }),
+	      (privDigest, priv, cb) => {
+	        if (pub) {
+	          pub.hash((err, pubDigest) => {
+	            cb(err, privDigest, priv, pubDigest)
+	          })
+	        } else {
+	          cb(null, privDigest, priv)
+	        }
+	      }
+	    ], (err, privDigest, priv, pubDigest) => {
+	      if (err) {
+	        return callback(err)
+	      }
+
+	      if (pub && !privDigest.equals(pubDigest)) {
+	        return callback(new Error('Public and private key do not match'))
+	      }
+
+	      if (id && !privDigest.equals(id)) {
+	        return callback(new Error('Id and private key do not match'))
+	      }
+
+	      callback(null, new PeerId(id, priv, pub))
+	    })
+	  } else {
+	    callback(null, new PeerId(id, null, pub))
+	  }
+	}
+
+	function toB64Opt (val) {
+	  if (val) {
+	    return val.toString('base64')
+	  }
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 727 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -99930,16 +103430,16 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 651 */
+/* 728 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const debug = __webpack_require__(245)
-	const waterfall = __webpack_require__(426)
+	const debug = __webpack_require__(251)
+	const waterfall = __webpack_require__(462)
 
-	const support = __webpack_require__(648)
-	const crypto = __webpack_require__(649)
+	const support = __webpack_require__(724)
+	const crypto = __webpack_require__(725)
 
 	const log = debug('libp2p:secio')
 	log.error = debug('libp2p:secio:error')
@@ -99973,20 +103473,20 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 652 */
+/* 729 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const pull = __webpack_require__(251)
-	const handshake = __webpack_require__(285)
-	const debug = __webpack_require__(245)
+	const pull = __webpack_require__(691)
+	const handshake = __webpack_require__(291)
+	const debug = __webpack_require__(251)
 
 	const log = debug('libp2p:secio')
 	log.error = debug('libp2p:secio:error')
 
-	const etm = __webpack_require__(653)
-	const crypto = __webpack_require__(649)
+	const etm = __webpack_require__(730)
+	const crypto = __webpack_require__(725)
 
 	// step 3. Finish
 	// -- send expected message to verify encryption works (send local nonce)
@@ -100039,13 +103539,13 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 653 */
+/* 730 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
 
-	const pull = __webpack_require__(251)
-	const lp = __webpack_require__(291)
+	const pull = __webpack_require__(691)
+	const lp = __webpack_require__(297)
 
 	const lpOpts = {
 	  fixed: true,
@@ -100125,13 +103625,13 @@ var Libp2pAutoGraph =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
 
 /***/ },
-/* 654 */
+/* 731 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 
-	const handshake = __webpack_require__(285)
-	const deferred = __webpack_require__(655)
+	const handshake = __webpack_require__(291)
+	const deferred = __webpack_require__(732)
 
 	class State {
 	  constructor (id, key, timeout, cb) {
@@ -100203,18 +103703,18 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 655 */
+/* 732 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	exports.source = __webpack_require__(243)
-	exports.through = __webpack_require__(656)
-	exports.sink = __webpack_require__(244)
-	exports.duplex = __webpack_require__(242)
+	exports.source = __webpack_require__(246)
+	exports.through = __webpack_require__(733)
+	exports.sink = __webpack_require__(247)
+	exports.duplex = __webpack_require__(245)
 
 
 /***/ },
-/* 656 */
+/* 733 */
 /***/ function(module, exports) {
 
 	
@@ -100248,12 +103748,934 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 657 */
+/* 734 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	const Id = __webpack_require__(735)
+	const multiaddr = __webpack_require__(736)
+	const uniqBy = __webpack_require__(472).uniqBy
+
+	exports = module.exports = PeerInfo
+
+	function ensureMultiaddr (addr) {
+	  if (multiaddr.isMultiaddr(addr)) {
+	    return addr
+	  }
+
+	  return multiaddr(addr)
+	}
+
+	// Peer represents a peer on the IPFS network
+	function PeerInfo (peerId) {
+	  if (!(this instanceof PeerInfo)) {
+	    return new PeerInfo(peerId)
+	  }
+
+	  if (!peerId) {
+	    throw new Error('Missing peerId. Use Peer.create(cb) to create one')
+	  }
+
+	  this.id = peerId
+
+	  this.multiaddrs = []
+	  const observedMultiaddrs = []
+
+	  this.multiaddr = {}
+
+	  this.multiaddr.add = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    var exists = false
+	    this.multiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        exists = true
+	        return true
+	      }
+	    })
+	    if (!exists) {
+	      this.multiaddrs.push(addr)
+	    }
+	  }
+
+	  // to prevent multiaddr explosion
+	  this.multiaddr.addSafe = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    var check = false
+	    observedMultiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        this.multiaddr.add(addr)
+	        observedMultiaddrs.splice(i, 1)
+	        check = true
+	      }
+	    })
+	    if (!check) {
+	      observedMultiaddrs.push(addr)
+	    }
+	  }
+
+	  this.multiaddr.rm = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    this.multiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        this.multiaddrs.splice(i, 1)
+	        return true
+	      }
+	    })
+	  }
+
+	  this.multiaddr.replace = (existing, fresh) => {
+	    if (!Array.isArray(existing)) {
+	      existing = [existing]
+	    }
+	    if (!Array.isArray(fresh)) {
+	      fresh = [fresh]
+	    }
+	    existing.forEach((m) => {
+	      this.multiaddr.rm(m)
+	    })
+	    fresh.forEach((m) => {
+	      this.multiaddr.add(m)
+	    })
+	  }
+
+	  this.distinctMultiaddr = () => {
+	    var result = uniqBy(this.multiaddrs, function (item) {
+	      return [item.toOptions().port, item.toOptions().transport].join()
+	    })
+	    return result
+	  }
+
+	  // TODO: add features to fetch multiaddr using filters
+	  // look at https://github.com/whyrusleeping/js-mafmt/blob/master/src/index.js
+	}
+
+	PeerInfo.create = (id, callback) => {
+	  if (typeof id === 'function') {
+	    callback = id
+	    id = null
+
+	    Id.create((err, id) => {
+	      if (err) {
+	        return callback(err)
+	      }
+
+	      callback(null, new PeerInfo(id))
+	    })
+	    return
+	  }
+
+	  callback(null, new PeerInfo(id))
+	}
+
+
+/***/ },
+/* 735 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {/*
+	 * Id is an object representation of a peer Id. a peer Id is a multihash
+	 */
+
+	'use strict'
+
+	const mh = __webpack_require__(373)
+	const crypto = __webpack_require__(377)
+	const assert = __webpack_require__(289)
+	const waterfall = __webpack_require__(462)
+
+	class PeerId {
+	  constructor (id, privKey, pubKey) {
+	    assert(Buffer.isBuffer(id), 'invalid id provided')
+
+	    if (privKey && pubKey) {
+	      assert(privKey.public.bytes.equals(pubKey.bytes), 'inconsistent arguments')
+	    }
+
+	    this._id = id
+	    this._idB58String = mh.toB58String(this.id)
+	    this._privKey = privKey
+	    this._pubKey = pubKey
+	  }
+
+	  get id () {
+	    return this._id
+	  }
+
+	  set id (val) {
+	    throw new Error('Id is immutable')
+	  }
+
+	  get privKey () {
+	    return this._privKey
+	  }
+
+	  get pubKey () {
+	    if (this._pubKey) {
+	      return this._pubKey
+	    }
+
+	    if (this.privKey) {
+	      return this.privKey.public
+	    }
+	  }
+
+	  // Return the protobuf version of the public key,
+	  // matching go ipfs formatting
+	  marshalPubKey () {
+	    if (this.pubKey) {
+	      return crypto.marshalPublicKey(this.pubKey)
+	    }
+	  }
+
+	  // Return the protobuf version of the private key,
+	  // matching go ipfs formatting
+	  marshalPrivKey () {
+	    if (this.privKey) {
+	      return crypto.marshalPrivateKey(this.privKey)
+	    }
+	  }
+
+	  // pretty print
+	  toPrint () {
+	    return this.toJSON()
+	  }
+
+	  // return the jsonified version of the key, matching the formatting
+	  // of go-ipfs for its config file
+	  toJSON () {
+	    return {
+	      id: this.toB58String(),
+	      privKey: toB64Opt(this.marshalPrivKey()),
+	      pubKey: toB64Opt(this.marshalPubKey())
+	    }
+	  }
+
+	  // encode/decode functions
+	  toHexString () {
+	    return mh.toHexString(this.id)
+	  }
+
+	  toBytes () {
+	    return this.id
+	  }
+
+	  toB58String () {
+	    return this._idB58String
+	  }
+	}
+
+	exports = module.exports = PeerId
+	exports.Buffer = Buffer
+
+	// generation
+	exports.create = function (opts, callback) {
+	  if (typeof opts === 'function') {
+	    callback = opts
+	    opts = {}
+	  }
+	  opts = opts || {}
+	  opts.bits = opts.bits || 2048
+
+	  waterfall([
+	    (cb) => crypto.generateKeyPair('RSA', opts.bits, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromHexString = function (str) {
+	  return new PeerId(mh.fromHexString(str))
+	}
+
+	exports.createFromBytes = function (buf) {
+	  return new PeerId(buf)
+	}
+
+	exports.createFromB58String = function (str) {
+	  return new PeerId(mh.fromB58String(str))
+	}
+
+	// Public Key input will be a buffer
+	exports.createFromPubKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const pubKey = crypto.unmarshalPublicKey(buf)
+	  pubKey.hash((err, digest) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, null, pubKey))
+	  })
+	}
+
+	// Private key input will be a string
+	exports.createFromPrivKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  waterfall([
+	    (cb) => crypto.unmarshalPrivateKey(buf, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromJSON = function (obj, callback) {
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const id = mh.fromB58String(obj.id)
+	  const rawPrivKey = obj.privKey && new Buffer(obj.privKey, 'base64')
+	  const rawPubKey = obj.pubKey && new Buffer(obj.pubKey, 'base64')
+	  const pub = rawPubKey && crypto.unmarshalPublicKey(rawPubKey)
+
+	  if (rawPrivKey) {
+	    waterfall([
+	      (cb) => crypto.unmarshalPrivateKey(rawPrivKey, cb),
+	      (priv, cb) => priv.public.hash((err, digest) => {
+	        cb(err, digest, priv)
+	      }),
+	      (privDigest, priv, cb) => {
+	        if (pub) {
+	          pub.hash((err, pubDigest) => {
+	            cb(err, privDigest, priv, pubDigest)
+	          })
+	        } else {
+	          cb(null, privDigest, priv)
+	        }
+	      }
+	    ], (err, privDigest, priv, pubDigest) => {
+	      if (err) {
+	        return callback(err)
+	      }
+
+	      if (pub && !privDigest.equals(pubDigest)) {
+	        return callback(new Error('Public and private key do not match'))
+	      }
+
+	      if (id && !privDigest.equals(id)) {
+	        return callback(new Error('Id and private key do not match'))
+	      }
+
+	      callback(null, new PeerId(id, priv, pub))
+	    })
+	  } else {
+	    callback(null, new PeerId(id, null, pub))
+	  }
+	}
+
+	function toB64Opt (val) {
+	  if (val) {
+	    return val.toString('base64')
+	  }
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 736 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var extend = __webpack_require__(465)
+	var codec = __webpack_require__(737)
+	var protocols = __webpack_require__(739)
+	var NotImplemented = new Error('Sorry, Not Implemented Yet.')
+	var varint = __webpack_require__(362)
+
+	exports = module.exports = Multiaddr
+
+	function Multiaddr (addr) {
+	  if (!(this instanceof Multiaddr)) {
+	    return new Multiaddr(addr)
+	  }
+
+	  // defaults
+	  if (!addr) {
+	    addr = ''
+	  }
+
+	  if (addr instanceof Buffer) {
+	    this.buffer = codec.fromBuffer(addr)
+	  } else if (typeof (addr) === 'string' || addr instanceof String) {
+	    this.buffer = codec.fromString(addr)
+	  } else if (addr.buffer && addr.protos && addr.protoCodes) { // Multiaddr
+	    this.buffer = codec.fromBuffer(addr.buffer) // validate + copy buffer
+	  } else {
+	    throw new Error('addr must be a string, Buffer, or another Multiaddr')
+	  }
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.toString = function toString () {
+	  return codec.bufferToString(this.buffer)
+	}
+
+	// get the multiaddr as a convinent options object to be dropped in net.createConnection
+	Multiaddr.prototype.toOptions = function toOptions () {
+	  var opts = {}
+	  var parsed = this.toString().split('/')
+	  opts.family = parsed[1] === 'ip4' ? 'ipv4' : 'ipv6'
+	  opts.host = parsed[2]
+	  opts.transport = parsed[3]
+	  opts.port = parsed[4]
+	  return opts
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.inspect = function inspect () {
+	  return '<Multiaddr ' +
+	  this.buffer.toString('hex') + ' - ' +
+	  codec.bufferToString(this.buffer) + '>'
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.protos = function protos () {
+	  return map(this.protoCodes(), function (code) {
+	    return extend(protocols(code))
+	    // copy to prevent users from modifying the internal objs.
+	  })
+	}
+
+	// get the multiaddr protocol codes
+	Multiaddr.prototype.protoCodes = function protoCodes () {
+	  const codes = []
+	  const buf = this.buffer
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+	    const size = codec.sizeForAddr(p, buf.slice(i + n))
+
+	    i += (size + n)
+	    codes.push(code)
+	  }
+
+	  return codes
+	}
+
+	// get the multiaddr protocol string names
+	Multiaddr.prototype.protoNames = function protoNames () {
+	  return map(this.protos(), function (proto) {
+	    return proto.name
+	  })
+	}
+
+	// Returns a tuple of parts:
+	Multiaddr.prototype.tuples = function tuples () {
+	  return codec.bufferToTuples(this.buffer)
+	}
+
+	// Returns a tuple of string parts:
+	Multiaddr.prototype.stringTuples = function stringTuples () {
+	  var t = codec.bufferToTuples(this.buffer)
+	  return codec.tuplesToStringTuples(t)
+	}
+
+	Multiaddr.prototype.encapsulate = function encapsulate (addr) {
+	  addr = Multiaddr(addr)
+	  return Multiaddr(this.toString() + addr.toString())
+	}
+
+	Multiaddr.prototype.decapsulate = function decapsulate (addr) {
+	  addr = addr.toString()
+	  var s = this.toString()
+	  var i = s.lastIndexOf(addr)
+	  if (i < 0) {
+	    throw new Error('Address ' + this + ' does not contain subaddress: ' + addr)
+	  }
+	  return Multiaddr(s.slice(0, i))
+	}
+
+	Multiaddr.prototype.equals = function equals (addr) {
+	  return this.buffer.equals(addr.buffer)
+	}
+
+	// get a node friendly address object
+	Multiaddr.prototype.nodeAddress = function nodeAddress () {
+	  if (!this.isThinWaistAddress()) {
+	    throw new Error('Multiaddr must be "thin waist" address for nodeAddress.')
+	  }
+
+	  var codes = this.protoCodes()
+	  var parts = this.toString().split('/').slice(1)
+	  return {
+	    family: (codes[0] === 41) ? 'IPv6' : 'IPv4',
+	    address: parts[1], // ip addr
+	    port: parts[3] // tcp or udp port
+	  }
+	}
+
+	// from a node friendly address object
+	Multiaddr.fromNodeAddress = function fromNodeAddress (addr, transport) {
+	  if (!addr) throw new Error('requires node address object')
+	  if (!transport) throw new Error('requires transport protocol')
+	  var ip = (addr.family === 'IPv6') ? 'ip6' : 'ip4'
+	  return Multiaddr('/' + [ip, addr.address, transport, addr.port].join('/'))
+	}
+
+	// returns whether this address is a standard combination:
+	// /{IPv4, IPv6}/{TCP, UDP}
+	Multiaddr.prototype.isThinWaistAddress = function isThinWaistAddress (addr) {
+	  var protos = (addr || this).protos()
+
+	  if (protos.length !== 2) {
+	    return false
+	  }
+
+	  if (protos[0].code !== 4 && protos[0].code !== 41) {
+	    return false
+	  }
+	  if (protos[1].code !== 6 && protos[1].code !== 17) {
+	    return false
+	  }
+	  return true
+	}
+
+	// parses the "stupid string" format:
+	// <proto><IPv>://<IP Addr>[:<proto port>]
+	// udp4://1.2.3.4:5678
+	Multiaddr.prototype.fromStupidString = function fromStupidString (str) {
+	  throw NotImplemented
+	}
+
+	// patch this in
+	Multiaddr.protocols = protocols
+
+	Multiaddr.isMultiaddr = function isMultiaddr (addr) {
+	  if (addr.constructor && addr.constructor.name) {
+	    return addr.constructor.name === 'Multiaddr'
+	  }
+
+	  return Boolean(
+	    addr.fromStupidString &&
+	    addr.protos
+	  )
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 737 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var filter = __webpack_require__(467)
+	var convert = __webpack_require__(738)
+	var protocols = __webpack_require__(739)
+	var varint = __webpack_require__(362)
+
+	// export codec
+	module.exports = {
+	  stringToStringTuples: stringToStringTuples,
+	  stringTuplesToString: stringTuplesToString,
+
+	  tuplesToStringTuples: tuplesToStringTuples,
+	  stringTuplesToTuples: stringTuplesToTuples,
+
+	  bufferToTuples: bufferToTuples,
+	  tuplesToBuffer: tuplesToBuffer,
+
+	  bufferToString: bufferToString,
+	  stringToBuffer: stringToBuffer,
+
+	  fromString: fromString,
+	  fromBuffer: fromBuffer,
+	  validateBuffer: validateBuffer,
+	  isValidBuffer: isValidBuffer,
+	  cleanPath: cleanPath,
+
+	  ParseError: ParseError,
+	  protoFromTuple: protoFromTuple,
+
+	  sizeForAddr: sizeForAddr
+	}
+
+	// string -> [[str name, str addr]... ]
+	function stringToStringTuples (str) {
+	  var tuples = []
+	  var parts = str.split('/').slice(1) // skip first empty elem
+	  if (parts.length === 1 && parts[0] === '') {
+	    return []
+	  }
+
+	  for (var p = 0; p < parts.length; p++) {
+	    var part = parts[p]
+	    var proto = protocols(part)
+
+	    if (proto.size === 0) {
+	      tuples.push([part])
+	      continue
+	    }
+
+	    p++ // advance addr part
+	    if (p >= parts.length) {
+	      throw ParseError('invalid address: ' + str)
+	    }
+
+	    tuples.push([part, parts[p]])
+	  }
+
+	  return tuples
+	}
+
+	// [[str name, str addr]... ] -> string
+	function stringTuplesToString (tuples) {
+	  var parts = []
+	  map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    parts.push(proto.name)
+	    if (tup.length > 1) {
+	      parts.push(tup[1])
+	    }
+	  })
+
+	  return '/' + parts.join('/')
+	}
+
+	// [[str name, str addr]... ] -> [[int code, Buffer]... ]
+	function stringTuplesToTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    if (!Array.isArray(tup)) {
+	      tup = [tup]
+	    }
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toBuffer(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer]... ] -> [[str name, str addr]... ]
+	function tuplesToStringTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toString(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer ]... ] -> Buffer
+	function tuplesToBuffer (tuples) {
+	  return fromBuffer(Buffer.concat(map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    var buf = new Buffer(varint.encode(proto.code))
+
+	    if (tup.length > 1) {
+	      buf = Buffer.concat([buf, tup[1]]) // add address buffer
+	    }
+
+	    return buf
+	  })))
+	}
+
+	function sizeForAddr (p, addr) {
+	  if (p.size > 0) {
+	    return p.size / 8
+	  } else if (p.size === 0) {
+	    return 0
+	  } else {
+	    const size = varint.decode(addr)
+	    return size + varint.decode.bytes
+	  }
+	}
+
+	// Buffer -> [[int code, Buffer ]... ]
+	function bufferToTuples (buf) {
+	  const tuples = []
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+
+	    const size = sizeForAddr(p, buf.slice(i + n))
+
+	    if (size === 0) {
+	      tuples.push([code])
+	      i += n
+	      continue
+	    }
+
+	    const addr = buf.slice(i + n, i + n + size)
+
+	    i += (size + n)
+
+	    if (i > buf.length) { // did not end _exactly_ at buffer.length
+	      throw ParseError('Invalid address buffer: ' + buf.toString('hex'))
+	    }
+
+	    // ok, tuple seems good.
+	    tuples.push([code, addr])
+	  }
+
+	  return tuples
+	}
+
+	// Buffer -> String
+	function bufferToString (buf) {
+	  var a = bufferToTuples(buf)
+	  var b = tuplesToStringTuples(a)
+	  return stringTuplesToString(b)
+	}
+
+	// String -> Buffer
+	function stringToBuffer (str) {
+	  str = cleanPath(str)
+	  var a = stringToStringTuples(str)
+	  var b = stringTuplesToTuples(a)
+	  return tuplesToBuffer(b)
+	}
+
+	// String -> Buffer
+	function fromString (str) {
+	  return stringToBuffer(str)
+	}
+
+	// Buffer -> Buffer
+	function fromBuffer (buf) {
+	  var err = validateBuffer(buf)
+	  if (err) throw err
+	  return new Buffer(buf) // copy
+	}
+
+	function validateBuffer (buf) {
+	  try {
+	    bufferToTuples(buf) // try to parse. will throw if breaks
+	  } catch (err) {
+	    return err
+	  }
+	}
+
+	function isValidBuffer (buf) {
+	  return validateBuffer(buf) === undefined
+	}
+
+	function cleanPath (str) {
+	  return '/' + filter(str.trim().split('/')).join('/')
+	}
+
+	function ParseError (str) {
+	  return new Error('Error parsing address: ' + str)
+	}
+
+	function protoFromTuple (tup) {
+	  var proto = protocols(tup[0])
+	  return proto
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 738 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var ip = __webpack_require__(469)
+	var protocols = __webpack_require__(739)
+	var bs58 = __webpack_require__(374)
+	var varint = __webpack_require__(362)
+
+	module.exports = Convert
+
+	// converts (serializes) addresses
+	function Convert (proto, a) {
+	  if (a instanceof Buffer) {
+	    return Convert.toString(proto, a)
+	  } else {
+	    return Convert.toBuffer(proto, a)
+	  }
+	}
+
+	Convert.toString = function convertToString (proto, buf) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toString(buf)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return buf2port(buf)
+
+	    case 421: // ipfs
+	      return buf2mh(buf)
+	    default:
+	      return buf.toString('hex') // no clue. convert to hex
+	  }
+	}
+
+	Convert.toBuffer = function convertToBuffer (proto, str) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toBuffer(str)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return port2buf(parseInt(str, 10))
+
+	    case 421: // ipfs
+	      return mh2buf(str)
+	    default:
+	      return new Buffer(str, 'hex') // no clue. convert from hex
+	  }
+	}
+
+	function port2buf (port) {
+	  var buf = new Buffer(2)
+	  buf.writeUInt16BE(port, 0)
+	  return buf
+	}
+
+	function buf2port (buf) {
+	  return buf.readUInt16BE(0)
+	}
+
+	function mh2buf (hash) {
+	  // the address is a varint prefixed multihash string representation
+	  const mh = new Buffer(bs58.decode(hash))
+	  const size = new Buffer(varint.encode(mh.length))
+	  return Buffer.concat([size, mh])
+	}
+
+	function buf2mh (buf) {
+	  const size = varint.decode(buf)
+	  const address = buf.slice(varint.decode.bytes)
+
+	  if (address.length !== size) {
+	    throw new Error('inconsistent lengths')
+	  }
+
+	  return bs58.encode(address)
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 739 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var map = __webpack_require__(464)
+
+	module.exports = Protocols
+
+	function Protocols (proto) {
+	  if (typeof (proto) === 'number') {
+	    if (Protocols.codes[proto]) {
+	      return Protocols.codes[proto]
+	    }
+
+	    throw new Error('no protocol with code: ' + proto)
+	  } else if (typeof (proto) === 'string' || proto instanceof String) {
+	    if (Protocols.names[proto]) {
+	      return Protocols.names[proto]
+	    }
+
+	    throw new Error('no protocol with name: ' + proto)
+	  }
+
+	  throw new Error('invalid protocol id type: ' + proto)
+	}
+
+	Protocols.lengthPrefixedVarSize = -1
+
+	// replicating table here to:
+	// 1. avoid parsing the csv
+	// 2. ensuring errors in the csv don't screw up code.
+	// 3. changing a number has to happen in two places.
+
+	Protocols.table = [
+	  [4, 32, 'ip4'],
+	  [6, 16, 'tcp'],
+	  [17, 16, 'udp'],
+	  [33, 16, 'dccp'],
+	  [41, 128, 'ip6'],
+	  [132, 16, 'sctp'],
+	  // these require varint for the protocol code
+	  [302, 0, 'utp'],
+	  [421, Protocols.lengthPrefixedVarSize, 'ipfs'],
+	  [480, 0, 'http'],
+	  [443, 0, 'https'],
+	  [477, 0, 'ws'],
+	  [275, 0, 'libp2p-webrtc-star']
+	]
+
+	Protocols.names = {}
+	Protocols.codes = {}
+
+	// populate tables
+	map(Protocols.table, function (e) {
+	  var proto = p.apply(this, e)
+	  Protocols.codes[proto.code] = proto
+	  Protocols.names[proto.name] = proto
+	})
+
+	Protocols.object = p
+
+	function p (code, size, name) {
+	  return {code: code, size: size, name: name}
+	}
+
+
+/***/ },
+/* 740 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bs58 = __webpack_require__(336);
+	var bs58 = __webpack_require__(374);
 
 	module.exports = PeerBook;
 
@@ -100306,18 +104728,940 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 658 */
+/* 741 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	'use strict'
+
+	const Id = __webpack_require__(742)
+	const multiaddr = __webpack_require__(743)
+	const uniqBy = __webpack_require__(472).uniqBy
+
+	exports = module.exports = PeerInfo
+
+	function ensureMultiaddr (addr) {
+	  if (multiaddr.isMultiaddr(addr)) {
+	    return addr
+	  }
+
+	  return multiaddr(addr)
+	}
+
+	// Peer represents a peer on the IPFS network
+	function PeerInfo (peerId) {
+	  if (!(this instanceof PeerInfo)) {
+	    return new PeerInfo(peerId)
+	  }
+
+	  if (!peerId) {
+	    throw new Error('Missing peerId. Use Peer.create(cb) to create one')
+	  }
+
+	  this.id = peerId
+
+	  this.multiaddrs = []
+	  const observedMultiaddrs = []
+
+	  this.multiaddr = {}
+
+	  this.multiaddr.add = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    var exists = false
+	    this.multiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        exists = true
+	        return true
+	      }
+	    })
+	    if (!exists) {
+	      this.multiaddrs.push(addr)
+	    }
+	  }
+
+	  // to prevent multiaddr explosion
+	  this.multiaddr.addSafe = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    var check = false
+	    observedMultiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        this.multiaddr.add(addr)
+	        observedMultiaddrs.splice(i, 1)
+	        check = true
+	      }
+	    })
+	    if (!check) {
+	      observedMultiaddrs.push(addr)
+	    }
+	  }
+
+	  this.multiaddr.rm = (addr) => {
+	    addr = ensureMultiaddr(addr)
+
+	    this.multiaddrs.some((m, i) => {
+	      if (m.equals(addr)) {
+	        this.multiaddrs.splice(i, 1)
+	        return true
+	      }
+	    })
+	  }
+
+	  this.multiaddr.replace = (existing, fresh) => {
+	    if (!Array.isArray(existing)) {
+	      existing = [existing]
+	    }
+	    if (!Array.isArray(fresh)) {
+	      fresh = [fresh]
+	    }
+	    existing.forEach((m) => {
+	      this.multiaddr.rm(m)
+	    })
+	    fresh.forEach((m) => {
+	      this.multiaddr.add(m)
+	    })
+	  }
+
+	  this.distinctMultiaddr = () => {
+	    var result = uniqBy(this.multiaddrs, function (item) {
+	      return [item.toOptions().port, item.toOptions().transport].join()
+	    })
+	    return result
+	  }
+
+	  // TODO: add features to fetch multiaddr using filters
+	  // look at https://github.com/whyrusleeping/js-mafmt/blob/master/src/index.js
+	}
+
+	PeerInfo.create = (id, callback) => {
+	  if (typeof id === 'function') {
+	    callback = id
+	    id = null
+
+	    Id.create((err, id) => {
+	      if (err) {
+	        return callback(err)
+	      }
+
+	      callback(null, new PeerInfo(id))
+	    })
+	    return
+	  }
+
+	  callback(null, new PeerInfo(id))
+	}
+
+
+/***/ },
+/* 742 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {/*
+	 * Id is an object representation of a peer Id. a peer Id is a multihash
+	 */
+
+	'use strict'
+
+	const mh = __webpack_require__(373)
+	const crypto = __webpack_require__(377)
+	const assert = __webpack_require__(289)
+	const waterfall = __webpack_require__(462)
+
+	class PeerId {
+	  constructor (id, privKey, pubKey) {
+	    assert(Buffer.isBuffer(id), 'invalid id provided')
+
+	    if (privKey && pubKey) {
+	      assert(privKey.public.bytes.equals(pubKey.bytes), 'inconsistent arguments')
+	    }
+
+	    this._id = id
+	    this._idB58String = mh.toB58String(this.id)
+	    this._privKey = privKey
+	    this._pubKey = pubKey
+	  }
+
+	  get id () {
+	    return this._id
+	  }
+
+	  set id (val) {
+	    throw new Error('Id is immutable')
+	  }
+
+	  get privKey () {
+	    return this._privKey
+	  }
+
+	  get pubKey () {
+	    if (this._pubKey) {
+	      return this._pubKey
+	    }
+
+	    if (this.privKey) {
+	      return this.privKey.public
+	    }
+	  }
+
+	  // Return the protobuf version of the public key,
+	  // matching go ipfs formatting
+	  marshalPubKey () {
+	    if (this.pubKey) {
+	      return crypto.marshalPublicKey(this.pubKey)
+	    }
+	  }
+
+	  // Return the protobuf version of the private key,
+	  // matching go ipfs formatting
+	  marshalPrivKey () {
+	    if (this.privKey) {
+	      return crypto.marshalPrivateKey(this.privKey)
+	    }
+	  }
+
+	  // pretty print
+	  toPrint () {
+	    return this.toJSON()
+	  }
+
+	  // return the jsonified version of the key, matching the formatting
+	  // of go-ipfs for its config file
+	  toJSON () {
+	    return {
+	      id: this.toB58String(),
+	      privKey: toB64Opt(this.marshalPrivKey()),
+	      pubKey: toB64Opt(this.marshalPubKey())
+	    }
+	  }
+
+	  // encode/decode functions
+	  toHexString () {
+	    return mh.toHexString(this.id)
+	  }
+
+	  toBytes () {
+	    return this.id
+	  }
+
+	  toB58String () {
+	    return this._idB58String
+	  }
+	}
+
+	exports = module.exports = PeerId
+	exports.Buffer = Buffer
+
+	// generation
+	exports.create = function (opts, callback) {
+	  if (typeof opts === 'function') {
+	    callback = opts
+	    opts = {}
+	  }
+	  opts = opts || {}
+	  opts.bits = opts.bits || 2048
+
+	  waterfall([
+	    (cb) => crypto.generateKeyPair('RSA', opts.bits, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromHexString = function (str) {
+	  return new PeerId(mh.fromHexString(str))
+	}
+
+	exports.createFromBytes = function (buf) {
+	  return new PeerId(buf)
+	}
+
+	exports.createFromB58String = function (str) {
+	  return new PeerId(mh.fromB58String(str))
+	}
+
+	// Public Key input will be a buffer
+	exports.createFromPubKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const pubKey = crypto.unmarshalPublicKey(buf)
+	  pubKey.hash((err, digest) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, null, pubKey))
+	  })
+	}
+
+	// Private key input will be a string
+	exports.createFromPrivKey = function (key, callback) {
+	  let buf = key
+	  if (typeof buf === 'string') {
+	    buf = new Buffer(key, 'base64')
+	  }
+
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  waterfall([
+	    (cb) => crypto.unmarshalPrivateKey(buf, cb),
+	    (privKey, cb) => privKey.public.hash((err, digest) => {
+	      cb(err, digest, privKey)
+	    })
+	  ], (err, digest, privKey) => {
+	    if (err) {
+	      return callback(err)
+	    }
+
+	    callback(null, new PeerId(digest, privKey))
+	  })
+	}
+
+	exports.createFromJSON = function (obj, callback) {
+	  if (typeof callback !== 'function') {
+	    throw new Error('callback is required')
+	  }
+
+	  const id = mh.fromB58String(obj.id)
+	  const rawPrivKey = obj.privKey && new Buffer(obj.privKey, 'base64')
+	  const rawPubKey = obj.pubKey && new Buffer(obj.pubKey, 'base64')
+	  const pub = rawPubKey && crypto.unmarshalPublicKey(rawPubKey)
+
+	  if (rawPrivKey) {
+	    waterfall([
+	      (cb) => crypto.unmarshalPrivateKey(rawPrivKey, cb),
+	      (priv, cb) => priv.public.hash((err, digest) => {
+	        cb(err, digest, priv)
+	      }),
+	      (privDigest, priv, cb) => {
+	        if (pub) {
+	          pub.hash((err, pubDigest) => {
+	            cb(err, privDigest, priv, pubDigest)
+	          })
+	        } else {
+	          cb(null, privDigest, priv)
+	        }
+	      }
+	    ], (err, privDigest, priv, pubDigest) => {
+	      if (err) {
+	        return callback(err)
+	      }
+
+	      if (pub && !privDigest.equals(pubDigest)) {
+	        return callback(new Error('Public and private key do not match'))
+	      }
+
+	      if (id && !privDigest.equals(id)) {
+	        return callback(new Error('Id and private key do not match'))
+	      }
+
+	      callback(null, new PeerId(id, priv, pub))
+	    })
+	  } else {
+	    callback(null, new PeerId(id, null, pub))
+	  }
+	}
+
+	function toB64Opt (val) {
+	  if (val) {
+	    return val.toString('base64')
+	  }
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 743 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var extend = __webpack_require__(465)
+	var codec = __webpack_require__(744)
+	var protocols = __webpack_require__(746)
+	var NotImplemented = new Error('Sorry, Not Implemented Yet.')
+	var varint = __webpack_require__(362)
+
+	exports = module.exports = Multiaddr
+
+	function Multiaddr (addr) {
+	  if (!(this instanceof Multiaddr)) {
+	    return new Multiaddr(addr)
+	  }
+
+	  // defaults
+	  if (!addr) {
+	    addr = ''
+	  }
+
+	  if (addr instanceof Buffer) {
+	    this.buffer = codec.fromBuffer(addr)
+	  } else if (typeof (addr) === 'string' || addr instanceof String) {
+	    this.buffer = codec.fromString(addr)
+	  } else if (addr.buffer && addr.protos && addr.protoCodes) { // Multiaddr
+	    this.buffer = codec.fromBuffer(addr.buffer) // validate + copy buffer
+	  } else {
+	    throw new Error('addr must be a string, Buffer, or another Multiaddr')
+	  }
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.toString = function toString () {
+	  return codec.bufferToString(this.buffer)
+	}
+
+	// get the multiaddr as a convinent options object to be dropped in net.createConnection
+	Multiaddr.prototype.toOptions = function toOptions () {
+	  var opts = {}
+	  var parsed = this.toString().split('/')
+	  opts.family = parsed[1] === 'ip4' ? 'ipv4' : 'ipv6'
+	  opts.host = parsed[2]
+	  opts.transport = parsed[3]
+	  opts.port = parsed[4]
+	  return opts
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.inspect = function inspect () {
+	  return '<Multiaddr ' +
+	  this.buffer.toString('hex') + ' - ' +
+	  codec.bufferToString(this.buffer) + '>'
+	}
+
+	// get the multiaddr protocols
+	Multiaddr.prototype.protos = function protos () {
+	  return map(this.protoCodes(), function (code) {
+	    return extend(protocols(code))
+	    // copy to prevent users from modifying the internal objs.
+	  })
+	}
+
+	// get the multiaddr protocol codes
+	Multiaddr.prototype.protoCodes = function protoCodes () {
+	  const codes = []
+	  const buf = this.buffer
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+	    const size = codec.sizeForAddr(p, buf.slice(i + n))
+
+	    i += (size + n)
+	    codes.push(code)
+	  }
+
+	  return codes
+	}
+
+	// get the multiaddr protocol string names
+	Multiaddr.prototype.protoNames = function protoNames () {
+	  return map(this.protos(), function (proto) {
+	    return proto.name
+	  })
+	}
+
+	// Returns a tuple of parts:
+	Multiaddr.prototype.tuples = function tuples () {
+	  return codec.bufferToTuples(this.buffer)
+	}
+
+	// Returns a tuple of string parts:
+	Multiaddr.prototype.stringTuples = function stringTuples () {
+	  var t = codec.bufferToTuples(this.buffer)
+	  return codec.tuplesToStringTuples(t)
+	}
+
+	Multiaddr.prototype.encapsulate = function encapsulate (addr) {
+	  addr = Multiaddr(addr)
+	  return Multiaddr(this.toString() + addr.toString())
+	}
+
+	Multiaddr.prototype.decapsulate = function decapsulate (addr) {
+	  addr = addr.toString()
+	  var s = this.toString()
+	  var i = s.lastIndexOf(addr)
+	  if (i < 0) {
+	    throw new Error('Address ' + this + ' does not contain subaddress: ' + addr)
+	  }
+	  return Multiaddr(s.slice(0, i))
+	}
+
+	Multiaddr.prototype.equals = function equals (addr) {
+	  return this.buffer.equals(addr.buffer)
+	}
+
+	// get a node friendly address object
+	Multiaddr.prototype.nodeAddress = function nodeAddress () {
+	  if (!this.isThinWaistAddress()) {
+	    throw new Error('Multiaddr must be "thin waist" address for nodeAddress.')
+	  }
+
+	  var codes = this.protoCodes()
+	  var parts = this.toString().split('/').slice(1)
+	  return {
+	    family: (codes[0] === 41) ? 'IPv6' : 'IPv4',
+	    address: parts[1], // ip addr
+	    port: parts[3] // tcp or udp port
+	  }
+	}
+
+	// from a node friendly address object
+	Multiaddr.fromNodeAddress = function fromNodeAddress (addr, transport) {
+	  if (!addr) throw new Error('requires node address object')
+	  if (!transport) throw new Error('requires transport protocol')
+	  var ip = (addr.family === 'IPv6') ? 'ip6' : 'ip4'
+	  return Multiaddr('/' + [ip, addr.address, transport, addr.port].join('/'))
+	}
+
+	// returns whether this address is a standard combination:
+	// /{IPv4, IPv6}/{TCP, UDP}
+	Multiaddr.prototype.isThinWaistAddress = function isThinWaistAddress (addr) {
+	  var protos = (addr || this).protos()
+
+	  if (protos.length !== 2) {
+	    return false
+	  }
+
+	  if (protos[0].code !== 4 && protos[0].code !== 41) {
+	    return false
+	  }
+	  if (protos[1].code !== 6 && protos[1].code !== 17) {
+	    return false
+	  }
+	  return true
+	}
+
+	// parses the "stupid string" format:
+	// <proto><IPv>://<IP Addr>[:<proto port>]
+	// udp4://1.2.3.4:5678
+	Multiaddr.prototype.fromStupidString = function fromStupidString (str) {
+	  throw NotImplemented
+	}
+
+	// patch this in
+	Multiaddr.protocols = protocols
+
+	Multiaddr.isMultiaddr = function isMultiaddr (addr) {
+	  if (addr.constructor && addr.constructor.name) {
+	    return addr.constructor.name === 'Multiaddr'
+	  }
+
+	  return Boolean(
+	    addr.fromStupidString &&
+	    addr.protos
+	  )
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 744 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var map = __webpack_require__(464)
+	var filter = __webpack_require__(467)
+	var convert = __webpack_require__(745)
+	var protocols = __webpack_require__(746)
+	var varint = __webpack_require__(362)
+
+	// export codec
+	module.exports = {
+	  stringToStringTuples: stringToStringTuples,
+	  stringTuplesToString: stringTuplesToString,
+
+	  tuplesToStringTuples: tuplesToStringTuples,
+	  stringTuplesToTuples: stringTuplesToTuples,
+
+	  bufferToTuples: bufferToTuples,
+	  tuplesToBuffer: tuplesToBuffer,
+
+	  bufferToString: bufferToString,
+	  stringToBuffer: stringToBuffer,
+
+	  fromString: fromString,
+	  fromBuffer: fromBuffer,
+	  validateBuffer: validateBuffer,
+	  isValidBuffer: isValidBuffer,
+	  cleanPath: cleanPath,
+
+	  ParseError: ParseError,
+	  protoFromTuple: protoFromTuple,
+
+	  sizeForAddr: sizeForAddr
+	}
+
+	// string -> [[str name, str addr]... ]
+	function stringToStringTuples (str) {
+	  var tuples = []
+	  var parts = str.split('/').slice(1) // skip first empty elem
+	  if (parts.length === 1 && parts[0] === '') {
+	    return []
+	  }
+
+	  for (var p = 0; p < parts.length; p++) {
+	    var part = parts[p]
+	    var proto = protocols(part)
+
+	    if (proto.size === 0) {
+	      tuples.push([part])
+	      continue
+	    }
+
+	    p++ // advance addr part
+	    if (p >= parts.length) {
+	      throw ParseError('invalid address: ' + str)
+	    }
+
+	    tuples.push([part, parts[p]])
+	  }
+
+	  return tuples
+	}
+
+	// [[str name, str addr]... ] -> string
+	function stringTuplesToString (tuples) {
+	  var parts = []
+	  map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    parts.push(proto.name)
+	    if (tup.length > 1) {
+	      parts.push(tup[1])
+	    }
+	  })
+
+	  return '/' + parts.join('/')
+	}
+
+	// [[str name, str addr]... ] -> [[int code, Buffer]... ]
+	function stringTuplesToTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    if (!Array.isArray(tup)) {
+	      tup = [tup]
+	    }
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toBuffer(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer]... ] -> [[str name, str addr]... ]
+	function tuplesToStringTuples (tuples) {
+	  return map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    if (tup.length > 1) {
+	      return [proto.code, convert.toString(proto.code, tup[1])]
+	    }
+	    return [proto.code]
+	  })
+	}
+
+	// [[int code, Buffer ]... ] -> Buffer
+	function tuplesToBuffer (tuples) {
+	  return fromBuffer(Buffer.concat(map(tuples, function (tup) {
+	    var proto = protoFromTuple(tup)
+	    var buf = new Buffer(varint.encode(proto.code))
+
+	    if (tup.length > 1) {
+	      buf = Buffer.concat([buf, tup[1]]) // add address buffer
+	    }
+
+	    return buf
+	  })))
+	}
+
+	function sizeForAddr (p, addr) {
+	  if (p.size > 0) {
+	    return p.size / 8
+	  } else if (p.size === 0) {
+	    return 0
+	  } else {
+	    const size = varint.decode(addr)
+	    return size + varint.decode.bytes
+	  }
+	}
+
+	// Buffer -> [[int code, Buffer ]... ]
+	function bufferToTuples (buf) {
+	  const tuples = []
+	  let i = 0
+	  while (i < buf.length) {
+	    const code = varint.decode(buf, i)
+	    const n = varint.decode.bytes
+
+	    const p = protocols(code)
+
+	    const size = sizeForAddr(p, buf.slice(i + n))
+
+	    if (size === 0) {
+	      tuples.push([code])
+	      i += n
+	      continue
+	    }
+
+	    const addr = buf.slice(i + n, i + n + size)
+
+	    i += (size + n)
+
+	    if (i > buf.length) { // did not end _exactly_ at buffer.length
+	      throw ParseError('Invalid address buffer: ' + buf.toString('hex'))
+	    }
+
+	    // ok, tuple seems good.
+	    tuples.push([code, addr])
+	  }
+
+	  return tuples
+	}
+
+	// Buffer -> String
+	function bufferToString (buf) {
+	  var a = bufferToTuples(buf)
+	  var b = tuplesToStringTuples(a)
+	  return stringTuplesToString(b)
+	}
+
+	// String -> Buffer
+	function stringToBuffer (str) {
+	  str = cleanPath(str)
+	  var a = stringToStringTuples(str)
+	  var b = stringTuplesToTuples(a)
+	  return tuplesToBuffer(b)
+	}
+
+	// String -> Buffer
+	function fromString (str) {
+	  return stringToBuffer(str)
+	}
+
+	// Buffer -> Buffer
+	function fromBuffer (buf) {
+	  var err = validateBuffer(buf)
+	  if (err) throw err
+	  return new Buffer(buf) // copy
+	}
+
+	function validateBuffer (buf) {
+	  try {
+	    bufferToTuples(buf) // try to parse. will throw if breaks
+	  } catch (err) {
+	    return err
+	  }
+	}
+
+	function isValidBuffer (buf) {
+	  return validateBuffer(buf) === undefined
+	}
+
+	function cleanPath (str) {
+	  return '/' + filter(str.trim().split('/')).join('/')
+	}
+
+	function ParseError (str) {
+	  return new Error('Error parsing address: ' + str)
+	}
+
+	function protoFromTuple (tup) {
+	  var proto = protocols(tup[0])
+	  return proto
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 745 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict'
+
+	var ip = __webpack_require__(469)
+	var protocols = __webpack_require__(746)
+	var bs58 = __webpack_require__(374)
+	var varint = __webpack_require__(362)
+
+	module.exports = Convert
+
+	// converts (serializes) addresses
+	function Convert (proto, a) {
+	  if (a instanceof Buffer) {
+	    return Convert.toString(proto, a)
+	  } else {
+	    return Convert.toBuffer(proto, a)
+	  }
+	}
+
+	Convert.toString = function convertToString (proto, buf) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toString(buf)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return buf2port(buf)
+
+	    case 421: // ipfs
+	      return buf2mh(buf)
+	    default:
+	      return buf.toString('hex') // no clue. convert to hex
+	  }
+	}
+
+	Convert.toBuffer = function convertToBuffer (proto, str) {
+	  proto = protocols(proto)
+	  switch (proto.code) {
+	    case 4: // ipv4
+	    case 41: // ipv6
+	      return ip.toBuffer(str)
+
+	    case 6: // tcp
+	    case 17: // udp
+	    case 33: // dccp
+	    case 132: // sctp
+	      return port2buf(parseInt(str, 10))
+
+	    case 421: // ipfs
+	      return mh2buf(str)
+	    default:
+	      return new Buffer(str, 'hex') // no clue. convert from hex
+	  }
+	}
+
+	function port2buf (port) {
+	  var buf = new Buffer(2)
+	  buf.writeUInt16BE(port, 0)
+	  return buf
+	}
+
+	function buf2port (buf) {
+	  return buf.readUInt16BE(0)
+	}
+
+	function mh2buf (hash) {
+	  // the address is a varint prefixed multihash string representation
+	  const mh = new Buffer(bs58.decode(hash))
+	  const size = new Buffer(varint.encode(mh.length))
+	  return Buffer.concat([size, mh])
+	}
+
+	function buf2mh (buf) {
+	  const size = varint.decode(buf)
+	  const address = buf.slice(varint.decode.bytes)
+
+	  if (address.length !== size) {
+	    throw new Error('inconsistent lengths')
+	  }
+
+	  return bs58.encode(address)
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181).Buffer))
+
+/***/ },
+/* 746 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+
+	var map = __webpack_require__(464)
+
+	module.exports = Protocols
+
+	function Protocols (proto) {
+	  if (typeof (proto) === 'number') {
+	    if (Protocols.codes[proto]) {
+	      return Protocols.codes[proto]
+	    }
+
+	    throw new Error('no protocol with code: ' + proto)
+	  } else if (typeof (proto) === 'string' || proto instanceof String) {
+	    if (Protocols.names[proto]) {
+	      return Protocols.names[proto]
+	    }
+
+	    throw new Error('no protocol with name: ' + proto)
+	  }
+
+	  throw new Error('invalid protocol id type: ' + proto)
+	}
+
+	Protocols.lengthPrefixedVarSize = -1
+
+	// replicating table here to:
+	// 1. avoid parsing the csv
+	// 2. ensuring errors in the csv don't screw up code.
+	// 3. changing a number has to happen in two places.
+
+	Protocols.table = [
+	  [4, 32, 'ip4'],
+	  [6, 16, 'tcp'],
+	  [17, 16, 'udp'],
+	  [33, 16, 'dccp'],
+	  [41, 128, 'ip6'],
+	  [132, 16, 'sctp'],
+	  // these require varint for the protocol code
+	  [302, 0, 'utp'],
+	  [421, Protocols.lengthPrefixedVarSize, 'ipfs'],
+	  [480, 0, 'http'],
+	  [443, 0, 'https'],
+	  [477, 0, 'ws'],
+	  [275, 0, 'libp2p-webrtc-star']
+	]
+
+	Protocols.names = {}
+	Protocols.codes = {}
+
+	// populate tables
+	map(Protocols.table, function (e) {
+	  var proto = p.apply(this, e)
+	  Protocols.codes[proto.code] = proto
+	  Protocols.names[proto.name] = proto
+	})
+
+	Protocols.object = p
+
+	function p (code, size, name) {
+	  return {code: code, size: size, name: name}
+	}
+
+
+/***/ },
+/* 747 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
 	module.exports = TorrentGraph;
 
-	var d3 = __webpack_require__(659);
-	var debug = __webpack_require__(245)('p2p-graph');
-	var debounce = __webpack_require__(660);
+	var d3 = __webpack_require__(748);
+	var debug = __webpack_require__(251)('p2p-graph');
+	var debounce = __webpack_require__(749);
 
 	var COLORS = {
 	  text: {
@@ -100329,12 +105673,12 @@ var Libp2pAutoGraph =
 	        return d3.hsl(120, 0.7, 0.725);
 	      }
 	      if (d.me) {
-	        return d3.hsl(210, 0.7, 0.725);
+	        return d3.hsl(32, 0.91, 0.55);
 	      }
-	      return d3.hsl(55, 0.7, 0.725);
+	      return d3.hsl(184, 0.52, 0.62);
 	    },
-	    hover: '#FAFAFA',
-	    dep: '#252929'
+	    hover: '#000',
+	    dep: '#000'
 	  }
 	};
 
@@ -100405,7 +105749,7 @@ var Libp2pAutoGraph =
 	      if (d.sending) {
 	        return d3.hsl(120, 0.7, 0.725);
 	      } else {
-	        return 'white';
+	        return d3.hsl(184, 0.52, 0.62);
 	      }
 	    }).style('stroke-width', 2);
 
@@ -100437,13 +105781,18 @@ var Libp2pAutoGraph =
 
 	    node.select('text').attr('font-size', function (d) {
 	      return d.me ? 16 * scale() : 12 * scale();
-	    }).attr('dx', 0).attr('dy', function (d) {
-	      return d.me ? -22 * scale() : -15 * scale();
+	    }).style('fill', function () {
+	      return d3.hsl(32, 0.91, 0.55);
+	    }).attr('dx', -11).attr('dy', function (d) {
+	      return -22 * scale();
+	      // return d.me ? -22 * scale() : -15 * scale()
 	    });
 
 	    node.exit().remove();
 
-	    force.linkDistance(100 * scale()).charge(-1000 * scale()).linkStrength(0.01).start();
+	    force.linkDistance(function (d) {
+	      return d.linkDistance;
+	    }).charge(-1000 * scale()).linkStrength(0.01).start();
 	  }
 
 	  function refresh(e) {
@@ -100535,7 +105884,13 @@ var Libp2pAutoGraph =
 	    if (getLink(sourceNode.index, targetNode.index)) {
 	      throw new Error('connect: cannot make duplicate connection');
 	    }
-	    model.links.push({ source: sourceNode.index, target: targetNode.index, sending: false });
+	    var linkDistance = Math.floor(Math.random() * 1000);
+	    model.links.push({
+	      source: sourceNode.index,
+	      target: targetNode.index,
+	      sending: false,
+	      linkDistance: linkDistance
+	    });
 	    update();
 	  }
 
@@ -100597,10 +105952,10 @@ var Libp2pAutoGraph =
 	  };
 	}
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/victor/projects/libp2p/libp2p-demo/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "p2p-graph.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/victor/projects/libp2p/peers-demo/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "p2p-graph.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 659 */
+/* 748 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -110159,7 +115514,7 @@ var Libp2pAutoGraph =
 	}();
 
 /***/ },
-/* 660 */
+/* 749 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -110167,7 +115522,7 @@ var Libp2pAutoGraph =
 	 * Module dependencies.
 	 */
 
-	var now = __webpack_require__(661);
+	var now = __webpack_require__(750);
 
 	/**
 	 * Returns a function, that, as long as it continues to be invoked, will not
@@ -110218,7 +115573,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 661 */
+/* 750 */
 /***/ function(module, exports) {
 
 	module.exports = Date.now || now
@@ -110229,16 +115584,170 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 662 */
+/* 751 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(setImmediate, process) {
+	var Stream = __webpack_require__(414)
+
+	module.exports = duplex
+
+
+	module.exports.source = function (source) {
+	  return duplex(null, source)
+	}
+
+	module.exports.sink = function (sink) {
+	  return duplex(sink, null)
+	}
+
+	var next = (
+	  'undefined' === typeof setImmediate
+	  ? process.nextTick
+	  : setImmediate
+	)
+
+	function duplex (reader, read) {
+	  if(reader && 'object' === typeof reader) {
+	    read = reader.source
+	    reader = reader.sink
+	  }
+
+	  var cbs = [], input = [], ended, needDrain
+	  var s = new Stream()
+	  s.writable = s.readable = true
+	  s.write = function (data) {
+	    if(cbs.length)
+	      cbs.shift()(null, data)
+	    else
+	      input.push(data)
+
+	    if (!cbs.length) {
+	      needDrain = true
+	    }
+	    return !!cbs.length
+	  }
+
+	  s.end = function () {
+	    if(read) {
+	      if (input.length)
+	        drain()
+	      else
+	        read(ended = true, cbs.length ? cbs.shift() : function () {})
+	    } else if(cbs.length) {
+	      cbs.shift()(true)
+	    }
+	  }
+
+	  s.source = function (end, cb) {
+	    if(input.length) {
+	      cb(null, input.shift())
+	      if(!input.length)
+	        s.emit('drain')
+	    }
+	    else {
+	      if(ended = ended || end)
+	        cb(ended)
+	      else
+	        cbs.push(cb)
+
+	      if (needDrain) {
+	        needDrain = false
+	        s.emit('drain')
+	      }
+	    }
+	  }
+
+	  var n
+	  if(reader) n = reader(s.source)
+	  if(n && !read) read = n
+
+	  var output = [], _cbs = []
+	  var _ended = false, waiting = false
+
+	  s.sink = function (_read) {
+	    read = _read
+	    next(drain)
+	  }
+
+	  if(read) {
+	    s.sink(read)
+
+	    var pipe = s.pipe.bind(s)
+	    s.pipe = function (dest, opts) {
+	      var res = pipe(dest, opts)
+
+	      if(s.paused) s.resume()
+
+	      return res
+	    }
+	  }
+
+	  function drain () {
+	    waiting = false
+	    if(!read) return
+	    while(output.length && !s.paused) {
+	      s.emit('data', output.shift())
+	    }
+	    if(s.paused) return
+	    if(_ended)
+	      return s.emit('end')
+
+	    read(null, function next (end, data) {
+	      if(s.paused) {
+	        if(end === true) _ended = end
+	        else if(end) s.emit('error', end)
+	        else output.push(data)
+	        waiting = true
+	      } else {
+	        if(end && (ended = end) !== true)
+	          s.emit('error', end)
+	        else if(ended = ended || end) s.emit('end')
+	        else {
+	          s.emit('data', data)
+	          read(null, next)
+	        }
+	      }
+	    })
+	  }
+
+	  s.pause = function () {
+	    s.paused = true
+	    return s
+	  }
+
+	  s.resume = function () {
+	    s.paused = false
+	    drain()
+	    return s
+	  }
+
+	  s.destroy = function () {
+	    if(!ended && read)
+	      read(ended = true, function () {})
+	    ended = true
+	    if(cbs.length)
+	      cbs.shift()(true)
+
+	    s.emit('close')
+	  }
+
+	  return s
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185).setImmediate, __webpack_require__(4)))
+
+/***/ },
+/* 752 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(663);
+	var content = __webpack_require__(753);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(665)(content, {});
+	var update = __webpack_require__(755)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -110255,21 +115764,21 @@ var Libp2pAutoGraph =
 	}
 
 /***/ },
-/* 663 */
+/* 753 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(664)();
+	exports = module.exports = __webpack_require__(754)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "html, body {\n  background-color: rgba(0,0,0,0.8);\n  font-family: Arial;\n}\n\n#title {\n  color: white;\n  position: absolute;\n  left: 10px;\n  top: 10px;\n  font-size: 28px;\n}\n#peers {\n  color: white;\n  position: absolute;\n  left: 10px;\n  top: 70px;\n  font-size: 13px;\n  opacity: 0.5;\n}\n\n#blue {\n  color: #63D0D3;\n}\n\n.text {\n  fill: white;\n}\n\n#you {\n  position: absolute;\n  top: 10px;\n  width: 500px;\n  left: 50%;\n  margin-left: -250px;\n  text-align: center;\n  color: rgba(240, 240, 240, 0.8);\n  word-break: break-all;\n}\n\n#graph {\n  position: absolute;\n  top: 0px; right: 0px; bottom: 0px; left: 0px;\n  height: 100%;\n}\n", ""]);
+	exports.push([module.id, "html, body {\n  background-image: linear-gradient(141deg,#dfd8d8 0,#f5f5f5 71%,#fff 100%);\n  font-family: Arial;\n}\n\n#title {\n  color: white;\n  position: absolute;\n  left: 10px;\n  top: 10px;\n  font-size: 28px;\n}\n#peers {\n  color: white;\n  position: absolute;\n  left: 10px;\n  top: 70px;\n  font-size: 13px;\n  opacity: 0.5;\n}\n\n#blue {\n  color: #63D0D3;\n}\n\n.text {\n  fill: white;\n}\n\n#you {\n  position: absolute;\n  top: 10px;\n  width: 500px;\n  left: 50%;\n  margin-left: -250px;\n  text-align: center;\n  color: rgba(240, 240, 240, 0.8);\n  word-break: break-all;\n}\n\n#graph {\n  position: absolute;\n  top: 0px; right: 0px; bottom: 0px; left: 0px;\n  height: 100%;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 664 */
+/* 754 */
 /***/ function(module, exports) {
 
 	/*
@@ -110325,7 +115834,7 @@ var Libp2pAutoGraph =
 
 
 /***/ },
-/* 665 */
+/* 755 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

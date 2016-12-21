@@ -263,3 +263,37 @@ footer {
 .implementation-table .subtitle {
 	font-size: 24px;
 }
+
+/* bundles */
+
+.bundles-section {
+	padding-top: 150px;
+}
+
+.bundles-section a {
+	color: #60D2D5;
+}
+
+.bundles-section a:hover {
+	color: black;
+}
+
+.bundles-description {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.bundle-icon, .bundle-title {
+	height: 64px;
+	line-height: 64px;
+}
+
+.bundle-icon {
+	float: left;
+	font-size: 64px;
+	margin-right: 20px;
+}
+
+.bundle-title {
+	font-size: 24px;
+}
