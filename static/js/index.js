@@ -142,7 +142,7 @@ $(function () {
   setInterval(function () {
     for (var n = 0; n < rowsCount; n++) {
       var $firstIcon = $('use[data-row=' + n + ']' + '[data-position=first]'),
-        var firstIconX = $firstIcon[0].x.animVal.value;
+          firstIconX = $firstIcon[0].x.animVal.value;
       if (!$firstIcon.length || firstIconX > (iconWidth * (-1))) continue
 
       var firstIconIndex = parseInt($firstIcon.attr('data-index')),
