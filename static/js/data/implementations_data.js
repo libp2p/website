@@ -108,11 +108,11 @@ var data = {
   'crypto-channels': {
     'libp2p-secio': {
       'Browser JS': {
-        status: 'Unstable',
+        status: 'Done',
         url: 'https://github.com/libp2p/js-libp2p-secio'
       },
       'Node.js': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/js-libp2p-secio'
       },
       'Go': {
@@ -124,7 +124,7 @@ var data = {
   'connection-upgrades': {
     'libp2p-conn': {
       'Browser JS': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/interface-connection'
       },
       'Node.js': {
@@ -154,7 +154,7 @@ var data = {
         url: 'https://github.com/libp2p/js-libp2p-dht'
       },
       'Go': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/go-libp2p-kad-dht'
       }
     }
@@ -190,7 +190,7 @@ var data = {
   'discovery': {
     'railing': {
       'Browser JS': {
-        status: 'Unstable',
+        status: 'Usable',
         url: 'https://github.com/libp2p/js-libp2p-railing'
       },
       'Node.js': {
@@ -198,7 +198,7 @@ var data = {
         url: 'https://github.com/libp2p/js-libp2p-railing'
       },
       'Go': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/??'
       }
     },
@@ -244,6 +244,16 @@ var data = {
     }
   },
   'generics': {
+    'libp2p-peer-id': {
+      'Browser JS': {
+        status: 'Done',
+        url: 'https://github.com/libp2p/js-peer-id'
+      },
+      'Node.js': {
+        status: 'Done',
+        url: 'https://github.com/libp2p/js-peer-id'
+      }
+    },
     'libp2p-peer-info': {
       'Browser JS': {
         status: 'Done',
@@ -258,16 +268,21 @@ var data = {
         url: 'https://github.com/libp2p/go-libp2p-peer'
       }
     },
-    'libp2p-peer-id': {
+    'libp2p-peer-book': {
       'Browser JS': {
         status: 'Done',
-        url: 'https://github.com/libp2p/js-peer-id'
+        url: 'https://github.com/libp2p/js-peer-book'
       },
       'Node.js': {
         status: 'Done',
-        url: 'https://github.com/libp2p/js-peer-id'
+        url: 'https://github.com/libp2p/js-peer-book'
+      },
+      'Go': {
+        status: 'Done',
+        url: 'https://github.com/libp2p/go-libp2p-peerstore'
       }
     },
+
     'libp2p-swarm': {
       'Browser JS': {
         status: 'Done',
@@ -300,15 +315,15 @@ var data = {
     },
     'libp2p-ping': {
       'Browser JS': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/js-libp2p-ping'
       },
       'Node.js': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/js-libp2p-ping'
       },
       'Go': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/??'
       }
     }
