@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>libp2p</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/bundles.css">
+</head>
+<body>
+
+<header>
+    <div class="wrap">
+        <a class="logo static" href="/">
+            <img width="60" height="72" src="/img/logo_small.png" alt="">
+            <b>lib</b>p2p</a>
+        <a href='#' class='bars'><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <a href='#' class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <nav>
+            <ul>
+                <li><a href="/implementations">Implementations</a></li>
+                <li><a href="/bundles" class="active">Bundles</a></li>
+                <li><a href="/media">Media</a></li>
+                <li><a href="https://github.com/libp2p" target="_blank">Github</a></li>
+                <li><a href="https://github.com/libp2p/specs" target="_blank">Specifications</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <article class="center bundles">
+        <header>
+            <h2>Bundles.</h2>
+        </header>
+        <div class="wrap">
+            <p> libp2p provides ready-to-use bundles for different use cases and different languages. You can use these
+                to get all the functionality in one package, instead of including and bundling the different modules
+                yourself. See it as a quickstart.</p>
+            <div class="links">
+                <div class="active-link">
+                    <div class="copy-block">
+                        <div class="img">
+                            <img class="browser" width="101" height="100" src="/img/logo_1.png" alt="Browser JS">
+                        </div>
+                        <span>Browser JS</span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <a href="#browser" class="link scroll">
+                            <div class="img">
+                                <img class="browser" width="101" height="100" src="/img/logo_1.png" alt="Browser JS">
+                            </div>
+                            <span>Browser JS</span>
+                        </a>
+                        <a href="#node" class="link scroll">
+                            <div class="img">
+                                <img class="node" width="161" height="100" src="/img/logo_2.png" alt="Node JS">
+                            </div>
+                            <span>Node JS</span>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="#golang" class="link scroll">
+                            <div class="img">
+                                <img class="golang" width="74" height="100" src="/img/logo_3.png" alt="Golang">
+                            </div>
+                            <span>Golang</span>
+                        </a>
+                        <a href="#" class="link inactive">
+                            <div class="img">
+                                <img class="haskell" width="124" height="88" src="/img/logo_4.png" alt="Haskell">
+                            </div>
+                            <span>Haskell</span>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="#" class="link inactive">
+                            <div class="img">
+                                <img class="java" width="76" height="140" src="/img/logo_5.png" alt="Java">
+                            </div>
+                            <span>Java</span>
+                        </a>
+                        <a href="#" class="link inactive">
+                            <div class="img">
+                                <img class="python" width="150" height="150" src="/img/logo_6_.png" alt="Python">
+                            </div>
+                            <span>Python</span>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="#" class="link inactive">
+                            <div class="img">
+                                <img class="rust" width="118" height="118" src="/img/logo_7.png" alt="Rust">
+                            </div>
+                            <span>Rust</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="triangle white"></div>
+    </article>
+
+    <article class="center bundles-info">
+        <div class="wrap">
+            <section id="browser">
+                <aside class="left">
+                    <div class="active-link"><span>Transport</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <nav>
+                        <a class="active" href="#" data-info="transport">Transport</a>
+                        <a href="#" data-info="stream-muxer">Stream Muxer</a>
+                        <a href="#" data-info="crypto-channels">Crypto Channels</a>
+                        <a href="#" data-info="peer-routing">Peer Routing</a>
+                        <a href="#" data-info="record-stores">Record Stores</a>
+                        <a href="#" data-info="discovery">Discovery</a>
+                    </nav>
+                </aside>
+                <div class="content">
+                    <div class="title">
+                        <div class="wrapper">
+                            <div class="img">
+                                <img width="101" height="100" src="/img/logo_1.png" alt="">
+                            </div>
+                            <a class="btn-interface">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <ul class="transport calc-col show">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-tcp</span></li>
+                            <li><i class="icon-hexagon green"></i><span>libp2p-websockets</span></li>
+                            <li><i class="icon-hexagon green"></i><span>libp2p-webrtc-star</span></li>
+                        </ul>
+                        <ul class="stream-muxer calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-multiplex</span></li>
+                            <li><i class="icon-hexagon green"></i><span>libp2p-spdy</span></li>
+                        </ul>
+                        <ul class="crypto-channels calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-secio</span></li>
+                        </ul>
+                        <ul class="discovery calc-col">
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-mdns</span></li>
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-webrtc-star</span></li>
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-railing</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="node">
+                <aside class="left">
+                    <div class="active-link"><span>Transport</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <nav>
+                        <a class="active" href="#" data-info="transport">Transport</a>
+                        <a href="#" data-info="stream-muxer">Stream Muxer</a>
+                        <a href="#" data-info="crypto-channels">Crypto Channels</a>
+                        <a href="#" data-info="peer-routing">Peer Routing</a>
+                        <a href="#" data-info="record-stores">Record Stores</a>
+                        <a href="#" data-info="discovery">Discovery</a>
+                    </nav>
+                </aside>
+                <div class="content">
+                    <div class="title">
+                        <div class="wrapper">
+                            <div class="img"><img width="161" height="100" src="/img/logo_2.png" alt=""></div>
+                            <a class="btn-interface">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <ul class="transport calc-col show">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-websockets</span></li>
+                            <li><i class="icon-hexagon green"></i><span>libp2p-webrtc-star</span></li>
+                        </ul>
+                        <ul class="stream-muxer calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-multiplex</span></li>
+                            <li><i class="icon-hexagon green"></i><span>libp2p-spdy</span></li>
+                        </ul>
+                        <ul class="crypto-channels calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-secio</span></li>
+                        </ul>
+                        <ul class="discovery calc-col">
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-mdns</span></li>
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-webrtc-star</span></li>
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-railing</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="golang">
+                <aside class="left">
+                    <div class="active-link"><span>Transport</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <nav>
+                        <a class="active" href="#" data-info="transport">Transport</a>
+                        <a href="#" data-info="stream-muxer">Stream Muxer</a>
+                        <a href="#" data-info="crypto-channels">Crypto Channels</a>
+                        <a href="#" data-info="peer-routing">Peer Routing</a>
+                        <a href="#" data-info="record-stores">Record Stores</a>
+                        <a href="#" data-info="nat-travesal">NAT Travesal</a>
+                        <a href="#" data-info="discovery">Discovery</a>
+                    </nav>
+                </aside>
+                <div class="content">
+                    <div class="title">
+                        <div class="wrapper">
+                            <div class="img"><img width="74" height="100" src="/img/logo_3.png" alt=""></div>
+                            <a class="btn-interface">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <ul class="transport calc-col show">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-tcp</span></li>
+                            <li><i class="icon-hexagon green"></i><span>libp2p-websockets</span></li>
+                        </ul>
+                        <ul class="stream-muxer calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-yamux</span></li>
+                            <li><i class="icon-hexagon green"></i><span>libp2p-multiplex</span></li>
+                        </ul>
+                        <ul class="peer-routing calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-kad-dht</span></li>
+                        </ul>
+                        <ul class="record-stores calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-kad-dht</span></li>
+                        </ul>
+                        <ul class="nat-traversal calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-nat</span></li>
+                        </ul>
+                        <ul class="crypto-channels calc-col">
+                            <li><i class="icon-hexagon green"></i><span>libp2p-secio</span></li>
+                        </ul>
+                        <ul class="discovery calc-col">
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-mdns</span></li>
+                            <li><i class="icon-hexagon yellow"></i><span>libp2p-railing</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="coming-soon">
+                <div class="card">
+                    <a href="#" class="rectangle index1 coming-soon">
+                        <div class="img">
+                            <img width="124" height="88" src="/img/logo_4.png" alt="">
+                        </div>
+                        <div class="text">In progress...</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" class="rectangle index2 coming-soon">
+                        <div class="img">
+                            <img width="76" height="140" src="/img/logo_java.png" alt="">
+                        </div>
+                        <div class="text">In progress...</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" class="rectangle index3 coming-soon">
+                        <div class="img">
+                            <img width="204" height="60" src="/img/logo_6.png" alt="">
+                        </div>
+                        <div class="text">In progress...</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" class="rectangle index4 coming-soon">
+                        <div class="img">
+                            <img width="118" height="118" src="/img/logo_7.png" alt="">
+                        </div>
+                        <div class="text">In progress...</div>
+                    </a>
+                </div>
+                <div class="card empty">
+                    <div class="rectangle empty">
+                        <img width="82" height="60" src="/img/img4.png" alt="">
+                    </div>
+                </div>
+                <div class="card empty">
+                    <div class="rectangle empty">
+                        <img width="43" height="47" src="/img/img5.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <div class="triangle grey"></div>
+    </article>
+
+</main>
+
+<footer>
+    <div class="wrap">
+        <p>
+        <div class="title">libp2p was started and is sponsored by</div>
+        </p>
+        <p><a href="http://protocol.ai">
+            <img src="../img/protocol-labs-logo.png" height="64px">
+        </a></p>
+        <div class="copyright">&copy; Protocol Labs | Except as noted, content licensed CC-BY 3.0</div>
+        <img class="decoration img8" width="63" height="75" src="/img/img8.png" alt="">
+    </div>
+</footer>
+
+<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/bundles.js"></script>
+
+</body>
+</html>

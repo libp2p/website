@@ -510,18 +510,16 @@ article.implementations-info .wrap section .table .info {
 article.implementations-info .wrap section .table .info .table-wrapper {
   overflow-x: auto;
   overflow-y: visible;
-  margin-left: 127px;
+  margin-left: 240px;
 }
 @media (max-width: 940px) {
   article.implementations-info .wrap section .table .info .table-wrapper {
-    margin-left: 57px;
+    margin-left: 170px;
   }
 }
 article.implementations-info .wrap section .table .info table {
   font-size: 16px;
   border-collapse: collapse;
-  width: 936px;
-  margin-left: -130px;
 }
 article.implementations-info .wrap section .table .info table *:hover {
   -webkit-transition: none;
