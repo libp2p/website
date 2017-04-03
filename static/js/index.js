@@ -14,7 +14,7 @@ $(function () {
 
   var rowWidth = 0
 
-  $.get('http://contributors.cloud.ipfs.team/contributors?org=all', function (items) {
+  $.get('https://contributors.cloud.ipfs.team/contributors?org=all', function (items) {
     iconCount = items.length
     countInRow = Math.ceil(items.length / rowsCount)
     rowWidth = countInRow * (iconWidth + 20)
