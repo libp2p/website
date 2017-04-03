@@ -241,6 +241,20 @@ var data = {
         status: 'Done',
         url: 'https://github.com/libp2p/go-libp2p-crypto'
       }
+    },
+    'libp2p-ping': {
+      'Browser JS': {
+        status: 'Done',
+        url: 'https://github.com/libp2p/js-libp2p-ping'
+      },
+      'Node.js': {
+        status: 'Done',
+        url: 'https://github.com/libp2p/js-libp2p-ping'
+      },
+      'Go': {
+        status: 'Done',
+        url: 'https://github.com/libp2p/??'
+      }
     }
   },
   'generics': {
@@ -282,7 +296,6 @@ var data = {
         url: 'https://github.com/libp2p/go-libp2p-peerstore'
       }
     },
-
     'libp2p-swarm': {
       'Browser JS': {
         status: 'Done',
@@ -311,20 +324,6 @@ var data = {
       'Go': {
         status: 'Usable',
         url: 'https://github.com/libp2p/go-floodsub'
-      }
-    },
-    'libp2p-ping': {
-      'Browser JS': {
-        status: 'Done',
-        url: 'https://github.com/libp2p/js-libp2p-ping'
-      },
-      'Node.js': {
-        status: 'Done',
-        url: 'https://github.com/libp2p/js-libp2p-ping'
-      },
-      'Go': {
-        status: 'Done',
-        url: 'https://github.com/libp2p/??'
       }
     }
   }
