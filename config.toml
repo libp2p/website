@@ -1,0 +1,7 @@
+title = "libp2p"
+author = "Protocol Labs"
+languageCode = "en-us"
+copyright = "libp2p - All rights reserved."
+canonifyurls = true
+relativeURLs = true
+baseURL = ""
