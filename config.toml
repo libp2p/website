@@ -1,0 +1,5 @@
+languageCode = "en-us"
+title = "libp2p"
+baseURL = "/"
+canonifyurls = true
+relativeURLs = true
