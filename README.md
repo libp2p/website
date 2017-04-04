@@ -1,8 +1,8 @@
 # [libp2p-website](libp2p.io)
 
-## Implementations table
+## Implementations & Bundles
 
-The implementations table can be found at `/static/js/data`
+JSON arrays to update implementation & bundle status can be found in `/static/js/data`
 
 ## Development
 
