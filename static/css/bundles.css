@@ -245,9 +245,6 @@ article.bundles-info .wrap section aside nav a {
     line-height: 35px;
   }
 }
-article.bundles-info .wrap section aside nav a:last-of-type {
-  border-bottom: none;
-}
 article.bundles-info .wrap section aside nav a.active,
 article.bundles-info .wrap section aside nav a:hover {
   background: #E9EEF5;
@@ -270,7 +267,7 @@ article.bundles-info .wrap section .content .title {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px 1px #DFE5EE;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 1;
@@ -304,7 +301,7 @@ article.bundles-info .wrap section .content .info {
   border-top: none;
   border-bottom-right-radius: 5px;
   box-shadow: 0 0 10px 1px #DFE5EE;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
 }
@@ -321,6 +318,9 @@ article.bundles-info .wrap section .content .info ul {
 article.bundles-info .wrap section .content .info ul.show {
   display: flex;
   overflow-x: auto;
+}
+article.bundles-info .wrap section .content .info ul a {
+  text-decoration: none;
 }
 article.bundles-info .wrap section .content .info ul li {
   list-style: none;

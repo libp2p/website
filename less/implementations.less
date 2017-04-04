@@ -540,18 +540,18 @@ article.implementations-info {
           .table-wrapper {
             overflow-x: auto;
             overflow-y: visible;
-            margin-left: 127px;
+            margin-left: 240px;
 
             @media (max-width: 940px) {
-              margin-left: 57px;
+              margin-left: 170px;
             }
           }
 
           table {
             font-size: 16px;
             border-collapse: collapse;
-            width: 936px;
-            margin-left: -130px;
+            //width: 936px;
+            //margin-left: 240px;
 
             *:hover {
               -webkit-transition: none;
@@ -606,7 +606,7 @@ article.implementations-info {
                 line-height: 0;
 
                 &:last-of-type {
-                  border: none;
+                  //border: none;
                 }
 
                 a {
@@ -628,7 +628,12 @@ article.implementations-info {
                   border-bottom: 1px solid #DFE5EE;
                   border-right-color: transparent;
                   cursor: pointer;
+
+                  &:last-child {
+                    border-right-color: #DFE5EE;
+                  }
                 }
+
               }
 
               &:first-of-type {
@@ -642,7 +647,7 @@ article.implementations-info {
                   border-left: 1px solid transparent;
 
                   &:last-of-type {
-                    border: none;
+                    //border: none;
                   }
                 }
               }

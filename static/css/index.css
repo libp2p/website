@@ -563,9 +563,6 @@ article.community .wrap h6 {
   font-family: Roboto-Light, SansSerif;
   color: #555C68;
 }
-article.community .wrap .buttons a {
-  text-decoration: none;
-}
 article.community .wrap .buttons {
   width: 100%;
   max-width: 650px;
@@ -593,7 +590,6 @@ article.community .persons .svg-wrapper {
   overflow-x: auto;
   height: 250px;
   overflow-y: hidden;
-  cursor: e-resize;
 }
 article.community .persons .svg-wrapper use:hover {
   cursor: pointer;

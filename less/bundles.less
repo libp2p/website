@@ -237,7 +237,7 @@ article.bundles-info {
             }
 
             &:last-of-type {
-              border-bottom: none;
+              //border-bottom: none;
             }
 
             &.active, &:hover {
@@ -263,7 +263,7 @@ article.bundles-info {
           justify-content: center;
           align-items: center;
           box-shadow: 0 0 10px 1px #DFE5EE;
-          position: absolute;
+          position: relative;
           top: 0;
           left: 0;
           z-index: 1;
@@ -300,7 +300,7 @@ article.bundles-info {
           border-top: none;
           border-bottom-right-radius: 5px;
           box-shadow: 0 0 10px 1px #DFE5EE;
-          position: absolute;
+          position: relative;
           bottom: 0;
           left: 0;
           ul {
@@ -316,6 +316,11 @@ article.bundles-info {
               display: flex;
               overflow-x: auto;
             }
+
+            a {
+              text-decoration: none;
+            }
+
             li {
               list-style: none;
               margin-top: 27px;
