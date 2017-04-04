@@ -1,6 +1,98 @@
 $(function () {
     $('svg.contributors')[0].pauseAnimations();
 
+    var bundles = data.Bundles,
+        bundlesCount = 0;
+    createBundles();
+    createCommingSoon();
+    createEmpty();
+
+    function createEmpty() {
+        var template = $('<div class="card empty">' +
+            '<div class="rectangle empty">' +
+            '<img>' +
+            '</div>' +
+            '</div>');
+
+        var $wrap = $('.wrap', 'article.implementations-in')
+        for (var n = bundlesCount; n < 9; n++) {
+            var tmp = template.clone();
+            tmp.find('img').attr('src', (n % 2) === 1 ? '/img/img4.png' : '/img/img5.png');
+            $wrap.append(tmp);
+        }
+    }
+
+    function createCommingSoon() {
+        var template = $('<div class="card">' +
+            '<a class="rectangle coming-soon">' +
+            '<img>' +
+            '<div>Coming soon...</div>' +
+            '</a>' +
+            '</div>'
+        );
+
+        var $wrap = $('.wrap', 'article.implementations-in'),
+            index = 0;
+        $.each(bundles, function (key, values) {
+            var tmp = template.clone();
+            if (values['status'] !== 'live' && bundlesCount < 9) {
+                tmp.find('a').addClass('index' + (index + 1));
+                switch (key.toLowerCase()) {
+                    case 'java':
+                        tmp.find('img').attr('src', '../img/logo_5.png');
+                        break;
+                    case 'python':
+                        tmp.find('img').attr('src', '../img/logo_6.png');
+                        break;
+                    default:
+                        tmp.find('img').attr('src', values['image']);
+                }
+
+                $wrap.append(tmp);
+                index++;
+
+                bundlesCount++;
+            }
+        });
+    }
+
+    function createBundles() {
+        var template = $('<div class="card">' +
+            '<a class="rectangle">' +
+            '<div class="img-wrap">' +
+            '<img>' +
+            '</div>' +
+            '</a>' +
+            '</div>'
+        );
+
+        var $wrap = $('.wrap', 'article.implementations-in');
+
+        $.each(bundles, function (key, values) {
+            var tmp = template.clone();
+            if (values['status'] === 'live' && bundlesCount < 9) {
+                tmp.find('a').attr('href', '/bundles#' + key.replace(' ', '-').toLowerCase());
+                switch (key.toLowerCase()) {
+                    case 'java':
+                        tmp.find('img').attr('src', '../img/logo_5.png');
+                        break;
+                    case 'python':
+                        tmp.find('img').attr('src', '../img/logo_6.png');
+                        break;
+                    default:
+                        tmp.find('img').attr('src', values['image']);
+                }
+
+                tmp.find('img').attr('alt', key);
+                tmp.find('img').attr('title', key);
+                $wrap.append(tmp);
+
+                bundlesCount++;
+            }
+        });
+    }
+
+
     var $shapes = $('#shapes'),
         $shapesDefs = $shapes.find('defs'),
         $contributors = $('.contributors', '.persons'),
@@ -151,7 +243,7 @@ $(function () {
     setInterval(function () {
         for (var n = 0; n < rowsCount; n++) {
             var $firstIcon = $('use[data-row=' + n + ']' + '[data-position=first]'),
-                firstIconX = $firstIcon[0].x.animVal.value;
+                firstIconX = (typeof $firstIcon[0] === 'undefined') ? 0 : $firstIcon[0].x.animVal.value;
             if (!$firstIcon.length || firstIconX > (iconWidth * (-1))) continue;
 
             var firstIconIndex = parseInt($firstIcon.attr('data-index')),

@@ -319,6 +319,9 @@ article.bundles-info .wrap section .content .info ul.show {
   display: flex;
   overflow-x: auto;
 }
+article.bundles-info .wrap section .content .info ul a {
+  text-decoration: none;
+}
 article.bundles-info .wrap section .content .info ul li {
   list-style: none;
   margin-top: 27px;

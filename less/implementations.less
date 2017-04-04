@@ -606,7 +606,7 @@ article.implementations-info {
                 line-height: 0;
 
                 &:last-of-type {
-                  border: none;
+                  //border: none;
                 }
 
                 a {
@@ -628,7 +628,12 @@ article.implementations-info {
                   border-bottom: 1px solid #DFE5EE;
                   border-right-color: transparent;
                   cursor: pointer;
+
+                  &:last-child {
+                    border-right-color: #DFE5EE;
+                  }
                 }
+
               }
 
               &:first-of-type {
@@ -642,7 +647,7 @@ article.implementations-info {
                   border-left: 1px solid transparent;
 
                   &:last-of-type {
-                    border: none;
+                    //border: none;
                   }
                 }
               }

@@ -156,7 +156,7 @@ $(function () {
 
         var minHeight = 0, maxHeight = 0, opacity = 0.0;
 
-        if (scrollTop >= $transports.offset().top - headerHeight - sectionMarginTop &&
+        if (scrollTop >= 235 &&
             scrollTop <= $transports.offset().top - headerHeight - sectionMarginTop + 140) {
             maxHeight = $transports.offset().top - headerHeight - sectionMarginTop + 140;
             opacity = maxHeight != scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0;
