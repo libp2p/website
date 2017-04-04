@@ -190,7 +190,7 @@ var data = {
   'discovery': {
     'railing': {
       'Browser JS': {
-        status: 'Unsable',
+        status: 'Usable',
         url: 'https://github.com/libp2p/js-libp2p-railing'
       },
       'Node.js': {
