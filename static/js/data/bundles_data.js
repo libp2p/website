@@ -9,15 +9,15 @@ var data = {
                     'modules': {
                         'libp2p-tcp': {
                             'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p'
+                            'url': 'https://github.com/libp2p/js-libp2p-tcp'
                         },
                         'libp2p-websockets': {
                             'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p'
+                            'url': 'https://github.com/libp2p/js-libp2p-websockets'
                         },
                         'libp2p-webrtc-star': {
                             'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p'
+                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
                         }
                     }
                 },
@@ -25,11 +25,11 @@ var data = {
                     'modules': {
                         'libp2p-multiplex': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-multiplex'
                         },
                         'libp2p-spdy': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-spdy'
                         }
                     }
                 },
@@ -37,7 +37,7 @@ var data = {
                     'modules': {
                         'libp2p-secio': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-secio'
                         }
                     }
                 },
@@ -51,15 +51,15 @@ var data = {
                     'modules': {
                         'libp2p-mdns': {
                             'status': 'unstable',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-mdns'
                         },
                         'libp2p-webrtc-star': {
-                            'status': 'unstable',
-                            'url': ''
+                            'status': 'done',
+                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
                         },
                         'libp2p-railing': {
                             'status': 'unstable',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-railing'
                         }
                     }
                 }
@@ -68,17 +68,17 @@ var data = {
         'Node JS': {
             'status': 'live',
             'image': '../img/logo_2.png',
-            'github': 'https://github.com/libp2p/',
+            'github': 'https://github.com/libp2p/js-libp2p',
             'categories': {
                 'Transport': {
                     'modules': {
                         'libp2p-websockets': {
                             'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p'
+                            'url': 'https://github.com/libp2p/js-libp2p-websockets'
                         },
                         'libp2p-webrtc-star': {
                             'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p'
+                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
                         }
                     }
                 },
@@ -86,11 +86,11 @@ var data = {
                     'modules': {
                         'libp2p-multiplex': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-multiplex'
                         },
                         'libp2p-spdy': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-spdy'
                         }
                     }
                 },
@@ -98,7 +98,7 @@ var data = {
                     'modules': {
                         'libp2p-secio': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-secio'
                         }
                     }
                 },
@@ -111,16 +111,16 @@ var data = {
                 "Discovery": {
                     'modules': {
                         'libp2p-mdns': {
-                            'status': 'unstable',
-                            'url': ''
+                            'status': 'done',
+                            'url': 'https://github.com/libp2p/js-libp2p-mdns'
                         },
                         'libp2p-webrtc-star': {
-                            'status': 'unstable',
-                            'url': ''
+                            'status': 'done',
+                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
                         },
                         'libp2p-railing': {
                             'status': 'unstable',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/js-libp2p-railing'
                         }
                     }
                 }
@@ -147,7 +147,7 @@ var data = {
                     'modules': {
                         'libp2p-yamux': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/hashicorp/yamux'
                         },
                         'libp2p-multiplex': {
                             'status': 'Done',
@@ -159,7 +159,7 @@ var data = {
                     'modules': {
                         'libp2p-secio': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/go-libp2p-secio'
                         }
                     }
                 },
@@ -167,7 +167,7 @@ var data = {
                     'modules': {
                         'libp2p-kad-dht': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/go-libp2p-kad-dht'
                         }
                     }
                 },
@@ -175,7 +175,7 @@ var data = {
                     'modules': {
                         'libp2p-kad-dht': {
                             'status': 'Done',
-                            'url': ''
+                            'url': 'https://github.com/libp2p/go-libp2p-kad-dht'
                         }
                     }
                 },
@@ -185,8 +185,8 @@ var data = {
                 "Discovery": {
                     'modules': {
                         'libp2p-mdns': {
-                            'status': 'unstable',
-                            'url': ''
+                            'status': 'done',
+                            'url': 'https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go'
                         },
                         'libp2p-railing': {
                             'status': 'unstable',
@@ -220,4 +220,3 @@ var data = {
         }
     }
 };
-
