@@ -289,14 +289,6 @@ main > .img .cubes-wrapper img.cubes.utils {
 main > .img .cubes-wrapper img.cubes.utils.show {
   opacity: 1;
 }
-main > .img .cubes-wrapper img.cubes.generics {
-  width: 63px;
-  top: 75px;
-  left: 1px;
-}
-main > .img .cubes-wrapper img.cubes.generics.show {
-  opacity: 1;
-}
 main > .img .cubes-wrapper img.cubes.others {
   width: 66px;
   top: 87px;
@@ -429,18 +421,6 @@ article.implementations-info .wrap section#utils .table {
 @media (max-width: 940px) {
   article.implementations-info .wrap section#utils .table {
     height: 266px;
-  }
-}
-article.implementations-info .wrap section#generics .img img.cubes {
-  top: 10px;
-  left: 60px;
-}
-article.implementations-info .wrap section#generics .table {
-  height: 462px;
-}
-@media (max-width: 940px) {
-  article.implementations-info .wrap section#generics .table {
-    height: 404px;
   }
 }
 article.implementations-info .wrap section#others .img img.cubes {

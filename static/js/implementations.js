@@ -142,8 +142,7 @@ $(function () {
             $recordStores = $('#record-stores'),
             $natTraversal = $('#nat-traversal'),
             $discovery = $('#discovery'),
-            $utils = $('#utils'),
-            $generics = $('#generics');
+            $utils = $('#utils');
 
         var sectionMarginTop = parseInt($transports.css('margin-top'));
         var headerHeight = $header.outerHeight();
@@ -227,14 +226,6 @@ $(function () {
             $cube.find('.utils').css('opacity', opacity)
         } else {
             $cube.find('.utils').css('opacity', 0)
-        }
-        if (scrollTop >= $generics.offset().top - headerHeight - sectionMarginTop - 60 &&
-            scrollTop <= $generics.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
-            maxHeight = $generics.offset().top - headerHeight - sectionMarginTop - 60 + 200;
-            opacity = maxHeight != scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0;
-            $cube.find('.generics').css('opacity', opacity)
-        } else {
-            $cube.find('.generics').css('opacity', 0)
         }
         if (scrollTop >= $other.offset().top - headerHeight - sectionMarginTop - 60 &&
             scrollTop <= $other.offset().top - headerHeight - sectionMarginTop - 60 + 200) {

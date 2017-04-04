@@ -255,9 +255,7 @@ var data = {
         status: 'Done',
         url: 'https://github.com/libp2p/??'
       }
-    }
-  },
-  'generics': {
+    },
     'libp2p-peer-id': {
       'Browser JS': {
         status: 'Done',
