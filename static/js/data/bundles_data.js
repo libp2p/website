@@ -3,7 +3,74 @@ var data = {
         'Browser JS': {
             'status': 'live',
             'image': '../img/logo_1.png',
-            'github': 'https://github.com/libp2p/js-libp2p',
+            'github': 'https://github.com/ipfs/js-libp2p-ipfs-browser',
+            'categories': {
+                'Transport': {
+                    'modules': {
+                        'libp2p-websockets': {
+                            'status': 'Done',
+                            'url': 'https://github.com/libp2p/js-libp2p-websockets'
+                        },
+                        'libp2p-webrtc-star': {
+                            'status': 'Done',
+                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
+                        }
+                    }
+                },
+                "Stream Muxer": {
+                    'modules': {
+                        'libp2p-multiplex': {
+                            'status': 'Done',
+                            'url': 'https://github.com/libp2p/js-libp2p-multiplex'
+                        },
+                        'libp2p-spdy': {
+                            'status': 'Done',
+                            'url': 'https://github.com/libp2p/js-libp2p-spdy'
+                        }
+                    }
+                },
+                "Crypto Channels": {
+                    'modules': {
+                        'libp2p-secio': {
+                            'status': 'Done',
+                            'url': 'https://github.com/libp2p/js-libp2p-secio'
+                        }
+                    }
+                },
+                "Peer Routing": {
+                    'modules': {
+                      'libp2p-kad-dht': {
+                          'status': 'unstable',
+                          'url': 'https://github.com/libp2p/js-libp2p-kad-dht'
+                      }
+                    }
+                },
+                "Record Stores": {
+                    'modules': {
+                      'record': {
+                          'status': 'usable',
+                          'url': 'https://github.com/libp2p/js-libp2p-record'
+                      }
+                    }
+                },
+                "Discovery": {
+                    'modules': {
+                        'libp2p-webrtc-star': {
+                            'status': 'done',
+                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
+                        },
+                        'libp2p-railing': {
+                            'status': 'done',
+                            'url': 'https://github.com/libp2p/js-libp2p-railing'
+                        }
+                    }
+                }
+            }
+        },
+        'Node JS': {
+            'status': 'live',
+            'image': '../img/logo_2.png',
+            'github': 'https://github.com/ipfs/js-libp2p-ipfs-nodejs',
             'categories': {
                 'Transport': {
                     'modules': {
@@ -42,71 +109,20 @@ var data = {
                     }
                 },
                 "Peer Routing": {
-                    'modules': {}
+                    'modules': {
+                      'libp2p-kad-dht': {
+                          'status': 'unstable',
+                          'url': 'https://github.com/libp2p/js-libp2p-kad-dht'
+                      }
+                    }
                 },
                 "Record Stores": {
-                    'modules': {}
-                },
-                "Discovery": {
                     'modules': {
-                        'libp2p-mdns': {
-                            'status': 'unstable',
-                            'url': 'https://github.com/libp2p/js-libp2p-mdns'
-                        },
-                        'libp2p-webrtc-star': {
-                            'status': 'done',
-                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
-                        },
-                        'libp2p-railing': {
-                            'status': 'unstable',
-                            'url': 'https://github.com/libp2p/js-libp2p-railing'
-                        }
+                      'record': {
+                          'status': 'usable',
+                          'url': 'https://github.com/libp2p/js-libp2p-record'
+                      }
                     }
-                }
-            }
-        },
-        'Node JS': {
-            'status': 'live',
-            'image': '../img/logo_2.png',
-            'github': 'https://github.com/libp2p/js-libp2p',
-            'categories': {
-                'Transport': {
-                    'modules': {
-                        'libp2p-websockets': {
-                            'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p-websockets'
-                        },
-                        'libp2p-webrtc-star': {
-                            'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
-                        }
-                    }
-                },
-                "Stream Muxer": {
-                    'modules': {
-                        'libp2p-multiplex': {
-                            'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p-multiplex'
-                        },
-                        'libp2p-spdy': {
-                            'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p-spdy'
-                        }
-                    }
-                },
-                "Crypto Channels": {
-                    'modules': {
-                        'libp2p-secio': {
-                            'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p-secio'
-                        }
-                    }
-                },
-                "Peer Routing": {
-                    'modules': {}
-                },
-                "Record Stores": {
-                    'modules': {}
                 },
                 "Discovery": {
                     'modules': {
@@ -180,7 +196,12 @@ var data = {
                     }
                 },
                 "NAT Traversal": {
-                    'modules': {}
+                    'modules': {
+                      'libp2p-nat': {
+                          'status': 'Done',
+                          'url': 'https://github.com/libp2p/go-libp2p-nat'
+                      }
+                    }
                 },
                 "Discovery": {
                     'modules': {
