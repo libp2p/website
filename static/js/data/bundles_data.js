@@ -38,10 +38,20 @@ var data = {
                     }
                 },
                 "Peer Routing": {
-                    'modules': {}
+                    'modules': {
+                      'libp2p-kad-dht': {
+                          'status': 'unstable',
+                          'url': 'https://github.com/libp2p/js-libp2p-kad-dht'
+                      }
+                    }
                 },
                 "Record Stores": {
-                    'modules': {}
+                    'modules': {
+                      'record': {
+                          'status': 'usable',
+                          'url': 'https://github.com/libp2p/js-libp2p-record'
+                      }
+                    }
                 },
                 "Discovery": {
                     'modules': {
@@ -99,10 +109,20 @@ var data = {
                     }
                 },
                 "Peer Routing": {
-                    'modules': {}
+                    'modules': {
+                      'libp2p-kad-dht': {
+                          'status': 'unstable',
+                          'url': 'https://github.com/libp2p/js-libp2p-kad-dht'
+                      }
+                    }
                 },
                 "Record Stores": {
-                    'modules': {}
+                    'modules': {
+                      'record': {
+                          'status': 'usable',
+                          'url': 'https://github.com/libp2p/js-libp2p-record'
+                      }
+                    }
                 },
                 "Discovery": {
                     'modules': {
@@ -176,7 +196,12 @@ var data = {
                     }
                 },
                 "NAT Traversal": {
-                    'modules': {}
+                    'modules': {
+                      'libp2p-nat': {
+                          'status': 'Done',
+                          'url': 'https://github.com/libp2p/go-libp2p-nat'
+                      }
+                    }
                 },
                 "Discovery": {
                     'modules': {
