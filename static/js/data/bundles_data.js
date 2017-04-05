@@ -3,14 +3,10 @@ var data = {
         'Browser JS': {
             'status': 'live',
             'image': '../img/logo_1.png',
-            'github': 'https://github.com/libp2p/js-libp2p',
+            'github': 'https://github.com/ipfs/js-libp2p-ipfs-browser',
             'categories': {
                 'Transport': {
                     'modules': {
-                        'libp2p-tcp': {
-                            'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p-tcp'
-                        },
                         'libp2p-websockets': {
                             'status': 'Done',
                             'url': 'https://github.com/libp2p/js-libp2p-websockets'
@@ -49,16 +45,12 @@ var data = {
                 },
                 "Discovery": {
                     'modules': {
-                        'libp2p-mdns': {
-                            'status': 'unstable',
-                            'url': 'https://github.com/libp2p/js-libp2p-mdns'
-                        },
                         'libp2p-webrtc-star': {
                             'status': 'done',
                             'url': 'https://github.com/libp2p/js-libp2p-webrtc-star'
                         },
                         'libp2p-railing': {
-                            'status': 'unstable',
+                            'status': 'done',
                             'url': 'https://github.com/libp2p/js-libp2p-railing'
                         }
                     }
@@ -68,10 +60,14 @@ var data = {
         'Node JS': {
             'status': 'live',
             'image': '../img/logo_2.png',
-            'github': 'https://github.com/libp2p/js-libp2p',
+            'github': 'https://github.com/ipfs/js-libp2p-ipfs-nodejs',
             'categories': {
                 'Transport': {
                     'modules': {
+                        'libp2p-tcp': {
+                            'status': 'Done',
+                            'url': 'https://github.com/libp2p/js-libp2p-tcp'
+                        },
                         'libp2p-websockets': {
                             'status': 'Done',
                             'url': 'https://github.com/libp2p/js-libp2p-websockets'
