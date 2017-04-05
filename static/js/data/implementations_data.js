@@ -14,6 +14,12 @@ var data = {
         url: 'https://github.com/libp2p/go-tcp-transport'
       }
     },
+	'libp2p-quic': {
+	  'Go': {
+	    status: 'Unstable',
+		url: 'https://github.com/marten-seemann/libp2p-quic-transport'
+	  }
+	},
     'libp2p-websockets': {
       'Browser JS': {
         status: 'Done',
@@ -95,7 +101,7 @@ var data = {
       },
       'Go': {
         status: 'Done',
-        url: 'https://github.com/libp2p/'
+        url: 'https://github.com/whyrusleeping/go-smux-multiplex'
       }
     },
     'libp2p-yamux': {
@@ -130,7 +136,11 @@ var data = {
       'Node.js': {
         status: 'Done',
         url: 'https://github.com/libp2p/interface-connection'
-      }
+      },
+	  'Go': {
+	    status: 'Done',
+		url: 'https://github.com/libp2p/go-libp2p-conn'
+	  }
     },
     'half-closed-connection-upgrade': {
       'Browser JS': {
@@ -183,12 +193,12 @@ var data = {
     'libp2p-nat': {
       'Go': {
         status: 'Unstable',
-        url: 'https://github.com/libp2p/go-libp2p-nat '
+        url: 'https://github.com/libp2p/go-libp2p-nat'
       }
     }
   },
   'discovery': {
-    'railing': {
+    'bootstrap': {
       'Browser JS': {
         status: 'Usable',
         url: 'https://github.com/libp2p/js-libp2p-railing'
@@ -199,7 +209,7 @@ var data = {
       },
       'Go': {
         status: 'Done',
-        url: 'https://github.com/libp2p/??'
+        url: 'https://github.com/ipfs/go-ipfs/blob/master/core/bootstrap.go'
       }
     },
     'random-walk': {
@@ -213,7 +223,7 @@ var data = {
       },
       'Go': {
         status: 'Done',
-        url: 'https://github.com/libp2p/??'
+        url: 'https://github.com/libp2p/go-libp2p-kad-dht'
       }
     },
     'mdns-discovery': {
@@ -253,7 +263,7 @@ var data = {
       },
       'Go': {
         status: 'Done',
-        url: 'https://github.com/libp2p/??'
+        url: 'https://github.com/libp2p/go-libp2p/p2p/protocol/ping'
       }
     },
     'libp2p-peer-id': {
@@ -320,7 +330,7 @@ var data = {
         url: 'https://github.com/libp2p/js-libp2p-floodsub'
       },
       'Go': {
-        status: 'Usable',
+        status: 'Done',
         url: 'https://github.com/libp2p/go-floodsub'
       }
     }
