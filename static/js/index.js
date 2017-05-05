@@ -108,9 +108,10 @@ $(function () {
 
     $(window).on('load', function () {
         setTimeout(function () {
-            getContributors();
+			$(".svg-wrapper").removeClass("hide");
             $('svg.contributors')[0].unpauseAnimations();
         }, 5000);
+		getContributors();
     });
 
     function getContributors() {
@@ -143,8 +144,8 @@ $(function () {
                 var indexRow = Math.floor(index / countInRow),
                     y = indexRow * (iconHeight - 10),
                     indexInRow = index - (countInRow * indexRow),
-                    offsetX = indexRow % 2 * ((iconWidth + (indexInRow !== 0 ? 20 : 0)) / 2),
-                    x = indexInRow * (iconWidth + (indexInRow !== 0 ? 20 : 0)) + offsetX;
+                    offsetX = indexRow % 2 * ((iconWidth + (indexInRow !== 0 ? 10 : 0)) / 2),
+                    x = indexInRow * (iconWidth + (indexInRow !== 0 ? 10 : 0)) + offsetX;
 
                 var person = document.createElementNS('http://www.w3.org/2000/svg', 'use');
                 person.setAttributeNS(null, 'id', 'icon' + index);
@@ -179,6 +180,7 @@ $(function () {
                 var rnd1 = Math.floor(Math.random() * 15);
                 var rnd2 = Math.floor(Math.random() * 15);
 
+				/*
                 var animateY = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
                 animateY.setAttributeNS(null, 'attributeName', 'y');
                 animateY.setAttributeNS(null, 'from', (y));
@@ -191,6 +193,7 @@ $(function () {
                 animateY.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#icon' + index);
 
                 g.appendChild(animateY);
+				*/
 
                 $contributors.find('#group-icons').append(g);
 
@@ -230,8 +233,8 @@ $(function () {
 
         // $parent[0].appendChild(hexHover(elX - 3, elY - 3, iconWidth + 6, iconHeight + 6));
 
-        el.attr('width', (iconWidth + 5));
-        el.attr('height', (iconHeight + 5));
+        //el.attr('width', (iconWidth + 5));
+        //el.attr('height', (iconHeight + 5));
 
         $parent[0].appendChild(tooltip(el.attr('data-username')));
 
@@ -263,7 +266,7 @@ $(function () {
                 clone = $firstIconparent.get(0);
             $firstIconparent.remove();
 
-            $(clone).find('use').attr('x', (lastIconX + iconWidth + 20));
+            $(clone).find('use').attr('x', (lastIconX + iconWidth + 10));
             var id = $(clone).find('use').attr('id');
             $('#group-icons').append(clone);
             var $el = $('#' + id);

@@ -591,8 +591,12 @@ article.community .persons .svg-wrapper {
   height: 250px;
   overflow-y: hidden;
 }
+article.community .persons .svg-wrapper.hide {
+  visibility: hidden;
+}
 article.community .persons .svg-wrapper use:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   article.community {
