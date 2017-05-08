@@ -17,7 +17,7 @@ $(function () {
         var $wrap = $('.wrap', 'article.implementations-in')
         for (var n = bundlesCount; n < 9; n++) {
             var tmp = template.clone();
-            tmp.find('img').attr('src', (n % 2) === 1 ? '/img/img4.png' : '/img/img5.png');
+            tmp.find('img').attr('src', (n % 2) === 1 ? './img/img4.png' : './img/img5.png');
             $wrap.append(tmp);
         }
     }
@@ -39,13 +39,14 @@ $(function () {
                 tmp.find('a').addClass('index' + (index + 1));
                 switch (key.toLowerCase()) {
                     case 'java':
-                        tmp.find('img').attr('src', '../img/logo_5.png');
+                        tmp.find('img').attr('src', './img/logo_5.png');
                         break;
                     case 'python':
-                        tmp.find('img').attr('src', '../img/logo_6.png');
+                        tmp.find('img').attr('src', './img/logo_6.png');
                         break;
                     default:
-                        tmp.find('img').attr('src', values['image']);
+                        var imageUrl = values['image'].substring(1);
+                        tmp.find('img').attr('src', imageUrl);
                 }
 
                 $wrap.append(tmp);
@@ -74,13 +75,14 @@ $(function () {
                 tmp.find('a').attr('href', '/bundles#' + key.replace(' ', '-').toLowerCase());
                 switch (key.toLowerCase()) {
                     case 'java':
-                        tmp.find('img').attr('src', '../img/logo_5.png');
+                        tmp.find('img').attr('src', './img/logo_5.png');
                         break;
                     case 'python':
-                        tmp.find('img').attr('src', '../img/logo_6.png');
+                        tmp.find('img').attr('src', './img/logo_6.png');
                         break;
                     default:
-                        tmp.find('img').attr('src', values['image']);
+                        var imageUrl = values['image'].substring(1);
+                        tmp.find('img').attr('src', imageUrl);
                 }
 
                 tmp.find('img').attr('alt', key);
@@ -108,7 +110,7 @@ $(function () {
 
     $(window).on('load', function () {
         setTimeout(function () {
-			$(".svg-wrapper").removeClass("hide");            
+			$(".svg-wrapper").removeClass("hide");
             $('svg.contributors')[0].unpauseAnimations();
         }, 5000);
 		getContributors();
@@ -179,7 +181,7 @@ $(function () {
 
                 var rnd1 = Math.floor(Math.random() * 15);
                 var rnd2 = Math.floor(Math.random() * 15);
-				
+
 				/*
                 var animateY = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
                 animateY.setAttributeNS(null, 'attributeName', 'y');
