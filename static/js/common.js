@@ -1,3 +1,5 @@
+var $ = require('jquery')
+
 $(function () {
   var hash = window.location.hash
   if (hash.length) {

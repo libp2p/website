@@ -1,4 +1,4 @@
-var data = {
+module.exports = {
   'Transports': {
     'libp2p-tcp': {
       'Browser JS': {
@@ -14,12 +14,12 @@ var data = {
         url: 'https://github.com/libp2p/go-tcp-transport'
       }
     },
-	'libp2p-quic': {
-	  'Go': {
-	    status: 'Unstable',
-		url: 'https://github.com/marten-seemann/libp2p-quic-transport'
-	  }
-	},
+    'libp2p-quic': {
+      'Go': {
+        status: 'Unstable',
+        url: 'https://github.com/marten-seemann/libp2p-quic-transport'
+      }
+    },
     'libp2p-websockets': {
       'Browser JS': {
         status: 'Done',
@@ -137,10 +137,10 @@ var data = {
         status: 'Done',
         url: 'https://github.com/libp2p/interface-connection'
       },
-	  'Go': {
-	    status: 'Done',
-		url: 'https://github.com/libp2p/go-libp2p-conn'
-	  }
+      'Go': {
+        status: 'Done',
+        url: 'https://github.com/libp2p/go-libp2p-conn'
+      }
     },
     'half-closed-connection-upgrade': {
       'Browser JS': {
