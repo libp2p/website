@@ -149,13 +149,13 @@ var data = {
             'categories': {
                 'Transport': {
                     'modules': {
-                        'libp2p-tcp': {
+                        'go-tcp-transport': {
                             'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p'
+                            'url': 'https://github.com/libp2p/go-tcp-transport'
                         },
-                        'libp2p-websockets': {
+                        'go-ws-transport': {
                             'status': 'Done',
-                            'url': 'https://github.com/libp2p/js-libp2p'
+                            'url': 'https://github.com/libp2p/go-ws-transport'
                         }
                     }
                 },
@@ -163,7 +163,7 @@ var data = {
                     'modules': {
                         'libp2p-yamux': {
                             'status': 'Done',
-                            'url': 'https://github.com/hashicorp/yamux'
+                            'url': ''
                         },
                         'libp2p-multiplex': {
                             'status': 'Done',
