@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>libp2p</title>
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+  <title>libp2p</title>
 </head>
-
 <body>
-
 <header>
     <div class="wrap">
         <a class="logo" href="/">
@@ -221,32 +213,22 @@
 
 </main>
 
-<footer>
-    <div class="wrap">
-      <p><div class="title">libp2p was started and is sponsored by</div></p>
-      <p><a href="http://protocol.ai">
-        <img src="/img/protocol-labs-logo.png" height="64px">
-      </a></p>
-      <div class="copyright">&copy; Protocol Labs | Except as noted, content licensed CC-BY 3.0</div>
-      <img class="decoration img8" width="63" height="75" src="/img/img8.png" alt="">
-    </div>
-</footer>
+{{ partial "footer.html" . }}
 
-<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/js/lib/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/js/data/bundles_data.js"></script>
 <script type="text/javascript" src="/js/index.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
-<script type="text/javascript" src="/js/analytics.js"></script>
 
 <!--Adobe Edge Runtime-->
-<script type="text/javascript" charset="utf-8" src="/js/edge6.0.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/lib/edge6.0.0.js"></script>
 <style>
     .edgeLoad-EDGE-1720491910 {
         visibility: hidden;
     }
 </style>
 <script>
-    AdobeEdge.loadComposition('js/libp2p', 'EDGE-1720491910', {
+    AdobeEdge.loadComposition('js/lib/libp2p', 'EDGE-1720491910', {
         scaleToFit: "horizontal",
         centerStage: "horizontal",
         minW: "0px",

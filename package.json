@@ -1,0 +1,31 @@
+{
+  "name": "libp2p-website",
+  "version": "1.0.0",
+  "description": "Webpage of the libp2p project. A multi protocol approach for a interoperable network stack that follows the 'self description' in favor of assumptions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "serve": "hugo serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libp2p/website.git"
+  },
+  "author": "Protocol Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libp2p/website/issues"
+  },
+  "homepage": "https://github.com/libp2p/website#readme",
+  "devDependencies": {
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "globals": [ "$", "data" ],
+    "ignore": [
+      "/static/js/lib/"
+    ]
+  }
+}

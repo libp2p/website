@@ -5,3 +5,4 @@ copyright = "libp2p - All rights reserved."
 canonifyurls = true
 relativeURLs = true
 baseURL = ""
+googleAnalytics = "UA-96910779-2"
