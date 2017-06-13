@@ -1,6 +1,8 @@
 var $ = require('jquery')
-var data = require('./data/bundles_data')
-require('./common')
+var data = require('../data/bundles.json')
+var initPage = require('./lib/init-page')
+
+initPage()
 
 $(function () {
   $('svg.contributors')[0].pauseAnimations()
@@ -367,5 +369,14 @@ $(function () {
     // });
   $('body').mouseup(function (e) {
     down = false
+  })
+
+  $(window).on('resize', function () {
+    var $stage = $('#Stage')
+    if (!$stage.length) return
+
+    $stage.closest('.flow-wrapper').remove()
+    $('.homepage-animation').addClass('static')
+    $('#static-stage').addClass('show')
   })
 })

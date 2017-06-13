@@ -1,6 +1,8 @@
 var $ = require('jquery')
-var data = require('./data/bundles_data')
-require('./common')
+var data = require('../data/bundles.json')
+var initPage = require('./lib/init-page')
+
+initPage()
 
 $(function () {
   var bundles = data.Bundles

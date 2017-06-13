@@ -1,6 +1,8 @@
 var $ = require('jquery')
-var data = require('./data/implementations_data')
-require('./common')
+var data = require('../data/implementations.json')
+var initPage = require('./lib/init-page')
+
+initPage()
 
 $(function () {
   $.each(data, function (name, names) {

@@ -4,11 +4,14 @@
   "description": "Webpage of the libp2p project. A multi protocol approach for a interoperable network stack that follows the 'self description' in favor of assumptions",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all build:js serve",
+    "start": "npm run watch",
     "test": "npm run lint",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "build:js": "browserify js/{index,implementations,bundles}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js ] -o static/js/common.js",
+    "build": "npm-run-all --parallel build:*",
+    "watch": "npm-run-all --parallel watch:* serve",
+    "build:js": "browserify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js",
+    "watch:js": "watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js --debug",
     "serve": "hugo serve"
   },
   "repository": {
@@ -23,8 +26,7 @@
   "homepage": "https://github.com/libp2p/website#readme",
   "standard": {
     "ignore": [
-      "/static/js/dist/",
-      "/static/js/lib/"
+      "/static/js"
     ]
   },
   "dependencies": {
@@ -34,6 +36,7 @@
     "browserify": "^14.4.0",
     "factor-bundle": "^2.5.0",
     "npm-run-all": "^4.0.2",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "watchify": "^3.9.0"
   }
 }
