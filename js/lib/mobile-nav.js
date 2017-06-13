@@ -1,25 +1,6 @@
 var $ = require('jquery')
 
-module.exports = function topbar () {
-  initMobileNav()
-  initLogoAnimation()
-}
-
-function initLogoAnimation () {
-  $(window).scroll(function (e) {
-    var $logo = $('header .logo')
-
-    if ($(window).outerWidth() > 767 && !$logo.hasClass('static')) {
-      if ($(window).scrollTop() > 300) {
-        $logo.addClass('show')
-      } else {
-        $logo.removeClass('show')
-      }
-    }
-  })
-}
-
-function initMobileNav () {
+module.exports = function initMobileNav () {
   $('.bars', 'header').on('click', function (e) {
     e.preventDefault()
     $('.bars', 'header').hide()
