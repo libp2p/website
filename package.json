@@ -4,11 +4,11 @@
   "description": "Webpage of the libp2p project. A multi protocol approach for a interoperable network stack that follows the 'self description' in favor of assumptions",
   "main": "index.js",
   "scripts": {
-    "start": "npm run serve",
+    "start": "npm-run-all build:js serve",
     "test": "npm run lint",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "build:js": "browserify static/js/{index,implementations,bundles}.js -p [ factor-bundle -o static/js/dist/index.js -o static/js/dist/implementations.js -o static/js/dist/bundles.js ] -o static/js/dist/common.js",
+    "build:js": "browserify js/{index,implementations,bundles}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js ] -o static/js/common.js",
     "serve": "hugo serve"
   },
   "repository": {
@@ -33,6 +33,7 @@
   "devDependencies": {
     "browserify": "^14.4.0",
     "factor-bundle": "^2.5.0",
+    "npm-run-all": "^4.0.2",
     "standard": "^10.0.2"
   }
 }
