@@ -1,8 +1,10 @@
 var $ = require('jquery')
 var data = require('../data/bundles.json')
 var initPage = require('./lib/init-page')
+var initLogo = require('./lib/logo')
 
 initPage()
+initLogo()
 
 $(function () {
   $('svg.contributors')[0].pauseAnimations()
