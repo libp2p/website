@@ -11,6 +11,11 @@
 
   {{ partial "topbar.html" . }}
 
+  <div class="">
+    <pre>
+    </pre>
+  </div>
+
   <main>
     <article class="center implementations">
       <header>
@@ -120,16 +125,11 @@
 
     <article class="center implementations-info">
       <div class="wrap">
-        {{ partial "implementation.html" (dict "id" "transports" "interface" "https://github.com/libp2p/interface-transport")}}
-        {{ partial "implementation.html" (dict "id" "stream-muxers" "interface" "https://github.com/libp2p/interface-stream-muxer")}}
-        {{ partial "implementation.html" (dict "id" "crypto-channels")}}
-        {{ partial "implementation.html" (dict "id" "discovery" "interface" "https://github.com/libp2p/interface-peer-discovery")}}
-        {{ partial "implementation.html" (dict "id" "peer-routing" "interface" "https://github.com/libp2p/interface-peer-routing")}}
-        {{ partial "implementation.html" (dict "id" "record-stores" "interface" "https://github.com/libp2p/interface-record-store")}}
-        {{ partial "implementation.html" (dict "id" "nat-traversal")}}
-        {{ partial "implementation.html" (dict "id" "connection-upgrades" "title" "Connection & Connection Upgrades")}}
-        {{ partial "implementation.html" (dict "id" "utils" "title" "General Purpose Utils & Datatypes")}}
-        {{ partial "implementation.html" (dict "id" "others")}}
+
+      {{ range $.Site.Data.implementations}}
+        {{ partial "implementation.html" . }}
+      {{ end }}
+
       </div>
       <div class="triangle grey"></div>
     </article>
