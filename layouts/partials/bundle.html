@@ -1,0 +1,57 @@
+<section id="{{ .id }}">
+  <aside class="left">
+    <div class="active-link">
+      <span>Transport</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    <nav>
+      <a href="#" class="active" data-info="transport">Transport</a>
+      <a href="#" data-info="stream-muxer">Stream Muxer</a>
+      <a href="#" data-info="crypto-channels">Crypto Channels</a>
+      <a href="#" data-info="peer-routing">Peer Routing</a>
+      <a href="#" data-info="record-stores">Record Stores</a>
+      <a href="#" data-info="discovery">Discovery</a>
+    </nav>
+  </aside>
+  <div class="content">
+    <div class="title">
+      <div class="wrapper">
+        <div class="img">
+          <img src="{{ .img }}" alt="{{ .name }}" title="{{ .name }}">
+        </div>
+        <a class="btn-interface" target="_blank" href="{{ .github }}">GitHub</a>
+      </div>
+    </div>
+    <div class="info">
+      {{ range .categories }}
+      <ul class="{{ toLowerCase .name}} calc-col one-col show">
+        <li style="min-width: 100px; width: 100%; max-width: 168px;">
+          <a href="https://github.com/libp2p/js-libp2p-websockets">
+            <i class="icon-hexagon green"></i><span>libp2p-websockets</span>
+          </a>
+        </li>
+        <li style="min-width: 100px; width: 100%; max-width: 168px;">
+          <a href="https://github.com/libp2p/js-libp2p-webrtc-star">
+            <i class="icon-hexagon green"></i><span>libp2p-webrtc-star</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="stream-muxer calc-col">
+        <li><a href="https://github.com/libp2p/js-libp2p-multiplex"><i class="icon-hexagon green"></i><span>libp2p-multiplex</span></a></li>
+        <li><a href="https://github.com/libp2p/js-libp2p-spdy"><i class="icon-hexagon green"></i><span>libp2p-spdy</span></a></li>
+      </ul>
+      <ul class="crypto-channels calc-col">
+        <li><a href="https://github.com/libp2p/js-libp2p-secio"><i class="icon-hexagon green"></i><span>libp2p-secio</span></a></li>
+      </ul>
+      <ul class="peer-routing calc-col">
+        <li><a href="https://github.com/libp2p/js-libp2p-kad-dht"><i class="icon-hexagon red"></i><span>libp2p-kad-dht</span></a></li>
+      </ul>
+      <ul class="record-stores calc-col">
+        <li><a href="https://github.com/libp2p/js-libp2p-record"><i class="icon-hexagon yellow"></i><span>record</span></a></li>
+      </ul>
+      <ul class="discovery calc-col">
+        <li><a href="https://github.com/libp2p/js-libp2p-webrtc-star"><i class="icon-hexagon green"></i><span>libp2p-webrtc-star</span></a></li>
+        <li><a href="https://github.com/libp2p/js-libp2p-railing"><i class="icon-hexagon green"></i><span>libp2p-railing</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
