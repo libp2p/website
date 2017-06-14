@@ -1,6 +1,7 @@
 [
   {
-    "id": "Transports",
+    "id": "transports",
+    "interface": "https://github.com/libp2p/interface-transport",
     "libs": [
       {
         "id": "libp2p-tcp",
@@ -146,6 +147,7 @@
   },
   {
     "id": "stream-muxers",
+    "interface": "https://github.com/libp2p/interface-stream-muxer",
     "libs": [
       {
         "id": "libp2p-spdy",
@@ -236,6 +238,7 @@
   },
   {
     "id": "connection-upgrades",
+    "title": "Connection & Connection Upgrades",
     "libs": [
       {
         "id": "libp2p-conn",
@@ -281,6 +284,7 @@
   },
   {
     "id": "peer-routing",
+    "interface": "https://github.com/libp2p/interface-peer-routing",
     "libs": [
       {
         "id": "libp2p-kad-dht",
@@ -306,6 +310,7 @@
   },
   {
     "id": "record-stores",
+    "interface": "https://github.com/libp2p/interface-record-store",
     "libs": [
       {
         "id": "record",
@@ -336,6 +341,7 @@
   },
   {
     "id": "nat-traversal",
+    "title": "NAT Traversal",
     "libs": [
       {
         "id": "libp2p-nat",
@@ -361,6 +367,7 @@
   },
   {
     "id": "discovery",
+    "interface": "https://github.com/libp2p/interface-peer-discovery",
     "libs": [
       {
         "id": "bootstrap",
@@ -426,6 +433,7 @@
   },
   {
     "id": "utils",
+    "title": "General Purpose Utils & Datatypes",
     "libs": [
       {
         "id": "crypto",

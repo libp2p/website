@@ -1,93 +1,14 @@
 var $ = require('jquery')
-var data = require('../data/implementations.json')
 var initPage = require('./lib/init-page')
 
 initPage()
 
 $(function () {
-  $.each(data, function (name, names) {
-    showData(name)
-  })
+  $('section table').each(showData)
 
-  function showData (tableName) {
-    var $section = $('#' + tableName.toLowerCase())
-    var $table = $section.find('table')
-    var categories = []
-
-    var tr = document.createElement('tr')
-    tr.classList.add('head-row')
-    var th = document.createElement('th')
-    th.classList.add('head-col')
-    tr.appendChild(th)
-
-    $.each(data[tableName], function (item, items) {
-      $.each(items, function (key, values) {
-        if ($.inArray(key, categories) === -1) {
-          categories.push(key)
-          var th = document.createElement('th')
-          th.textContent = key
-          tr.appendChild(th)
-        }
-      })
-    })
-    $table.append(tr)
-
-    $.each(data[tableName], function (item, items) {
-      var tr = document.createElement('tr')
-      var th = document.createElement('th')
-      th.classList.add('head-col')
-      th.textContent = item
-      tr.appendChild(th)
-
-      $.each(categories, function (n, col) {
-        var td = document.createElement('td')
-        var i = document.createElement('i')
-        var status = 'grey'
-        i.classList.add('icon-hexagon')
-        if (items[col] && items[col].status) {
-          switch (items[col].status.toLowerCase()) {
-            case 'done':
-              status = 'green'
-              break
-            case 'usable':
-              status = 'yellow'
-              break
-            case 'unstable':
-              status = 'red'
-              break
-            default:
-              status = 'grey'
-          }
-
-          if (items[col].url && items[col].url.length) {
-            var a = document.createElement('a')
-            a.setAttribute('href', items[col].url)
-            a.appendChild(i)
-          }
-        }
-        i.classList.add(status)
-        td.appendChild(a || i)
-        tr.appendChild(td)
-      })
-
-      $table.append(tr)
-    })
-
-    tr = document.createElement('tr')
-    tr.classList.add('empty')
-
-    th = document.createElement('th')
-    th.classList.add('head-col')
-    tr.appendChild(th)
-
-    for (var n = 0; n < categories.length; n++) {
-      var td = document.createElement('td')
-      tr.appendChild(td)
-    }
-    $table.append(tr)
-
-    $table.width(categories.length * 95)
-
+  function showData (i, table) {
+    const $table = $(table)
+    // $table.width(categories.length * 95)
     var $parent = $table.closest('.table')
     var tableHeight = $parent.find('.title').height() +
             $parent.find('.info').height() +

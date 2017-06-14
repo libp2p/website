@@ -38,6 +38,14 @@
               {{end}}
             </tr>
             {{ end }}
+            <tr class="empty">
+              <th class="head-col"></th>
+              {{ range first 1 .libs }}
+                {{ range .langs }}
+                <td></td>
+                {{end}}
+              {{end}}
+            </tr>
           </thead>
         </table>
       </div>
