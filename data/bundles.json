@@ -7,7 +7,7 @@
     "github": "https://github.com/ipfs/js-libp2p-ipfs-browser",
     "categories": [
       {
-        "name": "Transport",
+        "id": "transport",
         "modules": [
           {
             "id": "libp2p-websockets",
@@ -22,7 +22,7 @@
         ]
       },
       {
-        "name": "Stream Muxer",
+        "id": "stream-muxer",
         "modules": [
           {
             "id": "libp2p-multiplex",
@@ -37,7 +37,7 @@
         ]
       },
       {
-        "name": "Crypto Channels",
+        "id": "crypto-channels",
         "modules": [
           {
             "id": "libp2p-secio",
@@ -47,36 +47,36 @@
         ]
       },
       {
-        "name": "Peer Routing",
+        "id": "peer-routing",
         "modules": [
           {
             "id": "libp2p-kad-dht",
-            "status": "unstable",
+            "status": "Unstable",
             "url": "https://github.com/libp2p/js-libp2p-kad-dht"
           }
         ]
       },
       {
-        "name": "Record Stores",
+        "id": "record-stores",
         "modules": [
           {
             "id": "record",
-            "status": "usable",
+            "status": "Usable",
             "url": "https://github.com/libp2p/js-libp2p-record"
           }
         ]
       },
       {
-        "name": "Discovery",
+        "id": "discovery",
         "modules": [
           {
             "id": "libp2p-webrtc-star",
-            "status": "done",
+            "status": "Done",
             "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
           },
           {
             "id": "libp2p-railing",
-            "status": "done",
+            "status": "Done",
             "url": "https://github.com/libp2p/js-libp2p-railing"
           }
         ]
@@ -91,7 +91,7 @@
     "github": "https://github.com/ipfs/js-libp2p-ipfs-nodejs",
     "categories": [
       {
-        "name": "Transport",
+        "id": "transport",
         "modules": [
           {
             "id": "libp2p-tcp",
@@ -111,7 +111,7 @@
         ]
       },
       {
-        "name": "Stream Muxer",
+        "id": "stream-muxer",
         "modules": [
           {
             "id": "libp2p-multiplex",
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "name": "Crypto Channels",
+        "id": "crypto-channels",
         "modules": [
           {
             "id": "libp2p-secio",
@@ -136,41 +136,41 @@
         ]
       },
       {
-        "name": "Peer Routing",
+        "id": "peer-routing",
         "modules": [
           {
             "id": "libp2p-kad-dht",
-            "status": "unstable",
+            "status": "Unstable",
             "url": "https://github.com/libp2p/js-libp2p-kad-dht"
           }
         ]
       },
       {
-        "name": "Record Stores",
+        "id": "record-stores",
         "modules": [
           {
             "id": "record",
-            "status": "usable",
+            "status": "Usable",
             "url": "https://github.com/libp2p/js-libp2p-record"
           }
         ]
       },
       {
-        "name": "Discovery",
+        "id": "discovery",
         "modules": [
           {
             "id": "libp2p-mdns",
-            "status": "done",
+            "status": "Done",
             "url": "https://github.com/libp2p/js-libp2p-mdns"
           },
           {
             "id": "libp2p-webrtc-star",
-            "status": "done",
+            "status": "Done",
             "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
           },
           {
             "id": "libp2p-railing",
-            "status": "unstable",
+            "status": "Unstable",
             "url": "https://github.com/libp2p/js-libp2p-railing"
           }
         ]
@@ -185,7 +185,7 @@
     "github": "https://github.com/libp2p/go-libp2p",
     "categories": [
       {
-        "name": "Transport",
+        "id": "transport",
         "modules": [
           {
             "id": "go-tcp-transport",
@@ -200,7 +200,7 @@
         ]
       },
       {
-        "name": "Stream Muxer",
+        "id": "stream-muxer",
         "modules": [
           {
             "id": "libp2p-yamux",
@@ -215,7 +215,7 @@
         ]
       },
       {
-        "name": "Crypto Channels",
+        "id": "crypto-channels",
         "modules": [
           {
             "id": "libp2p-secio",
@@ -225,7 +225,7 @@
         ]
       },
       {
-        "name": "Peer Routing",
+        "id": "peer-routing",
         "modules": [
           {
             "id": "libp2p-kad-dht",
@@ -235,7 +235,7 @@
         ]
       },
       {
-        "name": "Record Stores",
+        "id": "record-stores",
         "modules": [
           {
             "id": "libp2p-kad-dht",
@@ -245,6 +245,7 @@
         ]
       },
       {
+        "id": "nat-traversal",
         "name": "NAT Traversal",
         "modules": [
           {
@@ -255,16 +256,16 @@
         ]
       },
       {
-        "name": "Discovery",
+        "id": "discovery",
         "modules": [
           {
             "id": "libp2p-mdns",
-            "status": "done",
+            "status": "Done",
             "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go"
           },
           {
             "id": "libp2p-railing",
-            "status": "unstable",
+            "status": "Unstable",
             "url": ""
           }
         ]

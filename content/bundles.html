@@ -37,7 +37,32 @@
     <article class="center bundles-info">
         <div class="wrap">
 
-            <!--<section class="coming-soon"></section>-->
+          {{ range where $.Site.Data.bundles "status" "live" }}
+            {{ partial "bundle.html" . }}
+          {{ end }}
+
+          <section class="coming-soon">
+            {{ range where $.Site.Data.bundles "status" "coming-soon" }}
+              <div class="card">
+                <div class="rectangle coming-soon" title="{{ .name }} bundle coming soon">
+                  <div class="img">
+                    <img src="{{ .image }}" alt="{{ .name }}">
+                  </div>
+                  <div class="text">In progress...</div>
+                </div>
+              </div>
+            {{ end }}
+            <div class="card empty">
+              <div class="rectangle empty">
+                <img src="../img/img4.png" alt="A 3 cube tetris block in a minimal L shape, pointing upwards."/>
+              </div>
+            </div>
+            <div class="card empty">
+              <div class="rectangle empty">
+                <img src="../img/img5.png" alt="A single cube, corner pointing upwards; The isomorphic perspective revealing an hexangonal outline." />
+              </div>
+            </div>
+          </section>
 
         </div>
         <div class="triangle grey"></div>
