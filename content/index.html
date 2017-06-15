@@ -37,7 +37,6 @@
             <p>Run your network applications free from runtime and address services, independently of their location.</p>
             <div class="buttons">
                 <a href="https://github.com/libp2p/libp2p" class="btn-socials btn-more-videos" target="_blank">TRY LIBP2P</a>
-                <!-- <a href="#" class="btn-socials btn-more-videos">SEE GITHUB</a> -->
             </div>
         </div>
         <div class="triangle white"></div>
@@ -137,14 +136,40 @@
             <h2>Implementations In</h2>
         </header>
         <div class="wrap">
-          <!-- Bundles get injected here from bundles_data.js -->
+          {{ range where $.Site.Data.bundles "status" "live" }}
+          <div class="card">
+            <a class="rectangle" href="/bundles#{{ .id }}">
+              <div class="img-wrap">
+                <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
+              </div>
+            </a>
+          </div>
+          {{ end }}
+          {{ range where $.Site.Data.bundles "status" "coming-soon" }}
+          <div class="card">
+            <a class="rectangle coming-soon">
+              <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
+              <div>Coming soon...</div>
+            </a>
+          </div>
+          {{ end }}
+          <div class="card empty">
+            <div class="rectangle empty">
+              <img src="../img/img4.png" alt="A 3 cube tetris block in a minimal L shape, pointing upwards."/>
+            </div>
+          </div>
+          <div class="card empty">
+            <div class="rectangle empty">
+              <img src="../img/img5.png" alt="A single cube, corner pointing upwards; The isomorphic perspective revealing an hexangonal outline." />
+            </div>
+          </div>
         </div>
         <div class="triangle white"></div>
     </article>
 
     <article class="center publications-talks">
         <header>
-            <h2>Publications & Talks.</h2>
+            <h2>Publications &amp; Talks.</h2>
         </header>
         <div class="wrap">
             <iframe width="620" height="350" src="https://www.youtube.com/embed/HxueJbeMVG4" allowfullscreen></iframe>
