@@ -10,37 +10,7 @@
 {{ partial "topbar.html" . }}
 
 <main>
-    <article class="a-modular-network-stack">
-        <div class="homepage-animation">
-            <div id="Stage" class="EDGE-1720491910">
-                <div id="Stage_Symbol_1" class="edgeLoad-EDGE-1720491910">
-                    <div id="Stage_Symbol_1_Pasted152"></div>
-                    <div id="Stage_Symbol_1_Pasted11"></div>
-                    <div id="Stage_Symbol_1_Pasted7"></div>
-                    <div id="Stage_Symbol_1_Pasted14"></div>
-                    <div id="Stage_Symbol_1_Pasted3"></div>
-                    <div id="Stage_Symbol_1_Pasted12"></div>
-                    <div id="Stage_Symbol_1_Pasted9"></div>
-                    <div id="Stage_Symbol_1_Pasted4"></div>
-                    <div id="Stage_Symbol_1_Pasted5"></div>
-                    <div id="Stage_Symbol_1_Pasted10"></div>
-                    <div id="Stage_Symbol_1_Pasted8"></div>
-                    <div id="Stage_Symbol_1_Pasted6"></div>
-                </div>
-                <div id="Stage_Pasted" class="edgeLoad-EDGE-1720491910"></div>
-            </div>
-            <img id="static-stage" src='/img/svg/cube.svg'>
-        </div>
-
-        <div class="wrap">
-            <h2><span>A</span> <span>modular</span> <span>network</span> <span>stack.</span></h2>
-            <p>Run your network applications free from runtime and address services, independently of their location.</p>
-            <div class="buttons">
-                <a href="https://github.com/libp2p/libp2p" class="btn-socials btn-more-videos" target="_blank">TRY LIBP2P</a>
-            </div>
-        </div>
-        <div class="triangle white"></div>
-    </article>
+    {{ partial "splash.html" . }}
 
     <article class="center features">
         <header>
@@ -226,26 +196,5 @@
 
 <script type="text/javascript" src="/js/common.js"></script>
 <script type="text/javascript" src="/js/index.js"></script>
-
-<!--Adobe Edge Runtime-->
-<script type="text/javascript" charset="utf-8" src="/js/vendor/edge6.0.0.js"></script>
-<style>
-    .edgeLoad-EDGE-1720491910 {
-        visibility: hidden;
-    }
-</style>
-<script>
-    AdobeEdge.loadComposition('js/vendor/libp2p', 'EDGE-1720491910', {
-        scaleToFit: "horizontal",
-        centerStage: "horizontal",
-        minW: "0px",
-        maxW: "1440px",
-        width: "1440px",
-        height: "475px",
-        bScaleToParent: true
-    }, {"dom": {}}, {"dom": {}});
-</script>
-<!--Adobe Edge Runtime End-->
-
 </body>
 </html>
