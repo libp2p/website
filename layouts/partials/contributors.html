@@ -5,10 +5,13 @@
   }
   #contributors-slide {
     transform: translate3d(0,0,0); /* hint to prefer gpu rending. */
-    animation: slide 60s ease-in-out both 4s infinite alternate;
+    animation: slide 60s ease-in-out both 2s infinite alternate;
     animation-play-state: paused;
   }
-  #contributors-slide:hover {
+  #contributors-slide.running {
+    animation-play-state: running;
+  }
+  #contributors-slide.running:hover {
     animation-play-state: paused;
   }
   #contributors .hex {
@@ -88,7 +91,7 @@
     }
 
     function renderContributors (data) {
-      var ct = document.getElementById('contributors')
+      containerEl.className = 'running'
       var rows = document.querySelectorAll('.contributors-row')
       var rowWidth = Math.ceil(data.length / rows.length) * hexWidth
       ;[].forEach.call(rows, function (row, i) {
