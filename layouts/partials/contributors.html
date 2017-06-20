@@ -5,7 +5,7 @@
   }
   #contributors-slide {
     transform: translate3d(0,0,0); /* hint to prefer gpu rending. */
-    animation: slide 60s ease-in-out both 2s infinite alternate;
+    animation: slide 60s ease-in-out both 0s infinite alternate;
     animation-play-state: paused;
   }
   #contributors-slide.running {
@@ -32,14 +32,12 @@
     transform: scale(1.2);
     z-index: 10;
   }
-  #contributors .hex.show:hover + .hex {
-  }
   #contributors .contributors-row {
     height: 72px;
     overflow:visible;
   }
   #contributors .contributors-row:hover {
-    z-index: 100;
+    z-index: 20;
   }
 </style>
 
@@ -75,7 +73,7 @@
     var containerElTop = containerEl.getBoundingClientRect().top
     var screenHeight = window.innerHeight
     var pageYOffset = window.pageYOffset
-    var inView = (pageYOffset + screenHeight) > containerElTop
+    var inView = (pageYOffset + screenHeight + 100) > containerElTop
     if (inView) {
       renderContributors(contributors)
     } else {
@@ -83,7 +81,7 @@
     }
 
     function isContributorsSectionInView () {
-      inView = (window.pageYOffset + screenHeight) > containerElTop
+      inView = (window.pageYOffset + screenHeight + 100) > containerElTop
       if (inView) {
         renderContributors(contributors)
         window.removeEventListener('scroll', isContributorsSectionInView)
@@ -103,21 +101,24 @@
         }
       })
       var nextRow = 0
-      function renderWithPause(itemIndex, lastRender) {
+      var lastRender = 0
+      function renderWithPause(itemIndex) {
+        if (itemIndex >= data.length) return
         renderContributor(data[itemIndex], function (err, el) {
+          var nextIndex = itemIndex + 1
+          if (err) renderWithPause(nextIndex)
           rows[nextRow].appendChild(el)
           setTimeout(function () {
             el.className = 'hex show'
           }, 10)
-          nextIndex = itemIndex + 1
-          if (nextIndex === data.length) return // All done.
-          nextRow = (nextRow + 1) % rows.length
           var now = Date.now()
           var diff = now - lastRender
           var delay = loadingDelayMs - diff
           if (delay < 0) delay = 0
+          lastRender = now
+          nextRow = (nextRow + 1) % rows.length
           setTimeout(function () {
-            renderWithPause(itemIndex + 1, now)
+            renderWithPause(itemIndex + 1)
           }, delay)
         })
       }
@@ -138,6 +139,9 @@
         link.style.background = '#333 url(' + item.photo + ') no-repeat center'
         link.style.backgroundSize = 'cover'
         cb(null, link)
+      }
+      img.onerror = function (evt) {
+        cb(evt, link)
       }
       img.src = item.photo
     }
