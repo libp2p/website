@@ -22,7 +22,7 @@ help:
 	@echo '   make js                             Browserify the *.js to ./static/js                                 '
 	@echo '   make css                            Compile the *.less to ./static/css                                 '
 	@echo '   make minify                         Optimise all the things!                                           '
-	@echo '   make dev                            (Re)start the hot-relading dev server on http://localhost:1313     '
+	@echo '   make dev                            Start a hot-reloding dev server on http://localhost:1313           '
 	@echo '   make dev-stop                       Stop the dev server                                                '
 	@echo '   make deploy                         Add the website to your local IPFS node                            '
 	@echo '   make publish-to-domain              Update $(DNSZONE) DNS record to the ipfs hash from the last deploy '
