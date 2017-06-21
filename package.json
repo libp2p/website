@@ -9,7 +9,7 @@
     "lint": "npm-run-all lint:*",
     "lint:js": "standard",
     "lint:css": "lessc --lint",
-    "build": "npm-run-all --parallel build:*",
+    "build": "npm-run-all --parallel build:js build:css --serial minify build:html",
     "watch": "npm-run-all --parallel watch:* serve",
     "minify": "npm-run-all --parallel minify:*",
     "clean": "npm-run-all --parallel clean:*",
@@ -20,6 +20,7 @@
     "watch:css": "nodemon --quiet --watch less --ext less --exec npm run build:css",
     "minify:img": "find static/img -type d -exec imagemin {}/* --out-dir={} \\;",
     "clean:css": "rm -rf static/css/*.css",
+    "build:html": "hugo",
     "serve": "hugo serve"
   },
   "repository": {
