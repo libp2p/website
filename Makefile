@@ -23,7 +23,7 @@ help:
 	@echo '   make css                            Compile the *.less to ./static/css                                 '
 	@echo '   make minify                         Optimise all the things!                                           '
 	@echo '   make dev                            (Re)start the hot-relading dev server on http://localhost:1313     '
-	@echo '   make stopdev                        Stop the dev server                                                '
+	@echo '   make dev-stop                       Stop the dev server                                                '
 	@echo '   make deploy                         Add the website to your local IPFS node                            '
 	@echo '   make publish-to-domain              Update $(DNSZONE) DNS record to the ipfs hash from the last deploy '
 	@echo '   make clean                          remove the generated files                                         '
@@ -61,7 +61,7 @@ dev: install js css
 	$(NPMBIN)/nodemon --quiet --watch less --ext less --exec "make css" & echo $$! >> $(PIDFILE) ; \
 	hugo server & echo $$! >> $(PIDFILE))
 
-stopdev:
+dev-stop:
 	touch $(PIDFILE) ; \
 	[ -z "`(cat $(PIDFILE))`" ] || kill `(cat $(PIDFILE))` ; \
 	rm $(PIDFILE)
