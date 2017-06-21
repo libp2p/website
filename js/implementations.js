@@ -7,7 +7,7 @@ $(function () {
   $('section table').each(showData)
 
   function showData (i, table) {
-    const $table = $(table)
+    var $table = $(table)
     // $table.width(categories.length * 95)
     var $parent = $table.closest('.table')
     var tableHeight = $parent.find('.title').height() +
