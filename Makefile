@@ -7,7 +7,7 @@ NPMBIN=./node_modules/.bin
 OUTPUTDIR=public
 PIDFILE=dev.pid
 
-build: install lint js css minify
+build: clean install lint js css minify
 	@hugo && \
 	echo "" && \
 	echo "Site built out to ./public dir"
@@ -66,7 +66,7 @@ dev-stop:
 	[ -z "`(cat $(PIDFILE))`" ] || kill `(cat $(PIDFILE))` ; \
 	rm $(PIDFILE)
 
-deploy: install lint js css minify
+deploy:
 	ipfs swarm peers >/dev/null || (echo "ipfs daemon must be online to publish" && exit 1)
 	ipfs add -r -q $(OUTPUTDIR) | tail -n1 >versions/current
 	cat versions/current >>versions/history
