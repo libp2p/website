@@ -16,9 +16,9 @@
     "build:js": "browserify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js",
     "watch:js": "watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js --debug",
     "minify:js": "find static/js -name '*.js' -exec uglifyjs {} --compress --output {} \\;",
-    "build:css": "for f in less/*.less; do lessc $f \"static/css/$(basename $f .less).css\"; done",
+    "build:css": "for f in less/*.less; do lessc --autoprefix='> 1%, last 2 versions' --clean-css $f \"static/css/$(basename $f .less).css\"; done",
     "watch:css": "nodemon --quiet --watch less --ext less --exec npm run build:css",
-    "minify:css": "for f in less/*.less; do lessc -x $f \"static/css/$(basename $f .less).css\"; done",
+    "minify:img": "find static/img -type d -exec imagemin {}/* --out-dir={} \\;",
     "clean:css": "rm -rf static/css/*.css",
     "serve": "hugo serve"
   },
@@ -38,15 +38,22 @@
     ]
   },
   "dependencies": {
-    "jquery": "^2.1.1",
-    "uglify-js": "^3.0.18"
+    "jquery": "^2.1.1"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "browserify": "^14.4.0",
     "factor-bundle": "^2.5.0",
+    "imagemin-cli": "^3.0.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^5.2.2",
     "less": "^2.7.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
     "npm-run-all": "^4.0.2",
     "standard": "^10.0.2",
+    "uglify-js": "^3.0.18",
     "watchify": "^3.9.0"
   }
 }
