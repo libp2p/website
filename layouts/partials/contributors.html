@@ -68,12 +68,12 @@
     var contributors = {{ $contributors }}
     var hexWidth = 62
     var hexHeight = 72
-    var loadingDelayMs = 150
+    var loadingDelayMs = 100
     var containerEl = document.getElementById('contributors-slide')
     var containerElTop = containerEl.getBoundingClientRect().top
     var screenHeight = window.innerHeight
     var pageYOffset = window.pageYOffset
-    var inView = (pageYOffset + screenHeight + 100) > containerElTop
+    var inView = (pageYOffset + screenHeight + 500) > containerElTop
     if (inView) {
       renderContributors(contributors)
     } else {
@@ -81,7 +81,7 @@
     }
 
     function isContributorsSectionInView () {
-      inView = (window.pageYOffset + screenHeight + 100) > containerElTop
+      inView = (window.pageYOffset + screenHeight + 500) > containerElTop
       if (inView) {
         renderContributors(contributors)
         window.removeEventListener('scroll', isContributorsSectionInView)
