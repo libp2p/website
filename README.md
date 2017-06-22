@@ -66,10 +66,10 @@ Build the site in the `public` dir and add to `ipfs` _(requires `hugo` & `ipfs` 
 
 Update the DNS record for `libp2p.io`.  _(requires an `auto.token` file to be saved in the project root.)_
 
-If you'd like to update the dnslink TXT record for another domain, set `DOMAIN=<your domain here>` like so:
+If you'd like to update the dnslink TXT record for another domain, pass `DOMAIN=<your domain here>` like so:
 
 ```sh
-DOMAIN=tableflip.io make publish-to-domain
+make publish-to-domain DOMAIN=tableflip.io
 ```
 
 ---

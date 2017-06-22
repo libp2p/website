@@ -1,9 +1,8 @@
-DOMAIN?="libp2p.io"
-IPFSLOCAL?="http://localhost:8080/ipfs/"
-IPFSGATEWAY?="https://ipfs.io/ipfs/"
-NPMBIN?=./node_modules/.bin
-NPM?=npm
-
+DOMAIN="libp2p.io"
+IPFSLOCAL="http://localhost:8080/ipfs/"
+IPFSGATEWAY="https://ipfs.io/ipfs/"
+NPMBIN=./node_modules/.bin
+NPM=npm
 OUTPUTDIR=public
 PIDFILE=dev.pid
 
@@ -25,7 +24,7 @@ help:
 	@echo '   make dev                            Start a hot-reloding dev server on http://localhost:1313           '
 	@echo '   make dev-stop                       Stop the dev server                                                '
 	@echo '   make deploy                         Add the website to your local IPFS node                            '
-	@echo '   make publish-to-domain              Update $(DNSZONE) DNS record to the ipfs hash from the last deploy '
+	@echo '   make publish-to-domain              Update $(DOMAIN) DNS record to the ipfs hash from the last deploy  '
 	@echo '   make clean                          remove the generated files                                         '
 	@echo '                                                                                                          '
 
@@ -80,7 +79,7 @@ deploy:
 		echo "- ipfs pin add -r /ipfs/$$hash"; \
 		echo "- make publish-to-domain"; \
 
-publish-to-domain: auth.token
+publish-to-domain: auth.token versions/current
 	DNSIMPLE_TOKEN=$(shell cat auth.token) \
 	./dnslink.sh $(DOMAIN) $(shell cat versions/current)
 
