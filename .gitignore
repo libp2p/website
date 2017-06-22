@@ -4,3 +4,4 @@ public
 static/js/*.js
 static/css/*.css
 dev.pid
+auth.token
