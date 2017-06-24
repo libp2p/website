@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" type="text/css" href="/css/media.css">
+  <title>Media - libp2p</title>
+</head>
+<body>
+
+{{ partial "topbar.html" . }}
+
+  <main>
+    <div class="pseudo-header"></div>
+    <section class="wrap">
+      <h1 class="title-page">Media.</h1>
+      <div class="about-part">Talks, publications and demos.</div>
+
+      <div class="wrap-videos">
+        <div class="item-video">
+          <div class="video-container">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/HxueJbeMVG4" allowfullscreen></iframe>
+          </div>
+          <p>libp2p ❤ devp2p: IPFS and Ethereum Networking - David Dias and Juan Benet</p>
+        </div>
+
+        <div class="item-video last-element">
+          <div class="video-container">
+            <iframe src="https://archive.org/embed/DWebSummit2016_Panel_Peer_to_Peer_Networks" width="300" height="200" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+          </div>
+          <p>Peer to Peer Networks at the Decentralised Web Summit</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <script type="text/javascript" src="/js/common.js"></script>
+  <script type="text/javascript" src="/js/media.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,585 @@
+[
+  {
+    "id": "transports",
+    "interface": "https://github.com/libp2p/interface-transport",
+    "libs": [
+      {
+        "id": "libp2p-tcp",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-tcp"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-tcp"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-tcp-transport"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-quic",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Node.js",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Go",
+            "status": "Unstable",
+            "url": "https://github.com/marten-seemann/libp2p-quic-transport"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-websockets",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-websockets"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-websockets"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-ws-transport"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-webrtc-star",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          },
+          {
+            "name": "Go",
+            "status": "Missing",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "libp2p-webrtc-direct",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
+          },
+          {
+            "name": "Go",
+            "status": "Missing",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "libp2p-udp",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Node.js",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-udp"
+          },
+          {
+            "name": "Go",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/go-udp-transport"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-utp",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Node.js",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-utp"
+          },
+          {
+            "name": "Go",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/go-utp-transport"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stream-muxers",
+    "interface": "https://github.com/libp2p/interface-stream-muxer",
+    "libs": [
+      {
+        "id": "libp2p-spdy",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-spdy"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-spdy"
+          },
+          {
+            "name": "Go",
+            "status": "Unstable",
+            "url": "https://github.com/docker/spdystream"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-multiplex",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-multiplex"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-multiplex"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/whyrusleeping/go-smux-multiplex"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-yamux",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Node.js",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/hashicorp/yamux"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crypto-channels",
+    "libs": [
+      {
+        "id": "libp2p-secio",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-secio"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-secio"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-secio"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "connection-upgrades",
+    "title": "Connection & Connection Upgrades",
+    "libs": [
+      {
+        "id": "libp2p-conn",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/interface-connection"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/interface-connection"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-conn"
+          }
+        ]
+      },
+      {
+        "id": "half-closed-connection-upgrade",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-half-closed-connection-upgrade"
+          },
+          {
+            "name": "Node.js",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-half-closed-connection-upgrade"
+          },
+          {
+            "name": "Go",
+            "status": "Missing",
+            "url": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "peer-routing",
+    "interface": "https://github.com/libp2p/interface-peer-routing",
+    "libs": [
+      {
+        "id": "libp2p-kad-dht",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-dht"
+          },
+          {
+            "name": "Node.js",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-dht"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-kad-dht"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "record-stores",
+    "interface": "https://github.com/libp2p/interface-record-store",
+    "libs": [
+      {
+        "id": "record",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-record"
+          },
+          {
+            "name": "Node.js",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-record"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-record"
+          },
+          {
+            "name": "C#",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/go-libp2p-record"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nat-traversal",
+    "title": "NAT Traversal",
+    "libs": [
+      {
+        "id": "libp2p-nat",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Node.js",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Go",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/go-libp2p-nat"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "discovery",
+    "interface": "https://github.com/libp2p/interface-peer-discovery",
+    "libs": [
+      {
+        "id": "bootstrap",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-railing"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-railing"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/ipfs/go-ipfs/blob/master/core/bootstrap.go"
+          }
+        ]
+      },
+      {
+        "id": "random-walk",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-random-walk"
+          },
+          {
+            "name": "Node.js",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-random-walk"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-kad-dht"
+          }
+        ]
+      },
+      {
+        "id": "mdns-discovery",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Missing",
+            "url": ""
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-mdns"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "utils",
+    "title": "General Purpose Utils & Datatypes",
+    "libs": [
+      {
+        "id": "crypto",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-crypto"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-crypto"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-crypto"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-ping",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-ping"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-ping"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p/p2p/protocol/ping"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-peer-id",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-peer-id"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-peer-id"
+          },
+          {
+            "name": "Go",
+            "status": "Missing",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "libp2p-peer-info",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-peer-info"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-peer-info"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-peer"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-peer-book",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-peer-book"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-peer-book"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-peerstore"
+          }
+        ]
+      },
+      {
+        "id": "libp2p-swarm",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-swarm"
+          },
+          {
+            "name": "Node.js",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-swarm"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/host/basic"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "others",
+    "libs": [
+      {
+        "id": "libp2p-floodsub",
+        "langs": [
+          {
+            "name": "Browser JS",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-floodsub"
+          },
+          {
+            "name": "Node.js",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-floodsub"
+          },
+          {
+            "name": "Go",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-floodsub"
+          }
+        ]
+      }
+    ]
+  }
+]

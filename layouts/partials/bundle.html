@@ -1,0 +1,42 @@
+<section id="{{ .id }}">
+  <aside class="left">
+    <div class="active-link">
+      <span>Transport</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    <nav>
+      {{ range $index, $element := .categories }}
+      <a href="#" {{ if eq $index 0 }}class="active"{{end}} data-info="{{ .id }}" style="text-transform: capitalize;">
+        {{if isset . "name"}}
+          {{ .name }}
+        {{else}}
+          {{ humanize .id }}
+        {{end}}
+      </a>
+      {{ end }}
+    </nav>
+  </aside>
+  <div class="content">
+    <div class="title">
+      <div class="wrapper">
+        <div class="img">
+          <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
+        </div>
+        <a class="btn-interface" target="_blank" href="{{ .github }}">GitHub</a>
+      </div>
+    </div>
+    <div class="info">
+      {{ range $index, $element := .categories }}
+      <ul class="{{ .id }} calc-col one-col {{if eq $index 0}}show{{end}}">
+        {{ range .modules }}
+        <li style="min-width: 100px; width: 100%; max-width: 168px;">
+          <a href="{{ .url }}">
+            {{ partial "status-icon" . }}
+            <span>{{ .id }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </div>
+</section>

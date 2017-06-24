@@ -1,0 +1,20 @@
+<style>
+@keyframes {{ .id }} {
+  0% {
+    transform: {{ .start | safeCSS }};
+  }
+  84% {
+    transform: {{ .start | safeCSS }};
+  }
+  100% {
+    transform: {{ .end | safeCSS }};
+  }
+}
+#{{ .id }} {
+  animation: {{ .id }} 2000ms ease-in both;
+  animation-play-state: running;
+}
+</style>
+<div id="{{ .id }}" class="layer">
+  <img src="/img/svg/{{ .id }}.svg" alt="{{ .name }}" title="{{ .name }}" class="anim-fade" style="margin:0 auto; animation-delay: {{ .fadeDelay }}" />
+</div>

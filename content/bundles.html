@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" type="text/css" href="/css/bundles.css">
+  <title>Bundles - libp2p</title>
+</head>
+<body>
+
+{{ partial "topbar.html" . }}
+
+<main>
+    <article class="center bundles">
+        <header>
+            <h2>Bundles.</h2>
+        </header>
+        <div class="wrap">
+            <p> libp2p provides ready-to-use bundles for different use cases and different languages. You can use these
+                to get all the functionality in one package, instead of including and bundling the different modules
+                yourself. See it as a quickstart.</p>
+            <div class="links">
+                <div class="active-link">
+                    <div class="copy-block"></div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="columns">
+                    <div class="column col1"></div>
+                    <div class="column col2"></div>
+                    <div class="column col3"></div>
+                    <div class="column col4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="triangle white"></div>
+    </article>
+
+    <article class="center bundles-info">
+        <div class="wrap">
+
+          {{ range where $.Site.Data.bundles "status" "live" }}
+            {{ partial "bundle.html" . }}
+          {{ end }}
+
+          <section class="coming-soon">
+            {{ range where $.Site.Data.bundles "status" "coming-soon" }}
+              <div class="card">
+                <div class="rectangle coming-soon" title="{{ .name }} bundle coming soon">
+                  <div class="img">
+                    <img src="{{ .image }}" alt="{{ .name }}">
+                  </div>
+                  <div class="text">In progress...</div>
+                </div>
+              </div>
+            {{ end }}
+            <div class="card empty">
+              <div class="rectangle empty">
+                <img src="../img/img4.png" alt="A 3 cube tetris block in a minimal L shape, pointing upwards."/>
+              </div>
+            </div>
+            <div class="card empty">
+              <div class="rectangle empty">
+                <img src="../img/img5.png" alt="A single cube, corner pointing upwards; The isomorphic perspective revealing an hexangonal outline." />
+              </div>
+            </div>
+          </section>
+
+        </div>
+        <div class="triangle grey"></div>
+    </article>
+
+</main>
+
+{{ partial "footer.html" . }}
+
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/bundles.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+  <title>libp2p</title>
+</head>
+<body>
+
+{{ partial "topbar.html" . }}
+
+<main>
+    {{ partial "splash.html" . }}
+
+    <article class="center features">
+        <header>
+            <h2>Features.</h2>
+        </header>
+        <div class="wrap">
+            <div class="card">
+                <a class="rectangle">
+                    <img width="184" height="130" src="/img/img_1.png" alt="">
+                    <div>Use Several Transports</div>
+                    <p>Use newer and faster transports like QUIC and WebRTC at the same time you support more well-established ones such as TCP,
+                       supporting multiple hosts and connectivity conditions.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="184" height="130" src="/img/img_2.png" alt="">
+                    <div>Native Roaming</div>
+                    <p>You get Native Roaming out of the box. Your app or service can be migrated between machines or move between networks without any configuration steps.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="184" height="130" src="/img/img_3.png" alt="">
+                    <div>Runtime Freedom</div>
+                    <p>Simply assume connectivity, independent of the platform you are running your software on.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="192" height="130" src="/img/img_4.png" alt="">
+                    <div>Protocol Muxing</div>
+                    <p>Reuse already established and secure connections with in-band protocol multiplexing.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="184" height="130" src="/img/img_5.png" alt="">
+                    <div>Work Offline</div>
+                    <p>libp2p is capable of discovering other peers without resourcing to centralized registries,
+                       enabling apps to work disconnected from the backbone.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="184" height="130" src="/img/img_6.png" alt="">
+                    <div>Encrypted Connections</div>
+                    <p>Ensure that no one can eavesdrop on user traffic by setting a crypto channel by default,
+                       protecting both bits and validating peer identities.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="189" height="130" src="/img/img_7.png" alt="">
+                    <div>Upgrade Without Compromises</div>
+                    <p>Don't let past decisions hold your application back. Wire protocol versioning allows you to
+                       upgrade your service while still supporting older versions, no complicated setup necessary.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="183" height="130" src="/img/img_8.png" alt="">
+                    <div>Work In The Browser</div>
+                    <p>Write your application to run in the browser and take advantage of the ultimate in cross platform environments and with zero user install.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="rectangle">
+                    <img width="184" height="130" src="/img/img_9.png" alt="">
+                    <div>Good For High Latency Scenarios</div>
+                    <p>Not all connections are equal. Make sure your app is using the best transport for its environment.</p>
+                </a>
+            </div>
+        </div>
+        <img class="decoration img1" width="61" height="85" src="/img/img1.png" alt="">
+        <img class="decoration img2" width="41" height="99" src="/img/img2.png" alt="">
+        <div class="triangle grey"></div>
+    </article>
+
+    <!--<article class="center example">-->
+    <!--<header>-->
+    <!--<h2>Example.</h2>-->
+    <!--</header>-->
+    <!--<div class="wrap">-->
+    <!--<img width="942" height="454" src="/img/home-map.png" alt="">-->
+    <!--</div>-->
+    <!--<img class="decoration img3" src="/img/img3.png" width="61" height="61" alt="">-->
+    <!--<div class="triangle white"></div>-->
+    <!--</article>-->
+
+    <article class="center implementations-in">
+        <header>
+            <h2>Implementations In</h2>
+        </header>
+        <div class="wrap">
+          {{ range where $.Site.Data.bundles "status" "live" }}
+          <div class="card">
+            <a class="rectangle" href="/bundles#{{ .id }}">
+              <div class="img-wrap">
+                <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
+              </div>
+            </a>
+          </div>
+          {{ end }}
+          {{ range where $.Site.Data.bundles "status" "coming-soon" }}
+          <div class="card">
+            <a class="rectangle coming-soon">
+              <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
+              <div>Coming soon...</div>
+            </a>
+          </div>
+          {{ end }}
+          <div class="card empty">
+            <div class="rectangle empty">
+              <img src="../img/img4.png" alt="A 3 cube tetris block in a minimal L shape, pointing upwards."/>
+            </div>
+          </div>
+          <div class="card empty">
+            <div class="rectangle empty">
+              <img src="../img/img5.png" alt="A single cube, corner pointing upwards; The isomorphic perspective revealing an hexangonal outline." />
+            </div>
+          </div>
+        </div>
+        <div class="triangle white"></div>
+    </article>
+
+    <article class="center publications-talks">
+        <header>
+            <h2>Publications &amp; Talks.</h2>
+        </header>
+        <div class="wrap">
+            <iframe width="620" height="350" src="https://www.youtube.com/embed/HxueJbeMVG4" allowfullscreen></iframe>
+        </div>
+        <a href="/media" class="btn-socials btn-more-videos">More Videos</a>
+
+        <img class="decoration img6" width="42" height="74" src="/img/img6.png" alt="">
+        <img class="decoration img7" width="63" height="101" src="/img/img7.png" alt="">
+        <div class="triangle grey"></div>
+    </article>
+
+    <article class="center community">
+        <header>
+            <h2>Community.</h2>
+        </header>
+        <div class="wrap">
+            <p>libp2p is an open source project from the IPFS community. There are many ways you can contribute by
+                getting involved: you can help write the specification, code implementations and tools using libp2p,
+                craft examples and tutorials, and join
+                our regular product calls to discuss libp2p with us.</p>
+            <h6>Join Us</h6>
+            <div class="buttons">
+              <a href="http://webchat.freenode.net/?channels=%23ipfs" target="_blank" class="btn-socials btn-freenode">IRC FREENODE</a>
+              <a href="https://github.com/libp2p" target="_blank" class="btn-socials btn-github">GITHUB</a>
+              <a href="https://twitter.com/libp2p" target="_blank" class="btn-socials btn-twitter">TWITTER</a>
+            </div>
+        </div>
+
+        {{ partial "contributors.html" . }}
+
+    </article>
+</main>
+
+{{ partial "footer.html" . }}
+
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>

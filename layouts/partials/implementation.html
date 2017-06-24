@@ -1,0 +1,60 @@
+<section id="{{ .id }}">
+  <div class="table">
+    <div class="title">
+      <div class="wrapper">
+        <div class="header">
+          {{ if .title }}
+            {{ .title }}
+          {{ else }}
+            {{ humanize .id }}
+          {{ end }}
+        </div>
+        {{if .interface}}
+        <a class="btn-interface" href="{{.interface}}" target="_blank">Interface</a>
+        {{end}}
+      </div>
+    </div>
+    <div class="info">
+      <div class="table-wrapper">
+        <table>
+          <tbody>
+            <tr class="head-row">
+              <th class="head-col"></th>
+                {{ range first 1 .libs }}
+                  {{ range .langs }}
+                    <th>{{ .name }}</th>
+                  {{ end }}
+                {{ end }}
+            </tr>
+            {{ range .libs }}
+            <tr>
+              <th class="head-col">{{ .id }}</th>
+              {{ range .langs }}
+                <td>
+                  <a href="{{ .url }}" target="_blank">
+                    {{ partial "status-icon.html" . }}
+                  </a>
+                </td>
+              {{end}}
+            </tr>
+            {{ end }}
+            <tr class="empty">
+              <th class="head-col"></th>
+              {{ range first 1 .libs }}
+                {{ range .langs }}
+                <td></td>
+                {{end}}
+              {{end}}
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+    <div class="description">
+      <div><i class="icon-hexagon green"></i><span>Done</span></div>
+      <div><i class="icon-hexagon yellow"></i><span>In Progress / Usable</span></div>
+      <div><i class="icon-hexagon red"></i><span>Prototype / Unstable</span></div>
+      <div><i class="icon-hexagon grey"></i><span>Missing</span></div>
+    </div>
+  </div>
+</section>

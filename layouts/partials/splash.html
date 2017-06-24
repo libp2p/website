@@ -1,0 +1,92 @@
+<style>
+.a-modular-network-stack {
+  display: block;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  overflow-y: visible;
+  transform: translate3d(0,0,0); /* hint to prefer gpu rending. */
+}
+
+.layer {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  transform-style: preserve-3d;
+}
+
+.module-transports {
+  top: 100px;
+}
+
+@keyframes fade {
+    0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+.anim-fade {
+  animation: fade 1000ms ease-in both;
+}
+
+@keyframes throb {
+    0% { transform: scale(1)}
+   50% { transform: scale(1.05)}
+  100% { transform: scale(1)}
+}
+
+#splash-stage {
+  animation: throb 200ms ease-in-out 2200ms both;
+}
+
+#splash-headline {
+  animation: fade 1000ms ease-in 800ms both;
+}
+
+@keyframes rise {
+    0% { transform: translate(0, 50px)}
+  100% { transform: translate(0, 0px)}
+}
+
+#splash-subhead {
+  animation:
+    fade 500ms ease-in 2400ms both,
+    rise 500ms ease-in 2200ms both;
+}
+#splash-subhead * {
+  opacity: 1;
+}
+</style>
+<article class="a-modular-network-stack" style="overflow:hidden;">
+  <div style="height:475px;" id="splash-stage">
+    <div class="layer module-transports anim-fade">
+      <img src="/img/svg/transports.svg" alt="Transports" title="Transports">
+    </div>
+    {{ partial "symbol.html" (dict "id" "blue-2" "start" "translate(-31.8%, 346px)" "end" "translate(-55px, 234px)" "fadeDelay" "0ms") }}
+    {{ partial "symbol.html" (dict "id" "discovery" "start" "translate(39.8%, 297px)" "end" "translate(37px, 213px)" "fadeDelay" "100ms") }}
+    {{ partial "symbol.html" (dict "id" "stream-muxers" "start" "translate(14%, 40px)" "end" "translate(36px, 121px)" "fadeDelay" "200ms") }}
+    {{ partial "symbol.html" (dict "id" "crypto-channels" "start" "translate(-26.8%, 37px)" "end" "translate(-18px, 121px)" "fadeDelay" "300ms") }}
+    {{ partial "symbol.html" (dict "id" "connection-upgrades" "start" "translate(-42.2%, 178px)" "end" "translate(-73px, 142px)" "fadeDelay" "400ms") }}
+    {{ partial "symbol.html" (dict "id" "others" "start" "translate(13.5%, 346px)" "end" "translate(18px, 256px)" "fadeDelay" "500ms") }}
+    {{ partial "symbol.html" (dict "id" "orange-1" "start" "translate(calc(-15.5% - 18px), 259px)" "end" "translate(-36px, 211px)" "fadeDelay" "600ms") }}
+    {{ partial "symbol.html" (dict "id" "nat-traversal" "start" "translate(35.4%, 37px)" "end" "translate(55px, 142px)" "fadeDelay" "800ms") }}
+    {{ partial "symbol.html" (dict "id" "utils" "start" "translate(-7.6%, 365px)" "end" "translate(0px, 231px)" "fadeDelay" "900ms") }}
+    {{ partial "symbol.html" (dict "id" "record-stores" "start" "translate(22.6%, 225px)" "end" "translate(36px, 164px)" "fadeDelay" "700ms") }}
+    {{ partial "symbol.html" (dict "id" "orange-2" "start" "translate(-15.5%, 211px)" "end" "translate(-18px, 164px)" "fadeDelay" "600ms") }}
+  </div>
+  <div class="wrap" style="padding-bottom:30px;">
+    <h2 id="splash-headline"><span>A</span> <span>modular</span> <span>network</span> <span>stack.</span></h2>
+    <div id="splash-subhead">
+      <p style="margin-top:0;">Run your network applications free from runtime and address services, independently of their location.</p>
+      <div class="buttons" style="text-align:center;">
+        <a href="https://github.com/libp2p/libp2p" class="btn-socials btn-more-videos" target="_blank">TRY LIBP2P</a>
+      </div>
+    </div>
+  </div>
+  <div class="triangle white"></div>
+</article>

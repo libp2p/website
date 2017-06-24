@@ -1,0 +1,303 @@
+[
+  {
+    "id": "browser-js",
+    "name": "Browser JS",
+    "status": "live",
+    "image": "/img/logo_1.png",
+    "github": "https://github.com/ipfs/js-libp2p-ipfs-browser",
+    "categories": [
+      {
+        "id": "transport",
+        "modules": [
+          {
+            "id": "libp2p-websockets",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-websockets"
+          },
+          {
+            "id": "libp2p-webrtc-star",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          }
+        ]
+      },
+      {
+        "id": "stream-muxer",
+        "modules": [
+          {
+            "id": "libp2p-multiplex",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-multiplex"
+          },
+          {
+            "id": "libp2p-spdy",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-spdy"
+          }
+        ]
+      },
+      {
+        "id": "crypto-channels",
+        "modules": [
+          {
+            "id": "libp2p-secio",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-secio"
+          }
+        ]
+      },
+      {
+        "id": "peer-routing",
+        "modules": [
+          {
+            "id": "libp2p-kad-dht",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-kad-dht"
+          }
+        ]
+      },
+      {
+        "id": "record-stores",
+        "modules": [
+          {
+            "id": "record",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-record"
+          }
+        ]
+      },
+      {
+        "id": "discovery",
+        "modules": [
+          {
+            "id": "libp2p-webrtc-star",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          },
+          {
+            "id": "libp2p-railing",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-railing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "node-js",
+    "name": "Node JS",
+    "status": "live",
+    "image": "/img/logo_2.png",
+    "github": "https://github.com/ipfs/js-libp2p-ipfs-nodejs",
+    "categories": [
+      {
+        "id": "transport",
+        "modules": [
+          {
+            "id": "libp2p-tcp",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-tcp"
+          },
+          {
+            "id": "libp2p-websockets",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-websockets"
+          },
+          {
+            "id": "libp2p-webrtc-star",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          }
+        ]
+      },
+      {
+        "id": "stream-muxer",
+        "modules": [
+          {
+            "id": "libp2p-multiplex",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-multiplex"
+          },
+          {
+            "id": "libp2p-spdy",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-spdy"
+          }
+        ]
+      },
+      {
+        "id": "crypto-channels",
+        "modules": [
+          {
+            "id": "libp2p-secio",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-secio"
+          }
+        ]
+      },
+      {
+        "id": "peer-routing",
+        "modules": [
+          {
+            "id": "libp2p-kad-dht",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-kad-dht"
+          }
+        ]
+      },
+      {
+        "id": "record-stores",
+        "modules": [
+          {
+            "id": "record",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/js-libp2p-record"
+          }
+        ]
+      },
+      {
+        "id": "discovery",
+        "modules": [
+          {
+            "id": "libp2p-mdns",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-mdns"
+          },
+          {
+            "id": "libp2p-webrtc-star",
+            "status": "Done",
+            "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          },
+          {
+            "id": "libp2p-railing",
+            "status": "Unstable",
+            "url": "https://github.com/libp2p/js-libp2p-railing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "golang",
+    "name": "Golang",
+    "status": "live",
+    "image": "/img/logo_3.png",
+    "github": "https://github.com/libp2p/go-libp2p",
+    "categories": [
+      {
+        "id": "transport",
+        "modules": [
+          {
+            "id": "go-tcp-transport",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-tcp-transport"
+          },
+          {
+            "id": "go-ws-transport",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-ws-transport"
+          }
+        ]
+      },
+      {
+        "id": "stream-muxer",
+        "modules": [
+          {
+            "id": "libp2p-yamux",
+            "status": "Done",
+            "url": ""
+          },
+          {
+            "id": "libp2p-multiplex",
+            "status": "Done",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "crypto-channels",
+        "modules": [
+          {
+            "id": "libp2p-secio",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-secio"
+          }
+        ]
+      },
+      {
+        "id": "peer-routing",
+        "modules": [
+          {
+            "id": "libp2p-kad-dht",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-kad-dht"
+          }
+        ]
+      },
+      {
+        "id": "record-stores",
+        "modules": [
+          {
+            "id": "libp2p-kad-dht",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-kad-dht"
+          }
+        ]
+      },
+      {
+        "id": "nat-traversal",
+        "name": "NAT Traversal",
+        "modules": [
+          {
+            "id": "libp2p-nat",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p-nat"
+          }
+        ]
+      },
+      {
+        "id": "discovery",
+        "modules": [
+          {
+            "id": "libp2p-mdns",
+            "status": "Done",
+            "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go"
+          },
+          {
+            "id": "libp2p-railing",
+            "status": "Unstable",
+            "url": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Haskell",
+    "status": "coming-soon",
+    "image": "/img/logo_4.png",
+    "github": "",
+    "categories": []
+  },
+  {
+    "name": "Java",
+    "status": "coming-soon",
+    "image": "/img/logo_java.png",
+    "github": "",
+    "categories": []
+  },
+  {
+    "name": "Python",
+    "status": "coming-soon",
+    "image": "/img/logo_6.png",
+    "github": "",
+    "categories": []
+  },
+  {
+    "name": "Rust",
+    "status": "coming-soon",
+    "image": "/img/logo_7.png",
+    "github": "",
+    "categories": []
+  }
+]

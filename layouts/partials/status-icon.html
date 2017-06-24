@@ -1,0 +1,15 @@
+{{ if eq .status "Done" }}
+<i class="green icon-hexagon"></i>
+{{end}}
+
+{{ if eq .status "Usable" }}
+<i class="yellow icon-hexagon"></i>
+{{end}}
+
+{{ if eq .status "Unstable" }}
+<i class="red icon-hexagon"></i>
+{{end}}
+
+{{ if eq .status "Missing" }}
+<i class="grey icon-hexagon"></i>
+{{end}}

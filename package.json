@@ -1,0 +1,43 @@
+{
+  "name": "libp2p-website",
+  "version": "1.0.0",
+  "description": "Webpage of the libp2p project. A multi protocol approach for a interoperable network stack that follows the 'self description' in favor of assumptions",
+  "main": "index.js",
+  "scripts": {
+    "start": "make serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libp2p/website.git"
+  },
+  "author": "Protocol Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libp2p/website/issues"
+  },
+  "homepage": "https://github.com/libp2p/website#readme",
+  "standard": {
+    "ignore": [
+      "/static/js"
+    ]
+  },
+  "dependencies": {
+    "jquery": "^2.1.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "dnslink-deploy": "^1.0.7",
+    "factor-bundle": "^2.5.0",
+    "imagemin-cli": "^3.0.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^5.2.2",
+    "less": "^2.7.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "nodemon": "^1.11.0",
+    "standard": "^10.0.2",
+    "uglify-js": "^3.0.18",
+    "watchify": "^3.9.0"
+  }
+}
