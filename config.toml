@@ -6,3 +6,11 @@ canonifyurls = true
 relativeURLs = true
 baseURL = ""
 googleAnalytics = "UA-96910779-2"
+
+[params]
+  name = "libp2p"
+  title = "libp2p - A modular network stack"
+  description = "Run your network applications free from runtime and address services, independently of their location."
+  author = "Protocol Labs"
+  github = "https://github.com/libp2p/libp2p"
+  specifications = "https://github.com/libp2p/specs"
