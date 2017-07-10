@@ -1,3 +1,4 @@
+SHELL=/bin/bash
 DOMAIN="libp2p.io"
 IPFSLOCAL="http://localhost:8080/ipfs/"
 IPFSGATEWAY="https://ipfs.io/ipfs/"
@@ -6,8 +7,16 @@ NPM=npm
 OUTPUTDIR=public
 PIDFILE=dev.pid
 
+ifeq ($(DEBUG), true)
+	PREPEND=
+	APPEND=
+else
+	PREPEND=@
+	APPEND=1>/dev/null
+endif
+
 build: clean install lint js css minify
-	@hugo && \
+	$(PREPEND)hugo && \
 	echo "" && \
 	echo "Site built out to ./public dir"
 
@@ -24,49 +33,50 @@ help:
 	@echo '   make dev                            Start a hot-reloding dev server on http://localhost:1313           '
 	@echo '   make dev-stop                       Stop the dev server                                                '
 	@echo '   make deploy                         Add the website to your local IPFS node                            '
-	@echo '   make publish-to-domain              Update $(DOMAIN) DNS record to the ipfs hash from the last deploy  '
+	@echo '   make publish-to-domain              Update $(DOMAIN) DNS record to the ipfs hash from the last deploy '
 	@echo '   make clean                          remove the generated files                                         '
 	@echo '                                                                                                          '
+	@echo '   DEBUG=true make [command] for increased verbosity                                                      '
 
 serve: install lint js css minify
-	hugo server
+	$(PREPEND)hugo server
 
 node_modules:
-	$(NPM) i
+	$(PREPEND)$(NPM) i $(APPEND)
 
 install: node_modules
 
 lint: install
-	$(NPMBIN)/standard && $(NPMBIN)/lessc --lint less/*.less
+	$(PREPEND)$(NPMBIN)/standard && $(NPMBIN)/lessc --lint less/*.less
 
 js: install
-	$(NPMBIN)/browserify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js
+	$(PREPEND)$(NPMBIN)/browserify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js $(APPEND)
 
 css: install
-	for f in less/*.less; do $(NPMBIN)/lessc $$f --autoprefix='> 1%, last 2 versions' --clean-css static/css/$$(basename $$f .less).css; done
+	$(PREPEND)for f in less/*.less; do $(NPMBIN)/lessc $$f --autoprefix='> 1%, last 2 versions' --clean-css static/css/$$(basename $$f .less).css $(APPEND); done
 
 minify: install minify-js minify-img
 
 minify-js: install
-	find static/js -name '*.js' -exec $(NPMBIN)/uglifyjs {} --compress --output {} \;
+	$(PREPEND)find static/js -name '*.js' -exec $(NPMBIN)/uglifyjs {} --compress --output {} $(APPEND) \;
 
 minify-img: install
-	find static/img -type d -exec $(NPMBIN)/imagemin {}/* --out-dir={} \;
+	$(PREPEND)find static/img -type d -exec $(NPMBIN)/imagemin {}/* --out-dir={} $(APPEND) \;
 
 dev: install js css
-	[ ! -f $(PIDFILE) ] || rm $(PIDFILE) ; \
+	$(PREPEND)[ ! -f $(PIDFILE) ] || rm $(PIDFILE) ; \
 	touch $(PIDFILE) ; \
 	($(NPMBIN)/watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js & echo $$! >> $(PIDFILE) ; \
 	$(NPMBIN)/nodemon --quiet --watch less --ext less --exec "make css" & echo $$! >> $(PIDFILE) ; \
 	hugo server & echo $$! >> $(PIDFILE))
 
 dev-stop:
-	touch $(PIDFILE) ; \
+	$(PREPEND)touch $(PIDFILE) ; \
 	[ -z "`(cat $(PIDFILE))`" ] || kill `(cat $(PIDFILE))` ; \
 	rm $(PIDFILE)
 
 deploy:
-	ipfs swarm peers >/dev/null || (echo "ipfs daemon must be online to publish" && exit 1)
+	$(PREPEND)ipfs swarm peers >/dev/null || (echo "ipfs daemon must be online to publish" && exit 1)
 	ipfs add -r -q $(OUTPUTDIR) | tail -n1 >versions/current
 	cat versions/current >>versions/history
 	@export hash=`cat versions/current`; \
@@ -84,7 +94,7 @@ publish-to-domain: auth.token versions/current
 	./dnslink.sh $(DOMAIN) $(shell cat versions/current)
 
 clean:
-	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR) && \
+	$(PREPEND)[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR) && \
 	[ ! -d static/js ] || rm -rf static/js/*.js && \
 	[ ! -d static/css ] || rm -rf static/css/*.css
 
