@@ -5,7 +5,6 @@ IPFSGATEWAY="https://ipfs.io/ipfs/"
 NPMBIN=./node_modules/.bin
 NPM=npm
 OUTPUTDIR=public
-PIDFILE=dev.pid
 
 ifeq ($(DEBUG), true)
 	PREPEND=
@@ -31,7 +30,6 @@ help:
 	@echo '   make css                            Compile the *.less to ./static/css                                 '
 	@echo '   make minify                         Optimise all the things!                                           '
 	@echo '   make dev                            Start a hot-reloding dev server on http://localhost:1313           '
-	@echo '   make dev-stop                       Stop the dev server                                                '
 	@echo '   make deploy                         Add the website to your local IPFS node                            '
 	@echo '   make publish-to-domain              Update $(DOMAIN) DNS record to the ipfs hash from the last deploy '
 	@echo '   make clean                          remove the generated files                                         '
@@ -64,16 +62,11 @@ minify-img: install
 	$(PREPEND)find static/img -type d -exec $(NPMBIN)/imagemin {}/* --out-dir={} $(APPEND) \;
 
 dev: install js css
-	$(PREPEND)[ ! -f $(PIDFILE) ] || rm $(PIDFILE) ; \
-	touch $(PIDFILE) ; \
-	($(NPMBIN)/watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js & echo $$! >> $(PIDFILE) ; \
-	$(NPMBIN)/nodemon --quiet --watch less --ext less --exec "make css" & echo $$! >> $(PIDFILE) ; \
-	hugo server & echo $$! >> $(PIDFILE))
-
-dev-stop:
-	$(PREPEND)touch $(PIDFILE) ; \
-	[ -z "`(cat $(PIDFILE))`" ] || kill `(cat $(PIDFILE))` ; \
-	rm $(PIDFILE)
+	$(PREPEND) ( \
+		$(NPMBIN)/watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js \
+		$(NPMBIN)/nodemon --quiet --watch less --ext less --exec "make css" & \
+		hugo server -w \
+	)
 
 deploy:
 	$(PREPEND)ipfs swarm peers >/dev/null || (echo "ipfs daemon must be online to publish" && exit 1)
