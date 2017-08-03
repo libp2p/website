@@ -1,14 +1,21 @@
 <footer>
   <div class="wrap">
-    <p>
-      <span class="title">libp2p was started and is sponsored by</span>
-    </p>
-    <p>
-      <a href="http://protocol.ai">
-        <img src="/img/protocol-labs-logo.png" height="64px">
+    <div>
+      <p>libp2p was started and is sponsored by</p>
+      <a class="logo" href="https://protocol.ai/">
+        <img src="/img/logo_protocol_labs.svg" class="grow" />
+        <span>Protocol Labs</span>
       </a>
-    </p>
-    <div class="copyright">&copy; Protocol Labs | Except as noted, content licensed CC-BY 3.0</div>
-    <img class="decoration img8" width="63" height="75" src="/img/img8.png" alt="">
+    </div>
+    <div>
+      <nav>
+        <a href="/implementations" class="{{ if eq .URL "/implementations/" }}active{{end}}">Implementations</a>
+        <a href="/bundles" class="{{ if eq .URL "/bundles/" }}active{{end}}">Bundles</a>
+        <a href="/media" class="{{ if eq .URL "/media/" }}active{{end}}">Media</a>
+        <a href="{{ .Site.Params.github }}">Github</a>
+        <a href="{{ .Site.Params.specifications }}">Specifications</a>
+      </nav>
+      <small class="db f6 pt4">© <a class="link white hover-blue" href="https://protocol.ai/" target="_blank">Protocol Labs</a> | Except as <a class="link white hover-blue" href="https://protocol.ai/legal/">noted</a>, content licensed <a class="link white hover-blue" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC-BY 3.0</a></small>
+    </div>
   </div>
 </footer>
