@@ -1,0 +1,126 @@
+{
+  "id": "utils",
+  "title": "General Purpose Utils & Datatypes",
+  "libs": [
+    {
+      "id": "crypto",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-crypto"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-crypto"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-crypto"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-ping",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-ping"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-ping"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p/p2p/protocol/ping"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-peer-id",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-peer-id"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-peer-id"
+        },
+        {
+          "name": "Go",
+          "status": "Missing",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "libp2p-peer-info",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-peer-info"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-peer-info"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-peer"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-peer-book",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-peer-book"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-peer-book"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-peerstore"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-swarm",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-swarm"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-swarm"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/host/basic"
+        }
+      ]
+    }
+  ]
+}

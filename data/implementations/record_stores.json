@@ -1,0 +1,31 @@
+{
+  "id": "record-stores",
+  "interface": "https://github.com/libp2p/interface-record-store",
+  "libs": [
+    {
+      "id": "record",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-record"
+        },
+        {
+          "name": "Node.js",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-record"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-record"
+        },
+        {
+          "name": "C#",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/go-libp2p-record"
+        }
+      ]
+    }
+  ]
+}

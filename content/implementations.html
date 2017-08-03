@@ -127,8 +127,10 @@
     <article class="center implementations-info">
       <div class="wrap">
 
-      {{ range $.Site.Data.implementations}}
-        {{ partial "implementation.html" . }}
+      {{ $impls := (slice "transports" "stream_muxers" "crypto_channels" "connection_upgrades" "peer_routing" "record_stores" "nat_traversal" "discovery" "utils" "others") }}
+
+      {{ range $impls }}
+        {{ partial "implementation.html" (index $.Site.Data.implementations .) }}
       {{ end }}
 
       </div>

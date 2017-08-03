@@ -1,0 +1,25 @@
+{
+  "id": "others",
+  "libs": [
+    {
+      "id": "libp2p-floodsub",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-floodsub"
+        },
+        {
+          "name": "Node.js",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-floodsub"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-floodsub"
+        }
+      ]
+    }
+  ]
+}

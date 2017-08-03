@@ -1,0 +1,46 @@
+{
+  "id": "connection-upgrades",
+  "title": "Connection & Connection Upgrades",
+  "libs": [
+    {
+      "id": "libp2p-conn",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/interface-connection"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/interface-connection"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-conn"
+        }
+      ]
+    },
+    {
+      "id": "half-closed-connection-upgrade",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-half-closed-connection-upgrade"
+        },
+        {
+          "name": "Node.js",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-half-closed-connection-upgrade"
+        },
+        {
+          "name": "Go",
+          "status": "Missing",
+          "url": ""
+        }
+      ]
+    }
+  ]
+}
