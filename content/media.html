@@ -11,26 +11,48 @@
 
   <main>
     <div class="pseudo-header"></div>
-    <section class="wrap">
-      <h1 class="title-page">Media.</h1>
-      <div class="about-part">Talks, publications and demos.</div>
+    <article class="center videos">
+      <section class="wrap">
+        <h1 class="title-page">Media.</h1>
+        <div class="about-part">Talks, publications and demos.</div>
 
-      <div class="wrap-videos">
-        <div class="item-video">
-          <div class="video-container">
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/HxueJbeMVG4" allowfullscreen></iframe>
+        <div class="wrap-videos">
+          <div class="item-video">
+            <div class="video-container">
+              <iframe width="300" height="200" src="https://www.youtube.com/embed/HxueJbeMVG4" allowfullscreen></iframe>
+            </div>
+            <p>libp2p ❤ devp2p: IPFS and Ethereum Networking - David Dias and Juan Benet</p>
           </div>
-          <p>libp2p ❤ devp2p: IPFS and Ethereum Networking - David Dias and Juan Benet</p>
-        </div>
 
-        <div class="item-video last-element">
-          <div class="video-container">
-            <iframe src="https://archive.org/embed/DWebSummit2016_Panel_Peer_to_Peer_Networks" width="300" height="200" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+          <div class="item-video last-element">
+            <div class="video-container">
+              <iframe src="https://archive.org/embed/DWebSummit2016_Panel_Peer_to_Peer_Networks" width="300" height="200" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+            <p>Peer to Peer Networks at the Decentralised Web Summit</p>
           </div>
-          <p>Peer to Peer Networks at the Decentralised Web Summit</p>
         </div>
+      </section>
+      <div class="triangle white"></div>
+    </article>
+
+    <article class="center articles">
+      <div class="wrap">
+        <h2 class="title-page">Articles.</h2>
+        <ul class="articles-list">
+          <li>
+            Distributed Web Applications with IPFS - 16th International Conference on Web Engineering (ICWE2016)<br/>
+            <a href="http://icwe2016.inf.usi.ch/program/tutorials/ipfs" class="link">http://icwe2016.inf.usi.ch/program/tutorials/ipfs</a>
+            <div class="hr"></div>
+          </li>
+          <li>
+            &lt;エンジニアに朗報&gt;イーサリアムとIPFSのコラボレーションによる次世代ライブラリとは<br/>
+            <a href="http://dapps.hatenablog.com/entry/2016/10/30/000000" class="link">http://dapps.hatenablog.com/entry/2016/10/30/000000</a>
+            <div class="hr"></div>
+          </li>
+        </ul>
       </div>
-    </section>
+      <div class="triangle grey"></div>
+    </article>
   </main>
 
   {{ partial "footer.html" . }}

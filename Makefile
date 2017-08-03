@@ -63,7 +63,7 @@ minify-img: install
 
 dev: install js css
 	$(PREPEND) ( \
-		$(NPMBIN)/watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js \
+		$(NPMBIN)/watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js & \
 		$(NPMBIN)/nodemon --quiet --watch less --ext less --exec "make css" & \
 		hugo server -w \
 	)
