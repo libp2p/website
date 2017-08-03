@@ -1,0 +1,25 @@
+{
+  "id": "crypto-channels",
+  "libs": [
+    {
+      "id": "libp2p-secio",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-secio"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-secio"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-secio"
+        }
+      ]
+    }
+  ]
+}

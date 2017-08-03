@@ -1,0 +1,66 @@
+{
+  "id": "discovery",
+  "interface": "https://github.com/libp2p/interface-peer-discovery",
+  "libs": [
+    {
+      "id": "bootstrap",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-railing"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-railing"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/ipfs/go-ipfs/blob/master/core/bootstrap.go"
+        }
+      ]
+    },
+    {
+      "id": "random-walk",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-random-walk"
+        },
+        {
+          "name": "Node.js",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-random-walk"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-kad-dht"
+        }
+      ]
+    },
+    {
+      "id": "mdns-discovery",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Missing",
+          "url": ""
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-mdns"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "stream-muxers",
+  "interface": "https://github.com/libp2p/interface-stream-muxer",
+  "libs": [
+    {
+      "id": "libp2p-spdy",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-spdy"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-spdy"
+        },
+        {
+          "name": "Go",
+          "status": "Unstable",
+          "url": "https://github.com/docker/spdystream"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-multiplex",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-multiplex"
+        },
+        {
+          "name": "Node.js",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-multiplex"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/whyrusleeping/go-smux-multiplex"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-yamux",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Missing",
+          "url": ""
+        },
+        {
+          "name": "Node.js",
+          "status": "Missing",
+          "url": ""
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/hashicorp/yamux"
+        }
+      ]
+    }
+  ]
+}

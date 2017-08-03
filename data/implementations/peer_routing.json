@@ -1,0 +1,26 @@
+{
+  "id": "peer-routing",
+  "interface": "https://github.com/libp2p/interface-peer-routing",
+  "libs": [
+    {
+      "id": "libp2p-kad-dht",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-dht"
+        },
+        {
+          "name": "Node.js",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-dht"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-kad-dht"
+        }
+      ]
+    }
+  ]
+}
