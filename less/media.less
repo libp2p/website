@@ -102,7 +102,55 @@ main {
   }
 }
 
+article.videos {
+  position: relative;
+}
 
+article.articles {
+  background: #F3F6F9;
+  padding-top: 100px;
+  padding-bottom: 170px;
+
+  @media (max-width: 767px) {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .title-page {
+    font-size: 32px;
+  }
+
+  .title-year {
+    font-family: Roboto-Black, SansSerif;
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    margin: 0;
+    color: @c_m_grey;
+  }
+
+  .articles-list {
+    li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+
+  .link {
+    color: #31BDEE;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .hr {
+    background: url(../img/logo_small.png) no-repeat center center;
+    background-size: contain;
+    height: 20px;
+    margin: 15px 0;
+  }
+}
 
 @media (max-width: 940px) {
   .wrap-videos{
