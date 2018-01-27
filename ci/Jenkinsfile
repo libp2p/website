@@ -1,1 +1,1 @@
-website([website: 'libp2p', record: '_dnslink'])
+website([website: 'libp2p.io', record: '_dnslink'])
