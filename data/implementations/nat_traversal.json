@@ -7,7 +7,7 @@
       "langs": [
         {
           "name": "Browser JS",
-          "status": "Missing",
+          "status": "Unimplementable",
           "url": ""
         },
         {

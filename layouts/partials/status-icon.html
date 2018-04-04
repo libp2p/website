@@ -10,6 +10,10 @@
 <i class="red icon-hexagon"></i>
 {{end}}
 
+{{ if eq .status "Unimplementable" }}
+<i class="blue icon-hexagon"></i>
+{{end}}
+
 {{ if eq .status "Missing" }}
 <i class="grey icon-hexagon"></i>
 {{end}}
