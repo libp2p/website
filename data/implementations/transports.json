@@ -7,8 +7,8 @@
       "langs": [
         {
           "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-tcp"
+          "status": "Unimplementable",
+          "url": ""
         },
         {
           "name": "Node.js",
@@ -27,7 +27,7 @@
       "langs": [
         {
           "name": "Browser JS",
-          "status": "Missing",
+          "status": "Unimplementable",
           "url": ""
         },
         {
@@ -107,7 +107,7 @@
       "langs": [
         {
           "name": "Browser JS",
-          "status": "Missing",
+          "status": "Unimplementable",
           "url": ""
         },
         {
@@ -127,7 +127,7 @@
       "langs": [
         {
           "name": "Browser JS",
-          "status": "Missing",
+          "status": "Unimplementable",
           "url": ""
         },
         {
