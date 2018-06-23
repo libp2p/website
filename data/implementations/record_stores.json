@@ -23,7 +23,7 @@
         {
           "name": "C#",
           "status": "Unstable",
-          "url": "https://github.com/libp2p/go-libp2p-record"
+          "url": "https://github.com/libp2p/cs-libp2p-record"
         }
       ]
     }
