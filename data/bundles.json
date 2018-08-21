@@ -273,6 +273,14 @@
     ]
   },
   {
+    "id": "rust",
+    "name": "Rust",
+    "status": "dev",
+    "image": "/img/logo_7.png",
+    "github": "https://github.com/libp2p/rust-libp2p",
+    "categories": []
+  },
+  {
     "name": "Haskell",
     "status": "coming-soon",
     "image": "/img/logo_4.png",
@@ -290,13 +298,6 @@
     "name": "Python",
     "status": "coming-soon",
     "image": "/img/logo_6.png",
-    "github": "",
-    "categories": []
-  },
-  {
-    "name": "Rust",
-    "status": "coming-soon",
-    "image": "/img/logo_7.png",
     "github": "",
     "categories": []
   }

@@ -113,6 +113,15 @@
               <div class="img-wrap">
                 <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
               </div>
+              <div>{{.desc}}</div>
+            </a>
+          </div>
+          {{ end }}
+          {{ range where $.Site.Data.bundles "status" "dev" }}
+          <div class="card">
+            <a class="rectangle in-dev" href="/bundles#{{ .id }}">
+              <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
+              <div>In development...</div>
             </a>
           </div>
           {{ end }}
