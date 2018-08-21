@@ -18,6 +18,11 @@
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-secio"
+        },
+        {
+          "name": "Rust",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/secio"
         }
       ]
     }

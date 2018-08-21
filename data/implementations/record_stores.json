@@ -24,6 +24,11 @@
           "name": "C#",
           "status": "Unstable",
           "url": "https://github.com/libp2p/cs-libp2p-record"
+        },
+        {
+          "name": "Rust",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/datastore"
         }
       ]
     }

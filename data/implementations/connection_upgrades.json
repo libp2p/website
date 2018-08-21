@@ -19,6 +19,11 @@
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-conn"
+        },
+        {
+          "name": "Rust",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/core"
         }
       ]
     },
