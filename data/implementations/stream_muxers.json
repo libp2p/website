@@ -48,7 +48,7 @@
         {
           "name": "Rust",
           "status": "Usable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/mplex"
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/mplex"
         }
       ]
     },
@@ -73,7 +73,7 @@
         {
           "name": "Rust",
           "status": "Usable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/yamux"
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
         }
       ]
     }

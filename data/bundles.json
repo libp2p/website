@@ -285,7 +285,7 @@
           {
             "id": "libp2p-tcp-transport",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/tcp-transport"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tcp"
           },
           {
             "id": "libp2p-memory",
@@ -295,17 +295,17 @@
           {
             "id": "libp2p-uds",
             "status": "Unstable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/uds"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/uds"
           },
           {
             "id": "libp2p-relay",
             "status": "Unstable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/relay"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/relay"
           },
           {
             "id": "libp2p-websocket",
             "status": "Unstable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/websocket"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
           }
         ]
       },
@@ -315,17 +315,17 @@
           {
             "id": "libp2p-yamux",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/yamux"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
           },
           {
             "id": "libp2p-mplex",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/mplex"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/mplex"
           },
           {
             "id": "libp2p-secio",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/secio"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/secio"
           }
         ]
       },
@@ -335,12 +335,12 @@
           {
             "id": "libp2p-kad",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/kad"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
           },
           {
             "id": "libp2p-peerstore",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/peerstore"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/stores/peerstore"
           }
         ]
       },
@@ -350,27 +350,27 @@
           {
             "id": "libp2p-multistream-select",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/ratelimit"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/misc/multistream-select"
           },
           {
             "id": "libp2p-ping",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/ping"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/ping"
           },
           {
             "id": "libp2p-identify",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/identify"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/identify"
           },
           {
             "id": "libp2p-dns",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/dns"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transport/dns"
           },
           {
             "id": "libp2p-floodsub",
             "status": "Unstable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/floodsub"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/floodsub"
           }
         ]
       },
@@ -380,27 +380,27 @@
           {
             "id": "multiaddr",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/multiaddr"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/misc/multiaddr"
           },
           {
             "id": "multihash",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/multhash"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/misc/multhash"
+          },
+          {
+            "id": "rw-stream-sink",
+            "status": "Usable",
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/misc/rw-stream-sink"
           },
           {
             "id": "libp2p-transport-timeout",
             "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transport-timeout"
-          },
-          {
-            "id": "libp2p-transport-timeout",
-            "status": "Usable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transport-timeout"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/timeout"
           },
           {
             "id": "libp2p-ratelimit",
             "status": "Unstable",
-            "url": "https://github.com/libp2p/rust-libp2p/tree/master/ratelimit"
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/ratelimit"
           }
         ]
       }

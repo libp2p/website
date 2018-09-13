@@ -28,7 +28,7 @@
         {
           "name": "Rust",
           "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/datastore"
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/stores/datastore"
         }
       ]
     }

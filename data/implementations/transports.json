@@ -23,7 +23,7 @@
         {
           "name": "Rust",
           "status": "Usable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/tcp-transport"
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tcp"
         }
       ]
     },
@@ -73,7 +73,7 @@
         {
           "name": "Rust",
           "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/websocket"
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
         }
       ]
     },

@@ -48,7 +48,7 @@
         {
           "name": "Rust",
           "status": "Usable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/ping"
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/ping"
         }
       ]
     },
@@ -123,7 +123,7 @@
         {
           "name": "Rust",
           "status": "Usable",
-          "url": "https://github.com/libp2p/rust-libp2p/blob/master/peerstore"
+          "url": "https://github.com/libp2p/rust-libp2p/blob/master/stores/peerstore"
         }
       ]
     },
