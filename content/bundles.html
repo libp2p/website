@@ -41,6 +41,11 @@
             {{ partial "bundle.html" . }}
           {{ end }}
 
+
+          {{ range where $.Site.Data.bundles "status" "dev" }}
+            {{ partial "bundle.html" . }}
+          {{ end }}
+
           <section class="coming-soon">
             {{ range where $.Site.Data.bundles "status" "coming-soon" }}
               <div class="card">
