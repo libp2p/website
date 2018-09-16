@@ -44,6 +44,11 @@
           "name": "Go",
           "status": "Missing",
           "url": ""
+        },
+        {
+          "name": "Rust",
+          "status": "Missing",
+          "url": ""
         }
       ]
     }
