@@ -43,7 +43,7 @@
         {
           "name": "Go",
           "status": "Unstable",
-          "url": "https://github.com/marten-seemann/libp2p-quic-transport"
+          "url": "https://github.com/libp2p/go-libp2p-quic-transport"
         },
         {
           "name": "Rust",
