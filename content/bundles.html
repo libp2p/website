@@ -7,55 +7,53 @@
 </head>
 <body>
 
-{{ partial "topbar.html" . }}
+  {{ partial "topbar.html" . }}
 
-<main>
+  <main>
     <article class="center bundles">
-        <header>
-            <h2>Bundles.</h2>
-        </header>
-        <div class="wrap">
-            <p> libp2p provides ready-to-use bundles for different use cases and different languages. You can use these
-                to get all the functionality in one package, instead of including and bundling the different modules
-                yourself. See it as a quickstart.</p>
-            <div class="links">
-                <div class="active-link">
-                    <div class="copy-block"></div>
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </div>
-                <div class="columns">
-                    <div class="column col1"></div>
-                    <div class="column col2"></div>
-                    <div class="column col3"></div>
-                    <div class="column col4"></div>
-                </div>
+      <h1>Bundles</h1>
+      <div class="wrap">
+        <p> libp2p provides ready-to-use bundles for different use cases and different languages. You can use these
+          to get all the functionality in one package, instead of including and bundling the different modules
+          yourself. See it as a quickstart.</p>
+          <div class="links">
+            <div class="active-link">
+              <div class="copy-block"></div>
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
             </div>
+            <div class="columns">
+              <div class="column col1"></div>
+              <div class="column col2"></div>
+              <div class="column col3"></div>
+              <div class="column col4"></div>
+            </div>
+          </div>
         </div>
         <div class="triangle white"></div>
-    </article>
+      </article>
 
-    <article class="center bundles-info">
+      <article class="center bundles-info">
         <div class="wrap">
 
           {{ range where $.Site.Data.bundles "status" "live" }}
-            {{ partial "bundle.html" . }}
+          {{ partial "bundle.html" . }}
           {{ end }}
 
 
           {{ range where $.Site.Data.bundles "status" "dev" }}
-            {{ partial "bundle.html" . }}
+          {{ partial "bundle.html" . }}
           {{ end }}
 
           <section class="coming-soon">
             {{ range where $.Site.Data.bundles "status" "coming-soon" }}
-              <div class="card">
-                <div class="rectangle coming-soon" title="{{ .name }} bundle coming soon">
-                  <div class="img">
-                    <img src="{{ .image }}" alt="{{ .name }}">
-                  </div>
-                  <div class="text">In progress...</div>
+            <div class="card">
+              <div class="rectangle coming-soon" title="{{ .name }} bundle coming soon">
+                <div class="img">
+                  <img src="{{ .image }}" alt="{{ .name }}">
                 </div>
+                <div class="text">In progress...</div>
               </div>
+            </div>
             {{ end }}
             <div class="card empty">
               <div class="rectangle empty">
@@ -71,14 +69,14 @@
 
         </div>
         <div class="triangle grey"></div>
-    </article>
+      </article>
 
-</main>
+    </main>
 
-{{ partial "footer.html" . }}
+    {{ partial "footer.html" . }}
 
-<script type="text/javascript" src="/js/common.js"></script>
-<script type="text/javascript" src="/js/bundles.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/bundles.js"></script>
 
-</body>
-</html>
+  </body>
+  </html>

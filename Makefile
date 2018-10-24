@@ -15,7 +15,7 @@ else
 endif
 
 build: clean install lint js css minify
-	$(PREPEND)hugo && \
+	$(PREPEND)$(NPMBIN)/hugo && \
 	echo "" && \
 	echo "Site built out to ./public dir"
 
@@ -37,7 +37,7 @@ help:
 	@echo '   DEBUG=true make [command] for increased verbosity                                                      '
 
 serve: install lint js css minify
-	$(PREPEND)hugo server
+	$(PREPEND)$(NPMBIN)/hugo server
 
 node_modules:
 	$(PREPEND)$(NPM) i $(APPEND)
@@ -65,7 +65,7 @@ dev: install js css
 	$(PREPEND) ( \
 		$(NPMBIN)/watchify --noparse=jquery js/{index,implementations,bundles,media}.js -p [ factor-bundle -o static/js/index.js -o static/js/implementations.js -o static/js/bundles.js -o static/js/media.js ] -o static/js/common.js & \
 		$(NPMBIN)/nodemon --quiet --watch less --ext less --exec "make css" & \
-		hugo server -w \
+		$(NPMBIN)/hugo server -w \
 	)
 
 deploy:

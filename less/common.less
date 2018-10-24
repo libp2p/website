@@ -23,6 +23,7 @@ body {
   width: 100%;
   font-family: Roboto-Regular, SansSerif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 article.center {
@@ -33,6 +34,7 @@ article.center {
   padding-bottom: 100px;
   @media (max-width: 767px) {
     padding-top: 40px;
+    padding-bottom: 52px;
   }
 }
 
@@ -245,18 +247,15 @@ main {
   padding-bottom: 60px;
 }
 
-header {
-  align-self: center;
-
-  & > h2 {
-    font-family: Roboto-Black;
-    color: @c_black;
-    margin: 0;
-    font-size: 65px;
-    @media (max-width: 767px) {
-      font-size: 36px;
-      text-align: center;
-    }
+h1, .h1 {
+  text-align: center;
+  font-family: Roboto-Black;
+  color: @c_black;
+  margin: 0;
+  font-size: 65px;
+  @media (max-width: 767px) {
+    font-size: 36px;
+    text-align: center;
   }
 }
 

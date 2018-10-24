@@ -7,89 +7,91 @@
 </head>
 <body>
 
-{{ partial "topbar.html" . }}
+  {{ partial "topbar.html" . }}
 
   <main>
-    <div class="pseudo-header"></div>
     <article class="center videos">
+      <h1>Media</h1>
+      <div class="about-part">Talks, publications and demos.</div>
+      <div class="triangle white"></div>
+    </article>
+    <article class="bg-gray">
       <section class="wrap">
-        <h1 class="title-page">Media.</h1>
-        <div class="about-part">Talks, publications and demos.</div>
-
-        <div class="wrap-videos">
-
+        <h2 class="subtitle">Introductions &amp; Project Updates</h2>
+        <div>
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/CRe_oDtfRLw" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/CRe_oDtfRLw" allowfullscreen></iframe>
             </div>
             <p>Introduction to libp2p - David Dias</p>
           </div>
-
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=PLX9e-uG608s-UpJKp8658FewwyQfh4jVC" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLX9e-uG608s-UpJKp8658FewwyQfh4jVC" allowfullscreen></iframe>
             </div>
             <p>October 2018 Project Updates</p>
           </div>
+        </div>
 
+        <h2 class="subtitle">Technical Deep Dives</h2>
+        <div>
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/HqSXFlCwgMY" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/HqSXFlCwgMY" allowfullscreen></iframe>
             </div>
             <p>Introduction to Rust Libp2p - Pierre Krieger</p>
           </div>
-
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/eb-Mg7Kxv9w" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/eb-Mg7Kxv9w" allowfullscreen></iframe>
             </div>
             <p>The libp2p Consensus Interface and the Raft Implementation - Hector Sanjuan</p>
           </div>
 
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/zcWHamr5m_k" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/zcWHamr5m_k" allowfullscreen></iframe>
             </div>
             <p>The Life of a libp2p Connection - Jacob Heun</p>
           </div>
 
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/hyT91vdeZBk" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/hyT91vdeZBk" allowfullscreen></iframe>
             </div>
             <p>Go libp2p gorpc simple RPC on top of libp2p - Hector Sanjuan</p>
           </div>
 
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/4FvMed5iCb4" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/4FvMed5iCb4" allowfullscreen></iframe>
             </div>
             <p>QUIC in libp2p - Marten Seemann</p>
           </div>
+        </div>
 
+        <h2 class="subtitle">Older Videos</h2>
+        <div>
           <div class="item-video">
             <div class="video-container">
-              <iframe width="300" height="200" src="https://www.youtube.com/embed/HxueJbeMVG4" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/HxueJbeMVG4" allowfullscreen></iframe>
             </div>
             <p>libp2p ❤ devp2p: IPFS and Ethereum Networking - David Dias</p>
           </div>
-
           <div class="item-video last-element">
             <div class="video-container">
               <iframe src="https://archive.org/embed/DWebSummit2016_Panel_Peer_to_Peer_Networks" width="300" height="200" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
             </div>
             <p>Peer to Peer Networks at the Decentralised Web Summit</p>
           </div>
-
         </div>
       </section>
-      <div class="triangle white"></div>
     </article>
 
     <article class="center articles">
       <div class="wrap">
-        <h2 class="title-page">Articles.</h2>
-        <h3 class="title-year">2016</h3>
+        <h2 class="h1">Articles</h2>
+        <h3 class="subtitle">2016</h3>
         <ul class="articles-list">
           <li>
             <a href="http://dapps.hatenablog.com/entry/2016/10/30/000000" class="link">Oct 30 - &lt;エンジニアに朗報&gt;イーサリアムとIPFSのコラボレーションによる次世代ライブラリとは</a>
