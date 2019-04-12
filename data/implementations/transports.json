@@ -117,8 +117,8 @@
         },
         {
           "name": "Go",
-          "status": "Missing",
-          "url": ""
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/go-libp2p-webrtc-direct"
         },
         {
           "name": "Rust",
