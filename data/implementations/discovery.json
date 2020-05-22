@@ -19,6 +19,11 @@
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/ipfs/go-ipfs/blob/master/core/bootstrap.go"
+        },
+        {
+          "name": "Rust",
+          "status": "Missing",
+          "url": ""
         }
       ]
     },
@@ -39,6 +44,11 @@
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kad-dht"
+        },
+        {
+          "name": "Rust",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         }
       ]
     },
@@ -59,6 +69,11 @@
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go"
+        },
+        {
+          "name": "Rust",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/mdns"
         }
       ]
     }
