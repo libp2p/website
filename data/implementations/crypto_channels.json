@@ -21,8 +21,58 @@
         },
         {
           "name": "Rust",
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/secio"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-tls",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Missing",
+          "url": "Unimplementable"
+        },
+        {
+          "name": "Node.js",
+          "status": "Missing",
+          "url": ""
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-tls"
+        },
+        {
+          "name": "Rust",
+          "status": "Missing",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "libp2p-noise",
+      "langs": [
+        {
+          "name": "Browser JS",
+          "status": "Usable",
+          "url": "https://github.com/NodeFactoryIo/js-libp2p-noise"
+        },
+        {
+          "name": "Node.js",
+          "status": "Usable",
+          "url": "https://github.com/NodeFactoryIo/js-libp2p-noise"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-noise"
+        },
+        {
+          "name": "Rust",
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/noise"
         }
       ]
     }
