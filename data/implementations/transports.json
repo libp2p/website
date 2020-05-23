@@ -147,7 +147,7 @@
         },
         {
           "name": "Rust",
-          "status": "Missing",
+          "status": "Unimplementable",
           "url": ""
         }
       ]
