@@ -275,7 +275,7 @@
   {
     "id": "rust",
     "name": "Rust",
-    "status": "dev",
+    "status": "live",
     "image": "/img/logo_7.png",
     "github": "https://github.com/libp2p/rust-libp2p",
     "categories": [
