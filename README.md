@@ -59,16 +59,6 @@ Optimise all the things!
 
 Build the site in the `public` dir and add to `ipfs` _(requires `hugo` & `ipfs` on your `PATH`)_
 
-### `make publish-to-domain` :rocket:
-
-Update the DNS record for `libp2p.io`.  _(requires an `auth.token` file to be saved in the project root.)_
-
-If you'd like to update the dnslink TXT record for another domain, pass `DOMAIN=<your domain here>` like so:
-
-```sh
-make publish-to-domain DOMAIN=tableflip.io
-```
-
 ---
 
 See the `Makefile` for the full list or run `make help` in the project root. You can pass the env var `DEBUG=true` to increase the verbosity of your chosen command.
