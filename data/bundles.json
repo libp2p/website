@@ -325,7 +325,7 @@
         ]
       },
       {
-        "id": "peers",
+        "id": "peer-routing",
         "modules": [
           {
             "id": "libp2p-kad",
@@ -371,6 +371,11 @@
             "id": "libp2p-mdns",
             "status": "Done",
             "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/mdns"
+          },
+          {
+            "id": "libp2p-rendezvous",
+            "status": "Done",
+            "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/rendezvous"
           }
         ]
       },
