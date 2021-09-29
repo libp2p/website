@@ -68,7 +68,7 @@
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go"
+          "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns/mdns.go"
         },
         {
           "name": "Rust",
