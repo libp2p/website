@@ -3,7 +3,7 @@
   "title": "NAT Traversal",
   "libs": [
     {
-      "id": "libp2p-nat",
+      "id": "libp2p-circuit-relay-v2",
       "langs": [
         {
           "name": "Browser JS",
@@ -17,9 +17,64 @@
         },
         {
           "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv2"
+        },
+        {
+          "name": "Rust",
           "status": "Unstable",
-          "url": "https://github.com/libp2p/go-libp2p-nat"
+          "url": "https://github.com/libp2p/rust-libp2p/pull/2059"
         }
+      ]
+    },
+    {
+      "id": "libp2p-autonat",
+      "langs": [
+        {
+        "name": "Browser JS",
+        "status": "Missing",
+        "url": ""
+      },
+        {
+        "name": "Node.js",
+        "status": "Missing",
+        "url": ""
+      },
+        {
+        "name": "Go",
+        "status": "Done",
+        "url": "https://github.com/libp2p/go-libp2p-autonat"
+      },
+        {
+        "name": "Rust",
+        "status": "Unstable",
+        "url": "https://github.com/libp2p/rust-libp2p/pull/1672"
+      }
+      ]
+    },
+    {
+      "id": "libp2p-dcutr",
+      "langs": [
+        {
+        "name": "Browser JS",
+        "status": "Missing",
+        "url": ""
+      },
+        {
+        "name": "Node.js",
+        "status": "Missing",
+        "url": ""
+      },
+        {
+        "name": "Go",
+        "status": "Done",
+        "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/holepunch"
+      },
+        {
+        "name": "Rust",
+        "status": "Unstable",
+        "url": "https://github.com/libp2p/rust-libp2p/pull/2076"
+      }
       ]
     }
   ]
