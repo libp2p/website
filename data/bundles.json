@@ -261,7 +261,7 @@
           {
             "id": "libp2p-mdns",
             "status": "Done",
-            "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns.go"
+            "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns/mdns.go"
           },
           {
             "id": "libp2p-railing",
