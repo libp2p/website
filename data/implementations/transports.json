@@ -6,24 +6,44 @@
       "id": "libp2p-tcp",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Unimplementable",
-          "url": ""
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-tcp"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-tcp-transport"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/tcp"
         },
         {
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tcp"
+        },
+        {
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
+        },
+        {
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/tcp"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/blob/master/src/libp2p_transport_tcp.erl"
         }
       ]
     },
@@ -31,24 +51,38 @@
       "id": "libp2p-quic",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Unimplementable",
-          "url": ""
+          "name": "JavaScript",
+          "status": "Missing"
         },
         {
-          "name": "Node.js",
-          "status": "Missing",
-          "url": ""
-        },
-        {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-quic-transport"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
         },
         {
           "name": "Rust",
           "status": "Unstable",
           "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     },
@@ -56,24 +90,41 @@
       "id": "libp2p-websockets",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-websockets"
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-websockets"
         },
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-ws-transport"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/websocket"
         },
         {
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/ws"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/wstransport.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     },
@@ -81,24 +132,37 @@
       "id": "libp2p-webrtc-star",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
         },
         {
           "name": "Go",
-          "status": "Missing",
-          "url": ""
+          "status": "Missing"        
         },
         {
           "name": "Rust",
-          "status": "Missing",
-          "url": ""
+          "status": "Missing"        
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     },
@@ -106,12 +170,7 @@
       "id": "libp2p-webrtc-direct",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
         },
@@ -124,6 +183,26 @@
           "name": "Rust",
           "status": "Missing",
           "url": ""
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     },
@@ -131,12 +210,7 @@
       "id": "libp2p-udp",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Unimplementable",
-          "url": ""
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Unstable",
           "url": "https://github.com/libp2p/js-libp2p-udp"
         },
@@ -147,8 +221,27 @@
         },
         {
           "name": "Rust",
-          "status": "Unimplementable",
-          "url": ""
+          "status": "Unimplementable"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     },
@@ -156,24 +249,38 @@
       "id": "libp2p-utp",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Unimplementable",
-          "url": ""
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Unstable",
           "url": "https://github.com/libp2p/js-libp2p-utp"
         },
         {
           "name": "Go",
-          "status": "Usable",
-          "url": "https://github.com/libp2p/go-utp-transport"
+          "status": "Missing"
         },
         {
           "name": "Rust",
           "status": "Missing",
           "url": ""
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     }
