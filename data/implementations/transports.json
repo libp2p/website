@@ -1,5 +1,5 @@
 {
-  "id": "transports",
+  "id": "transmission",
   "interface": "https://github.com/libp2p/interface-transport",
   "libs": [
     {
@@ -44,45 +44,6 @@
           "name": "Erlang",
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/blob/master/src/libp2p_transport_tcp.erl"
-        }
-      ]
-    },
-    {
-      "id": "libp2p-quic",
-      "langs": [
-        {
-          "name": "JavaScript",
-          "status": "Missing"
-        },
-        {
-          "name": "Golang",
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
-        },
-        {
-          "name": "Rust",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
-        },
-        {
-          "name": "Python",
-          "status": "Missing"
-        },
-        {
-          "name": "C++",
-          "status": "Missing"
-        },
-        {
-          "name": "Kotlin",
-          "status": "Missing"
-        },
-        {
-          "name": "Nim",
-          "status": "Missing"
-        },
-        {
-          "name": "Erlang",
-          "status": "Missing"
         }
       ]
     },

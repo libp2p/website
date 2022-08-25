@@ -1,17 +1,51 @@
 {
   "id": "stream-muxers",
-  "interface": "https://github.com/libp2p/interface-stream-muxer",
+  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
+    {
+      "id": "libp2p-quic",
+      "langs": [
+        {
+          "name": "JavaScript",
+          "status": "Missing"
+        },
+        {
+          "name": "Golang",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
+        },
+        {
+          "name": "Rust",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
+        }
+      ]
+    },
     {
       "id": "libp2p-spdy",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-spdy"
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-spdy"
         },
@@ -24,19 +58,34 @@
           "name": "Rust",
           "status": "Missing",
           "url": ""
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     },
     {
-      "id": "libp2p-multiplex",
+      "id": "libp2p-mplex",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-multiplex"
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-multiplex"
         },
@@ -49,6 +98,26 @@
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/mplex"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     },
@@ -56,12 +125,7 @@
       "id": "libp2p-yamux",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Missing",
-          "url": ""
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Missing",
           "url": ""
         },
@@ -74,6 +138,66 @@
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-muxado",
+      "langs": [
+        {
+          "name": "JavaScript",
+          "status": "Missing",
+          "url": ""
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/hashicorp/yamux"
+        },
+        {
+          "name": "Rust",
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     }
