@@ -11,7 +11,7 @@ This repository contains the source code for the libp2p website available at htt
 
 This project builds out a static site to explain libp2p, ready for deployment on ipfs. It uses `hugo` to glue the html together. It provides an informative, public-facing website. The most important things are the words, concepts and links it presents.
 
-Much of the site content is data-driven, take a look at the `data` dir where find the data behind the implementations and bundles information as json.
+Much of the site content is data-driven, take a look at the `data` dir where find the data behind the implementations information as json.
 
 ## Install
 
