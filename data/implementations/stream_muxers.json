@@ -101,19 +101,23 @@
         },
         {
           "name": "Python",
-          "status": "Missing"
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/stream_muxer/mplex"
         },
         {
           "name": "C++",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/mplex"
         },
         {
           "name": "Kotlin",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/mux/mplex"
         },
         {
           "name": "Nim",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/tree/master/libp2p/muxers/mplex"
         },
         {
           "name": "Erlang",
@@ -145,7 +149,8 @@
         },
         {
           "name": "C++",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/yamux"
         },
         {
           "name": "Kotlin",
@@ -157,7 +162,8 @@
         },
         {
           "name": "Erlang",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
       ]
     },

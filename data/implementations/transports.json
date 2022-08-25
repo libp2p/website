@@ -43,7 +43,7 @@
         {
           "name": "Erlang",
           "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/blob/master/src/libp2p_transport_tcp.erl"
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
       ]
     },
