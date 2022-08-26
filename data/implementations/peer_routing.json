@@ -1,17 +1,12 @@
 {
   "id": "peer-routing",
-  "interface": "https://github.com/libp2p/interface-peer-routing",
+  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "libp2p-kad-dht",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/js-libp2p-dht"
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Unstable",
           "url": "https://github.com/libp2p/js-libp2p-dht"
         },
@@ -24,6 +19,66 @@
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
+        }
+      ]
+    },
+    {
+      "id": "libp2p-kbucket",
+      "langs": [
+        {
+          "name": "JavaScript",
+          "status": "Missing"
+        },
+        {
+          "name": "Go",
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p-kbucket"
+        },
+        {
+          "name": "Rust",
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Kotlin",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     }
