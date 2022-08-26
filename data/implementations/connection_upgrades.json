@@ -7,42 +7,42 @@
       "langs": [
         {
           "name": "JavaScript",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/libp2p/js-libp2p"
         },
         {
           "name": "Golang",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/libp2p/go-libp2p"
         },
         {
           "name": "Rust",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/libp2p/rust-libp2p/"
         },
         {
           "name": "Python",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/libp2p/py-libp2p"
         },
         {
           "name": "C++",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/libp2p/cpp-libp2p"
         },
         {
           "name": "JVM",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/libp2p/jvm-libp2p"
         },
         {
           "name": "Nim",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/status-im/nim-libp2p"
         },
         {
           "name": "Erlang",
-          "status": "In Progress",
+          "status": "Usable",
           "url": "https://github.com/helium/erlang-libp2p"
         }
       ]

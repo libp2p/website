@@ -115,7 +115,7 @@
         },
         {
           "name": "Nim",
-          "status": "Prototype",
+          "status": "Usable",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/nat"
         },
         {
