@@ -68,14 +68,14 @@
                 </div>
                 <span>Routing</span>
               </a>
-            </div>
-            <div class="column col3">
               <a href="#nat-traversal" class="link scroll">
                 <div class="img">
                   <img width="14" src="/img/svg/nat-traversal.svg" alt="NAT traversal">
                 </div>
                 <span>NAT traversal</span>
               </a>
+            </div>
+            <div class="column col3">
               <a href="#record-stores" class="link scroll">
                 <div class="img">
                   <img width="10" src="/img/svg/record-stores.svg" alt="Record storing">
@@ -120,7 +120,7 @@
     <article class="center implementations-info">
       <div class="wrap">
 
-      {{ $impls := (slice "transports" "stream_muxers" "crypto_channels" "connection_upgrades" "peer_routing" "record_stores" "nat_traversal" "discovery" "utils" "others") }}
+      {{ $impls := (slice "connection_upgrades" "transports" "stream_muxers" "crypto_channels" "discovery" "peer_routing" "nat_traversal" "record_stores" "others" "utils") }}
 
       {{ range $impls }}
         {{ partial "implementation.html" (index $.Site.Data.implementations .) }}
