@@ -1,5 +1,6 @@
 {
   "id": "stream-muxers",
+  "title": "Steam Multiplexing",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
@@ -28,7 +29,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -68,7 +69,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -110,7 +111,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/mplex"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/mux/mplex"
         },
@@ -153,7 +154,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/yamux"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -194,7 +195,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {

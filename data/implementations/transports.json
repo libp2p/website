@@ -1,5 +1,6 @@
 {
   "id": "transmission",
+  "title": "Transmission",
   "interface": "https://github.com/libp2p/interface-transport",
   "libs": [
     {
@@ -31,7 +32,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/tcp"
         },
@@ -74,7 +75,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/ws"
         },
@@ -114,7 +115,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -154,7 +155,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -193,7 +194,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -232,7 +233,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {

@@ -1,5 +1,6 @@
 {
   "id": "discovery",
+  "title": "Discovery",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
@@ -30,7 +31,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -71,7 +72,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -112,7 +113,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -158,7 +159,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {

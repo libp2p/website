@@ -1,5 +1,7 @@
 {
   "id": "crypto-channels",
+  "title": "Secure Communication",
+  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "libp2p-noise",
@@ -30,7 +32,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/noise"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/security/noise"
         },
@@ -70,7 +72,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {

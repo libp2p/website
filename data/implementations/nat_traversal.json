@@ -1,5 +1,6 @@
 {
   "id": "nat-traversal",
+  "title": "NAT Traversal",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
@@ -28,7 +29,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -70,7 +71,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -109,7 +110,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {

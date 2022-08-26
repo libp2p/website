@@ -1,22 +1,18 @@
 {
   "id": "utils",
   "title": "General Purpose Utils & Datatypes",
+  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "crypto",
       "langs": [
         {
-          "name": "Browser JS",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-crypto"
         },
         {
-          "name": "Node.js",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-crypto"
-        },
-        {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-crypto"
         },
@@ -24,6 +20,31 @@
           "name": "Rust",
           "status": "Unimplementable",
           "url": ""
+        },
+        {
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/crypto"
+        },
+        {
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/crypto"
+        },
+        {
+          "name": "JVM",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/crypto"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/crypto/crypto.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
       ]
     },
@@ -31,49 +52,44 @@
       "id": "libp2p-ping",
       "langs": [
         {
-          "name": "Browser JS",
+          "name": "JavaScript",
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-ping"
-        },
-        {
-          "name": "Node.js",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-ping"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
         },
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/p2p/protocol/ping"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/ping"
         },
         {
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/ping"
-        }
-      ]
-    },
-    {
-      "id": "libp2p-peer-id",
-      "langs": [
-        {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-peer-id"
         },
         {
-          "name": "Node.js",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-peer-id"
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
         },
         {
-          "name": "Go",
-          "status": "Missing",
-          "url": ""
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/protocol/ping"
         },
         {
-          "name": "Rust",
+          "name": "JVM",
           "status": "Done",
-          "url": "https://github.com/libp2p/rust-libp2p/blob/master/core/src/peer_id.rs"
+          "url": "https://github.com/libp2p/jvm-libp2p/blob/develop/src/main/kotlin/io/libp2p/protocol/Ping.kt"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
       ]
     },
@@ -81,49 +97,43 @@
       "id": "libp2p-peer-info",
       "langs": [
         {
-          "name": "Browser JS",
+          "name": "JavaScript",
           "status": "Done",
-          "url": "https://github.com/libp2p/js-peer-info"
-        },
-        {
-          "name": "Node.js",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-peer-info"
+          "url": "https://github.com/libp2p/js-libp2p-peer-id"
         },
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-peer"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/core/peer"
         },
         {
           "name": "Rust",
-          "status": "Missing",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "id": "libp2p-peer-book",
-      "langs": [
-        {
-          "name": "Browser JS",
           "status": "Done",
-          "url": "https://github.com/libp2p/js-peer-book"
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/core/src"
         },
         {
-          "name": "Node.js",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-peer-book"
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/peer"
         },
         {
-          "name": "Go",
+          "name": "C++",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-peerstore"
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
         },
         {
-          "name": "Rust",
-          "status": "Missing",
-          "url": ""
+          "name": "JVM",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
       ]
     },
@@ -149,6 +159,31 @@
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/swarm"
+        },
+        {
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
+        },
+        {
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
+        },
+        {
+          "name": "JVM",
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/tcp"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
       ]
     }

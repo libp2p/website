@@ -1,5 +1,6 @@
 {
   "id": "peer-routing",
+  "title": "Routing",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
@@ -30,7 +31,7 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {
@@ -69,7 +70,7 @@
           "status": "Missing"
         },
         {
-          "name": "Kotlin",
+          "name": "JVM",
           "status": "Missing"
         },
         {

@@ -1,21 +1,18 @@
 {
   "id": "others",
+  "title": "Publish/Subscribe",
+  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "libp2p-floodsub",
       "langs": [
         {
-          "name": "Browser JS",
+          "name": "JavaScript",
           "status": "Usable",
           "url": "https://github.com/libp2p/js-libp2p-floodsub"
         },
         {
-          "name": "Node.js",
-          "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-floodsub"
-        },
-        {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-floodsub"
         },
@@ -23,6 +20,30 @@
           "name": "Rust",
           "status": "Usable",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/floodsub"
+        },
+        {
+          "name": "Python",
+          "status": "Done",
+          "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/floodsub.py"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "JVM",
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/pubsub/flood"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/protocols/relay.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src/relay"
         }
       ]
     },
@@ -30,17 +51,12 @@
       "id": "libp2p-gossipsub",
       "langs": [
         {
-          "name": "Browser JS",
+          "name": "JavaScript",
           "status": "Usable",
           "url": "https://github.com/ChainSafe/gossipsub-js"
         },
         {
-          "name": "Node.js",
-          "status": "Usable",
-          "url": "https://github.com/ChainSafe/gossipsub-js"
-        },
-        {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-pubsub"
         },
@@ -48,6 +64,31 @@
           "name": "Rust",
           "status": "Usable",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/gossipsub"
+        },
+        {
+          "name": "Python",
+          "status": "Done",
+          "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/gossipsub.py"
+        },
+        {
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/protocol/gossip"
+        },
+        {
+          "name": "JVM",
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/pubsub/gossip"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/protocols/relay.nim"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src/relay"
         }
       ]
     }
