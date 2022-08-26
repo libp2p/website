@@ -64,29 +64,29 @@
               </a>
               <a href="#peer-routing" class="link scroll">
                 <div class="img">
-                  <img width="13" src="/img/svg/peer-routing.svg" alt="Routing">
+                  <img width="13" src="/img/svg/peer-routing.svg" alt="Peer routing">
                 </div>
-                <span>Routing</span>
+                <span>Peer routing</span>
               </a>
+              <a href="#others" class="link scroll">
+                <div class="img">
+                  <img width="13" src="/img/svg/others.svg" alt="Content routing">
+                </div>
+                <span>Content routing</span>
+              </a>
+            </div>
+            <div class="column col3">
               <a href="#nat-traversal" class="link scroll">
                 <div class="img">
                   <img width="14" src="/img/svg/nat-traversal.svg" alt="NAT traversal">
                 </div>
                 <span>NAT traversal</span>
               </a>
-            </div>
-            <div class="column col3">
               <a href="#record-stores" class="link scroll">
                 <div class="img">
-                  <img width="10" src="/img/svg/record-stores.svg" alt="Record storing">
+                  <img width="10" src="/img/svg/record-stores.svg" alt="Storage">
                 </div>
-                <span>Record storing</span>
-              </a>
-              <a href="#others" class="link scroll">
-                <div class="img">
-                  <img width="13" src="/img/svg/others.svg" alt="Publish/subscribe">
-                </div>
-                <span>Publish/subscribe</span>
+                <span>Storage</span>
               </a>
               <a href="#utils" class="link scroll">
                 <div class="img">
@@ -120,7 +120,7 @@
     <article class="center implementations-info">
       <div class="wrap">
 
-      {{ $impls := (slice "connection_upgrades" "transports" "stream_muxers" "crypto_channels" "discovery" "peer_routing" "nat_traversal" "record_stores" "others" "utils") }}
+      {{ $impls := (slice "connection_upgrades" "transports" "stream_muxers" "crypto_channels" "discovery" "peer_routing" "others" "nat_traversal" "record_stores" "utils") }}
 
       {{ range $impls }}
         {{ partial "implementation.html" (index $.Site.Data.implementations .) }}

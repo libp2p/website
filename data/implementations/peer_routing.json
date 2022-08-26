@@ -1,6 +1,6 @@
 {
   "id": "peer-routing",
-  "title": "Routing",
+  "title": "Peer routing",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {

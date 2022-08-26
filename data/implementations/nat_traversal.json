@@ -76,7 +76,8 @@
         },
         {
           "name": "Nim",
-          "status": "Missing"        
+          "status": "Missing",
+          "link": "https://github.com/helium/erlang-libp2p/tree/master/src/nat"        
         },
         {
           "name": "Erlang",
@@ -115,8 +116,8 @@
         },
         {
           "name": "Nim",
-          "status": "Usable",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src/nat"
+          "status": "Unstable",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/autonat.nim"
         },
         {
           "name": "Erlang",

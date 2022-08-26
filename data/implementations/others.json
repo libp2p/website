@@ -1,6 +1,6 @@
 {
   "id": "others",
-  "title": "Publish/subscribe",
+  "title": "Content routing",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
