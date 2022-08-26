@@ -37,13 +37,11 @@
         },
         {
           "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/protocols/relay.nim"
+          "status": "Missing"
         },
         {
           "name": "Erlang",
-          "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src/relay"
+          "status": "Missing"
         }
       ]
     },
@@ -82,13 +80,11 @@
         },
         {
           "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/protocols/relay.nim"
+          "status": "Missing"
         },
         {
           "name": "Erlang",
-          "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src/relay"
+          "status": "Missing"
         }
       ]
     }

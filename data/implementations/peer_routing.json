@@ -12,7 +12,7 @@
           "url": "https://github.com/libp2p/js-libp2p-dht"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kad-dht"
         },
@@ -28,7 +28,7 @@
         {
           "name": "C++",
           "status": "Done",
-          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/protocol/kademlia"
         },
         {
           "name": "JVM",
@@ -52,14 +52,13 @@
           "status": "Missing"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kbucket"
         },
         {
           "name": "Rust",
-          "status": "Done",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
+          "status": "Missing"
         },
         {
           "name": "Python",

@@ -57,7 +57,7 @@
           "url": "https://github.com/libp2p/js-libp2p-websockets"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/websocket"
         },
@@ -99,7 +99,7 @@
           "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Missing"        
         },
         {
@@ -137,7 +137,7 @@
           "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-libp2p-webrtc-direct"
         },
@@ -177,7 +177,7 @@
           "url": "https://github.com/libp2p/js-libp2p-udp"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-udp-transport"
         },
@@ -216,7 +216,7 @@
           "url": "https://github.com/libp2p/js-libp2p-utp"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Missing"
         },
         {

@@ -51,14 +51,13 @@
           "url": "https://github.com/libp2p/js-libp2p-spdy"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Unstable",
           "url": "https://github.com/docker/spdystream"
         },
         {
           "name": "Rust",
-          "status": "Missing",
-          "url": ""
+          "status": "Missing"
         },
         {
           "name": "Python",
@@ -91,7 +90,7 @@
           "url": "https://github.com/libp2p/js-libp2p-multiplex"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/whyrusleeping/go-smux-multiplex"
         },
@@ -135,7 +134,7 @@
           "url": ""
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/hashicorp/yamux"
         },
@@ -177,7 +176,7 @@
           "url": ""
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/hashicorp/yamux"
         },

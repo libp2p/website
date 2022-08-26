@@ -133,7 +133,7 @@
         {
           "name": "Erlang",
           "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src/peerbook"
         }
       ]
     },

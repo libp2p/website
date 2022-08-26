@@ -7,17 +7,12 @@
       "id": "record",
       "langs": [
         {
-          "name": "Browser JS",
+          "name": "JavaScript",
           "status": "Usable",
           "url": "https://github.com/libp2p/js-libp2p-record"
         },
         {
-          "name": "Node.js",
-          "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-record"
-        },
-        {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-record"
         },
@@ -30,6 +25,26 @@
           "name": "Rust",
           "status": "Unstable",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Done"
+        },
+        {
+          "name": "JVM",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
         }
       ]
     }
