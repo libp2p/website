@@ -1,6 +1,6 @@
 {
-  "id": "transmission",
-  "title": "Transmission",
+  "id": "transports",
+  "title": "Transports",
   "interface": "https://github.com/libp2p/interface-transport",
   "libs": [
     {
