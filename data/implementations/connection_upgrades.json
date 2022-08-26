@@ -1,6 +1,6 @@
 {
   "id": "connection-upgrades",
-  "title": "Full specs",
+  "title": "Full specifications",
   "libs": [
     {
       "id": "libp2p-full-specs",

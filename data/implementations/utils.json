@@ -1,6 +1,6 @@
 {
   "id": "utils",
-  "title": "General Purpose Utils & Datatypes",
+  "title": "General purpose utils & datatypes",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {

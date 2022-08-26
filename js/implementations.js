@@ -84,6 +84,14 @@ $(function () {
     var maxHeight = 0
     var opacity = 0.0
 
+    if (scrollTop >= $connectionUpgrades.offset().top - headerHeight - sectionMarginTop - 60 &&
+            scrollTop <= $connectionUpgrades.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
+      maxHeight = $connectionUpgrades.offset().top - headerHeight - sectionMarginTop - 60 + 200
+      opacity = maxHeight !== scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0
+      $cube.find('.connection-upgrades').css('opacity', opacity)
+    } else {
+      $cube.find('.connection-upgrades').css('opacity', 0)
+    }
     if (scrollTop >= 235 &&
             scrollTop <= $transports.offset().top - headerHeight - sectionMarginTop + 140) {
       maxHeight = $transports.offset().top - headerHeight - sectionMarginTop + 140
@@ -108,13 +116,13 @@ $(function () {
     } else {
       $cube.find('.crypto-channels').css('opacity', 0)
     }
-    if (scrollTop >= $connectionUpgrades.offset().top - headerHeight - sectionMarginTop - 60 &&
-            scrollTop <= $connectionUpgrades.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
-      maxHeight = $connectionUpgrades.offset().top - headerHeight - sectionMarginTop - 60 + 200
+    if (scrollTop >= $discovery.offset().top - headerHeight - sectionMarginTop - 60 &&
+            scrollTop <= $discovery.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
+      maxHeight = $discovery.offset().top - headerHeight - sectionMarginTop - 60 + 200
       opacity = maxHeight !== scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0
-      $cube.find('.connection-upgrades').css('opacity', opacity)
+      $cube.find('.discovery').css('opacity', opacity)
     } else {
-      $cube.find('.connection-upgrades').css('opacity', 0)
+      $cube.find('.discovery').css('opacity', 0)
     }
     if (scrollTop >= $peerRouting.offset().top - headerHeight - sectionMarginTop - 60 &&
             scrollTop <= $peerRouting.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
@@ -124,14 +132,6 @@ $(function () {
     } else {
       $cube.find('.peer-routing').css('opacity', 0)
     }
-    if (scrollTop >= $recordStores.offset().top - headerHeight - sectionMarginTop - 60 &&
-            scrollTop <= $recordStores.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
-      maxHeight = $recordStores.offset().top - headerHeight - sectionMarginTop - 60 + 200
-      opacity = maxHeight !== scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0
-      $cube.find('.record-stores').css('opacity', opacity)
-    } else {
-      $cube.find('.record-stores').css('opacity', 0)
-    }
     if (scrollTop >= $natTraversal.offset().top - headerHeight - sectionMarginTop - 60 &&
             scrollTop <= $natTraversal.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
       maxHeight = $natTraversal.offset().top - headerHeight - sectionMarginTop - 60 + 200
@@ -140,21 +140,13 @@ $(function () {
     } else {
       $cube.find('.nat-traversal').css('opacity', 0)
     }
-    if (scrollTop >= $discovery.offset().top - headerHeight - sectionMarginTop - 60 &&
-            scrollTop <= $discovery.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
-      maxHeight = $discovery.offset().top - headerHeight - sectionMarginTop - 60 + 200
+    if (scrollTop >= $recordStores.offset().top - headerHeight - sectionMarginTop - 60 &&
+            scrollTop <= $recordStores.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
+      maxHeight = $recordStores.offset().top - headerHeight - sectionMarginTop - 60 + 200
       opacity = maxHeight !== scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0
-      $cube.find('.discovery').css('opacity', opacity)
+      $cube.find('.record-stores').css('opacity', opacity)
     } else {
-      $cube.find('.discovery').css('opacity', 0)
-    }
-    if (scrollTop >= $utils.offset().top - headerHeight - sectionMarginTop - 60 &&
-            scrollTop <= $utils.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
-      maxHeight = $utils.offset().top - headerHeight - sectionMarginTop - 60 + 200
-      opacity = maxHeight !== scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0
-      $cube.find('.utils').css('opacity', opacity)
-    } else {
-      $cube.find('.utils').css('opacity', 0)
+      $cube.find('.record-stores').css('opacity', 0)
     }
     if (scrollTop >= $other.offset().top - headerHeight - sectionMarginTop - 60 &&
             scrollTop <= $other.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
@@ -163,6 +155,14 @@ $(function () {
       $cube.find('.others').css('opacity', opacity)
     } else {
       $cube.find('.others').css('opacity', 0)
+    }
+    if (scrollTop >= $utils.offset().top - headerHeight - sectionMarginTop - 60 &&
+            scrollTop <= $utils.offset().top - headerHeight - sectionMarginTop - 60 + 200) {
+      maxHeight = $utils.offset().top - headerHeight - sectionMarginTop - 60 + 200
+      opacity = maxHeight !== scrollTop ? 1.0 / (70.0 / (maxHeight - scrollTop)) : 0
+      $cube.find('.utils').css('opacity', opacity)
+    } else {
+      $cube.find('.utils').css('opacity', 0)
     }
   }
 
