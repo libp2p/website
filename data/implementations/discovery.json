@@ -129,12 +129,12 @@
       "langs": [
         {
           "name": "JavaScript",
-          "status": "Prototype",
+          "status": "Unstable",
           "url": "https://github.com/libp2p/js-libp2p-rendezvous/pull/6"
         },
         {
           "name": "Golang",
-          "status": "Prototype",
+          "status": "Unstable",
           "url": "https://github.com/libp2p/go-libp2p-rendezvous/pull/1"
         },
         {

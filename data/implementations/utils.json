@@ -43,8 +43,7 @@
         },
         {
           "name": "Erlang",
-          "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+          "status": "Missing"
         }
       ]
     },
@@ -57,7 +56,7 @@
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/ping"
         },
@@ -68,8 +67,7 @@
         },
         {
           "name": "Python",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
+          "status": "Missing"
         },
         {
           "name": "C++",
@@ -83,18 +81,16 @@
         },
         {
           "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
+          "status": "Missing"
         },
         {
           "name": "Erlang",
-          "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+          "status": "Missing"
         }
       ]
     },
     {
-      "id": "libp2p-peer-info",
+      "id": "libp2p-peer",
       "langs": [
         {
           "name": "JavaScript",
@@ -102,7 +98,7 @@
           "url": "https://github.com/libp2p/js-libp2p-peer-id"
         },
         {
-          "name": "Go",
+          "name": "Golang",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/core/peer"
         },
@@ -118,8 +114,7 @@
         },
         {
           "name": "C++",
-          "status": "Done",
-          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
+          "status": "Missing"
         },
         {
           "name": "JVM",
@@ -127,9 +122,7 @@
         },
         {
           "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
-        },
+          "status": "Missing"        },
         {
           "name": "Erlang",
           "status": "Done",
@@ -141,19 +134,14 @@
       "id": "libp2p-swarm",
       "langs": [
         {
-          "name": "Browser JS",
+          "name": "JavaScript",
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-swarm"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/pnet"
         },
         {
-          "name": "Node.js",
+          "name": "Golang",
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-swarm"
-        },
-        {
-          "name": "Go",
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/host/basic"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/net/swarm"
         },
         {
           "name": "Rust",
@@ -162,28 +150,23 @@
         },
         {
           "name": "Python",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
+          "status": "Missing"
         },
         {
           "name": "C++",
-          "status": "Done",
-          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
+          "status": "Missing"
         },
         {
           "name": "JVM",
-          "status": "Done",
-          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/tcp"
+          "status": "Missing"
         },
         {
           "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
+          "status": "Missing"
         },
         {
           "name": "Erlang",
-          "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+          "status": "Missing"
         }
       ]
     }
