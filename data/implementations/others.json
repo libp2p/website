@@ -42,6 +42,10 @@
         {
           "name": "Erlang",
           "status": "Missing"
+        },
+        {
+          "name": "Ziglang",
+          "status": "Missing"
         }
       ]
     },
@@ -84,6 +88,10 @@
         },
         {
           "name": "Erlang",
+          "status": "Missing"
+        },
+        {
+          "name": "Ziglang",
           "status": "Missing"
         }
       ]

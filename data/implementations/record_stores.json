@@ -45,6 +45,10 @@
         {
           "name": "Erlang",
           "status": "Missing"
+        },
+        {
+          "name": "Ziglang",
+          "status": "Missing"
         }
       ]
     }
