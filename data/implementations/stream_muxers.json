@@ -145,18 +145,15 @@
       "langs": [
         {
           "name": "JavaScript",
-          "status": "Missing",
-          "url": ""
+          "status": "Missing"
         },
         {
           "name": "Golang",
-          "status": "Done",
-          "url": "https://github.com/hashicorp/yamux"
+          "status": "Missing"
         },
         {
           "name": "Rust",
-          "status": "Done",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
+          "status": "Missing"
         },
         {
           "name": "Python",

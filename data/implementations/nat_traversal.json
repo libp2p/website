@@ -103,7 +103,7 @@
         {
           "name": "Golang",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-autonat"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/host/autonat"
         },
         {
           "name": "Rust",
