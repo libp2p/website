@@ -47,49 +47,6 @@
       ]
     },
     {
-      "id": "libp2p-spdy",
-      "langs": [
-        {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-spdy"
-        },
-        {
-          "name": "Golang",
-          "status": "Unstable",
-          "url": "https://github.com/docker/spdystream"
-        },
-        {
-          "name": "Rust",
-          "status": "Missing"
-        },
-        {
-          "name": "Python",
-          "status": "Missing"
-        },
-        {
-          "name": "C++",
-          "status": "Missing"
-        },
-        {
-          "name": "JVM",
-          "status": "Missing"
-        },
-        {
-          "name": "Nim",
-          "status": "Missing"
-        },
-        {
-          "name": "Erlang",
-          "status": "Missing"
-        },
-        {
-          "name": "Ziglang",
-          "status": "Missing"
-        }
-      ]
-    },
-    {
       "id": "libp2p-mplex",
       "langs": [
         {
