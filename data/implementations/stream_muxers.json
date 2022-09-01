@@ -139,47 +139,6 @@
           "status": "Missing"
         }
       ]
-    },
-    {
-      "id": "libp2p-muxado",
-      "langs": [
-        {
-          "name": "JavaScript",
-          "status": "Missing"
-        },
-        {
-          "name": "Golang",
-          "status": "Missing"
-        },
-        {
-          "name": "Rust",
-          "status": "Missing"
-        },
-        {
-          "name": "Python",
-          "status": "Missing"
-        },
-        {
-          "name": "C++",
-          "status": "Missing"
-        },
-        {
-          "name": "JVM",
-          "status": "Missing"
-        },
-        {
-          "name": "Nim",
-          "status": "Missing"
-        },
-        {
-          "name": "Erlang",
-          "status": "Missing"
-        },
-        {
-          "name": "Ziglang",
-          "status": "Missing"
-        }
-      ]
     }
   ]
 }
