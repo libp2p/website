@@ -12,7 +12,7 @@
           "url": "https://github.com/libp2p/js-libp2p-railing"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/ipfs/go-ipfs/blob/master/core/bootstrap/bootstrap.go"
         },
@@ -42,7 +42,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -56,7 +56,7 @@
           "url": "https://github.com/libp2p/js-libp2p-random-walk"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kad-dht"
         },
@@ -87,7 +87,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -101,7 +101,7 @@
           "url": "https://github.com/libp2p/js-libp2p-mdns"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns/mdns.go"
         },
@@ -131,7 +131,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -145,7 +145,7 @@
           "url": "https://github.com/libp2p/js-libp2p-rendezvous/pull/6"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-libp2p-rendezvous/pull/1"
         },
@@ -175,7 +175,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]

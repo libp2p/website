@@ -12,7 +12,7 @@
           "url": "https://github.com/libp2p/js-libp2p-tcp"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/tcp"
         },
@@ -47,7 +47,7 @@
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -61,7 +61,7 @@
           "url": "https://github.com/libp2p/js-libp2p-websockets"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/websocket"
         },
@@ -93,7 +93,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -107,7 +107,7 @@
           "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Missing"        
         },
         {
@@ -135,7 +135,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -149,7 +149,7 @@
           "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-libp2p-webrtc-direct"
         },
@@ -179,7 +179,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -193,7 +193,7 @@
           "url": "https://github.com/libp2p/js-libp2p-udp"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-udp-transport"
         },
@@ -222,7 +222,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -236,7 +236,7 @@
           "url": "https://github.com/libp2p/js-libp2p-utp"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Missing"
         },
         {
@@ -265,7 +265,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]

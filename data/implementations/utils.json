@@ -12,7 +12,7 @@
           "url": "https://github.com/libp2p/js-libp2p-crypto"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-crypto"
         },
@@ -46,7 +46,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -60,7 +60,7 @@
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/ping"
         },
@@ -92,7 +92,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -106,7 +106,7 @@
           "url": "https://github.com/libp2p/js-libp2p-peer-id"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/core/peer"
         },
@@ -138,7 +138,7 @@
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/peerbook"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -152,7 +152,7 @@
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/pnet"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/net/swarm"
         },
@@ -182,7 +182,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]

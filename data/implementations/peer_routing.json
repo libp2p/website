@@ -12,7 +12,7 @@
           "url": "https://github.com/libp2p/js-libp2p-dht"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kad-dht"
         },
@@ -43,7 +43,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -56,7 +56,7 @@
           "status": "Missing"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kbucket"
         },
@@ -85,7 +85,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]

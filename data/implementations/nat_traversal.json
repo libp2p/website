@@ -12,7 +12,7 @@
           "url": "https://github.com/libp2p/js-libp2p-relay-server"       
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv1"
         },
@@ -43,7 +43,7 @@
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/relay"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -57,7 +57,7 @@
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/circuit"       
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv2"
         },
@@ -88,7 +88,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -101,7 +101,7 @@
           "status": "Missing"        
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/host/autonat"
         },
@@ -133,7 +133,7 @@
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/nat"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -146,7 +146,7 @@
           "status": "Missing"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/holepunch"
         },
@@ -176,7 +176,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -189,7 +189,7 @@
           "status": "Missing"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/holepunch"
         },
@@ -219,7 +219,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]

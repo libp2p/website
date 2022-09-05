@@ -12,7 +12,7 @@
           "url": "https://github.com/libp2p/js-libp2p-record"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-record"
         },
@@ -47,7 +47,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]

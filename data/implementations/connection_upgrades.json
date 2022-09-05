@@ -11,7 +11,7 @@
           "url": "https://github.com/libp2p/js-libp2p"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Usable",
           "url": "https://github.com/libp2p/go-libp2p"
         },
@@ -46,7 +46,7 @@
           "url": "https://github.com/helium/erlang-libp2p"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]

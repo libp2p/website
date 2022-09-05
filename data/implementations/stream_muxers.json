@@ -11,7 +11,7 @@
           "status": "Missing"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
         },
@@ -41,7 +41,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -55,7 +55,7 @@
           "url": "https://github.com/libp2p/js-libp2p-multiplex"
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/whyrusleeping/go-smux-multiplex"
         },
@@ -89,7 +89,7 @@
           "status": "Missing"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
@@ -103,7 +103,7 @@
           "url": ""
         },
         {
-          "name": "Golang",
+          "name": "Go",
           "status": "Done",
           "url": "https://github.com/hashicorp/yamux"
         },
@@ -135,7 +135,7 @@
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         },
         {
-          "name": "Ziglang",
+          "name": "Zig",
           "status": "Missing"
         }
       ]
