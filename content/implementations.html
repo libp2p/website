@@ -15,7 +15,8 @@
     <article class="center implementations">
       <h1>Implementations</h1>
       <div class="wrap">
-        <p>libp2p is composed of many modules and different parts. Here you can see an overview over all the different libraries we develop, along with the status of the implementation.</p>
+        <p>libp2p is composed of many modules and different parts. Here, overviews are available for all the different libraries, along with the 
+          status of each implementation. All sections use the same status legend and link to the implementation's source code.</p>
         <div class="links">
           <div class="active-link">
             <div class="copy-block">
@@ -29,26 +30,31 @@
 
           <div class="columns">
             <div class="column col1">
+              <a href="#connection-upgrades" class="link scroll">
+                <div class="img">
+                  <img width="10" src="/img/svg/connection-upgrades.svg" alt="Supported Implementations">
+                </div>
+                <span>Supported Implementations</span>
+              </a>
               <a href="#transports" class="link scroll">
                 <div class="img">
                   <img width="10" src="/img/svg/transports.svg" alt="Transports">
                 </div>
                 <span>Transports</span>
               </a>
-              <a href="#stream-muxers" class="link scroll">
+              <a href="#nat-traversal" class="link scroll">
                 <div class="img">
-                  <img width="10" src="/img/svg/stream-muxers.svg" alt="Stream Muxers">
+                  <img width="14" src="/img/svg/nat-traversal.svg" alt="NAT traversal">
                 </div>
-                <span>Stream Muxers</span>
+                <span>NAT Traversal</span>
               </a>
               <a href="#crypto-channels" class="link scroll">
                 <div class="img">
-                  <img width="14" src="/img/svg/crypto-channels.svg" alt="Crypto Channels">
+                  <img width="14" src="/img/svg/crypto-channels.svg" alt="Secure Communication">
                 </div>
-                <span>Crypto Channels</span>
+                <span>Secure Communication</span>
               </a>
             </div>
-
             <div class="column col2">
               <a href="#discovery" class="link scroll">
                 <div class="img">
@@ -58,45 +64,35 @@
               </a>
               <a href="#peer-routing" class="link scroll">
                 <div class="img">
-                  <img width="13" src="/img/svg/peer-routing.svg" alt="Peer Routing">
+                  <img width="13" src="/img/svg/peer-routing.svg" alt="Peer routing">
                 </div>
                 <span>Peer Routing</span>
               </a>
-              <a href="#record-stores" class="link scroll">
+              <a href="#others" class="link scroll">
                 <div class="img">
-                  <img width="10" src="/img/svg/record-stores.svg" alt="Record Stores">
+                  <img width="13" src="/img/svg/others.svg" alt="Publish/subscribe">
                 </div>
-                <span>Record Stores</span>
+                <span>Publish/Subscribe</span>
               </a>
             </div>
-
             <div class="column col3">
-              <a href="#nat-traversal" class="link scroll">
+              <a href="#stream-muxers" class="link scroll">
                 <div class="img">
-                  <img width="14" src="/img/svg/nat-traversal.svg" alt="NAT Traversal">
+                  <img width="10" src="/img/svg/stream-muxers.svg" alt="Stream Multiplexing">
                 </div>
-                <span>NAT Traversal</span>
+                <span>Stream Multiplexing</span>
               </a>
-              <a href="#connection-upgrades" class="link scroll">
+              <a href="#record-stores" class="link scroll">
                 <div class="img">
-                  <img width="10" src="/img/svg/connection-upgrades.svg" alt="Connection & Connection Upgrades">
+                  <img width="10" src="/img/svg/record-stores.svg" alt="Storage">
                 </div>
-                <span>Connection & Connection Upgrades</span>
+                <span>Storage</span>
               </a>
               <a href="#utils" class="link scroll">
                 <div class="img">
-                  <img width="10" src="/img/svg/utils.svg" alt="General Purpose Utils and Datatypes">
+                  <img width="10" src="/img/svg/utils.svg" alt="General purpose utils & datatypes">
                 </div>
-                <span>General Purpose Utils & Datatypes</span>
-              </a>
-            </div>
-
-            <div class="column col4">
-              <a href="#others" class="link scroll">
-                <div class="img">
-                  <img width="13" src="/img/svg/others.svg" alt="Others">
-                </div>
-                <span>Others</span>
+                <span>General Purpose Utilities & Datatypes</span>
               </a>
             </div>
           </div>
@@ -124,7 +120,7 @@
     <article class="center implementations-info">
       <div class="wrap">
 
-      {{ $impls := (slice "transports" "stream_muxers" "crypto_channels" "connection_upgrades" "peer_routing" "record_stores" "nat_traversal" "discovery" "utils" "others") }}
+      {{ $impls := (slice "connection_upgrades" "transports" "nat_traversal" "crypto_channels" "discovery" "peer_routing" "others" "stream_muxers"  "record_stores" "utils") }}
 
       {{ range $impls }}
         {{ partial "implementation.html" (index $.Site.Data.implementations .) }}

@@ -1,54 +1,58 @@
 {
   "id": "connection-upgrades",
-  "title": "Connection & Connection Upgrades",
+  "title": "Supported Implementations",
   "libs": [
     {
-      "id": "libp2p-conn",
+      "id": "libp2p-implementations",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/interface-connection"
-        },
-        {
-          "name": "Node.js",
-          "status": "Done",
-          "url": "https://github.com/libp2p/interface-connection"
+          "name": "JavaScript",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p"
         },
         {
           "name": "Go",
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-conn"
+          "status": "Usable",
+          "url": "https://github.com/libp2p/go-libp2p"
         },
         {
           "name": "Rust",
           "status": "Usable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/core"
-        }
-      ]
-    },
-    {
-      "id": "half-closed-connection-upgrade",
-      "langs": [
-        {
-          "name": "Browser JS",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/js-libp2p-half-closed-connection-upgrade"
+          "url": "https://github.com/libp2p/rust-libp2p/"
         },
         {
-          "name": "Node.js",
+          "name": "Swift",
           "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-half-closed-connection-upgrade"
+          "url": "https://github.com/swift-libp2p/swift-libp2p"
         },
         {
-          "name": "Go",
-          "status": "Missing",
-          "url": ""
+          "name": "Python",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/py-libp2p"
         },
         {
-          "name": "Rust",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/core"
+          "name": "C++",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/cpp-libp2p"
+        },
+        {
+          "name": "JVM",
+          "status": "Usable",
+          "url": "https://github.com/libp2p/jvm-libp2p"
+        },
+        {
+          "name": "Nim",
+          "status": "Usable",
+          "url": "https://github.com/status-im/nim-libp2p"
+        },
+        {
+          "name": "Erlang",
+          "status": "Usable",
+          "url": "https://github.com/helium/erlang-libp2p"
+        },
+        {
+          "name": "Zig",
+          "status": "Missing"
         }
       ]
     }

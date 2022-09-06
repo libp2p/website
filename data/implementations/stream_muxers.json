@@ -1,42 +1,59 @@
 {
   "id": "stream-muxers",
-  "interface": "https://github.com/libp2p/interface-stream-muxer",
+  "title": "Stream Multiplexing",
   "libs": [
     {
-      "id": "libp2p-spdy",
+      "id": "libp2p-quic",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-spdy"
-        },
-        {
-          "name": "Node.js",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-spdy"
+          "name": "JavaScript",
+          "status": "Missing"
         },
         {
           "name": "Go",
-          "status": "Unstable",
-          "url": "https://github.com/docker/spdystream"
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
         },
         {
           "name": "Rust",
-          "status": "Missing",
-          "url": ""
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
+        },
+        {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "JVM",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
+        },
+        {
+          "name": "Zig",
+          "status": "Missing"
         }
       ]
     },
     {
-      "id": "libp2p-multiplex",
+      "id": "libp2p-mplex",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-multiplex"
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-multiplex"
         },
@@ -49,6 +66,39 @@
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/mplex"
+        },
+        {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-mplex"
+        },
+        {
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/stream_muxer/mplex"
+        },
+        {
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/mplex"
+        },
+        {
+          "name": "JVM",
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/mux/mplex"
+        },
+        {
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/tree/master/libp2p/muxers/mplex"
+        },
+        {
+          "name": "Erlang",
+          "status": "Missing"
+        },
+        {
+          "name": "Zig",
+          "status": "Missing"
         }
       ]
     },
@@ -56,24 +106,49 @@
       "id": "libp2p-yamux",
       "langs": [
         {
-          "name": "Browser JS",
-          "status": "Missing",
-          "url": ""
-        },
-        {
-          "name": "Node.js",
+          "name": "JavaScript",
           "status": "Missing",
           "url": ""
         },
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/hashicorp/yamux"
+          "url": "https://github.com/libp2p/go-yamux"
         },
         {
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
+        },
+        {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
+          "name": "Python",
+          "status": "Missing"
+        },
+        {
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/yamux"
+        },
+        {
+          "name": "JVM",
+          "status": "Missing"
+        },
+        {
+          "name": "Nim",
+          "status": "Missing"
+        },
+        {
+          "name": "Erlang",
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+        },
+        {
+          "name": "Zig",
+          "status": "Missing"
         }
       ]
     }
