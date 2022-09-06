@@ -1,6 +1,6 @@
 {
   "id": "stream-muxers",
-  "title": "Steam multiplexing",
+  "title": "Stream Multiplexing",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {

@@ -3,7 +3,7 @@
   "title": "Supported implementations",
   "libs": [
     {
-      "id": "libp2p-full-specs",
+      "id": "libp2p-implementations",
       "langs": [
         {
           "name": "JavaScript",

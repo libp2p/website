@@ -1,6 +1,6 @@
 {
   "id": "crypto-channels",
-  "title": "Secure communication",
+  "title": "Secure Communication",
   "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
