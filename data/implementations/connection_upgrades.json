@@ -1,6 +1,6 @@
 {
   "id": "connection-upgrades",
-  "title": "Supported implementations",
+  "title": "Supported Implementations",
   "libs": [
     {
       "id": "libp2p-implementations",
