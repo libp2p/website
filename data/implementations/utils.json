@@ -13,7 +13,7 @@
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-crypto"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/core/crypto"
         },
         {
           "name": "Rust",

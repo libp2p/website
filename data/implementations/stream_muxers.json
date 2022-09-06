@@ -113,7 +113,7 @@
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/hashicorp/yamux"
+          "url": "https://github.com/libp2p/go-yamux"
         },
         {
           "name": "Rust",
