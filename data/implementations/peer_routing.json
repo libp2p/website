@@ -1,7 +1,6 @@
 {
   "id": "peer-routing",
   "title": "Peer Routing",
-  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "libp2p-kad-dht",

@@ -1,7 +1,6 @@
 {
   "id": "utils",
   "title": "General Purpose Utilities & Datatypes",
-  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "crypto",

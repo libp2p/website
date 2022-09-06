@@ -1,7 +1,6 @@
 {
   "id": "discovery",
   "title": "Discovery",
-  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "bootstrap",

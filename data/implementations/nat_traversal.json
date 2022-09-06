@@ -1,7 +1,6 @@
 {
   "id": "nat-traversal",
   "title": "NAT Traversal",
-  "interface": "https://github.com/libp2p/js-libp2p-interfaces",
   "libs": [
     {
       "id": "libp2p-circuit-relay-v1",
