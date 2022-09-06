@@ -21,6 +21,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p"
+        },
+        {
           "name": "Python",
           "status": "Usable",
           "url": "https://github.com/libp2p/py-libp2p"

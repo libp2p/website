@@ -22,6 +22,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/noise"
         },
         {
+          "name": "Swift",
+          "status": "Unstable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-noise"
+        },
+        {
           "name": "Python",
           "status": "Unstable",
           "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/security/noise"
@@ -64,6 +69,10 @@
         },
         {
           "name": "Rust",
+          "status": "Missing"
+        },
+        {
+          "name": "Swift",
           "status": "Missing"
         },
         {

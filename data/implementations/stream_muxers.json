@@ -21,6 +21,10 @@
           "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "Python",
           "status": "Missing"
         },
@@ -63,6 +67,11 @@
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/mplex"
+        },
+        {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-mplex"
         },
         {
           "name": "Python",
@@ -111,6 +120,10 @@
           "name": "Rust",
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
+        },
+        {
+          "name": "Swift",
+          "status": "Missing"
         },
         {
           "name": "Python",

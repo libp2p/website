@@ -27,6 +27,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/Record"
+        },
+        {
           "name": "Python",
           "status": "Missing"
         },

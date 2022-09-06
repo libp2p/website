@@ -22,6 +22,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/floodsub"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/PubSub"
+        },
+        {
           "name": "Python",
           "status": "Done",
           "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/floodsub.py"
@@ -66,6 +71,11 @@
           "name": "Rust",
           "status": "Usable",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/gossipsub"
+        },
+        {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/PubSub"
         },
         {
           "name": "Python",

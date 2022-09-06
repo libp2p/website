@@ -22,6 +22,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tcp"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-tcp"
+        },
+        {
           "name": "Python",
           "status": "Unstable",
           "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
@@ -71,6 +76,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-websocket"
+        },
+        {
           "name": "Python",
           "status": "Missing"
         },
@@ -113,6 +123,10 @@
         {
           "name": "Rust",
           "status": "Missing"        
+        },
+        {
+          "name": "Swift",
+          "status": "Missing"
         },
         {
           "name": "Python",
@@ -159,6 +173,10 @@
           "url": ""
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "Python",
           "status": "Missing"
         },
@@ -202,6 +220,10 @@
           "status": "Unimplementable"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "Python",
           "status": "Missing"
         },
@@ -243,6 +265,10 @@
           "name": "Rust",
           "status": "Missing",
           "url": ""
+        },
+        {
+          "name": "Swift",
+          "status": "Missing"
         },
         {
           "name": "Python",
