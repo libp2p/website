@@ -3,7 +3,7 @@
   "title": "Storage",
   "libs": [
     {
-      "id": "record",
+      "id": "libp2p-record",
       "langs": [
         {
           "name": "JavaScript",

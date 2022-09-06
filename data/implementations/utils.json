@@ -3,7 +3,7 @@
   "title": "General Purpose Utilities & Datatypes",
   "libs": [
     {
-      "id": "crypto",
+      "id": "libp2p-crypto",
       "langs": [
         {
           "name": "JavaScript",
