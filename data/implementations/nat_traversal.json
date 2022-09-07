@@ -114,7 +114,8 @@
         },
         {
           "name": "Rust",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/blob/master/protocols/autonat/"
         },
         {
           "name": "Swift",
