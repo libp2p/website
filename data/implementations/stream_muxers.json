@@ -42,10 +42,6 @@
         {
           "name": "Erlang",
           "status": "Missing"
-        },
-        {
-          "name": "Zig",
-          "status": "Missing"
         }
       ]
     },
@@ -95,10 +91,6 @@
         {
           "name": "Erlang",
           "status": "Missing"
-        },
-        {
-          "name": "Zig",
-          "status": "Missing"
         }
       ]
     },
@@ -146,10 +138,6 @@
           "name": "Erlang",
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
-        },
-        {
-          "name": "Zig",
-          "status": "Missing"
         }
       ]
     }

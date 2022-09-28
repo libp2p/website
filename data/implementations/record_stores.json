@@ -50,10 +50,6 @@
         {
           "name": "Erlang",
           "status": "Missing"
-        },
-        {
-          "name": "Zig",
-          "status": "Missing"
         }
       ]
     }

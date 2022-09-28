@@ -49,10 +49,6 @@
           "name": "Erlang",
           "status": "Usable",
           "url": "https://github.com/helium/erlang-libp2p"
-        },
-        {
-          "name": "Zig",
-          "status": "Missing"
         }
       ]
     }
