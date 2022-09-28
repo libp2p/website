@@ -44,7 +44,8 @@
         },
         {
           "name": "Nim",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/peerstore.nim"
         },
         {
           "name": "Erlang",

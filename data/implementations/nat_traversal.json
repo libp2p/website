@@ -38,7 +38,7 @@
         {
           "name": "Nim",
           "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/protocols/relay.nim"
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
         },
         {
           "name": "Erlang",
@@ -87,8 +87,8 @@
         },
         {
           "name": "Nim",
-          "status": "Missing",
-          "link": "https://github.com/helium/erlang-libp2p/tree/master/src/nat"        
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
         },
         {
           "name": "Erlang",
@@ -137,7 +137,7 @@
         {
           "name": "Nim",
           "status": "Unstable",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/autonat.nim"
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/autonat.nim"
         },
         {
           "name": "Erlang",

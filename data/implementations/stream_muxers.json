@@ -139,7 +139,8 @@
         },
         {
           "name": "Nim",
-          "status": "Missing"
+          "status": "Unstable",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/muxers/yamux/yamux.nim"
         },
         {
           "name": "Erlang",

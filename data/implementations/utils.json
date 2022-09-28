@@ -93,7 +93,8 @@
         },
         {
           "name": "Nim",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/ping.nim"
         },
         {
           "name": "Erlang",
@@ -143,7 +144,8 @@
         },
         {
           "name": "Nim",
-          "status": "Missing"        
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/peerid.nim"
         },
         {
           "name": "Erlang",
@@ -192,7 +194,8 @@
         },
         {
           "name": "Nim",
-          "status": "Missing"
+          "status": "Done",
+	  "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/switch.nim"
         },
         {
           "name": "Erlang",
