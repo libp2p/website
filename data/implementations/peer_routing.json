@@ -6,11 +6,6 @@
       "id": "libp2p-kad-dht",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/js-libp2p-dht"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kad-dht"
@@ -21,12 +16,12 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
         {
-          "name": "Swift",
-          "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/Routing"
+          "name": "JavaScript",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-dht"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -35,11 +30,16 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/protocol/kademlia"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/Routing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {
@@ -52,10 +52,6 @@
       "id": "libp2p-kbucket",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Missing"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kbucket"
@@ -65,11 +61,11 @@
           "status": "Missing"
         },
         {
-          "name": "Swift",
+          "name": "JavaScript",
           "status": "Missing"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -77,11 +73,15 @@
           "status": "Missing"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {

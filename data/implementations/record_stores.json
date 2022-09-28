@@ -6,19 +6,9 @@
       "id": "libp2p-record",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-record"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-record"
-        },
-        {
-          "name": "C#",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/cs-libp2p-record"
         },
         {
           "name": "Rust",
@@ -26,26 +16,31 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
         {
-          "name": "Swift",
+          "name": "JavaScript",
           "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/Record"
+          "url": "https://github.com/libp2p/js-libp2p-record"
         },
         {
-          "name": "Python",
-          "status": "Missing"
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/peerstore.nim"
         },
         {
           "name": "C++",
           "status": "Done"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/Record"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/peerstore.nim"
+          "name": "Python",
+          "status": "Missing"
         },
         {
           "name": "Erlang",

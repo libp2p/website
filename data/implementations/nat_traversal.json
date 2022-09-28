@@ -6,11 +6,6 @@
       "id": "libp2p-circuit-relay-v1",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done", 
-          "url": "https://github.com/libp2p/js-libp2p-relay-server"       
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv1"
@@ -20,15 +15,21 @@
           "status": "Missing"
         },
         {
-          "name": "Swift",
-          "status": "Missing"
+          "name": "JavaScript",
+          "status": "Done", 
+          "url": "https://github.com/libp2p/js-libp2p-relay-server"       
         },
         {
-          "name": "Python",
-          "status": "Missing"
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
         },
         {
           "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Swift",
           "status": "Missing"
         },
         {
@@ -36,9 +37,8 @@
           "status": "Missing"
         },
         {
-          "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
+          "name": "Python",
+          "status": "Missing"
         },
         {
           "name": "Erlang",
@@ -51,11 +51,6 @@
       "id": "libp2p-circuit-relay-v2",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done", 
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/circuit"       
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv2"
@@ -66,15 +61,21 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/relay/src/v2"
         },
         {
-          "name": "Swift",
-          "status": "Missing"
+          "name": "JavaScript",
+          "status": "Done", 
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/circuit"       
         },
         {
-          "name": "Python",
-          "status": "Missing"
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
         },
         {
           "name": "C++",
+          "status": "Missing"
+        },
+        {
+          "name": "Swift",
           "status": "Missing"
         },
         {
@@ -82,9 +83,8 @@
           "status": "Missing"
         },
         {
-          "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
+          "name": "Python",
+          "status": "Missing"
         },
         {
           "name": "Erlang",
@@ -96,10 +96,6 @@
       "id": "libp2p-autonat",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Missing"        
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/host/autonat"
@@ -110,12 +106,13 @@
           "url": "https://github.com/libp2p/rust-libp2p/blob/master/protocols/autonat/"
         },
         {
-          "name": "Swift",
-          "status": "Missing"
+          "name": "JavaScript",
+          "status": "Missing"        
         },
         {
-          "name": "Python",
-          "status": "Missing"
+          "name": "Nim",
+          "status": "Unstable",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/autonat.nim"
         },
         {
           "name": "C++",
@@ -123,13 +120,16 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
-          "status": "Unstable",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/autonat.nim"
+          "name": "Python",
+          "status": "Missing"
         },
         {
           "name": "Erlang",
@@ -142,10 +142,6 @@
       "id": "libp2p-hole-punching",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Missing"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/holepunch"
@@ -156,11 +152,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/dcutr"
         },
         {
-          "name": "Swift",
+          "name": "JavaScript",
           "status": "Missing"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -168,11 +164,15 @@
           "status": "Missing"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {

@@ -6,11 +6,6 @@
       "id": "libp2p-noise",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/ChainSafe/js-libp2p-noise"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-noise"
@@ -21,24 +16,9 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/noise"
         },
         {
-          "name": "Swift",
-          "status": "Unstable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p-noise"
-        },
-        {
-          "name": "Python",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/security/noise"
-        },
-        {
-          "name": "C++",
+          "name": "JavaScript",
           "status": "Done",
-          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/noise"
-        },
-        {
-          "name": "JVM",
-          "status": "Done",
-          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/security/noise"
+          "url": "https://github.com/ChainSafe/js-libp2p-noise"
         },
         {
           "name": "Nim",
@@ -46,11 +26,27 @@
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/secure/noise.nim"
         },
         {
-          "name": "Erlang",
-          "status": "Missing"
+          "name": "C++",
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/noise"
         },
         {
-          "name": "Zig",
+          "name": "Swift",
+          "status": "Unstable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-noise"
+        },
+        {
+          "name": "JVM",
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/security/noise"
+        },
+        {
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/security/noise"
+        },
+        {
+          "name": "Erlang",
           "status": "Missing"
         }
       ]
@@ -58,10 +54,6 @@
     {
       "id": "libp2p-tls",
       "langs": [
-        {
-          "name": "JavaScript",
-          "status": "Missing"
-        },
         {
           "name": "Go",
           "status": "Done",
@@ -72,11 +64,11 @@
           "status": "Missing"
         },
         {
-          "name": "Swift",
+          "name": "JavaScript",
           "status": "Missing"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -85,19 +77,19 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {
           "name": "Erlang",
-          "status": "Missing"
-        },
-        {
-          "name": "Zig",
           "status": "Missing"
         }
       ]

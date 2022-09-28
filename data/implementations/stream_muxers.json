@@ -6,11 +6,6 @@
       "id": "libp2p-yamux",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Missing",
-          "url": ""
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-yamux"
@@ -21,12 +16,14 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
         },
         {
-          "name": "Swift",
-          "status": "Missing"
+          "name": "JavaScript",
+          "status": "Missing",
+          "url": ""
         },
         {
-          "name": "Python",
-          "status": "Missing"
+          "name": "Nim",
+          "status": "Usable",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/muxers/yamux/yamux.nim"
         },
         {
           "name": "C++",
@@ -34,13 +31,16 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/yamux"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
-          "status": "Unstable",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/muxers/yamux/yamux.nim"
+          "name": "Python",
+          "status": "Missing"
         },
         {
           "name": "Erlang",
@@ -53,11 +53,6 @@
       "id": "libp2p-mplex",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-multiplex"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/whyrusleeping/go-smux-multiplex"
@@ -68,14 +63,14 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/mplex"
         },
         {
-          "name": "Swift",
-          "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p-mplex"
+          "name": "JavaScript",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-multiplex"
         },
         {
-          "name": "Python",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/stream_muxer/mplex"
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/tree/master/libp2p/muxers/mplex"
         },
         {
           "name": "C++",
@@ -83,14 +78,19 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/mplex"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-mplex"
+        },
+        {
           "name": "JVM",
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/mux/mplex"
         },
         {
-          "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/tree/master/libp2p/muxers/mplex"
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/stream_muxer/mplex"
         },
         {
           "name": "Erlang",
@@ -102,10 +102,6 @@
       "id": "libp2p-quic",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Missing"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
@@ -116,11 +112,11 @@
           "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
         },
         {
-          "name": "Swift",
+          "name": "JavaScript",
           "status": "Missing"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -128,11 +124,15 @@
           "status": "Missing"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {

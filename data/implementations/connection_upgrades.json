@@ -6,11 +6,6 @@
       "id": "libp2p-implementations",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p"
-        },
-        {
           "name": "Go",
           "status": "Usable",
           "url": "https://github.com/libp2p/go-libp2p"
@@ -21,14 +16,14 @@
           "url": "https://github.com/libp2p/rust-libp2p/"
         },
         {
-          "name": "Swift",
+          "name": "JavaScript",
           "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p"
+          "url": "https://github.com/libp2p/js-libp2p"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Usable",
-          "url": "https://github.com/libp2p/py-libp2p"
+          "url": "https://github.com/status-im/nim-libp2p"
         },
         {
           "name": "C++",
@@ -36,14 +31,19 @@
           "url": "https://github.com/libp2p/cpp-libp2p"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p"
+        },
+        {
           "name": "JVM",
           "status": "Usable",
           "url": "https://github.com/libp2p/jvm-libp2p"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Usable",
-          "url": "https://github.com/status-im/nim-libp2p"
+          "url": "https://github.com/libp2p/py-libp2p"
         },
         {
           "name": "Erlang",

@@ -6,11 +6,6 @@
       "id": "libp2p-tcp",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-tcp"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/tcp"
@@ -21,14 +16,14 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tcp"
         },
         {
-          "name": "Swift",
-          "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p-tcp"
+          "name": "JavaScript",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-tcp"
         },
         {
-          "name": "Python",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
         },
         {
           "name": "C++",
@@ -36,14 +31,19 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-tcp"
+        },
+        {
           "name": "JVM",
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/tcp"
         },
         {
-          "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
+          "name": "Python",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
         },
         {
           "name": "Erlang",
@@ -56,11 +56,6 @@
       "id": "libp2p-websockets",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-websockets"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/websocket"
@@ -71,17 +66,23 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
         },
         {
-          "name": "Swift",
-          "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p-websocket"
+          "name": "JavaScript",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-websockets"
         },
         {
-          "name": "Python",
-          "status": "Missing"
+          "name": "Nim",
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/wstransport.nim"
         },
         {
           "name": "C++",
           "status": "Missing"
+        },
+        {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-websocket"
         },
         {
           "name": "JVM",
@@ -89,9 +90,8 @@
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/ws"
         },
         {
-          "name": "Nim",
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/wstransport.nim"
+          "name": "Python",
+          "status": "Missing"
         },
         {
           "name": "Erlang",
@@ -103,11 +103,6 @@
       "id": "libp2p-webrtc-star",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
-        },
-        {
           "name": "Go",
           "status": "Missing"        
         },
@@ -116,11 +111,12 @@
           "status": "Missing"        
         },
         {
-          "name": "Swift",
-          "status": "Missing"
+          "name": "JavaScript",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -128,11 +124,15 @@
           "status": "Missing"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {
@@ -145,11 +145,6 @@
       "id": "libp2p-webrtc-direct",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
-        },
-        {
           "name": "Go",
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-libp2p-webrtc-direct"
@@ -160,7 +155,12 @@
           "url": ""
         },
         {
-          "name": "Swift",
+          "name": "JavaScript",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
+        },
+        {
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -172,11 +172,11 @@
           "status": "Missing"
         },
         {
-          "name": "JVM",
+          "name": "Swift",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "JVM",
           "status": "Missing"
         },
         {

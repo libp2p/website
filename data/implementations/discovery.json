@@ -6,11 +6,6 @@
       "id": "bootstrap",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-railing"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/ipfs/go-ipfs/blob/master/core/bootstrap/bootstrap.go"
@@ -20,12 +15,12 @@
           "status": "Missing"
         },
         {
-          "name": "Swift",
-          "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/Discovery/Bootstrap"
+          "name": "JavaScript",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-railing"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -34,11 +29,16 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
+          "name": "Swift",
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/Discovery/Bootstrap"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {
@@ -51,11 +51,6 @@
       "id": "random-walk",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/js-libp2p-random-walk"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kad-dht"
@@ -66,11 +61,12 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
         {
-          "name": "Swift",
-          "status": "Missing"
+          "name": "JavaScript",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-random-walk"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -79,11 +75,15 @@
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {
@@ -96,11 +96,6 @@
       "id": "mdns-discovery",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-mdns"
-        },
-        {
           "name": "Go",
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/blob/master/p2p/discovery/mdns/mdns.go"
@@ -111,12 +106,12 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/mdns"
         },
         {
-          "name": "Swift",
-          "status": "Unstable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p-mdns"
+          "name": "JavaScript",
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-mdns"
         },
         {
-          "name": "Python",
+          "name": "Nim",
           "status": "Missing"
         },
         {
@@ -124,11 +119,16 @@
           "status": "Missing"
         },
         {
+          "name": "Swift",
+          "status": "Unstable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-mdns"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
+          "name": "Python",
           "status": "Missing"
         },
         {
@@ -141,11 +141,6 @@
       "id": "rendezvous",
       "langs": [
         {
-          "name": "JavaScript",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/js-libp2p-rendezvous/pull/6"
-        },
-        {
           "name": "Go",
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-libp2p-rendezvous/pull/1"
@@ -156,25 +151,30 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/rendezvous"
         },
         {
-          "name": "Swift",
-          "status": "Missing"
+          "name": "JavaScript",
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-rendezvous/pull/6"
         },
         {
-          "name": "Python",
-          "status": "Missing"
+          "name": "Nim",
+          "status": "Unstable",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/rendezvous.nim"
         },
         {
           "name": "C++",
           "status": "Done"
         },
         {
+          "name": "Swift",
+          "status": "Missing"
+        },
+        {
           "name": "JVM",
           "status": "Missing"
         },
         {
-          "name": "Nim",
-          "status": "Unstable",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/rendezvous.nim"
+          "name": "Python",
+          "status": "Missing"
         },
         {
           "name": "Erlang",
