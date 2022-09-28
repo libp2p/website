@@ -147,7 +147,7 @@
       ]
     },
     {
-      "id": "libp2p-swarm",
+      "id": "libp2p-switch",
       "langs": [
         {
           "name": "JavaScript",
