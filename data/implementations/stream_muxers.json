@@ -3,21 +3,22 @@
   "title": "Stream Multiplexing",
   "libs": [
     {
-      "id": "libp2p-quic",
+      "id": "libp2p-yamux",
       "langs": [
         {
           "name": "JavaScript",
-          "status": "Missing"
+          "status": "Missing",
+          "url": ""
         },
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
+          "url": "https://github.com/libp2p/go-yamux"
         },
         {
           "name": "Rust",
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
         },
         {
           "name": "Swift",
@@ -29,7 +30,8 @@
         },
         {
           "name": "C++",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/yamux"
         },
         {
           "name": "JVM",
@@ -37,11 +39,13 @@
         },
         {
           "name": "Nim",
-          "status": "Missing"
+          "status": "Unstable",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/muxers/yamux/yamux.nim"
         },
         {
           "name": "Erlang",
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
       ]
     },
@@ -95,22 +99,21 @@
       ]
     },
     {
-      "id": "libp2p-yamux",
+      "id": "libp2p-quic",
       "langs": [
         {
           "name": "JavaScript",
-          "status": "Missing",
-          "url": ""
+          "status": "Missing"
         },
         {
           "name": "Go",
           "status": "Done",
-          "url": "https://github.com/libp2p/go-yamux"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
         },
         {
           "name": "Rust",
-          "status": "Done",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
         },
         {
           "name": "Swift",
@@ -122,8 +125,7 @@
         },
         {
           "name": "C++",
-          "status": "Done",
-          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/muxer/yamux"
+          "status": "Missing"
         },
         {
           "name": "JVM",
@@ -131,13 +133,11 @@
         },
         {
           "name": "Nim",
-          "status": "Unstable",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/muxers/yamux/yamux.nim"
+          "status": "Missing"
         },
         {
           "name": "Erlang",
-          "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+          "status": "Missing"
         }
       ]
     }
