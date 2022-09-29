@@ -4,192 +4,156 @@
   "libs": [
     {
       "id": "libp2p-crypto",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/core/crypto"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Unimplementable",
           "url": ""
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-crypto"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/crypto/crypto.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/crypto"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Unstable",
           "url": "https://github.com/swift-libp2p/swift-libp2p-crypto"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Unstable",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/crypto"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Unstable",
           "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/crypto"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-ping",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/ping"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/ping"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/ping.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/protocol/ping"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/blob/develop/src/main/kotlin/io/libp2p/protocol/Ping.kt"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-peer",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/core/peer"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/core/src"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-peer-id"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/peerid.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Usable",
           "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/Peer"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Unstable",
           "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/peer"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/peerbook"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-switch",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/net/swarm"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/swarm"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/pnet"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
 	  "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/switch.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     }
   ]
 }

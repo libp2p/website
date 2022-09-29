@@ -4,186 +4,150 @@
   "libs": [
     {
       "id": "libp2p-tcp",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/tcp"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tcp"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-tcp"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/tcptransport.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/transport/tcp"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Usable",
           "url": "https://github.com/swift-libp2p/swift-libp2p-tcp"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/tcp"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Unstable",
           "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/transport/tcp"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-websockets",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/websocket"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-websockets"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/master/libp2p/transports/wstransport.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Usable",
           "url": "https://github.com/swift-libp2p/swift-libp2p-websocket"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/ws"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
+        "Erlang": {
           "name": "Erlang",
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-webrtc-star",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Missing"        
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Missing"        
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Missing"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-webrtc-direct",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Unstable",
           "url": "https://github.com/libp2p/go-libp2p-webrtc-direct"
         },
-        {
-          "name": "Rust",
-          "status": "Missing",
-          "url": ""
+        "Rust": {
+          "status": "Missing"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     }
   ]
 }

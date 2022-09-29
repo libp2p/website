@@ -4,91 +4,74 @@
   "libs": [
     {
       "id": "libp2p-kad-dht",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kad-dht"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Unstable",
           "url": "https://github.com/libp2p/js-libp2p-dht"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Missing"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/protocol/kademlia"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Usable",
           "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/Routing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
+        "Python": {
           "name": "Python",
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-kbucket",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-kbucket"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Missing"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Missing"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Missing"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     }
   ]
 }

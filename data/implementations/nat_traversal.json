@@ -4,182 +4,146 @@
   "libs": [
     {
       "id": "libp2p-circuit-relay-v1",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv1"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Missing"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done", 
           "url": "https://github.com/libp2p/js-libp2p-relay-server"       
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/relay"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-circuit-relay-v2",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv2"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/relay/src/v2"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done", 
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/circuit"       
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-autonat",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/host/autonat"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/blob/master/protocols/autonat/"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Missing"        
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Unstable",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/autonat.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/nat"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-hole-punching",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/holepunch"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/dcutr"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Missing"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Missing"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Missing"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     }
   ]
 }

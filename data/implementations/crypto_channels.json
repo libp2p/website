@@ -4,95 +4,77 @@
   "libs": [
     {
       "id": "libp2p-noise",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-noise"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/noise"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Done",
           "url": "https://github.com/ChainSafe/js-libp2p-noise"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/secure/noise.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/noise"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Unstable",
           "url": "https://github.com/swift-libp2p/swift-libp2p-noise"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/security/noise"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Unstable",
           "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/security/noise"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-tls",
-      "langs": [
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-tls"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Missing"
         },
-        {
-          "name": "JavaScript",
+        "JavaScript": {
           "status": "Missing"
         },
-        {
-          "name": "Nim",
+        "Nim": {
           "status": "Missing"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
         },
-        {
-          "name": "Swift",
+        "Swift": {
           "status": "Missing"
         },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Missing"
         },
-        {
-          "name": "Python",
+        "Python": {
           "status": "Missing"
         },
-        {
-          "name": "Erlang",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     }
   ]
 }
