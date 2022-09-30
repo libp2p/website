@@ -4,106 +4,82 @@
   "libs": [
     {
       "id": "libp2p-floodsub",
-      "langs": [
-        {
-          "name": "JavaScript",
-          "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-floodsub"
-        },
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-floodsub"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Usable",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/floodsub"
         },
-        {
-          "name": "Swift",
+        "JavaScript": {
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-floodsub"
+        },
+        "Nim": {
+          "status": "Done",
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/pubsub/floodsub.nim"
+        },
+        "C++": {
+          "status": "Missing"
+        },
+        "Swift": {
           "status": "Usable",
           "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/PubSub"
         },
-        {
-          "name": "Python",
-          "status": "Done",
-          "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/floodsub.py"
-        },
-        {
-          "name": "C++",
-          "status": "Missing"
-        },
-        {
-          "name": "JVM",
+        "JVM": {
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/pubsub/flood"
         },
-        {
-          "name": "Nim",
-          "status": "Missing"
+        "Python": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/floodsub.py"
         },
-        {
-          "name": "Erlang",
-          "status": "Missing"
-        },
-        {
-          "name": "Zig",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     },
     {
       "id": "libp2p-gossipsub",
-      "langs": [
-        {
-          "name": "JavaScript",
-          "status": "Usable",
-          "url": "https://github.com/ChainSafe/gossipsub-js"
-        },
-        {
-          "name": "Go",
+      "langs": {
+        "Go": {
           "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p-pubsub"
         },
-        {
-          "name": "Rust",
+        "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/gossipsub"
         },
-        {
-          "name": "Swift",
+        "JavaScript": {
           "status": "Usable",
-          "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/PubSub"
+          "url": "https://github.com/ChainSafe/gossipsub-js"
         },
-        {
-          "name": "Python",
+        "Nim": {
           "status": "Done",
-          "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/gossipsub.py"
+          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/pubsub/gossipsub.nim"
         },
-        {
-          "name": "C++",
+        "C++": {
           "status": "Done",
           "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/protocol/gossip"
         },
-        {
-          "name": "JVM",
+        "Swift": {
+          "status": "Usable",
+          "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/PubSub"
+        },
+        "JVM": {
           "status": "Done",
           "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/pubsub/gossip"
         },
-        {
-          "name": "Nim",
-          "status": "Missing"
+        "Python": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/gossipsub.py"
         },
-        {
-          "name": "Erlang",
-          "status": "Missing"
-        },
-        {
-          "name": "Zig",
+        "Erlang": {
           "status": "Missing"
         }
-      ]
+      }
     }
   ]
 }

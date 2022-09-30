@@ -1,3 +1,5 @@
+{{ $impls := (slice "Go" "Rust" "JavaScript" "Nim" "C++" "Swift" "JVM" "Python" "Erlang") }}
+
 <section id="{{ .id }}">
   <div class="table">
     <div class="title">
@@ -17,30 +19,30 @@
           <tbody>
             <tr class="head-row">
               <th class="head-col"></th>
-                {{ range first 1 .libs }}
-                  {{ range .langs }}
-                    <th>{{ .name }}</th>
-                  {{ end }}
+                {{ range $impl := $impls }}
+                  <th>{{ $impl }}</th>
                 {{ end }}
             </tr>
-            {{ range .libs }}
+            {{ range $lib := .libs }}
             <tr>
               <th class="head-col">{{ .id }}</th>
-              {{ range .langs }}
+              {{ range $impl := $impls }}
                 <td>
-                  <a href="{{ .url }}" target="_blank">
-                    {{ partial "status-icon.html" . }}
-                  </a>
+	          {{ with index $lib.langs $impl }}
+                    <a href="{{ .url }}" target="_blank">
+                      {{ partial "status-icon.html" . }}
+                    </a>
+		  {{ else }}
+		    Missing!
+                  {{ end }}
                 </td>
-              {{end}}
+              {{ end }}
             </tr>
             {{ end }}
             <tr class="empty">
               <th class="head-col"></th>
-              {{ range first 1 .libs }}
-                {{ range .langs }}
+              {{ range $impl := $impls }}
                 <td></td>
-                {{end}}
               {{end}}
             </tr>
           </thead>
