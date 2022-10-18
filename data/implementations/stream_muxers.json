@@ -79,40 +79,6 @@
           "status": "Missing"
         }
       }
-    },
-    {
-      "id": "libp2p-quic",
-      "langs": {
-        "Go": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
-        },
-        "Rust": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/pull/1334/"
-        },
-        "JavaScript": {
-          "status": "Missing"
-        },
-        "Nim": {
-          "status": "Missing"
-        },
-        "C++": {
-          "status": "Missing"
-        },
-        "Swift": {
-          "status": "Missing"
-        },
-        "JVM": {
-          "status": "Missing"
-        },
-        "Python": {
-          "status": "Missing"
-        },
-        "Erlang": {
-          "status": "Missing"
-        }
-      }
     }
   ]
 }
