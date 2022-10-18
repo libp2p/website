@@ -120,7 +120,7 @@
       "id": "libp2p-webtransport",
       "langs": {
         "Go": {
-          "status": "Stable",
+          "status": "Done",
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/webtransport"
         },
         "Rust": {
