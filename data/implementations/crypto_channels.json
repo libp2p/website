@@ -7,7 +7,7 @@
       "langs": {
         "Go": {
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-noise"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/security/noise"
         },
         "Rust": {
           "status": "Done",
@@ -47,10 +47,11 @@
       "langs": {
         "Go": {
           "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-tls"
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/security/tls"
         },
         "Rust": {
-          "status": "Missing"
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/pull/2945"
         },
         "JavaScript": {
           "status": "Missing"
