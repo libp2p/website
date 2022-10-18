@@ -114,16 +114,14 @@
       "id": "rendezvous",
       "langs": {
         "Go": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/go-libp2p-rendezvous/pull/1"
+          "status": "Missing"
         },
         "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/rendezvous"
         },
         "JavaScript": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/js-libp2p-rendezvous/pull/6"
+          "status": "Missing"
         },
         "Nim": {
           "status": "Unstable",
