@@ -44,6 +44,40 @@
       }
     },
     {
+      "id": "libp2p-quic",
+      "langs": {
+        "Go": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
+        },
+        "Rust": {
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/pull/2289"
+        },
+        "JavaScript": {
+          "status": "Missing"
+        },
+        "Nim": {
+          "status": "Missing"
+        },
+        "C++": {
+          "status": "Missing"
+        },
+        "Swift": {
+          "status": "Missing"
+        },
+        "JVM": {
+          "status": "Missing"
+        },
+        "Python": {
+          "status": "Missing"
+        },
+        "Erlang": {
+          "status": "Missing"
+        }
+      }
+    },
+    {
       "id": "libp2p-websockets",
       "langs": {
         "Go": {
@@ -78,6 +112,75 @@
         },
         "Erlang": {
           "name": "Erlang",
+          "status": "Missing"
+        }
+      }
+    },
+    {
+      "id": "libp2p-webtransport",
+      "langs": {
+        "Go": {
+          "status": "Stable",
+          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/webtransport"
+        },
+        "Rust": {
+          "status": "Missing"
+        },
+        "JavaScript": {
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/js-libp2p-webtransport"
+        },
+        "Nim": {
+          "status": "Missing"
+        },
+        "C++": {
+          "status": "Missing"
+        },
+        "Swift": {
+          "status": "Missing"
+        },
+        "JVM": {
+          "status": "Missing"
+        },
+        "Python": {
+          "status": "Missing"
+        },
+        "Erlang": {
+          "status": "Missing"
+        }
+      }
+    },
+    {
+      "id": "libp2p-webrtc-browser-to-server",
+      "langs": {
+        "Go": {
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/go-libp2p/pull/1655"
+        },
+        "Rust": {
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/rust-libp2p/pull/2622"
+        },
+        "JavaScript": {
+          "status": "Unstable",
+          "url": "https://github.com/little-bear-labs/js-libp2p-webrtc/pull/4"
+        },
+        "Nim": {
+          "status": "Missing"
+        },
+        "C++": {
+          "status": "Missing"
+        },
+        "Swift": {
+          "status": "Missing"
+        },
+        "JVM": {
+          "status": "Missing"
+        },
+        "Python": {
+          "status": "Missing"
+        },
+        "Erlang": {
           "status": "Missing"
         }
       }
