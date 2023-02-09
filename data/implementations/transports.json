@@ -78,7 +78,7 @@
       }
     },
     {
-      "id": "libp2p-websockets",
+      "id": "libp2p-websocket",
       "langs": {
         "Go": {
           "status": "Done",
@@ -155,15 +155,15 @@
       "langs": {
         "Go": {
           "status": "Unstable",
-          "url": "https://github.com/libp2p/go-libp2p/pull/1655"
+          "url": "https://github.com/libp2p/go-libp2p/issues/2030"
         },
         "Rust": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/pull/2622"
+          "status": "Usable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/webrtc"
         },
         "JavaScript": {
-          "status": "Unstable",
-          "url": "https://github.com/little-bear-labs/js-libp2p-webrtc/pull/4"
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-webrtc"
         },
         "Nim": {
           "status": "Missing"
