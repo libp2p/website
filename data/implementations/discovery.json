@@ -14,7 +14,7 @@
         },
         "JavaScript": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-railing"
+          "url": "https://github.com/libp2p/js-libp2p-bootstrap"
         },
         "Nim": {
           "status": "Missing"
@@ -50,8 +50,7 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
         "JavaScript": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/js-libp2p-random-walk"
+          "status": "Missing"
         },
         "Nim": {
           "status": "Missing"

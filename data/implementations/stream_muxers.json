@@ -14,8 +14,8 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
         },
         "JavaScript": {
-          "status": "Missing",
-          "url": ""
+          "status": "Done",
+          "url": "https://github.com/Chainsafe/js-libp2p-yamux"
         },
         "Nim": {
           "status": "Usable",
