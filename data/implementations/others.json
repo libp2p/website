@@ -53,7 +53,7 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/gossipsub"
         },
         "JavaScript": {
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/ChainSafe/gossipsub-js"
         },
         "Nim": {

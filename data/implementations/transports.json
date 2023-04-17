@@ -127,7 +127,7 @@
           "status": "Missing"
         },
         "JavaScript": {
-          "status": "Unstable",
+          "status": "Usable",
           "url": "https://github.com/libp2p/js-libp2p-webtransport"
         },
         "Nim": {
@@ -189,10 +189,10 @@
       "id": "libp2p-webrtc-star",
       "langs": {
         "Go": {
-          "status": "Missing"        
+          "status": "Missing"
         },
         "Rust": {
-          "status": "Missing"        
+          "status": "Missing"
         },
         "JavaScript": {
           "status": "Done",
@@ -219,18 +219,17 @@
       }
     },
     {
-      "id": "libp2p-webrtc-direct",
+      "id": "libp2p-webrtc-private-to-private",
       "langs": {
         "Go": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/go-libp2p-webrtc-direct"
+          "status": "Missing"
         },
         "Rust": {
           "status": "Missing"
         },
         "JavaScript": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc-direct"
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-webrtc"
         },
         "Nim": {
           "status": "Missing"
