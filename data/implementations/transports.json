@@ -51,8 +51,8 @@
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
         },
         "Rust": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/pull/2289"
+          "status": "Usable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/quic"
         },
         "JavaScript": {
           "status": "Missing"
@@ -127,7 +127,7 @@
           "status": "Missing"
         },
         "JavaScript": {
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webtransport"
         },
         "Nim": {
@@ -158,45 +158,12 @@
           "url": "https://github.com/libp2p/go-libp2p/issues/2030"
         },
         "Rust": {
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/webrtc"
         },
         "JavaScript": {
-          "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc"
-        },
-        "Nim": {
-          "status": "Missing"
-        },
-        "C++": {
-          "status": "Missing"
-        },
-        "Swift": {
-          "status": "Missing"
-        },
-        "JVM": {
-          "status": "Missing"
-        },
-        "Python": {
-          "status": "Missing"
-        },
-        "Erlang": {
-          "status": "Missing"
-        }
-      }
-    },
-    {
-      "id": "libp2p-webrtc-star",
-      "langs": {
-        "Go": {
-          "status": "Missing"
-        },
-        "Rust": {
-          "status": "Missing"
-        },
-        "JavaScript": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          "url": "https://github.com/libp2p/js-libp2p-webrtc"
         },
         "Nim": {
           "status": "Missing"
@@ -222,13 +189,14 @@
       "id": "libp2p-webrtc-private-to-private",
       "langs": {
         "Go": {
-          "status": "Missing"
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/go-libp2p/pull/2177"
         },
         "Rust": {
           "status": "Missing"
         },
         "JavaScript": {
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webrtc"
         },
         "Nim": {
