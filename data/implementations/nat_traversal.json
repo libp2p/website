@@ -6,14 +6,15 @@
       "id": "libp2p-circuit-relay-v1",
       "langs": {
         "Go": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/protocol/circuitv1"
+          "status": "Unimplementable",
+          "url": "https://github.com/libp2p/go-libp2p/releases/tag/v0.26.0"
         },
         "Rust": {
-          "status": "Missing"
+          "status": "Unimplementable"
         },
         "JavaScript": {
-          "status": "Missing"
+          "status": "Unimplementable",
+          "url": "https://github.com/libp2p/js-libp2p/releases/tag/v0.43.0"
         },
         "Nim": {
           "status": "Done",
@@ -123,7 +124,8 @@
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/dcutr"
         },
         "JavaScript": {
-          "status": "Missing"
+          "status": "Missing",
+          "url": "https://github.com/libp2p/js-libp2p/issues/1461"
         },
         "Nim": {
           "status": "Missing"
