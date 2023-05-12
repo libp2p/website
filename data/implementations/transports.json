@@ -61,9 +61,6 @@
           "status": "Missing",
           "url": "https://github.com/libp2p/js-libp2p/issues/1459"
         },
-        "JavaScript (Browser)": {
-          "status": "Unimplementable"
-        },
         "Nim": {
           "status": "Missing"
         },
