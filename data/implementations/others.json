@@ -13,7 +13,11 @@
           "status": "Usable",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/floodsub"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p-floodsub"
+        },
+        "JavaScript (Browser)": {
           "status": "Usable",
           "url": "https://github.com/libp2p/js-libp2p-floodsub"
         },
@@ -52,7 +56,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/gossipsub"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/ChainSafe/gossipsub-js"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/ChainSafe/gossipsub-js"
         },

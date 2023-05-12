@@ -13,7 +13,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-kad-dht"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-kad-dht"
         },
@@ -50,7 +54,10 @@
         "Rust": {
           "status": "Missing"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Missing"
+        },
+        "JavaScript (Browser)": {
           "status": "Missing"
         },
         "Nim": {

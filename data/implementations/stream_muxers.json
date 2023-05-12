@@ -13,7 +13,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/yamux"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/Chainsafe/js-libp2p-yamux"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/Chainsafe/js-libp2p-yamux"
         },
@@ -51,7 +55,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/muxers/mplex"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-multiplex"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-multiplex"
         },

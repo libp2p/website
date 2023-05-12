@@ -13,7 +13,11 @@
           "status": "Unimplementable",
           "url": ""
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-crypto"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-crypto"
         },
@@ -53,7 +57,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/ping"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
         },
@@ -91,7 +99,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/core/src"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-peer-id"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-peer-id"
         },
@@ -120,7 +132,7 @@
       }
     },
     {
-      "id": "libp2p-switch",
+      "id": "libp2p-swarm",
       "langs": {
         "Go": {
           "status": "Done",
@@ -130,7 +142,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/swarm"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/pnet"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p/tree/master/src/pnet"
         },
