@@ -25,7 +25,13 @@
             </tr>
             {{ range $lib := .libs }}
             <tr>
-              <th class="head-col">{{ .id }}</th>
+              <th class="head-col">
+		{{ if .url }}
+		  <a href = "{{ .url }}" target="_blank">{{ .id }}</a>
+		{{ else }}
+		  {{ .id }}
+		{{ end }}
+	      </th>
               {{ range $impl := $impls }}
                 <td>
 	          {{ with index $lib.langs $impl }}
