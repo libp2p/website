@@ -3,7 +3,7 @@
   "title": "Secure Communication",
   "libs": [
     {
-      "id": "libp2p-noise",
+      "id": "libp2p-noise 🔗",
       "url": "https://github.com/libp2p/specs/blob/master/noise/",
       "langs": {
         "Go": {
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "libp2p-tls",
+      "id": "libp2p-tls 🔗",
       "url": "https://github.com/libp2p/specs/blob/master/tls/tls.md",
       "langs": {
         "Go": {
