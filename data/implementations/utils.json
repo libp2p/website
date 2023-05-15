@@ -43,7 +43,8 @@
       }
     },
     {
-      "id": "libp2p-ping",
+      "id": "libp2p-ping 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/ping/ping.md",
       "langs": {
         "Go": {
           "status": "Done",

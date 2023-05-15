@@ -3,7 +3,8 @@
   "title": "Discovery",
   "libs": [
     {
-      "id": "bootstrap",
+      "id": "bootstrap 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/kad-dht/README.md#bootstrap-process",
       "langs": {
         "Go": {
           "status": "Done",
@@ -74,7 +75,8 @@
       }
     },
     {
-      "id": "mdns-discovery",
+      "id": "mdns-discovery 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/discovery/mdns.md",
       "langs": {
         "Go": {
           "status": "Done",
@@ -110,7 +112,8 @@
       }
     },
     {
-      "id": "rendezvous",
+      "id": "rendezvous 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/rendezvous/README.md",
       "langs": {
         "Go": {
           "status": "Missing"
