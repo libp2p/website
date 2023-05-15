@@ -43,6 +43,7 @@
     },
     {
       "id": "libp2p-gossipsub",
+      "url": "https://github.com/libp2p/specs/tree/master/pubsub/gossipsub",
       "langs": {
         "Go": {
           "status": "Done",

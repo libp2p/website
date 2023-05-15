@@ -4,6 +4,7 @@
   "libs": [
     {
       "id": "libp2p-circuit-relay-v1",
+      "url": "https://github.com/libp2p/specs/blob/master/relay/circuit-v1.md",
       "langs": {
         "Go": {
           "status": "Done",
@@ -39,6 +40,7 @@
     },
     {
       "id": "libp2p-circuit-relay-v2",
+      "url": "https://github.com/libp2p/specs/blob/master/relay/circuit-v2.md",
       "langs": {
         "Go": {
           "status": "Done",
@@ -75,6 +77,7 @@
     },
     {
       "id": "libp2p-autonat",
+      "url": "https://github.com/libp2p/specs/tree/master/autonat",
       "langs": {
         "Go": {
           "status": "Done",
@@ -113,6 +116,7 @@
     },
     {
       "id": "libp2p-hole-punching",
+      "url": "https://github.com/libp2p/specs/blob/master/connections/hole-punching.md",
       "langs": {
         "Go": {
           "status": "Done",

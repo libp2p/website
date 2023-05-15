@@ -4,6 +4,7 @@
   "libs": [
     {
       "id": "libp2p-noise",
+      "url": "https://github.com/libp2p/specs/blob/master/noise/",
       "langs": {
         "Go": {
           "status": "Done",
@@ -44,6 +45,7 @@
     },
     {
       "id": "libp2p-tls",
+      "url": "https://github.com/libp2p/specs/blob/master/tls/tls.md",
       "langs": {
         "Go": {
           "status": "Done",
