@@ -3,7 +3,8 @@
   "title": "Peer Routing",
   "libs": [
     {
-      "id": "libp2p-kad-dht",
+      "id": "libp2p-kad-dht 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/kad-dht/README.md",
       "langs": {
         "Go": {
           "status": "Done",

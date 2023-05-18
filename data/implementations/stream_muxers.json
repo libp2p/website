@@ -3,7 +3,8 @@
   "title": "Stream Multiplexing",
   "libs": [
     {
-      "id": "libp2p-yamux",
+      "id": "libp2p-yamux 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/yamux/README.md",
       "langs": {
         "Go": {
           "status": "Done",
@@ -45,7 +46,8 @@
       }
     },
     {
-      "id": "libp2p-mplex",
+      "id": "libp2p-mplex 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/mplex/README.md",
       "langs": {
         "Go": {
           "status": "Done",

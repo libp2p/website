@@ -47,7 +47,8 @@
       }
     },
     {
-      "id": "libp2p-quic",
+      "id": "libp2p-quic 🔗",
+      "url": "https://github.com/libp2p/specs/tree/master/quic",
       "langs": {
         "Go": {
           "status": "Done",
@@ -128,7 +129,8 @@
       }
     },
     {
-      "id": "libp2p-webtransport",
+      "id": "libp2p-webtransport 🔗",
+      "url": "https://github.com/libp2p/specs/tree/master/webtransport",
       "langs": {
         "Go": {
           "status": "Done",
@@ -165,7 +167,8 @@
       }
     },
     {
-      "id": "libp2p-webrtc-browser-to-server",
+      "id": "libp2p-webrtc-browser-to-server 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/webrtc/webrtc-direct.md",
       "langs": {
         "Go": {
           "status": "Unstable",
@@ -204,7 +207,8 @@
       }
     },
     {
-      "id": "libp2p-webrtc-private-to-private",
+      "id": "libp2p-webrtc-private-to-private 🔗",
+      "url": "https://github.com/libp2p/specs/blob/master/webrtc/webrtc.md",
       "langs": {
         "Go": {
           "status": "Unstable",
