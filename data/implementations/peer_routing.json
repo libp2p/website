@@ -44,42 +44,6 @@
           "status": "Missing"
         }
       }
-    },
-    {
-      "id": "libp2p-kbucket",
-      "langs": {
-        "Go": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-kbucket"
-        },
-        "Rust": {
-          "status": "Missing"
-        },
-        "JavaScript (Node)": {
-          "status": "Missing"
-        },
-        "JavaScript (Browser)": {
-          "status": "Missing"
-        },
-        "Nim": {
-          "status": "Missing"
-        },
-        "C++": {
-          "status": "Missing"
-        },
-        "Swift": {
-          "status": "Missing"
-        },
-        "JVM": {
-          "status": "Missing"
-        },
-        "Python": {
-          "status": "Missing"
-        },
-        "Erlang": {
-          "status": "Missing"
-        }
-      }
     }
   ]
 }

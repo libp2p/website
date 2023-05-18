@@ -3,47 +3,6 @@
   "title": "NAT Traversal",
   "libs": [
     {
-      "id": "libp2p-circuit-relay-v1 🔗",
-      "url": "https://github.com/libp2p/specs/blob/master/relay/circuit-v1.md",
-      "langs": {
-        "Go": {
-          "status": "Unimplementable",
-          "url": "https://github.com/libp2p/go-libp2p/releases/tag/v0.26.0"
-        },
-        "Rust": {
-          "status": "Unimplementable"
-        },
-        "JavaScript (Node)": {
-          "status": "Unimplementable",
-          "url": "https://github.com/libp2p/js-libp2p/releases/tag/v0.43.0"
-        },
-        "JavaScript (Browser)": {
-          "status": "Unimplementable",
-          "url": "https://github.com/libp2p/js-libp2p/releases/tag/v0.43.0"
-        },
-        "Nim": {
-          "status": "Done",
-          "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/relay/relay.nim"
-        },
-        "C++": {
-          "status": "Missing"
-        },
-        "Swift": {
-          "status": "Missing"
-        },
-        "JVM": {
-          "status": "Missing"
-        },
-        "Python": {
-          "status": "Missing"
-        },
-        "Erlang": {
-          "status": "Done",
-          "url": "https://github.com/helium/erlang-libp2p/tree/master/src/relay"
-        }
-      }
-    },
-    {
       "id": "libp2p-circuit-relay-v2 🔗",
       "url": "https://github.com/libp2p/specs/blob/master/relay/circuit-v2.md",
       "langs": {
