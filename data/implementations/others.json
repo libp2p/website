@@ -30,7 +30,7 @@
         },
         "JVM": {
           "status": "Done",
-          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/pubsub/flood"
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/libp2p/src/main/kotlin/io/libp2p/pubsub/flood"
         },
         "Python": {
           "status": "Done",
@@ -71,7 +71,7 @@
         },
         "JVM": {
           "status": "Done",
-          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/pubsub/gossip"
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/libp2p/src/main/kotlin/io/libp2p/pubsub/gossip"
         },
         "Python": {
           "status": "Done",
