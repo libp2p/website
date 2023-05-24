@@ -29,7 +29,8 @@
           "url": "https://github.com/swift-libp2p/swift-libp2p/tree/main/Sources/LibP2P/Discovery/Bootstrap"
         },
         "JVM": {
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/Peergos/nabu/blob/master/src/main/java/org/peergos/protocol/dht/Kademlia.java"
         },
         "Python": {
           "status": "Missing"
