@@ -29,7 +29,8 @@
           "url": "https://github.com/swift-libp2p/swift-libp2p-core/tree/main/Sources/LibP2PCore/Record"
         },
         "JVM": {
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/Peergos/nabu/blob/master/src/main/java/org/peergos/protocol/dht/RecordStore.java"
         },
         "Python": {
           "status": "Missing"
