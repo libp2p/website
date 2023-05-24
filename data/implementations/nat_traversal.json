@@ -103,7 +103,8 @@
           "status": "Missing"
         },
         "JVM": {
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/Peergos/nabu/blob/master/src/main/java/org/peergos/protocol/autonat/AutonatProtocol.java"
         },
         "Python": {
           "status": "Missing"
