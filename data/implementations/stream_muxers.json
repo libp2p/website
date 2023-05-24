@@ -72,7 +72,7 @@
         },
         "JVM": {
           "status": "Done",
-          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/mux/mplex"
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/libp2p/src/main/kotlin/io/libp2p/mux/mplex"
         },
         "Python": {
           "status": "Unstable",
