@@ -13,7 +13,11 @@
           "status": "Usable",
           "url": "https://github.com/libp2p/rust-libp2p/"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Usable",
+          "url": "https://github.com/libp2p/js-libp2p"
+        },
+        "JavaScript (Browser)": {
           "status": "Usable",
           "url": "https://github.com/libp2p/js-libp2p"
         },

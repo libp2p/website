@@ -14,7 +14,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/protocols/kad"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-kad-dht"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-kad-dht"
         },
@@ -35,39 +39,6 @@
         },
         "Python": {
           "name": "Python",
-          "status": "Missing"
-        },
-        "Erlang": {
-          "status": "Missing"
-        }
-      }
-    },
-    {
-      "id": "libp2p-kbucket",
-      "langs": {
-        "Go": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p-kbucket"
-        },
-        "Rust": {
-          "status": "Missing"
-        },
-        "JavaScript": {
-          "status": "Missing"
-        },
-        "Nim": {
-          "status": "Missing"
-        },
-        "C++": {
-          "status": "Missing"
-        },
-        "Swift": {
-          "status": "Missing"
-        },
-        "JVM": {
-          "status": "Missing"
-        },
-        "Python": {
           "status": "Missing"
         },
         "Erlang": {

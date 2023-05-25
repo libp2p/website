@@ -14,7 +14,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/noise"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/ChainSafe/js-libp2p-noise"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/ChainSafe/js-libp2p-noise"
         },
@@ -52,10 +56,13 @@
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/security/tls"
         },
         "Rust": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/pull/2945"
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tls"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Missing"
+        },
+        "JavaScript (Browser)": {
           "status": "Missing"
         },
         "Nim": {

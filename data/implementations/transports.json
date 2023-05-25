@@ -13,9 +13,12 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/tcp"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-tcp"
+        },
+        "JavaScript (Browser)": {
+          "status": "Unimplementable"
         },
         "Nim": {
           "status": "Done",
@@ -52,11 +55,15 @@
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
         },
         "Rust": {
-          "status": "Unstable",
-          "url": "https://github.com/libp2p/rust-libp2p/pull/2289"
+          "status": "Usable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/quic"
         },
-        "JavaScript": {
-          "status": "Missing"
+        "JavaScript (Node)": {
+          "status": "Missing",
+          "url": "https://github.com/libp2p/js-libp2p/issues/1459"
+        },
+        "JavaScript (Browser)": {
+          "status": "Unimplementable"
         },
         "Nim": {
           "status": "Missing"
@@ -89,7 +96,11 @@
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
         },
-        "JavaScript": {
+        "JavaScript (Node)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-websockets"
+        },
+        "JavaScript (Browser)": {
           "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-websockets"
         },
@@ -128,9 +139,12 @@
         "Rust": {
           "status": "Missing"
         },
-        "JavaScript": {
-          "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-webtransport"
+        "JavaScript (Node)": {
+          "status": "Unimplementable"
+        },
+        "JavaScript (Browser)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p-websockets"
         },
         "Nim": {
           "status": "Missing"
@@ -161,45 +175,16 @@
           "url": "https://github.com/libp2p/go-libp2p/issues/2030"
         },
         "Rust": {
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/webrtc"
         },
-        "JavaScript": {
-          "status": "Usable",
+        "JavaScript (Node)": {
+          "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webrtc"
         },
-        "Nim": {
-          "status": "Missing"
-        },
-        "C++": {
-          "status": "Missing"
-        },
-        "Swift": {
-          "status": "Missing"
-        },
-        "JVM": {
-          "status": "Missing"
-        },
-        "Python": {
-          "status": "Missing"
-        },
-        "Erlang": {
-          "status": "Missing"
-        }
-      }
-    },
-    {
-      "id": "libp2p-webrtc-star",
-      "langs": {
-        "Go": {
-          "status": "Missing"
-        },
-        "Rust": {
-          "status": "Missing"
-        },
-        "JavaScript": {
+        "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc-star"
+          "url": "https://github.com/libp2p/js-libp2p-webrtc"
         },
         "Nim": {
           "status": "Missing"
@@ -226,13 +211,17 @@
       "url": "https://github.com/libp2p/specs/blob/master/webrtc/webrtc.md",
       "langs": {
         "Go": {
-          "status": "Missing"
+          "status": "Unstable",
+          "url": "https://github.com/libp2p/go-libp2p/pull/2177"
         },
         "Rust": {
           "status": "Missing"
         },
-        "JavaScript": {
-          "status": "Usable",
+        "JavaScript (Node)": {
+          "status": "Unimplementable"
+        },
+        "JavaScript (Browser)": {
+          "status": "Done",
           "url": "https://github.com/libp2p/js-libp2p-webrtc"
         },
         "Nim": {
