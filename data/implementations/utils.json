@@ -87,46 +87,6 @@
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/peerbook"
         }
       }
-    },
-    {
-      "id": "libp2p-swarm",
-      "langs": {
-        "Go": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/net/swarm"
-        },
-        "Rust": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/rust-libp2p/tree/master/swarm"
-        },
-        "JavaScript (Node)": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/pnet"
-        },
-        "JavaScript (Browser)": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/pnet"
-        },
-        "Nim": {
-          "status": "Done",
-	  "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/switch.nim"
-        },
-        "C++": {
-          "status": "Missing"
-        },
-        "Swift": {
-          "status": "Missing"
-        },
-        "JVM": {
-          "status": "Missing"
-        },
-        "Python": {
-          "status": "Missing"
-        },
-        "Erlang": {
-          "status": "Missing"
-        }
-      }
     }
   ]
 }
