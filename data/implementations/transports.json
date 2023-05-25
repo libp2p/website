@@ -34,7 +34,7 @@
         },
         "JVM": {
           "status": "Done",
-          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/tcp"
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/libp2p/src/main/kotlin/io/libp2p/transport/tcp"
         },
         "Python": {
           "status": "Unstable",
@@ -117,7 +117,7 @@
         },
         "JVM": {
           "status": "Done",
-          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/src/main/kotlin/io/libp2p/transport/ws"
+          "url": "https://github.com/libp2p/jvm-libp2p/tree/develop/libp2p/src/main/kotlin/io/libp2p/transport/ws"
         },
         "Python": {
           "status": "Missing"
