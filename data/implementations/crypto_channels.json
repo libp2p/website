@@ -76,7 +76,8 @@
           "status": "Missing"
         },
         "JVM": {
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/libp2p/jvm-libp2p/blob/v1.0.0/libp2p/src/main/kotlin/io/libp2p/security/tls/TLSSecureChannel.kt"
         },
         "Python": {
           "status": "Missing"
