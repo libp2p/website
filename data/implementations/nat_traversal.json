@@ -40,6 +40,9 @@
         },
         "Erlang": {
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -84,6 +87,9 @@
         "Erlang": {
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src/nat"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -123,6 +129,9 @@
           "status": "Missing"
         },
         "Erlang": {
+          "status": "Missing"
+        },
+        "Zig": {
           "status": "Missing"
         }
       }

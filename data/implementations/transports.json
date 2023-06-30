@@ -43,6 +43,9 @@
         "Erlang": {
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -81,6 +84,9 @@
           "status": "Missing"
         },
         "Erlang": {
+          "status": "Missing"
+        },
+        "Zig": {
           "status": "Missing"
         }
       }
@@ -125,6 +131,9 @@
         "Erlang": {
           "name": "Erlang",
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -163,6 +172,9 @@
         },
         "Erlang": {
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Done"
         }
       }
     },
@@ -203,6 +215,9 @@
         },
         "Erlang": {
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -240,6 +255,9 @@
           "status": "Missing"
         },
         "Erlang": {
+          "status": "Missing"
+        },
+        "Zig": {
           "status": "Missing"
         }
       }

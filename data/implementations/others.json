@@ -42,6 +42,9 @@
         },
         "Erlang": {
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -86,6 +89,9 @@
           "url": "https://github.com/libp2p/py-libp2p/blob/master/libp2p/pubsub/gossipsub.py"
         },
         "Erlang": {
+          "status": "Missing"
+        },
+        "Zig": {
           "status": "Missing"
         }
       }

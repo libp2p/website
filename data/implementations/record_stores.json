@@ -41,6 +41,9 @@
         },
         "Erlang": {
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     }
