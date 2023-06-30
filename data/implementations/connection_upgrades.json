@@ -29,11 +29,11 @@
           "status": "Usable",
           "url": "https://github.com/libp2p/cpp-libp2p"
         },
-  	"Swift": {
+        "Swift": {
           "status": "Usable",
           "url": "https://github.com/swift-libp2p/swift-libp2p"
         },
-	"JVM": {
+        "JVM": {
           "status": "Usable",
           "url": "https://github.com/libp2p/jvm-libp2p"
         },
@@ -44,6 +44,10 @@
         "Erlang": {
           "status": "Usable",
           "url": "https://github.com/helium/erlang-libp2p"
+        },
+        "Zig": {
+          "status": "Usable",
+          "url": "https://github.com/marcopolo/zig-libp2p"
         }
       }
     }
