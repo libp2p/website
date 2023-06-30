@@ -41,6 +41,9 @@
         },
         "Erlang": {
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -78,6 +81,9 @@
           "status": "Missing"
         },
         "Erlang": {
+          "status": "Missing"
+        },
+        "Zig": {
           "status": "Missing"
         }
       }
@@ -119,6 +125,9 @@
         },
         "Erlang": {
           "status": "Missing"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -156,6 +165,9 @@
           "status": "Missing"
         },
         "Erlang": {
+          "status": "Missing"
+        },
+        "Zig": {
           "status": "Missing"
         }
       }

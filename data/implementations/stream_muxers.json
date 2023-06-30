@@ -43,6 +43,9 @@
         "Erlang": {
           "status": "Done",
           "url": "https://github.com/helium/erlang-libp2p/tree/master/src"
+        },
+        "Zig": {
+          "status": "Missing"
         }
       }
     },
@@ -87,6 +90,9 @@
           "url": "https://github.com/libp2p/py-libp2p/tree/master/libp2p/stream_muxer/mplex"
         },
         "Erlang": {
+          "status": "Missing"
+        },
+        "Zig": {
           "status": "Missing"
         }
       }
