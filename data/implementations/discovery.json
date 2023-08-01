@@ -15,11 +15,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-bootstrap"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/peer-discovery-bootstrap"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-bootstrap"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/peer-discovery-bootstrap"
         },
         "Nim": {
           "status": "Missing"
@@ -102,7 +102,7 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-mdns"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/peer-discovery-mdns"
         },
         "JavaScript (Browser)": {
           "status": "Unimplementable"

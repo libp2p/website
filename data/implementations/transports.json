@@ -15,7 +15,7 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-tcp"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-tcp"
         },
         "JavaScript (Browser)": {
           "status": "Unimplementable"
@@ -104,11 +104,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-websockets"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-websockets"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-websockets"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-websockets"
         },
         "Nim": {
           "status": "Done",
@@ -153,7 +153,7 @@
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-websockets"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-websockets"
         },
         "Nim": {
           "status": "Missing"
@@ -192,11 +192,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-webrtc"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-webrtc"
         },
         "Nim": {
           "status": "Missing"
@@ -233,11 +233,12 @@
           "status": "Missing"
         },
         "JavaScript (Node)": {
-          "status": "Unimplementable"
+          "status": "Done",
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-webrtc"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-webrtc"
         },
         "Nim": {
           "status": "Missing"
