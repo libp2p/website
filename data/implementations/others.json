@@ -15,11 +15,11 @@
         },
         "JavaScript (Node)": {
           "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-floodsub"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/pubsub-floodsub"
         },
         "JavaScript (Browser)": {
           "status": "Usable",
-          "url": "https://github.com/libp2p/js-libp2p-floodsub"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/pubsub-floodsub"
         },
         "Nim": {
           "status": "Done",

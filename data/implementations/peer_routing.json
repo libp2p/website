@@ -16,11 +16,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-kad-dht"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/kad-dht"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-kad-dht"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/kad-dht"
         },
         "Nim": {
           "status": "Missing"

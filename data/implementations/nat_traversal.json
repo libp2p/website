@@ -16,11 +16,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/circuit-relay"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/libp2p/src/circuit-relay"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/circuit-relay"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/libp2p/src/circuit-relay"
         },
         "Nim": {
           "status": "Done",
@@ -60,11 +60,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/autonat"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/libp2p/src/autonat"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/autonat"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/libp2p/src/autonat"
         },
         "Nim": {
           "status": "Unstable",
@@ -111,7 +111,7 @@
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-webrtc"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-webrtc"
         },
         "Nim": {
           "status": "Missing"

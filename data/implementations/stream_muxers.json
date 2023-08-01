@@ -63,11 +63,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-multiplex"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/stream-multiplexer-mplex"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-multiplex"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/stream-multiplexer-mplex"
         },
         "Nim": {
           "status": "Done",

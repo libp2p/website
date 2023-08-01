@@ -16,11 +16,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/libp2p/src/ping"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p/tree/master/src/ping"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/libp2p/src/ping"
         },
         "Nim": {
           "status": "Done",
@@ -61,11 +61,11 @@
         },
         "JavaScript (Node)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-peer-id"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/peer-id"
         },
         "JavaScript (Browser)": {
           "status": "Done",
-          "url": "https://github.com/libp2p/js-libp2p-peer-id"
+          "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/peer-id"
         },
         "Nim": {
           "status": "Done",
