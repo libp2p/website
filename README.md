@@ -1,3 +1,5 @@
+# Archived - see [https://github.com/libp2p/website-new/](https://github.com/libp2p/website-new/) for the latest website
+
 # [libp2p-website](libp2p.io)
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
