@@ -149,7 +149,7 @@
           "status": "Missing"
         },
         "Nim": {
-          "status": "Unstable",
+          "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/rendezvous.nim"
         },
         "C++": {
