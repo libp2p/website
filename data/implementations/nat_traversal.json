@@ -71,8 +71,7 @@
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/autonat.nim"
         },
         "C++": {
-          "status": "Done",
-          "url": "https://github.com/libp2p/cpp-libp2p/tree/master/src/security/tls"
+          "status": "Missing",
         },
         "Swift": {
           "status": "Missing"
