@@ -23,7 +23,7 @@
           "url": "https://github.com/Chainsafe/js-libp2p-yamux"
         },
         "Nim": {
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/muxers/yamux/yamux.nim"
         },
         "C++": {

@@ -69,7 +69,8 @@
           "status": "Unimplementable"
         },
         "Nim": {
-          "status": "Missing"
+          "status": "Usable",
+          "url": "https://github.com/vacp2p/nim-libp2p/blob/master/libp2p/transports/quictransport.nim"
         },
         "C++": {
           "status": "Missing"

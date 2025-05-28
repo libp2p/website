@@ -67,7 +67,7 @@
           "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/libp2p/src/autonat"
         },
         "Nim": {
-          "status": "Unstable",
+          "status": "Usable",
           "url": "https://github.com/status-im/nim-libp2p/blob/unstable/libp2p/protocols/connectivity/autonat.nim"
         },
         "C++": {
@@ -114,7 +114,8 @@
           "url": "https://github.com/libp2p/js-libp2p/tree/master/packages/transport-webrtc"
         },
         "Nim": {
-          "status": "Missing"
+          "status": "Done",
+          "url": "https://github.com/vacp2p/nim-libp2p/tree/master/libp2p/protocols/connectivity/dcutr"
         },
         "C++": {
           "status": "Missing"
