@@ -58,7 +58,7 @@
           "url": "https://github.com/libp2p/go-libp2p/tree/master/p2p/transport/quic"
         },
         "Rust": {
-          "status": "Usable",
+          "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/quic"
         },
         "JavaScript (Node)": {
@@ -102,6 +102,10 @@
         "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/websocket"
+        },
+        "Rust (Browser)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/wasm-ext"
         },
         "JavaScript (Node)": {
           "status": "Done",
@@ -149,6 +153,10 @@
         "Rust": {
           "status": "Missing"
         },
+        "Rust (Browser)": {
+          "status": "Done",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/webtransport-websys"
+        },
         "JavaScript (Node)": {
           "status": "Unimplementable"
         },
@@ -190,6 +198,10 @@
         "Rust": {
           "status": "Done",
           "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/webrtc"
+        },
+        "Rust (Browser)": {
+          "status": "Usable",
+          "url": "https://github.com/libp2p/rust-libp2p/tree/master/transports/webrtc-websys"
         },
         "JavaScript (Node)": {
           "status": "Done",
